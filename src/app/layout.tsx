@@ -1,3 +1,8 @@
+import {Spartan} from "@next/font/google";
+
+const spartan = Spartan();
+
+
 export default function RootLayout({
     children,
     params: { lang },

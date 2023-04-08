@@ -5,6 +5,8 @@ import Header from '../components/header'
 import LanguageSwitcher from '../components/languageSwitcher'
 import Gallery from '../components/gallery.jsx'
 import Counter from '../components/counter'
+import{Spartan} from 'next/font/google' 
+import{}
 
 export default function Page() {
    const { t, lang } = useTranslation('common')

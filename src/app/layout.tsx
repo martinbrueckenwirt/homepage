@@ -1,6 +1,6 @@
-import {Spartan} from "@next/font/google";
+import {Quicksand} from "next/font/google";
 
-const spartan = Spartan();
+const quicksand = Quicksand({subsets:['latin']});
 
 
 export default function RootLayout({

@@ -1,0 +1,19 @@
+.gallerygridcontainer{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-column-gap: 0.1rem;
+grid-row-gap: 0.1 rem;
+justify-items: center; /*horizontal */
+align-items: stretch; /*vertikal */
+background: #eee;
+margin: 10em 10em 10em 10px;
+max-width: 70%;
+}
+
+.griditem{
+display: grid;
+color: blue;
+padding: 2px;
+margin: 2px;
+
+}

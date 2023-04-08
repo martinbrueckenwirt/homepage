@@ -1,0 +1,94 @@
+import Link from 'next/link'
+import ClientCode from '../components/client-code'
+import getT from 'next-translate/getT'
+
+
+
+const Page = (props) => {
+  const {  lang, title, menueAppartement } = props;
+  console.log('ooooooooolang ', lang);
+  console.log('ooooooooo ', props);
+  console.log('app-page lang ', title);
+
+  console.log('***************Menu ', menueAppartement);
+  
+
+  return (
+    <>
+      <h1>{title}</h1>
+
+      <ClientCode />
+
+      <div style={{ marginTop: 20 }}>
+        <Link href="/?lang=en" as="/en">
+          English
+        </Link>
+      </div>
+
+      <div>
+        <Link href="/?lang=de" as="/de">
+          Deutsch
+        </Link>
+      </div>
+
+      <div>
+        <Link href="/?lang=it" as="/it">
+          Italienisch
+        </Link>
+      </div>
+
+      <div>
+        <Link href={`/second-page?lang=${lang}`} as={`/${lang}/second-page`}>
+          ➡️
+        </Link>
+      </div>
+
+      <div>
+        <Link href={`/apartments?lang=${lang}`} as={`/${lang}/apartments`}>
+          {menueAppartement}
+         </Link>
+      </div>
+
+      <div>
+        <Link href={`/apartments/gartenblick?lang=${lang}`} as={`/${lang}/apartments/gartenblick`}>
+          Gartenblick
+         </Link>
+      </div>
+
+    </>
+  )
+}
+
+
+
+/* *a* metadata */
+export const metadata = {
+  title: 'App directory',
+}
+
+
+export async function getStaticProps({locale}) {
+  /*alle zu uebersetzenden Teile einsetzen */
+  console.log('---------app-page getStaticProps lang 1', locale);
+  /*const { t, lang } = useTranslation('common') */
+  const t = await getT(locale,'common')
+    console.log('---------app-page getStaticProps lang ', locale);
+    const title = t('title')
+    const menueAppartement = t('menue')
+  
+    /*const title  ='mytitle';
+    const menueAppartement = 'hier ist das Menue' */
+    
+  
+  return{
+      props:{
+        locale,
+        title,
+        menueAppartement
+      },
+  };
+
+};
+
+
+export default Page;

@@ -4,32 +4,26 @@ import getImageToEnlarge from "../functions/getImageToEnlarge"
 import {useEffect, useState} from "react" 
 
 
-const Modal = ({clickedImage, handleClickNext, setClickedImage, type}) =>{
+const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage, type}) =>{
     const [dataReceived, setDataReceived] = useState(null);
     const [altAttribut, setAltAttribut] = useState(null);
     const [desc,setDesc] =useState(null);
     const [imgSrc, setImgSrc] = useState(null);
-    const imageData ={
-        image:String, 
-        index: Number,
-        description : String,
-        alt: String,
-        copyright: "Brückenwirt Appartements",
-        height: Number,
-        width: Number,
-        priority: Boolean
-    }
+    const [height,setHeight] = useState(null);
+    const [width, setWidth] = useState(null);
+    const [priority,setPriority] = useState(null);
 
-        let altAttr ='hugo';
 
     function copyData(param){
-        console.log('copydata ',param);
         setAltAttribut(param.alt);
         setDesc(param.description);
         setImgSrc(param.enlargeImage);
+        setHeight(param.height);
+        setWidth(param.width);
+        setPriority(param.priority);
         setDataReceived(1);;
-        
     }
+ 
     let mydata =[]
     useEffect( () =>{
         let response =[]
@@ -38,14 +32,10 @@ const Modal = ({clickedImage, handleClickNext, setClickedImage, type}) =>{
             let data = await getImageToEnlarge(clickedImage,type)
             .then((response) => mydata={...response})
             .then(mydata => {
-                imageData.image = mydata.enlargeImage;
-                imageData.alt = mydata.alt;
-                imageData.description = mydata.description;
+       
                 console.log('%c imageData useEffect', 'background: #0000ff; color: white');
-                console.log(imageData, 'background: #0000ff; color: white');
-                console.log('######modal useeffect data description', imageData.description);
                 copyData(mydata);
-                 return imageData;
+                
 
                 })
 
@@ -55,19 +45,19 @@ const Modal = ({clickedImage, handleClickNext, setClickedImage, type}) =>{
 
     })
     
-      
-    /*imageData = getImageToEnlarge(clickedImage.full,type) */
+  
+    const handleCloseClick = (e) => {
+       if(e.target.className ==="close"){
+            	setClickedImage(null);
+        }
+    };
 
-    /*let alt = imageData.alt;
-    src= {clickedImage.full}*/
+   
 
     console.log('%c imageData', 'background: #00ff00; color: red');
-    console.log ('*******modal image ', imgSrc)
-    console.log ('*******modal altATTR ', altAttribut)
-    
-    let alt = 'alt text'
-    let src = '/P1470817.jpg'
 
+
+/*
     return (<>  
     
     <div className="overlay close"></div>
@@ -80,12 +70,40 @@ const Modal = ({clickedImage, handleClickNext, setClickedImage, type}) =>{
                     width = {300}
                     height ={200}
                 />
+                <span className="close">X</span>
     
     )
 }
     </>
     )
+
+    */
+   if (dataReceived){
+
+    return (<>  
     
+        <div className="overlay close" onClick={handleCloseClick} ></div>
+        
+        <Image 
+                        src= {imgSrc}
+                        alt={altAttribut}
+                        quality = {30}
+                        width = {300}
+                        height ={200}
+                    />
+                    <span className="close" onClick={handleCloseClick} >X</span>
+         <div  className="overlay-arrows-right"  onClick={handleClickNext} >REEEECHTS</div>   
+        <div> *a* Pfeile rechts und links 19:00 inkl css</div>
+        <div  className="overlay-arrows-right"  onClick={handleClickPrev} >LIIIINKS</div>   
+        
+        </>
+        )
+
+   }
+
+   else
+   return (<></>)
+
 }
 
 

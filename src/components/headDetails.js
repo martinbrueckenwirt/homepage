@@ -89,6 +89,7 @@ constSchemaAccomodation ={
  constSchemaHaunold ={
        "@context": "https://schema.org",
      "@type": "Apartment",
+     "@id": "Apartment",
      "name": "haunold",
      "description": "Ausblick nach Westen, großer Balkon",
      "image": "",
@@ -114,6 +115,7 @@ constSchemaAccomodation ={
     constSchemaBurgHeinfels ={
         "@context": "https://schema.org",
       "@type": "Apartment",
+      "@id": "Apartment",
       "name": "Burg_Heinfels",
       "description": "Ausblick nach Osten in den Garten und auf die historische Burg Heinfels; großer Balkon",
       "image": "",
@@ -139,6 +141,7 @@ constSchemaAccomodation ={
      constSchemaThurntaler ={
         "@context": "https://schema.org",
       "@type": "Apartment",
+      "@id": "Apartment",
       "name": "Burg_Heinfels",
       "description": "Ausblick nach Westen, großer Balkon",
       "image": "",
@@ -164,6 +167,7 @@ constSchemaAccomodation ={
      constSchemaHelm ={
         "@context": "https://schema.org",
       "@type": "Apartment",
+      "@id": "Apartment",
       "name": "Helm",
       "description": "Ausblick nach Süden auf die Karnischen Alpen, 2 getrennte Schlafzimmer",
       "image": "",
@@ -188,7 +192,8 @@ constSchemaAccomodation ={
 
      constSchemaDreiZinnen ={
         "@context": "https://schema.org",
-      "@type": "Apartment",
+      "@type": "Suite",
+      "@id": "Suite",
       "name": "Drei_Zinnen",
       "description": "Ausblick nach Süden auf die Karnischen Alpen, 2 getrennte Schlafzimmer, 2 Bäder",
       "image": "",
@@ -210,6 +215,27 @@ constSchemaAccomodation ={
       "tourBookingPage": "",
       "yearBuilt": "2014"
      };
+
+
+     constSchemaCafe ={
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "@id": "CafeOrCoffeeShop",
+        "acceptsReservations": "www.derbrueckenwirt.at",
+        "address": "Panzendorf 12",
+        "alternateName": "Brückenwirt",
+        "currenciesAccepted": "EUR",
+        "description": "Homemade cakes, best Cappuccino, ice cream ",
+        "email": "office@derbrueckenwirt.at",
+        "foundingDate": "2014-10-06",
+        "knowsLanguage": "DE,EN,IT",
+        "mainEntityOfPage": "https://www.derbrueckenwirt.at",
+        "maximumAttendeeCapacity": "70",
+        "openingHours": "9:00-19:00",
+        "paymentAccepted": "cash, bankomat, cards",
+        "servesCuisine": "cakes, toast, gulash soup",
+        "telephone": "+43 4842 6336"
+      };
 
 const  HeadDetails = ({type}) => 
 {
@@ -296,14 +322,24 @@ const  HeadDetails = ({type}) =>
                         </>
         
                     )
+
+                case 'cafe':
+                    return(
+                        <>
+                            <meta name="description" content="Perfekter Cappuccino, hausgemachte Kuchen und Torten, große sonnige Terasse nach Süden und Spielplatz"/>
+                            <script
+                            type="application/ld+json"
+                            dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaCafe) }}
+                                />
+                            
+                        </>
+        
+                    )
+
                 default: 
                 return(
                     <>
-                        <meta name="description" content="Große sonnige Ferienwohnung mit  großem Balkon nach Süden und Ausblick auf die Karnischen Alpen."/>
-                        <script
-                        type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaHelm) }}
-                            />
+                        <meta name="description" content="Schöne moderne Ferienwohnungen und Cafe im Erdgeschoß"/>
                         
                     </>
                 )

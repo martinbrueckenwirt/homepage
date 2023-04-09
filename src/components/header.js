@@ -4,7 +4,7 @@ import Head from 'next/head'
 import useTranslation from 'next-translate/useTranslation'
 import styles from '../components/header.module.css'
 
-
+/* *a* Title entfernen!!!!!!!!!!!!!!!!!!!!!*/
 
 export default function Header() {
 
@@ -27,4 +27,4 @@ export default function Header() {
       </header>
     </>
   )
-}
+} 

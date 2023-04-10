@@ -1,5 +1,6 @@
 .gallerygridcontainer{
 display: grid;
+position:relative; /* wichtig für Fill der unterliegenden Image */ 
 grid-template-columns: repeat(4, 1fr);
 grid-column-gap: 0.1rem;
 grid-row-gap: 0.1 rem;

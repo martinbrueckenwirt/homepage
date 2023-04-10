@@ -1,5 +1,7 @@
 "use client";
   /*https://www.youtube.com/watch?v=KNEbqO-q1r8*/
+  /*muster: zb key-down-Event (Barriere Armut) https://github.com/igordanchenko/react-photo-album/tree/main/examples/lightbox */
+  /* https://github.com/igordanchenko/yet-another-react-lightbox */
 import styles from "../components/gallery.module.css"
 import Image from "next/image"
 import { useState } from "react";
@@ -65,20 +67,15 @@ const Gallery = (props)  => {
         setCurrentIndex(newIndex);
         }
 /*image fill; der A boolean that causes the image to fill the parent element instead of setting width and height.
-
 The parent element must assign position: "relative", position: "fixed", or position: "absolute" style.*/
-/*<div className ={' ${isClicked ? styles.gridItemClicked : styles.gridItem}'}*/
-/*           <div className ={styles.gridItem}>*/ 
-/*<div className ={isClicked ? styles.gridItem : styles.red}> */
-/*<div className ={CheckIsClicked(index)}> */
+
 
 function checkIsClicked(index) {
     let result = false
-    if ((index == currentIndex)){
+    if (index == currentIndex){
          result = true 
     }
      return result    
-
 }
 
 return(
@@ -103,8 +100,8 @@ return(
                     alt={image.alt}
                     quality = {30}
                     width = {128}
-                    height ={96}
-                    /*fill*/
+                    height ={96} 
+                    /*fill */
                 />
             </div>
             </div>))

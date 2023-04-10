@@ -9,11 +9,25 @@ background: #eee;
 margin: 10em 10em 10em 10px;
 max-width: 70%;
 }
-
-.griditem{
-display: grid;
-color: blue;
-padding: 2px;
+.gridItem{
+background: yellow;
+padding: 20px;
 margin: 2px;
 
+}
+
+.gridItemClicked{
+background:green;
+padding: 2px;
+border: 5px solid rgb(7, 248, 228);
+
+}
+
+.red{
+background: red;
+padding: 5px;
+}
+
+.firstRun{
+    background: blue;
 }

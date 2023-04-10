@@ -37,6 +37,11 @@ constSchemaOrganisation =
  "postalCode": "9919",
  "addressCountry": "AT"
  },
+ "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 46.742481,
+    "longitude": 12.425066
+  },
  "contactPoint": {
  "@type": "ContactPoint",
  "contactType": "reception desk",
@@ -221,20 +226,60 @@ constSchemaAccomodation ={
         "@context": "https://schema.org",
         "@type": "CafeOrCoffeeShop",
         "@id": "CafeOrCoffeeShop",
-        "acceptsReservations": "www.derbrueckenwirt.at",
-        "address": "Panzendorf 12",
+        "acceptsReservations": "True",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Panzendorf 12",
+            "addressLocality": "Heinfels",
+            "addressRegion": "",
+            "postalCode": "9919",
+            "addressCountry": "AT"
+          },
+        "name": "Cafe Brückenwirt",
         "alternateName": "Brückenwirt",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.742481,
+            "longitude": 12.425066
+          },
         "currenciesAccepted": "EUR",
-        "description": "Homemade cakes, best Cappuccino, ice cream ",
+        "description": "Homemade cakes, best Cappuccino, ice cream, regional specialities ",
         "email": "office@derbrueckenwirt.at",
         "foundingDate": "2014-10-06",
         "knowsLanguage": "DE,EN,IT",
         "mainEntityOfPage": "https://www.derbrueckenwirt.at",
         "maximumAttendeeCapacity": "70",
         "openingHours": "9:00-19:00",
+        "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "19:00"
+            },
+        ],
         "paymentAccepted": "cash, bankomat, cards",
-        "servesCuisine": "cakes, toast, gulash soup",
-        "telephone": "+43 4842 6336"
+        "servesCuisine": "cakes, toast, soup",
+        "telephone": "+43 4842 6336",
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Martin Sch."
+            }
+          },
       };
 
 const  HeadDetails = ({type}) => 

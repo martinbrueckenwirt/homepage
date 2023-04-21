@@ -17,16 +17,17 @@ import Modal from "../components/modal"
 
 
 
-const Gallery = (props)  => {
+const GalleryA = (props)  => {
  
     const[clickedImage,setClickedImage] = useState(null);
     const[currentIndex, setCurrentIndex] =useState(0);
-         
+    console.log(props);
+    let imageList = [];
+    imageList = props.resultGridImages;
     let gridImages =[]; /*Liste der anzuzeigenden Bilder */
-    let type = props.id;
-    let resultGridImages = [];
-    resultGridImages =getImageList(type);
-    gridImages = resultGridImages.slice(); /*Duplikat Desktopansicht */
+    
+    console.log(imageList);
+    /*gridImages = imageList.slice(); /*Duplikat Desktopansicht */
  
     const lengthImageGrid = gridImages.length;
 
@@ -163,6 +164,18 @@ return(
 
 }
 
-export default Gallery;
 
 
+export function getStaticProps(context) {
+ let type = "typeA";
+    var resultGridImages = [];
+    resultGridImages=getImageList(type); 
+    console.log('getstatic  ',resultGridImages);
+    return {
+      props: {
+        resultGridImages,
+      },
+    };
+  }
+
+  export default GalleryA;

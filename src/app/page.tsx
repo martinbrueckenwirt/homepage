@@ -4,6 +4,8 @@ import ClientCode from '../components/client-code'
 import Header from '../components/header'
 import LanguageSwitcher from '../components/languageSwitcher'
 import Gallery from '../components/gallery.jsx'
+import GalleryA from '../components/gallery_a.jsx'
+
 import Counter from '../components/counter'
 
 
@@ -12,7 +14,8 @@ export default function Page() {
   const title = t('title')
   const menueAppartement = t('menue')
 
-    
+  /* 
+      <Gallery id="typeA" /> */  
      
  
   return (
@@ -46,7 +49,7 @@ export default function Page() {
       <p></p>
 
      
-      <Gallery id="typeA" />
+      <Gallery id='typeA' />
      
 
 

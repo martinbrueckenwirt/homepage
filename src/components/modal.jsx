@@ -33,7 +33,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
             .then((response) => mydata={...response})
             .then(mydata => {
        
-                console.log('%c imageData useEffect', 'background: #0000ff; color: white');
+                /*console.log('%c imageData useEffect', 'background: #0000ff; color: white');*/
                 copyData(mydata);
                 
 
@@ -54,7 +54,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
 
    
 
-    console.log('%c imageData', 'background: #00ff00; color: red');
+    /*console.log('%c imageData', 'background: #00ff00; color: red'); */
 
 
 /*
@@ -92,7 +92,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
                         alt={altAttribut}
                         quality = {30}
                         width = {300}
-                        height ={200}
+                        height ={225}
                     />
                     <span className="close" onClick={handleCloseClick} >X</span>
          <div  className="overlay-arrows-right"  onClick={handleClickNext} >

@@ -3,9 +3,9 @@ const imageList = [
 		id: "typeA",
 		images: [
 			{
-				small: "/P2535132-1.jpg",
+				small: "/P2535132-1-small2.webp",
 				full: "/P2535132-1.jpg",
-				description: "TEST A Gang1",
+				description: "TEST A Gang1 small2",
 				descriptionEn: "EN A Floor",
 				descriptionIt: "IT  A Floor",
 				alt:"Alt Gang1",
@@ -16,9 +16,9 @@ const imageList = [
                 sortnumber:1
 			},
             {
-				small: "/P2535145-1.jpg",
+				small: "/P2535145-1-small2.webp",
 				full: "/P2535145-1.jpg",
-				description: "TEST A Gang 2",
+				description: "TEST A Gang 2 small2",
                 descriptionEn: "EN A Floor 2",
 				descriptionIt: "IT  A Floor 2",
 				alt:"Alt Gang 2",
@@ -30,9 +30,9 @@ const imageList = [
 			},
 			
 			{
-				small: "/P1470817.jpg",
+				small: "/P1470817-small.webp",
 				full: "/P1470817.jpg",
-				description: "TEST A Blumen1",
+				description: "TEST A Blumen1 small",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
 			    alt:"Alt Blumen1",
@@ -43,7 +43,7 @@ const imageList = [
                 sortnumber:3,
 			},
 			{
-				small: "/P1540068.jpg",
+				small: "/P1540068-small.webp",
 				full: "/P1540068.jpg",
 				description: "TEST A Haus m Blumen",
 				descriptionEn: "EN A Flower1",
@@ -56,7 +56,7 @@ const imageList = [
                 sortnumber:4,
 			},
 			{
-				small: "/P1550975.jpg",
+				small: "/P1550975-small.webp",
 				full: "/P1550975.jpg",
 				description: "TEST A Blumen gelb",
 				descriptionEn: "EN A Flower1",
@@ -69,7 +69,7 @@ const imageList = [
                 sortnumber:5,
 			},
 			{
-				small: "/P1560052.jpg",
+				small: "/P1560052-small.webp",
 				full: "/P1560052.jpg",
 				description: "TEST A Biene",
 				descriptionEn: "EN A Flower1",
@@ -82,7 +82,7 @@ const imageList = [
                 sortnumber:6,
 			},
 			{
-				small: "/P1560057.jpg",
+				small: "/P1560057-small.webp",
 				full: "/P1560057.jpg",
 				description: "TEST A Blumen rot",
 				descriptionEn: "EN A Flower1",
@@ -95,7 +95,7 @@ const imageList = [
                 sortnumber:7,
 			},
 			{
-				small: "/P1560061.jpg",
+				small: "/P1560061-small.webp",
 				full: "/P1560061.jpg",
 				description: "TEST A Blumen rosa",
 				descriptionEn: "EN A Flower1",
@@ -108,7 +108,7 @@ const imageList = [
                 sortnumber:8,
 			},
 			{
-				small: "/P1560072.jpg",
+				small: "/P1560072-small.webp",
 				full: "/P1560072.jpg",
 				description: "TEST A Blumen",
 				descriptionEn: "EN A Flower1",
@@ -121,7 +121,7 @@ const imageList = [
                 sortnumber:9,
 			},
 			{
-				small: "/P1560079.jpg",
+				small: "/P1560079-small2.webp",
 				full: "/P1560079.jpg",
 				description: "TEST A Haus und Blumen",
 				descriptionEn: "EN A Flower1",
@@ -134,7 +134,7 @@ const imageList = [
                 sortnumber:10,
 			},
 			{
-				small: "/P1560082.jpg",
+				small: "/P1560082-small2.webp",
 				full: "/P1560082.jpg",
 				description: "TEST A Haus und gelbe Blumen",
 				descriptionEn: "EN A Flower1",
@@ -147,9 +147,9 @@ const imageList = [
                 sortnumber:11,
 			},
 			{
-				small: "/P2535145-1.jpg",
-				full: "/P2535145-1.jpg",
-				description: "TEST A Gang 2",
+				small: "/P1560061-small.webp",
+				full: "/P1560061.jpg",
+				description: "Rosen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
 			 	alt:"Alt Gang 2",

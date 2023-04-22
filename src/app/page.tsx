@@ -84,7 +84,8 @@ export default function Page() {
   )
 }
 
-
+/*
+*a* nicht erlaubt!!
 export const metadata = {
   title: 'App directory',
-}
+} */

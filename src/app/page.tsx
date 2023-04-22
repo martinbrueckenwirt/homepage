@@ -65,11 +65,11 @@ export default function Page() {
           
             <div >
                  <Image 
-                    src= {"/P2535145-1-small2.webp"}
-                    alt={"test1"}
+                    src= {"/P2535132-1.webp"}
+                    alt={"test volle größe"}
                     quality = {80}
-                    width = {128}
-                    height ={96} 
+                    width = {1256} 
+                    height ={600} 
                     /*fill */
                 />
             </div>

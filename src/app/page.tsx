@@ -65,9 +65,9 @@ export default function Page() {
           
             <div >
                  <Image 
-                    src= {image.small}
-                    alt={image.alt}
-                    quality = {30}
+                    src= {"/P2535145-1-small2.webp"}
+                    alt={"test"}
+                    quality = {80}
                     width = {128}
                     height ={96} 
                     /*fill */

@@ -11,22 +11,25 @@
 import styles from "../components/gallery.module.css"
 import Image from "next/image"
 import { useState, useEffect } from "react";
-import getImageList from "../functions/getImageList"
+/*import getImageList from "../functions/getImageList" */
 import Modal from "../components/modal"
+import imageList from "../../data/image";
 
 
 
 
 const Gallery = (props)  => {
  
-    const[clickedImage,setClickedImage] = useState(null);
-    const[currentIndex, setCurrentIndex] =useState(0);
+   /* const[clickedImage,setClickedImage] = useState(null);
+    const[currentIndex, setCurrentIndex] =useState(0); */
          
     let gridImages =[]; /*Liste der anzuzeigenden Bilder */
     let type = props.id;
     let resultGridImages = [];
-    resultGridImages =getImageList(type);
-    gridImages = resultGridImages.slice(); /*Duplikat Desktopansicht */
+    gridImages = imageList[0].images;
+    /*gridImages =getImageList(type); */
+   /* resultGridImages =getImageList(type);
+   /* gridImages = resultGridImages.slice(); /*Duplikat Desktopansicht */
  
     const lengthImageGrid = gridImages.length;
 
@@ -39,7 +42,7 @@ const Gallery = (props)  => {
       
     
 
-
+/*
     useEffect(() => {
         if ((!clickedImage) && (gridImages[0])) {
             setClickedImage(gridImages[0].full)
@@ -48,16 +51,16 @@ const Gallery = (props)  => {
         }
            
 },[currentIndex, clickedImage]);
+*/
 
-
-      const clickHandler = (image, index) => {
+      /*const clickHandler = (image, index) => {
         /* Klick auf Desktop */
-        setCurrentIndex(index);
+  /*      setCurrentIndex(index);
         setClickedImage(image);
     
         };
 
-      
+    */  
               
 
     const handleClickNext = () =>{
@@ -108,12 +111,12 @@ const Gallery = (props)  => {
 /*image fill; der A boolean that causes the image to fill the parent element instead of setting width and height.
 The parent element must assign position: "relative", position: "fixed", or position: "absolute" style.*/
 
-
+/*entfernt */
 function checkIsClicked(index) { 
     let result = false
-    if (index == currentIndex){
+ /*   if (index === currentIndex){
          result = true 
-    }
+    } */
   
      return result    
 }
@@ -128,12 +131,9 @@ return(
         {gridImages.map((image, index) => (
              <div className ={styles.firstRun}
                 key={index}
-                onClick={() => {
-                        clickHandler(image.full,index);
-                    }
-                }
+              
              > 
-            <div className ={checkIsClicked(index) ? styles.gridItem : styles.red}>
+            <div >
                  <Image 
                     src= {image.small}
                     alt={image.alt}
@@ -145,16 +145,7 @@ return(
             </div>
             </div>))
         }
-        {clickedImage && (
-        <Modal 
-            clickedImage={clickedImage} 
-            handleClickNext={handleClickNext}
-            handleClickPrev={handleClickPrev}
-            setClickedImage={setClickedImage}
-            type={type}
-        />)
-
-        }
+        
 </div>
 
 </div>

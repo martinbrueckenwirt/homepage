@@ -67,9 +67,10 @@ export default function Page() {
                  <Image 
                     src= {"/P2535132-1.webp"}
                     alt={"test volle größe"}
+                    priority= {false}
                     quality = {80}
-                    width = {1256} 
-                    height ={600} 
+                    width = {1920} 
+                    height ={1200} 
                     /*fill */
                 />
             </div>

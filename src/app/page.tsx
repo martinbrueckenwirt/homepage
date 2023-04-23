@@ -13,11 +13,11 @@ import imageList from "../../data/image";
 import styles from "../components/gallery.module.css"
 import Image from "next/image"
 
-
 export default function Page() {
    const { t, lang } = useTranslation('common')
   const title = t('title')
   const menueAppartement = t('menue')
+
   let gridImages =[]; /*Liste der anzuzeigenden Bilder */
   gridImages = imageList[0].images;
   let image = gridImages[0];
@@ -50,6 +50,8 @@ export default function Page() {
       <ClientCode />
 
       <p></p>
+
+       src= {"/P2535132-1.webp"}
 */
 
   return (
@@ -69,6 +71,14 @@ export default function Page() {
                     alt={"test volle größe"}
                     priority= {false}
                     quality = {80}
+                    width = {1920} 
+                    height ={1200} 
+                    /*fill */
+                />
+
+<img 
+                    src= {"/P2535132-1.webp"}
+                    alt={"image attribute"}
                     width = {1920} 
                     height ={1200} 
                     /*fill */

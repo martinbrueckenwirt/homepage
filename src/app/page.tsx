@@ -67,7 +67,7 @@ export default function Page() {
           
             <div >
                  <Image 
-                    src= {"/P1560079.jpg"}
+                    src= {"/P1560079.JPG"}
                     alt={"test volle größe"}
                     priority= {false}
                     quality = {80}

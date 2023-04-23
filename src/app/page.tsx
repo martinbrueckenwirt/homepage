@@ -67,7 +67,7 @@ export default function Page() {
           
             <div >
                  <Image 
-                    src= {"/P2535132-1.webp"}
+                    src= {"/P1560079.jpg"}
                     alt={"test volle größe"}
                     priority= {false}
                     quality = {80}
@@ -76,8 +76,18 @@ export default function Page() {
                     /*fill */
                 />
 
-<img 
+<Image 
                     src= {"/P2535132-1.webp"}
+                    alt={"test webp"}
+                    priority= {false}
+                    quality = {80}
+                    width = {1920} 
+                    height ={1200} 
+                    /*fill */
+                />
+
+<img 
+                    src= {"/P2535132-1.jpg"}
                     alt={"image attribute"}
                     width = {1920} 
                     height ={1200} 

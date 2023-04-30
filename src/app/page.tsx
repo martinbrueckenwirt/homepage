@@ -59,8 +59,6 @@ export default function Page() {
     <img
     src= {'/p1560079.jpg'}
                     alt={'test volle größe'}
-                    priority= {false}
-                    quality = {80}
                     width = {1920} 
                     height ={1200} 
      />

@@ -56,7 +56,7 @@ export default function Page() {
          </Link>
       </div>
 
-    <Image
+    <img
     src= {'/p1560079.jpg'}
                     alt={'test volle größe'}
                     priority= {false}

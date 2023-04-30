@@ -5,7 +5,7 @@ module.exports =
    nextTranslate({
   experimental: { appDir: true},
   
-},
+}
 )
 
 

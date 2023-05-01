@@ -8,7 +8,12 @@ export function middleware(request: NextRequest) {
   request.nextUrl.searchParams.set('lang', locale)
   
   console.log('*********Middleware request.nextURL vorher',request); 
-    if (request.nextUrl.pathname.startsWith('/_next/image')){
+    if (
+      request.nextUrl.pathname.startsWith('/_next') || 
+      request.nextUrl.pathname.includes('/api/') ||
+      /\.(.*)$/.test(request.nextUrl.pathname)
+      )
+    {
       console.log('*-*-*-*-*-*-Middleware request.nextURL -Treffer')
       return}
 

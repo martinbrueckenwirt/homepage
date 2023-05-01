@@ -3,6 +3,7 @@ import useTranslation from 'next-translate/useTranslation'
 import ClientCode from '../components/client-code'
 import Trans from 'next-translate/Trans'
 import Image from "next/image"
+import Gallery from "../components/gallery"
 
 export default function Page() {
   const { t, lang } = useTranslation('common')
@@ -60,10 +61,14 @@ export default function Page() {
     src= {'/p1560079a.jpg'}
                     alt={'test volle größe'}
                     
-                    width = {1920} 
-                    height ={1200} 
+                    width = {1000} 
+                    height ={800} 
+                    
      />
     
+    <Gallery
+    id='typeA'
+    />
     </>
   )
 }

@@ -3,17 +3,13 @@ import useTranslation from 'next-translate/useTranslation'
 import ClientCode from '../components/client-code'
 import Trans from 'next-translate/Trans'
 import Image from "next/image"
-import Gallery from "../components/gallery"
+import Gallery from "../components/gallery_a"
 
 export default function Page() {
   const { t, lang } = useTranslation('common')
- 
-
-  console.log('app-page lang ', lang);
-  const title = t('title')
+   const title = t('title')
   const menueAppartement = t('menue')
-  console.log('***************Menu ', menueAppartement);
-  
+   
 
   return (
     <>
@@ -67,7 +63,7 @@ export default function Page() {
      />
     
     <Gallery
-    id='typeA'
+    
     />
     </>
   )

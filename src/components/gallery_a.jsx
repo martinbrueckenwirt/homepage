@@ -14,19 +14,25 @@ import { useState, useEffect } from "react";
 import getImageList from "../functions/getImageList"
 import Modal from "../components/modal"
 
+function getInitialImages() {
+  let type = "typeA";
+     var resultGridImages = [];
+     resultGridImages=getImageList(type); 
+     /*console.log('getstatic  ',resultGridImages); */
+     return resultGridImages
+   }
 
 
 
-const GalleryA = (props)  => {
+const GalleryA = ()  => {
  
     const[clickedImage,setClickedImage] = useState(null);
     const[currentIndex, setCurrentIndex] =useState(0);
-    console.log(props);
-    let imageList = [];
-    imageList = props.resultGridImages;
+    /*console.log('im Haupt'); */
     let gridImages =[]; /*Liste der anzuzeigenden Bilder */
+       gridImages = getInitialImages();
     
-    console.log(imageList);
+    /*console.log(gridImages); */
     /*gridImages = imageList.slice(); /*Duplikat Desktopansicht */
  
     const lengthImageGrid = gridImages.length;
@@ -152,7 +158,7 @@ return(
             handleClickNext={handleClickNext}
             handleClickPrev={handleClickPrev}
             setClickedImage={setClickedImage}
-            type={type}
+            type='typeA'
         />)
 
         }
@@ -166,16 +172,6 @@ return(
 
 
 
-export function getStaticProps(context) {
- let type = "typeA";
-    var resultGridImages = [];
-    resultGridImages=getImageList(type); 
-    console.log('getstatic  ',resultGridImages);
-    return {
-      props: {
-        resultGridImages,
-      },
-    };
-  }
+
 
   export default GalleryA;

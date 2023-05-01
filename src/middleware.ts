@@ -6,10 +6,16 @@ import i18n from '../i18n'
 export function middleware(request: NextRequest) {
   const locale = request.nextUrl.locale || i18n.defaultLocale
   request.nextUrl.searchParams.set('lang', locale)
-  /*console.log('Middleware   request ',request); */
-  console.log('Middleware   request.nextURL',request.nextUrl.href); 
+  
+  console.log('*********Middleware request.nextURL vorher',request); 
+    if (request.nextUrl.pathname.startsWith('/_next/image')){
+      console.log('*-*-*-*-*-*-Middleware request.nextURL -Treffer')
+      return}
+
+    /*console.log('Middleware   request ',request); */
+  console.log('---------Middleware request.nextURL nachher',request); 
   request.nextUrl.href = request.nextUrl.href.replace(`/${locale}`, "")
-  console.log('Middleware   request.nextURL--------',request.nextUrl.href); 
+ /* console.log('Middleware   request.nextURL--------',request.nextUrl.href); */
   return NextResponse.rewrite(request.nextUrl)
 
 }

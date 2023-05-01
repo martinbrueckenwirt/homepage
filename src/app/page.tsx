@@ -56,9 +56,10 @@ export default function Page() {
          </Link>
       </div>
 
-    <img
-    src= {'/p1560079.jpg'}
+    <Image
+    src= {'/p1560079a.jpg'}
                     alt={'test volle größe'}
+                    
                     width = {1920} 
                     height ={1200} 
      />

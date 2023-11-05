@@ -1,6 +1,7 @@
 module.exports = {
   locales: ['en', 'de', 'it'],
-  defaultLocale: 'en',
+  defaultLocale: 'de',
+  loader: false, 
   pages: {
     '*': ['common'],
     '/': ['home'],
@@ -8,4 +9,6 @@ module.exports = {
     '/apartments': ['apartments'],
     '/apartments/gartenblick': ['apartments']
   },
+  loadLocaleFrom: async (locale, namespace) =>
+  import(`./locales/${locale}/${namespace}`).then((r) => r.default),
 }

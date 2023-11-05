@@ -1,17 +1,15 @@
 import Link from 'next/link'
+import useTranslation from 'next-translate/useTranslation'
 import ClientCode from '../components/client-code'
-import getT from 'next-translate/getT'
+import Trans from 'next-translate/Trans'
+import Image from "next/image"
+import Gallery from "../components/gallery_a"
 
-
-
-const Page = (props) => {
-  const {  lang, title, menueAppartement } = props;
-  console.log('ooooooooolang ', lang);
-  console.log('ooooooooo ', props);
-  console.log('app-page lang ', title);
-
-  console.log('***************Menu ', menueAppartement);
-  
+export default function Home() {
+  const { t, lang } = useTranslation('common')
+   const title = t('title')
+  const menueAppartement = t('menue')
+   
 
   return (
     <>
@@ -55,40 +53,23 @@ const Page = (props) => {
          </Link>
       </div>
 
+    <Image
+    src= {'/p1560079a.jpg'}
+                    alt={'test volle größe'}
+                    
+                    width = {1000} 
+                    height ={800} 
+                    
+     />
+    
+    <Gallery
+    
+    />
     </>
   )
 }
 
 
-
-/* *a* metadata */
 export const metadata = {
   title: 'App directory',
 }
-
-
-export async function getStaticProps({locale}) {
-  /*alle zu uebersetzenden Teile einsetzen */
-  console.log('---------app-page getStaticProps lang 1', locale);
-  /*const { t, lang } = useTranslation('common') */
-  const t = await getT(locale,'common')
-    console.log('---------app-page getStaticProps lang ', locale);
-    const title = t('title')
-    const menueAppartement = t('menue')
-  
-    /*const title  ='mytitle';
-    const menueAppartement = 'hier ist das Menue' */
-    
-  
-  return{
-      props:{
-        locale,
-        title,
-        menueAppartement
-      },
-  };
-
-};
-
-
-export default Page;

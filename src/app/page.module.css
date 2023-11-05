@@ -1,0 +1,167 @@
+   
+ /*top-bar */   
+    .a, .a:hover{
+    text-decoration:none;
+    }
+    
+    .topBar{
+        display: flex;
+        position: fixed;
+        height: 45px;
+        padding: 10px 25px;
+        background: blue;
+    }
+
+    .topBarTransparent{
+        display: flex;
+        position: fixed;
+        height: 45px;
+        padding: 10px 25px;
+        background: rgb(200, 255, 0);
+    }
+    
+    .telefoneMailWrapper{
+        display: flex;
+        /*min-width: 400px;
+        max-width: 400px; */
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: flex-start;
+    }
+    
+    .contact{
+        display: flex;
+        padding-left: 10px;
+    }
+    .contactSpacer{
+        padding-left: 8px;
+    }
+    
+    .languages{
+        display: flex;
+        align-items: center;
+        position:fixed;
+        height:30px;
+
+        right: 10px;
+        top:25px;  /*unsauber - keine saubere vertikale zentrierung *a* */
+        background: red
+        
+    }
+    
+    .languagesInRow{
+        display: flex;
+        justify-content:center;
+        width: 80px;
+        padding-left:0px;
+        list-style-type:none;
+       }
+    
+    
+    
+    .languageChoser{
+        margin-left: 5px;
+        padding: 0;          
+    }
+    
+    
+    /* navbar */
+    .navbar{
+        background :lime;
+        position: fixed;
+        top:80px;
+        height: 50px;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+    }
+    .navbarTransparent{
+        background: red; 
+        position: fixed;
+        top:80px;
+        height: 50px;
+        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav .a{
+        color: #fff
+    }
+    
+    .nav .a:hover{
+            color: yellow; 
+    }
+    
+    .logo{
+        display: flex;
+         
+    }
+    
+    .logo a{
+        display:flex;
+        align-items: center;
+        font-size: 50px;
+    }
+    
+    .logo a:hover{
+        color:#fff;
+    }
+    
+   
+    
+    .menu{
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style:none;
+    }
+    
+    .menu li{
+            margin-left: 20px;
+    }
+
+      
+    .toggle{
+        display: none;
+        position:fixed;
+        right: 10px;
+        width: 60px;
+    }
+    
+    .dropdownToopen{
+        display:block;
+    }
+
+    .dropdownToclose{
+        display:block;
+    }
+    .dropdownTocloseInvisible{
+        display:none;
+    }
+
+  
+    
+    @media screen and (max-width: 600px){
+        .nav{
+            display: block;
+            position: relative;
+            padding: 15px 20px;
+        }
+    
+        .menu{
+            margin-top: 15px;
+            display:none;
+        }
+        .menu.active, .toggle{
+            display: block;
+        }
+    
+        .nav .toggle{
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color:red;
+        }
+    }

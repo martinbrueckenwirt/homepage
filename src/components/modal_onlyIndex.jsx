@@ -2,10 +2,9 @@
 import Image from "next/image"
 import getImageToEnlarge from "../functions/getImageToEnlarge.ts"
 import {useEffect, useState} from "react" 
-import { clear } from "console";
 
 
-const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage, type}) =>{
+const Modal = ({clickedImage, handleClickNext, handleClickPrev, imageList}) =>{
     const [dataReceived, setDataReceived] = useState(null);
     const [altAttribut, setAltAttribut] = useState(null);
     const [desc,setDesc] =useState(null);
@@ -30,7 +29,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
         let response =[]
         async function getData() {
             
-            let data = await getImageToEnlarge(clickedImage,type)
+            let data = await getImageToEnlarge(imageList,clickedImage)
             .then((response) => mydata={...response})
             .then(mydata => {
        
@@ -49,7 +48,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
   
     const handleCloseClick = (e) => {
        if(e.target.className ==="close"){
-            	setClickedImage(null);
+            	setClickedImage(false);
         }
     };
 
@@ -120,9 +119,5 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
    return (<></>)
 
 }
-
-
-
-
 
 export default Modal

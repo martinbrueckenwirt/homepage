@@ -1,0 +1,224 @@
+
+
+import styles from "../components/gallery.module.css"
+import Image from 'next/image'
+import Gallery from '../components/gallery_a_onlyIndex.tsx' 
+import PricingTable from '../components/pricingTable'
+import {h1Font, h2Font, h3Font, heroFont, textFont, footerFont} from '../functions/fonts'
+import pagestyles  from './page.module.css'
+
+
+export default function Home() {
+   
+  return (
+     <>
+     <div className ={`${heroFont.className} ${pagestyles.heroText}`} > 
+      Spartan 
+      <br></br>
+      Urlaub in den Bergen! 
+      <br></br>
+      </div>
+      
+      <div className={`${heroFont.className} ${pagestyles.h1Text}`} > 
+      Spartan Test Fonts 
+      <br></br>
+      Text H1
+      <br></br>
+ </div>
+ <div className={`${heroFont.className} ${pagestyles.h2Text}`} > 
+      Spartan <br></br>Das ist eine längere Überschrift in H2-Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+ <div className={`${heroFont.className} ${pagestyles.h3Text}`} > 
+      Spartan <br></br>Das ist eine längere Überschrift in H3-Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+ <div className={`${heroFont.className} ${pagestyles.normalText}`} > 
+      Spartan <br></br>Das ist eine längere Überschrift in normal -Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ 
+ <hr className ="default"></hr>
+
+ <div className={`${h1Font.className} ${pagestyles.heroText}`} > 
+ <br></br>
+      Montserrat  
+      <br></br>
+      Urlaub in den Bergen! 
+      <br></br>
+      <br></br>
+
+ </div>
+ 
+ <div className={`${h1Font.className} ${pagestyles.h1Text}`} > 
+     Montserrat H1-Text
+      <br></br>
+      Lorem ipsum dolor sit
+      <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h2Font.className} ${pagestyles.h2Text}`} > 
+      Montserrat <br></br>Das ist eine längere Überschrift in H2-Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h2Font.className} ${pagestyles.h3Text}`} > 
+      Montserrat <br></br>Das ist eine längere Überschrift in H3-Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h2Font.className} ${pagestyles.normalText}`} > 
+      Montserrat <br></br>Das ist eine längere Text in normalText
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <hr className ="default"></hr>
+
+ <div className={`${h3Font.className} ${pagestyles.heroText}`} > 
+      Open Sans <br></br> Urlaub in den Bergen! 
+           <br></br>
+          
+
+ </div>
+
+ <div className={`${h3Font.className} ${pagestyles.h1Text}`} > 
+      Open Sans <br></br> als H2st eine längere Überschrift in H1Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+ <div className={`${h3Font.className} ${pagestyles.h2Text}`} > 
+      Open Sans <br></br> als H2st eine längere Überschrift in H2Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h3Font.className} ${pagestyles.h3Text}`} > 
+      Open Sans <br></br>Das ist eine längere Überschrift in H3Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h3Font.className} ${pagestyles.normalText}`} > 
+      Open Sans <br></br>Das ist eine längere Text in normalText
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+ 
+ <hr className ="default"></hr>
+
+ <div className={`${textFont.className} ${pagestyles.heroText}`} > 
+ Quicksand Hero <br>
+ </br>
+ Urlaub in den Bergen! 
+  <br></br>
+</div>
+
+<div className={`${textFont.className} ${pagestyles.h1Text}`} > 
+ Quicksand H1 Text orem ipsum dolor<br>
+ </br>
+ <br></br>
+ </div>
+
+ <div className={`${textFont.className} ${pagestyles.h2Text}`} > 
+ Quicksand H2 Text orem ipsum dolor<br>
+ </br>
+ <br></br>
+ </div>
+
+ <div className={`${textFont.className} ${pagestyles.h3Text}`} > 
+ Quicksand H3 Text orem ipsum dolor<br>
+ </br>
+ <br></br>
+ </div>
+
+ <div className={`${textFont.className} ${pagestyles.normalText}`} > 
+ Quicksand TEXT-BLOCK normaText<br>
+ </br>
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
+ sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      <br></br>
+      <br></br>
+      <br></br>
+
+ </div>
+
+ <hr className ="default"></hr>
+ <div className={`${footerFont.className} ${pagestyles.footerText}`} > 
+       <br></br>Das ist der Footer footer -Text
+           <br></br>
+           Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+                 <br></br>
+      <br></br>
+
+ </div>
+
+ <div className={`${h1Font.className} ${pagestyles.h1Text}`}> 
+      <PricingTable
+      type="apartmentA"
+      season="winter"
+      />
+      </div>
+
+
+      <div id="grid" className={styles.gallerygridcontainer}>
+      <Image 
+                    src= "/P2535132-1.webp"
+                    alt='test mit webp'
+                    priority= {false}
+                    quality = {80}
+                    width = {400} 
+                    height ={300} 
+                    /*fill */
+                />
+
+            <Gallery /> 
+
+        </div >
+
+
+
+</>
+    
+  )
+}
+
+

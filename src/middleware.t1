@@ -8,15 +8,18 @@ export function middleware(request: NextRequest) {
   request.nextUrl.searchParams.set('lang', locale)
   
   /*omit images and parts of next */
-    if (
+  /* if (
       request.nextUrl.pathname.startsWith('/_next') || 
       request.nextUrl.pathname.includes('/api/') ||
       /\.(.*)$/.test(request.nextUrl.pathname)
       )
     {
+      console.log('Middleware im if ',request.nextUrl.href);
       return
-    }
+    }*/
+  
   request.nextUrl.href = request.nextUrl.href.replace(`/${locale}`, "")
+  console.log('Middleware  ######',request.nextUrl.href);
   return NextResponse.rewrite(request.nextUrl)
 
 }

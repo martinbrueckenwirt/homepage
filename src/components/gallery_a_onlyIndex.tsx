@@ -12,7 +12,7 @@ import styles from "../components/gallery.module.css"
 import Image from "next/image"
 import { useState, useEffect } from "react";
 import getImageList from "../functions/getImageList"
-import Modal from "../components/modal"
+import Modal from "./modal_onlyIndex"
 
 function getInitialImages() {
   let type = "typeA";
@@ -26,7 +26,7 @@ function getInitialImages() {
 
 const GalleryA = ()  => {
  
-    const[clickedImage,setClickedImage] = useState(null);
+    const[clickedImage,setClickedImage] = useState(false);
     const[currentIndex, setCurrentIndex] =useState(0);
     /*console.log('im Haupt'); */
     let gridImages =[]; /*Liste der anzuzeigenden Bilder */
@@ -38,19 +38,9 @@ const GalleryA = ()  => {
     const lengthImageGrid = gridImages.length;
 
 
-    
- 
-
- 
-
-      
-    
-
-
     useEffect(() => {
         if ((!clickedImage) && (gridImages[0])) {
-            setClickedImage(gridImages[0].full)
-            setCurrentIndex(0);
+              setCurrentIndex(0);
 
         }
            
@@ -60,7 +50,7 @@ const GalleryA = ()  => {
       const clickHandler = (image, index) => {
         /* Klick auf Desktop */
         setCurrentIndex(index);
-        setClickedImage(image);
+        setClickedImage(true);
     
         };
 
@@ -76,15 +66,9 @@ const GalleryA = ()  => {
             /*Versuch über das letzte Element hinauszublättern ==> Zurücksetzen an den Anfang*/
             setCurrentIndex(0);
             const firstImage = gridImages[0].full;
-            setClickedImage(firstImage);
-            return;
+        return;
         }
         const newIndex = currentIndex +1;
-        const nextImage = gridImages.filter((image) => {
-            return gridImages.indexOf(image) === newIndex;
-        });
-        const displayNextImage = nextImage[0].full;
-        setClickedImage(displayNextImage);
         setCurrentIndex(newIndex);
      }
 
@@ -98,16 +82,9 @@ const GalleryA = ()  => {
         /*Versuch über das 1. Element hinauszublättern ==> Zurücksetzen an das Ende*/
         if (currentIndex === 0){
             setCurrentIndex(lengthImageGrid-1)
-            const lastImage = gridImages[lengthImageGrid-1].full;
-            setClickedImage(lastImage);
             return;
         }
         const newIndex = currentIndex-1;
-        const prevImage = gridImages.filter((image) => {
-            return gridImages.indexOf(image) === newIndex;
-        });
-        const displayPrevImage = prevImage[0].full;
-        setClickedImage(displayPrevImage);
         setCurrentIndex(newIndex);
     }
 
@@ -129,7 +106,7 @@ function checkIsClicked(index) {
 return(
 <div>
     
-<div id="grid" className={styles.gallerygridcontainer}>
+<div className={styles.gallerygridcontainer}>
    
       
         {gridImages.map((image, index) => (
@@ -154,11 +131,11 @@ return(
         }
         {clickedImage && (
         <Modal 
-            clickedImage={clickedImage} 
+            clickedImage={currentIndex} 
             handleClickNext={handleClickNext}
             handleClickPrev={handleClickPrev}
-            setClickedImage={setClickedImage}
-            type='typeA'
+            imageList = {gridImages}
+           
         />)
 
         }

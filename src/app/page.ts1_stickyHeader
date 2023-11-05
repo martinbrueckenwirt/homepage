@@ -14,9 +14,7 @@ export default function Home() {
 
     const [clientWindowHeight, setClientWindowHeight] = useState(0);
     const [topTransparent, setTopTransparent] = useState(false);
-    const [burgerClass, setBurgerClass] = useState("burgerbarUnclicked");
-    const [burgerMenueClass, setBurgerMenueClass] = useState("menuHidden");
-    const [isBurgerMenueClicked, setIsBurgerMenueClicked] = useState(false);
+    const [showDropdownMenue, setShowDropdownMenue] = useState(false);
   
 
     useEffect(() => {
@@ -39,19 +37,11 @@ export default function Home() {
        
     }, [clientWindowHeight]);
 
-
-    // toggle burge Menue change
-
     const handleClickMenueToggle = (event : MouseEvent<HTMLDivElement, MouseEvent>) => {
-        if (!isBurgerMenueClicked){
-            setBurgerClass("burgerbarClicked")
-            setBurgerMenueClass("menueVisible")
-        }       
-        else{
-            setBurgerClass("burgerbarUnclicked")
-            setBurgerMenueClass("menueHidden")
-        }
-     }
+               
+        setShowDropdownMenue(!showDropdownMenue);
+      
+    }
 
     return (
 
@@ -105,7 +95,7 @@ export default function Home() {
             height ={30}
             />
         </a>
-======================================================================
+
         <div className = {styles.toggle}
             onClick={handleClickMenueToggle}>
             showDropdownMenue === false 

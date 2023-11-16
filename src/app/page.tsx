@@ -4,7 +4,8 @@ import Image from 'next/image'
 import styles  from './page.module.css'
 import { useEffect, useState } from "react";
 import React from 'react';
-import {MouseEvent} from 'react';
+import { MouseEvent } from 'react';
+import { GetBurgerImageProps } from '../components/types';
 
 /*<!--*a* href austauschen--> */
 
@@ -30,7 +31,6 @@ export default function Home() {
 
       useEffect(() => {
         let cursorMovement = clientWindowHeight;
-        console.log(cursorMovement);
         if (cursorMovement > 50){
             setTopTransparent(false);
         }
@@ -42,7 +42,9 @@ export default function Home() {
 
     // toggle burge Menue change
 
-    const handleClickMenueToggle = (event : MouseEvent<HTMLDivElement, MouseEvent>) => {
+
+    const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement, React.MouseEvent<Element, globalThis.MouseEvent>>) => {
+        console.log('im handle click');
         if (!isBurgerMenueClicked){
             setBurgerClass("burgerbarClicked")
             setBurgerMenueClass("menueVisible")
@@ -51,7 +53,30 @@ export default function Home() {
             setBurgerClass("burgerbarUnclicked")
             setBurgerMenueClass("menueHidden")
         }
-     }
+    }
+    
+ 
+    const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
+        /*component Startmit Großbuchstabe*/
+
+        let mySrc: string = "/open_45x45.png";
+        console.log(Props.isMenueVisible);
+        if (Props.isMenueVisible === "menueHidden") {
+              mySrc = "/open_45x45.png"
+            }
+        else if (Props.isMenueVisible === "menueVisible") {
+            mySrc = "/close_45x45.png"
+        }
+   
+        return (<Image className={styles.dropdownToopen}
+            
+                    src={mySrc}
+                            height = {45}
+                            width={45}
+                            alt= "öffnen"
+                    />)
+
+    }
 
     return (
 
@@ -105,24 +130,14 @@ export default function Home() {
             height ={30}
             />
         </a>
-======================================================================
+
         <div className = {styles.toggle}
-            onClick={handleClickMenueToggle}>
-            showDropdownMenue === false 
-             ?  <Image className = {`${styles.dropdownToopen} ${styles.dropdownTocloseInvisible}`}
-                    src = "/open_45x45.png"
-                    height = {45}
-                    width={45}
-                    alt= "öffnen"
-                />
-            :   
-            <Image className = {styles.dropdownToclose}
-                    src = "/close_45x45.png"
-                    height = {45}
-                    width={45}
-                    alt= "schließen"
-                />
-             
+                    onClick={handleClickMenueToggle}>
+                    
+                    <input type='checkbox' id="navBurgerCheckbox" className={styles.invisible}/>
+                    <label htmlFor="navBurgerCheckbox" >
+                        <GetBurgerImage isMenueVisible={burgerMenueClass} />
+                    </label>
             
         </div>
 

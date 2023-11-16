@@ -6,17 +6,19 @@
     
     .topBar{
         display: flex;
+        justify-content: space-between;
         position: fixed;
         height: 45px;
-        padding: 10px 25px;
+        width:100%;
         background: blue;
     }
 
     .topBarTransparent{
         display: flex;
+        justify-content: space-between;
         position: fixed;
+        width:100%;
         height: 45px;
-        padding: 10px 25px;
         background: rgb(200, 255, 0);
     }
     
@@ -24,6 +26,7 @@
         display: flex;
         /*min-width: 400px;
         max-width: 400px; */
+        padding-left: 1rem;
         flex-direction: row;
         flex-wrap: wrap;
         align-items:center;
@@ -32,7 +35,7 @@
     
     .contact{
         display: flex;
-        padding-left: 10px;
+        padding-left: 1rem;
     }
     .contactSpacer{
         padding-left: 8px;
@@ -40,13 +43,10 @@
     
     .languages{
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        position:fixed;
-        height:30px;
-
-        right: 10px;
-        top:25px;  /*unsauber - keine saubere vertikale zentrierung *a* */
-        background: red
+        padding-right: 1rem;
+        background: red;
         
     }
     
@@ -70,19 +70,21 @@
     .navbar{
         background :lime;
         position: fixed;
-        top:80px;
+        top:60px;
         height: 50px;
-        padding: 5px 20px;
+        width: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
     .navbarTransparent{
         background: red; 
         position: fixed;
-        top:80px;
+        top:60px;
         height: 50px;
-        padding: 5px 20px;
+          width: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
     }
     
@@ -95,20 +97,23 @@
     }
     
     .logo{
-        display: flex;
+        padding-left: 1rem;
          
     }
     
-    .logo a{
+    /*.logo a{
         display:flex;
         align-items: center;
         font-size: 50px;
-    }
+    }*/
     
     .logo a:hover{
         color:#fff;
     }
     
+    #navBurgerCheckbox{
+        display: none;
+    }
    
     
     .menu{
@@ -116,6 +121,7 @@
         flex-wrap: wrap;
         align-items: center;
         list-style:none;
+        padding-right: 2rem;
     }
     
     .menu li{
@@ -125,21 +131,18 @@
       
     .toggle{
         display: none;
-        position:fixed;
+        /*position:fixed;
         right: 10px;
-        width: 60px;
+        width: 60px;*/
+        padding-right: 1.5rem;
     }
     
     .dropdownToopen{
         display:block;
     }
 
-    .dropdownToclose{
-        display:block;
-    }
-    .dropdownTocloseInvisible{
-        display:none;
-    }
+    
+    
 
   
     
@@ -154,10 +157,16 @@
             margin-top: 15px;
             display:none;
         }
-        .menu.active, .toggle{
+        .menu.active{
             display: block;
         }
     
+        .toggle{
+            display:block;
+        }
+        .invisible{
+            display: none;
+        }
         .nav .toggle{
             position: absolute;
             top: 15px;

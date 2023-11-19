@@ -5,7 +5,8 @@ import styles  from './page.module.css'
 import { useEffect, useState } from "react";
 import React from 'react';
 import { MouseEvent } from 'react';
-import { GetBurgerImageProps } from '../components/types';
+import { GetBurgerImageProps, BurgerMenueProps } from '../components/types';
+import BurgerMenue from '../components/burgermenue'
 
 /*<!--*a* href austauschen--> */
 
@@ -14,11 +15,11 @@ import { GetBurgerImageProps } from '../components/types';
 export default function Home() {
 
     const [clientWindowHeight, setClientWindowHeight] = useState(0);
-    const [topTransparent, setTopTransparent] = useState(false);
-    const [burgerClass, setBurgerClass] = useState("burgerbarUnclicked");
-    const [burgerMenueClass, setBurgerMenueClass] = useState("menuHidden");
-    const [isBurgerMenueClicked, setIsBurgerMenueClicked] = useState(false);
-  
+    const [topTransparent, setTopTransparent] = useState<boolean>(false);
+    const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
+    const [isBurgerMenueClicked, setIsBurgerMenueClicked]= useState<boolean>(false);
+    const [menueSlide,setMenueSlide]=useState<string> ("unClicked") /*Hilfskonstrukt für Transform des slide-InMenue*/
+   
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -43,16 +44,16 @@ export default function Home() {
     // toggle burge Menue change
 
 
-    const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement, React.MouseEvent<Element, globalThis.MouseEvent>>) => {
-        console.log('im handle click');
-        if (!isBurgerMenueClicked){
-            setBurgerClass("burgerbarClicked")
-            setBurgerMenueClass("menueVisible")
-        }       
-        else{
-            setBurgerClass("burgerbarUnclicked")
-            setBurgerMenueClass("menueHidden")
-        }
+    const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement>) => {
+        event.preventDefault(); /*verhindern, dass event 2x gefired wird */
+         
+        setIsBurgerMenueVisible(!isBurgerMenueVisible);
+        if (isBurgerMenueVisible === true){
+                setMenueSlide("unclicked") /*umgekehrte Darstellung */
+        } 
+        else  setMenueSlide("clicked")
+        console.log('Ende ', ' ',isBurgerMenueVisible, menueSlide);
+       
     }
     
  
@@ -60,11 +61,11 @@ export default function Home() {
         /*component Startmit Großbuchstabe*/
 
         let mySrc: string = "/open_45x45.png";
-        console.log(Props.isMenueVisible);
-        if (Props.isMenueVisible === "menueHidden") {
+       
+        if (Props.burgerMenueVisible === false) {
               mySrc = "/open_45x45.png"
             }
-        else if (Props.isMenueVisible === "menueVisible") {
+        else if (Props.burgerMenueVisible === true) {
             mySrc = "/close_45x45.png"
         }
    
@@ -75,8 +76,9 @@ export default function Home() {
                             width={45}
                             alt= "öffnen"
                     />)
-
     }
+
+
 
     return (
 
@@ -130,16 +132,20 @@ export default function Home() {
             height ={30}
             />
         </a>
-
+        
+        <BurgerMenue visibility = {isBurgerMenueVisible} menueSlide = {menueSlide}/>
+        
         <div className = {styles.toggle}
                     onClick={handleClickMenueToggle}>
                     
                     <input type='checkbox' id="navBurgerCheckbox" className={styles.invisible}/>
                     <label htmlFor="navBurgerCheckbox" >
-                        <GetBurgerImage isMenueVisible={burgerMenueClass} />
+                        <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
                     </label>
+                  
             
         </div>
+       
 
         <ul className = {styles.menu}>
             <li> <a href="#">Apartements</a></li>

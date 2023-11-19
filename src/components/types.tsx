@@ -1,3 +1,8 @@
 export type GetBurgerImageProps = {
-    isMenueVisible: string;
+    burgerMenueVisible: boolean;
+}
+
+export type BurgerMenueProps ={
+    visibility: boolean;  
+    menueSlide:string;
 };

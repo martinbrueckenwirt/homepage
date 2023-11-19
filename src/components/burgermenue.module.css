@@ -1,0 +1,20 @@
+.burgerMenue {
+display:block;
+position: fixed;
+top: 120px;
+background-color: rgb(221, 218, 170);
+height: 200px;
+width: 200px;
+left: -20px;
+list-style: none;
+transform: translateX(200px);
+transition: transform 2s ease-in ;
+
+}
+
+ .burgerMenue.clicked{
+    /*transform: translateX(100px);
+    transition: transform 2s ease-in ; */
+    color: blue;
+}
+

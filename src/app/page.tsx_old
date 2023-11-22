@@ -5,8 +5,9 @@ import styles  from './page.module.css'
 import { useEffect, useState } from "react";
 import React from 'react';
 import { MouseEvent } from 'react';
-import { GetBurgerImageProps} from '../components/types';
-
+import { GetBurgerImageProps, BurgerMenueProps } from '../components/types';
+import BurgerMenue from '../components/burgermenue'
+import burgerstyles from '../components/burgermenue.module.css';
 
 /*<!--*a* href austauschen--> */
 
@@ -69,12 +70,13 @@ export default function Home() {
             mySrc = "/close_45x45.png"
         }
    
-        return (<Image 
-                src={mySrc}
-                height = {45}
-                width={45}
-                alt= "öffnen"
-            />)
+        return (<Image className={styles.dropdownToopen}
+            
+                    src={mySrc}
+                            height = {45}
+                            width={45}
+                            alt= "öffnen"
+                    />)
     }
 
 
@@ -131,18 +133,20 @@ export default function Home() {
             height ={30}
             />
         </a>
-            
+        
+       
         
         <div className = {styles.toggle} onClick={handleClickMenueToggle}>
-            <input type='checkbox' id="navBurgerCheckbox" className={styles.checkboxInvisible}/>
+            <input type='checkbox' id="navBurgerCheckbox" className={styles.invisible}/>
                 <label htmlFor="navBurgerCheckbox" >
                     <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
                 </label>  
             
+                </div>
+        <div className = {`${burgerstyles.burgerMenue} ${menueSlide}`}>        
+            <BurgerMenue visibility = {isBurgerMenueVisible} menueSlide = {menueSlide}/>
         </div>
-     
-                
-        <ul className={styles.menu}>
+        <ul className = {styles.menu}>
             <li> <a href="#">Apartements</a></li>
             <li><a href="#">Cafe</a></li>
             <li><a href="#">über uns</a></li>
@@ -151,20 +155,7 @@ export default function Home() {
         </ul>
 
     </nav>
-{/* burger menue */}
-        <div className={styles.visibility}>
-            <div className={isBurgerMenueVisible === true
-                    ? `${styles.burgerMenue}`
-                    : `${styles.burgerMenueInvisible}`}>
-                <ul >
-                    <li><a href="#">Apartements burger</a></li>
-                    <li><a href="#">Cafe</a></li>
-                    <li><a href="#">über uns</a></li>
-                    <li><a href="#">Kontakt</a></li>
 
-                </ul>
-            </div>
-        </div>
 
     <div className = {styles.content}>
         <p>

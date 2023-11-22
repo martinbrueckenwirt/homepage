@@ -6,9 +6,9 @@ const BurgerMenue = (props:BurgerMenueProps)  => {
 
 if  (props.visibility === true) {
     return(
-        <div className = {`${styles.burgerMenue} ${props.menueSlide}`}>
+        <div >
                 <ul >
-                    <li> <a href="#">Apartements</a></li>
+                    <li> <a href="#">Apartements burger</a></li>
                     <li><a href="#">Cafe</a></li>
                     <li><a href="#">über uns</a></li>
                     <li><a href="#">Kontakt</a></li>

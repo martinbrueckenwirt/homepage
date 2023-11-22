@@ -7,8 +7,13 @@ height: 200px;
 width: 200px;
 left: -20px;
 list-style: none;
+
+transition-delay: 500ms;
+/*transition-property: left;*/
+transition-duration: 3s;
+animation-iteration-count:1;
 transform: translateX(200px);
-transition: transform 2s ease-in ;
+/*transition: transform 2s ease-in-out ; */
 
 }
 
@@ -18,3 +23,11 @@ transition: transform 2s ease-in ;
     color: blue;
 }
 
+.burgerMenue:hover{
+transform: translateY(50px);
+transition-duration: 5s;
+}
+
+.burgerMenueInvisible{
+    display:none;
+}

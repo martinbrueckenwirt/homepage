@@ -76,6 +76,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
     }
     .navbarTransparent{
         background: red; 
@@ -124,16 +125,7 @@
         padding-right: 2rem;
     }
     
-    .burgerMenu{
-        top: 200px;
-        left: 50px;  
-        width: 200px;
-        height: 200px;
-        background-color: rgb(128, 119, 0);
-     
-
-    }
-
+  
     .menu li{
             margin-left: 20px;
     }
@@ -141,44 +133,88 @@
       
     .toggle{
         display: none;
-        /*position:fixed;
-        right: 10px;
-        width: 60px;*/
-        padding-right: 1.5rem;
+        
     }
     
     
+    /*>600px*/
+  .visibility {  
+    display: none;
 
+  }
     
     
 
   
     
-    @media screen and (max-width: 600px){
-        .nav{
+ @media screen and (max-width: 600px){
+     /*   .nav{
             display: block;
             position: relative;
             padding: 15px 20px;
         }
-    
+    */
         .menu{
             margin-top: 15px;
             display:none;
         }
-        .menu.active{
+      /*  .menu.active{
             display: block;
         }
-    
+    */
         .toggle{
-            display:block;
+            display: block;
+            padding-right: 20px;
+            background-color: blue;;
+            
         }
-        .invisible{
+       .checkboxInvisible{
             display: none;
         }
-        .nav .toggle{
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color:red;
+   
+.visibility {  
+    display: block;
+
+  }
+    @keyframes menueSlide {
+    from {left: -150px;}
+    to {left: 5px;}
         }
+
+    .burgerMenue {   
+        display:block;
+        position: fixed;
+        top: 120px;
+        background-color: rgb(240, 175, 175);
+        width: 200px;
+        left: 5px;
+       height: 200px;
+        animation-name:menueSlide;
+        animation-duration:1.5s;
+        }
+
+    .burgerMenue ul {
+        list-style-type: none;
     }
+
+    .burgerMenue >li {
+        padding: 5px;
+        margin: 2px;
+        border: 1px;
+        border-color: black;
+    }
+
+    .burgerMenue li :hover{
+        background-color:blue;
+    }
+
+    .burgerMenue ul a{
+        text-decoration: none;
+    }
+    .burgerMenueInvisible{
+        display:none;
+    }
+}
+
+    
+    

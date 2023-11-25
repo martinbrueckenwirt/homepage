@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import React from 'react';
 import { MouseEvent } from 'react';
 import Navigation from '../components/navigation'
+import ApartmentModule from '../components/apartementModule';
 
 
 
@@ -63,6 +64,9 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
         </p>
 
     </div>
+
+<ApartmentModule type = {'A'} />
+
 
 </>
     )

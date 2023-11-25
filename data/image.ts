@@ -5,6 +5,7 @@ const imageList = [
 			{
 				small: "/P2535132-1-small2.webp",
 				full: "/P2535132-1.jpg",
+				teaser: true,
 				description: "TEST A Gang1 small2",
 				descriptionEn: "EN A Floor",
 				descriptionIt: "IT  A Floor",
@@ -18,6 +19,7 @@ const imageList = [
             {
 				small: "/P2535145-1-small2.webp",
 				full: "/P2535145-1.jpg",
+				teaser: false,
 				description: "TEST A Gang 2 small2",
                 descriptionEn: "EN A Floor 2",
 				descriptionIt: "IT  A Floor 2",
@@ -32,6 +34,7 @@ const imageList = [
 			{
 				small: "/P1470817-small.webp",
 				full: "/P1470817.jpg",
+				teaser: false,
 				description: "TEST A Blumen1 small",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -45,6 +48,7 @@ const imageList = [
 			{
 				small: "/P1540068-small.webp",
 				full: "/P1540068.jpg",
+				teaser: false,
 				description: "TEST A Haus m Blumen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -58,6 +62,7 @@ const imageList = [
 			{
 				small: "/P1550975-small.webp",
 				full: "/P1550975.jpg",
+				teaser: false,
 				description: "TEST A Blumen gelb",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -71,6 +76,7 @@ const imageList = [
 			{
 				small: "/P1560052-small.webp",
 				full: "/P1560052.jpg",
+				teaser: false,
 				description: "TEST A Biene",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -84,6 +90,7 @@ const imageList = [
 			{
 				small: "/P1560057-small.webp",
 				full: "/P1560057.jpg",
+				teaser: false,
 				description: "TEST A Blumen rot",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -97,6 +104,7 @@ const imageList = [
 			{
 				small: "/P1560061-small.webp",
 				full: "/P1560061.jpg",
+				teaser: false,
 				description: "TEST A Blumen rosa",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -110,6 +118,7 @@ const imageList = [
 			{
 				small: "/P1560072-small.webp",
 				full: "/P1560072.jpg",
+				teaser: false,
 				description: "TEST A Blumen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -123,6 +132,7 @@ const imageList = [
 			{
 				small: "/P1560079-small2.webp",
 				full: "/P1560079.jpg",
+				teaser: false,
 				description: "TEST A Haus und Blumen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -136,6 +146,7 @@ const imageList = [
 			{
 				small: "/P1560082-small2.webp",
 				full: "/P1560082.jpg",
+				teaser: false,
 				description: "TEST A Haus und gelbe Blumen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -149,6 +160,7 @@ const imageList = [
 			{
 				small: "/P1560061-small.webp",
 				full: "/P1560061.jpg",
+				teaser: false,
 				description: "Rosen",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -169,6 +181,7 @@ const imageList = [
 			{
 				small: "/P2535150-HDR-1.jpg",
 				full: "/P2535150-HDR-1.jpg",
+				teaser: true,
 				description: "TEST B Gang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -187,6 +200,7 @@ const imageList = [
 			{
 				small: "/P2535150-HDR-1.jpg",
 				full: "/P2535150-HDR-1.jpg",
+				teaser: false,
 				description: "TEST C Gang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -205,6 +219,7 @@ const imageList = [
 			{
 				small: "/P2535150-HDR-1.jpg",
 				full: "/P2535150-HDR-1.jpg",
+				teaser: false,
 				description: "TEST DGang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -223,6 +238,7 @@ const imageList = [
 			{
 				small: "/P2535150-HDR-1.jpg",
 				full: "/P2535150-HDR-1.jpg",
+				teaser: false,
 				description: "TEST E Gang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",

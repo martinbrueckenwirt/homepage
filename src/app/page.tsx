@@ -65,7 +65,7 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 
     </div>
 
-<ApartmentModule type = {'A'} />
+<ApartmentModule type = {'typeA'} />
 
 
 </>

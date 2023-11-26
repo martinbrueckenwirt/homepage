@@ -2,8 +2,8 @@ export type AppartmentModuleProps = {
     type: string;
 }
 
-export type AppartementTeaserImage = {
-    image:string, 
+export interface IAppartementTeaserImage  {
+    imageName:string, 
     description : string,
     alt: string,
     copyright: string,

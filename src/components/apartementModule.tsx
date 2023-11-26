@@ -1,5 +1,5 @@
 
-import styles  from './apartmentOverview.module.css';
+import styles  from './apartmentModule.module.css';
 import {AppartmentModuleProps, IAppartementTeaserImage} from './types';
 import getApartmentTeaser from '../functions/getApartmentTeaser';
 import Image from 'next/image'
@@ -14,8 +14,10 @@ myImage = getApartmentTeaser(props);
 
 return (
 <>
-<div>hier ist das Apartment {props.type}</div>
-<div> das ist das Bild {myImage.imageName}
+
+<div className={styles.apartmentCard}> hier startet die Card
+
+<div > das ist das Bild {myImage.imageName}
 
 <Image 
 src = {myImage.imageName}
@@ -26,7 +28,10 @@ alt ={myImage.alt}
 />
 
 </div>
-
+<div className ={styles.Text}>hier ist der Text für das Apartment {props.type}</div>
+<div>Anzahl Personen </div>
+<div>m² </div>
+</div>
 </>
 
 

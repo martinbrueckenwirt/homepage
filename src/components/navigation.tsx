@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from '../components/types';
 import { NavigationProps } from '../components/types';
-import { Console } from 'console';
+
 
 
 /*<!--*a* href austauschen--> */
@@ -25,7 +25,6 @@ export default  function Navigation({windowScrollPosition, transparency}: Naviga
     function calculateVisibility(windowScrollPosition: number,transparency:boolean)
     {
 
-        console.log('3' );
         if (transparency === false) {setTopTransparent(false)} 
 
         else{

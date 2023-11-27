@@ -35,8 +35,8 @@ export default function getApartmentTeaser(props:AppartmentModuleProps): IAppart
         description: teaserImage.description,
         alt: teaserImage.alt,
         copyright: teaserImage.copyright,
-        height: 100,
-        width: 100,
+        height: 400,
+        width: 500,
         priority: true
         } 
     return obj;

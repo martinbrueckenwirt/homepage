@@ -1,21 +1,45 @@
 .apartmentCard{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    margin: 1rem;
+    border:1px;
+    border-style: inset;
+    border-color: red;;
+    padding: 5rem;
+    background-Color: rgb(192, 197, 192);
+}
 
-display: flex;
-flex-direction: row;
-margin: 1rem;
-border:1px;
-border-style: inset;
-border-color: red;;
-padding: 5rem;
-background-Color: rgb(192, 197, 192);
+.image{
+    display:flex;
+justify-content: center;
 }
 
 .text{
 
+    /*position: absolute;*/
     display: flex;
-    height: 5rem;
-    margin:0.5rem;
-    background-color:  rgb(73, 126, 73);
-    color:blue;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    top:200px;
+ 
+}
+.paragraph{
+    /*display: flex;
+    flex-direction:column;
+    justify-content: center;*/
+    margin-block-start:0.4em;
+    margin-block-end:0.4em;
+   line-height: 0.1rem;
+   font-weight: 900;
+   font-size:xx-large;
+   color: #f3f0f0;
+}
 
+.linkButton{
+     display: flex;
+    justify-content: center;
+    
+    background-color: blue;
 }

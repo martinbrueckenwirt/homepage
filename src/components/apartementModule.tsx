@@ -17,20 +17,28 @@ return (
 
 <div className={styles.apartmentCard}> hier startet die Card
 
-<div > das ist das Bild {myImage.imageName}
+    <div className ={styles.image}> 
+        <Image 
+            src = {myImage.imageName}
+            width = {myImage.width}
+            height ={myImage.height}
+            alt ={myImage.alt}
+        />
+    </div>
+    <div className={styles.text}>hier ist der Text für das Apartment {props.type}
+            <p className={styles.paragraph}>Für </p>
+            <p className={styles.paragraph}>6 </p>
+            <p className={styles.paragraph}>Personen</p>    
+            <p className={styles.paragraph}>m²</p>            
+                    
+    </div>
+       
+    <div className={styles.linkButton}>
+         <button> das ist der Button</button>        
 
-<Image 
-src = {myImage.imageName}
-width = {myImage.width}
-height ={myImage.height}
-alt ={myImage.alt}
+    </div>
 
-/>
-
-</div>
-<div className ={styles.Text}>hier ist der Text für das Apartment {props.type}</div>
-<div>Anzahl Personen </div>
-<div>m² </div>
+            
 </div>
 </>
 

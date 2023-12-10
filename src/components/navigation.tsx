@@ -17,7 +17,7 @@ export default  function Navigation({windowScrollPosition, transparency}: Naviga
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
     /*const [isBurgerMenueClicked, setIsBurgerMenueClicked]= useState<boolean>(false);   *a* */
-    const [menueSlide,setMenueSlide]=useState<string> ("unClicked") /*Hilfskonstrukt für Transform des slide-InMenue*/
+    const [menueSlide,setMenueSlide]=useState<string> ("unClicked") /*funktioniert das?? *a* Hilfskonstrukt für Transform des slide-InMenue*/
  
     calculateVisibility(windowScrollPosition, transparency);
    

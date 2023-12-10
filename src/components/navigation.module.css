@@ -176,9 +176,13 @@
     display: block;
 
   }
-    @keyframes menueSlide {
+   @keyframes menueSlide {
     from {left: -150px;}
     to {left: 5px;}
+        }
+  @keyframes menueSlideOut {
+    from {left: 5px;}
+    to {left: -200px;}
         }
 
     .burgerMenue {   
@@ -188,15 +192,30 @@
         background-color: rgb(240, 175, 175);
         width: 200px;
         left: 5px;
-       height: 200px;
+        height: 200px;
         animation-name:menueSlide;
         animation-duration:1.5s;
         }
-
+        
+     .burgerMenueInvisible{
+        /*display: block;*/
+        position: fixed;
+        top: 120px;
+        background-color: rgb(240, 175, 175);
+        width: 200px;
+        left: -200px;
+        height: 200px;
+        animation-name:menueSlideOut;
+        animation-duration:1.5s;
+        /*display:none;*/
+    }
     .burgerMenue ul {
         list-style-type: none;
     }
 
+     .burgerMenueInvisible ul {
+        list-style-type: none;
+    }
     .burgerMenue >li {
         padding: 5px;
         margin: 2px;
@@ -211,9 +230,10 @@
     .burgerMenue ul a{
         text-decoration: none;
     }
-    .burgerMenueInvisible{
-        display:none;
+    .burgerMenueInvisible ul a{
+        text-decoration: none;
     }
+   
 }
 
     

@@ -1,5 +1,16 @@
+import { type } from "os";
+
 export type AppartmentModuleProps = {
-    type: string;
+    appType: string;
+}
+
+export type BurgerMenueProps ={
+    visibility: boolean;  
+    menueSlide:string;
+}
+
+export type GetBurgerImageProps = {
+    burgerMenueVisible: boolean;
 }
 
 export interface IAppartementTeaserImage  {
@@ -12,14 +23,6 @@ export interface IAppartementTeaserImage  {
     priority: boolean
 }
 
-export type GetBurgerImageProps = {
-    burgerMenueVisible: boolean;
-}
-
-export type BurgerMenueProps ={
-    visibility: boolean;  
-    menueSlide:string;
-};
 
 export type ImageType ={
     small: string,
@@ -36,8 +39,25 @@ export type ImageType ={
     sortnumber:number,
 }
 
+export type MinPrice = {
+   
+    minPriceSummer: number,
+    minPriceWinter: number,
+}
+
 export type NavigationProps = {
     windowScrollPosition: number;
     transparency: boolean;
+}
+
+export type Prices = {
+    type: string,
+    date: string,
+    price:number
+}
+
+export type PricingList = {
+    type: string,
+    season: string,
 }
 

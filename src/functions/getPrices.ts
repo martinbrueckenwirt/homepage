@@ -1,6 +1,7 @@
-import pricesSummer from "../../data/pricesSummer.ts";
-import pricesWinter from "../../data/pricesWinter.ts";
-import pricesGeneral from "../../data/pricesGeneral.ts";
+import pricesSummer from "../../data/pricesSummer";
+import pricesWinter from "../../data/pricesWinter";
+import pricesGeneral from "../../data/pricesGeneral";
+import { PricingList } from "../components/types";
 
 /* ================================================   
     3 Varianten season
@@ -8,9 +9,9 @@ import pricesGeneral from "../../data/pricesGeneral.ts";
     - "winter"  + apartmentType
     - "general"
    ================================================ */
-export default function getPrices(type,season) { 
+export default function getPrices({ type, season }:PricingList) { 
 
-    let pricingList = [];
+    let pricingList: any[];
 
     
     if (season === 'summer') 

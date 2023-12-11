@@ -13,6 +13,7 @@ export default function ApartmentModule(props:AppartmentModuleProps) {
 let myImage: IAppartementTeaserImage;
 
     myImage = getApartmentTeaser(props);
+    console.log(myImage);
     
 
     function getMinprices(type: AppartmentModuleProps): any {
@@ -31,34 +32,44 @@ let myImage: IAppartementTeaserImage;
 return (
 <>
 
-<div className={styles.apartmentCard}> hier startet die Card
+<div className={styles.apartmentCard}>
             
-            <div>
-             {getMinprices(props)}   
-</div>
+   
 
     <div className ={styles.image}> 
-        <Image 
-            src = {myImage.imageName}
-            width = {myImage.width}
-            height ={myImage.height}
+                <Image
+                    src={myImage.imageName}
+                    /* width = {myImage.width}
+                     height ={myImage.height}*/
+                    width={500}
+                    height={500}
+            
+           /* layout="fill"
+            objectFit = "contain"*/
             alt ={myImage.alt}
         />
-    </div>
-    <div className={styles.text}>hier ist der Text für das Apartment {props.appType}
-            <p className={styles.paragraph}>Für </p>
-            <p className={styles.paragraph}>6 </p>
-            <p className={styles.paragraph}>Personen</p>    
-            <p className={styles.paragraph}>m²</p>            
-                    
-    </div>
-       
-    <div className={styles.linkButton}>
-         <button> das ist der Button</button>        
+            </div>
 
-    </div>
-
-            
+    <div className ={styles.overlay}>
+        <div className={styles.title}>Apartment {props.appType}</div>
+        <p className={styles.description}>4-6 Personen </p>
+        
+             
+        <div className={styles.prices}>
+                {getMinprices(props)}   
+        </div>
+                
+        
+                        
+        <div className={styles.buttonContainer}>
+            <div >
+                <button className={styles.buttonLeft}> Buchen</button>        
+                    </div>
+                    <div className={styles.button}>
+                <button className={styles.buttonRight}> Details</button>        
+            </div>
+        </div>
+    </div>      
 </div>
 </>
 

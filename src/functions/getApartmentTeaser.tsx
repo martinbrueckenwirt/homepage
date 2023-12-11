@@ -11,11 +11,11 @@ export default function getApartmentTeaser(props:AppartmentModuleProps): IAppart
 
     /*1 Bilderliste auf die Bilder des Appartments reduzieren */
     filteredList = imageList.filter(function (el) {
-        return el.id === props.type 
+        return el.id === props.appType 
         });
 
     if (filteredList.length === 0) {
-    console.log('getApartmentTeaser FEHLER - falscher Typ :', props.type);
+    console.log('getApartmentTeaser FEHLER - falscher Typ :', props.appType);
     return filteredList  
     }
 

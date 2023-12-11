@@ -1,45 +1,97 @@
 .apartmentCard{
-    display: flex;
-    flex-direction: column;
+    display: block;
     position:relative;
-    margin: 1rem;
-    border:1px;
-    border-style: inset;
-    border-color: red;;
-    padding: 5rem;
+    width:50%;
+/*  bei größeren Auflösungen  width: calc(100% / 3); */
+    height:500px;
     background-Color: rgb(192, 197, 192);
 }
 
 .image{
     display:flex;
-justify-content: center;
-}
-
-.text{
-
-    /*position: absolute;*/
-    display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    align-items: center;
-    top:200px;
- 
-}
-.paragraph{
-    /*display: flex;
-    flex-direction:column;
-    justify-content: center;*/
-    margin-block-start:0.4em;
-    margin-block-end:0.4em;
-   line-height: 0.1rem;
-   font-weight: 900;
-   font-size:xx-large;
-   color: #f3f0f0;
-}
-
-.linkButton{
-     display: flex;
     justify-content: center;
-    
-    background-color: blue;
+    z-index:1;
+}
+
+.overlay{
+    display: block;
+    position: absolute;
+    top:5px;
+    right:5px;
+    bottom:5px;
+    left:5px;
+}
+
+.overlay .title{
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: x-large;
+    font-weight: 900;
+    color:brown;
+    z-index:2;
+}
+   
+.description{
+    position: absolute;
+    top: 40px;
+    left: 5px;
+    font-weight: 300;
+    font-size:xx-large;
+    color: #f3f0f0;
+}
+.prices{
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    line-height: 0.125rem;
+    font-weight: 200;
+    font-size:large;
+    color: #f3f0f0;
+}
+
+
+.buttonContainer{
+    position:absolute;
+    display: flex;
+    justify-content:flex-start;
+    gap: 20px;    
+    height: 3rem;
+    z-index: 2;
+    bottom: 20px;
+   
+}
+.buttonLeft{
+    padding: 1rem;
+    z-index: 2;
+    background-color: rgb(245, 245, 245);
+    border:1px solid rgb(245, 245, 245);
+    font-size: 20px;
+     font-weight:bold
+}
+.buttonLeft::before{
+    /* *a* Pfeil ersetzen  */    
+    content: ">";
+    color:red;
+    font-size: 20px;
+    font-weight:bold,
+}
+
+
+.buttonRight{
+    padding: 1rem;
+    border: 1px solid rgb(245, 245, 245);
+    background-color: transparent;
+    z-index: 2;
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+    font-weight:bold
+}
+.buttonRight::before{
+    /* *a* Pfeil ersetzen  */    
+    content: ">";
+    color:red;
+    font-size: 20px;
+    font-weight:bold,
 }

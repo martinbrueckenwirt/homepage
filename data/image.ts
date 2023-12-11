@@ -1,6 +1,6 @@
 const imageList = [
 	{
-		id: "typeA",
+		id: "A",
 		images: [
 			{
 				small: "/P2535132-1-small2.webp",
@@ -176,7 +176,7 @@ const imageList = [
         ]
     },
     {
-		id: "typeB",
+		id: "B",
 		images: [
 			{
 				small: "/P2535150-HDR-1.jpg",
@@ -195,7 +195,7 @@ const imageList = [
         ]
     },
 	{
-		id: "typeC",
+		id: "C",
 		images: [
 			{
 				small: "/P2535150-HDR-1.jpg",
@@ -214,7 +214,7 @@ const imageList = [
         ]
     },
 	{
-		id: "typeD",
+		id: "D",
 		images: [
 			{
 				small: "/P2535150-HDR-1.jpg",
@@ -233,7 +233,7 @@ const imageList = [
         ]
     },
 	{
-		id: "typeE",
+		id: "E",
 		images: [
 			{
 				small: "/P2535150-HDR-1.jpg",

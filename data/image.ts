@@ -200,7 +200,7 @@ const imageList = [
 			{
 				small: "/P2535150-HDR-1.jpg",
 				full: "/P2535150-HDR-1.jpg",
-				teaser: false,
+				teaser: true,
 				description: "TEST C Gang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",

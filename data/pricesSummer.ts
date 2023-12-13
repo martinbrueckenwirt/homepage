@@ -14,6 +14,10 @@ const pricesSummer =
             { type :"B",
             date: "02.07-30.07.2022",
 			price: 81.123   
+        },
+            { type :"C",
+            date: "02.07-30.07.2022",
+			price: 81.123   
 			},
     
   ];

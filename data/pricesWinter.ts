@@ -10,7 +10,19 @@ const pricesWinter =
             type :"A",
             date: "04.07-30.05.2022",
 			price: 92.99   
+        },
+             {
+            type :"B",
+            date: "04.07-30.05.2022",
+			price: 92.99   
+        },
+              {
+            type :"C",
+            date: "04.07-30.05.2022",
+			price: 92.99   
 			}
+            
+            
     
   ];
 export default pricesWinter; 

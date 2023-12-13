@@ -3,9 +3,18 @@
     position:relative;
     width:50%;
 /*  bei größeren Auflösungen  width: calc(100% / 3); */
-    height:500px;
+
+    height:700px; 
     background-Color: rgb(192, 197, 192);
 }
+@media (max-width: 450px) {
+.apartmentCard{
+    width: 100%;
+height:330px;
+}
+}
+
+
 
 .image{
     display:flex;
@@ -27,19 +36,28 @@
     position: absolute;
     top: 10px;
     left: 5px;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: 900;
-    color:brown;
+    color:black;
     z-index:2;
+}
+
+.backdrop{
+    background-color: rgba(47, 144, 255, 0.1);
+    border-radius: 10px;;
+    height: 170px;
+    width:200px;
+    z-index:1;
 }
    
 .description{
     position: absolute;
-    top: 40px;
+    top: 10px;
     left: 5px;
+
     font-weight: 300;
-    font-size:xx-large;
-    color: #f3f0f0;
+    font-size:x-large;
+    color: #ffffff;
 }
 .prices{
     position: absolute;
@@ -48,7 +66,7 @@
     line-height: 0.125rem;
     font-weight: 200;
     font-size:large;
-    color: #f3f0f0;
+    color: #ffffff;
 }
 
 
@@ -70,13 +88,7 @@
     font-size: 20px;
      font-weight:bold
 }
-.buttonLeft::before{
-    /* *a* Pfeil ersetzen  */    
-    content: ">";
-    color:red;
-    font-size: 20px;
-    font-weight:bold,
-}
+
 
 
 .buttonRight{
@@ -88,10 +100,14 @@
     font-size: 20px;
     font-weight:bold
 }
+
+.buttonLeft::before{
+    content: url('../../public/caret-right.webp');
+} 
+    
 .buttonRight::before{
-    /* *a* Pfeil ersetzen  */    
-    content: ">";
-    color:red;
-    font-size: 20px;
-    font-weight:bold,
+    content: url('../../public/caret-right.webp');
 }
+
+
+

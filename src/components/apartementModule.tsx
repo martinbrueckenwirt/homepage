@@ -5,6 +5,8 @@ import getApartmentTeaser from '../functions/getApartmentTeaser';
 import Image from 'next/image'
 import getMinPriceApartment from '../functions/getMinPriceApartment';
 import { MinPrice } from './types';
+import getPersonsForType from '../functions/getPersonsForType';
+
 
 
 
@@ -29,6 +31,19 @@ let myImage: IAppartementTeaserImage;
         )
     }
 
+    function getPersons(type: AppartmentModuleProps): any {
+        let persons: string;
+        let myType = type.appType;
+        persons = getPersonsForType(myType);
+
+        return (
+            <>
+                <p>{persons} Personen </p>
+                
+            </>
+        )
+    }
+
 return (
 <>
 
@@ -38,11 +53,17 @@ return (
 
     <div className ={styles.image}> 
                 <Image
+                    fill
+                    objectFit='contain'
+                    priority={false}
                     src={myImage.imageName}
                     /* width = {myImage.width}
                      height ={myImage.height}*/
-                    width={500}
-                    height={500}
+                    /*width={800}*/
+                    /*height={50vw}*/
+                    sizes="calc(50vw - 8px)"
+                    
+                    
             
            /* layout="fill"
             objectFit = "contain"*/
@@ -50,15 +71,18 @@ return (
         />
             </div>
 
-    <div className ={styles.overlay}>
-        <div className={styles.title}>Apartment {props.appType}</div>
-        <p className={styles.description}>4-6 Personen </p>
-        
-             
-        <div className={styles.prices}>
-                {getMinprices(props)}   
-        </div>
+    <div className={styles.overlay}>
+        <div className={styles.backdrop}>
+            
+            <div className={styles.title}>Apartment {props.appType}</div>
+                    <p className={styles.description}> {getPersons(props)} </p>
+            
                 
+            <div className={styles.prices}>
+                    {getMinprices(props)}   
+            </div>
+        </div>        
+        
         
                         
         <div className={styles.buttonContainer}>

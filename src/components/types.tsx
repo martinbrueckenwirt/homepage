@@ -4,6 +4,12 @@ export type AppartmentModuleProps = {
     appType: string;
 }
 
+export type AppDescript = {
+        type: string;
+        persons: string;
+        size: string;
+    }[];
+
 export type BurgerMenueProps ={
     visibility: boolean;  
     menueSlide:string;

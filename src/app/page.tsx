@@ -65,9 +65,11 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 
     </div>
 
+    <section    className = {styles.apartmentContainerxx}>
         <ApartmentModule appType={'A'} />
         <ApartmentModule appType = {'B'} />
          <ApartmentModule appType = {'C'} />
+         </section>
 
 </>
     )

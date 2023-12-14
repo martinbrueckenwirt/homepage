@@ -3,6 +3,19 @@
     background-color: lime;
  }
     
+ .apartmentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+    ;
+    justify-content: center;
+    align-items: center;
+    gap: 0em;
+    width: 100%;
+    height: 100%;
+    background-color: lime;
+ }
+
  
 
   

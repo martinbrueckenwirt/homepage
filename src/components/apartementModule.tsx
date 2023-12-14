@@ -62,9 +62,6 @@ return (
                     /*width={800}*/
                     /*height={50vw}*/
                     sizes="calc(50vw - 8px)"
-                    
-                    
-            
            /* layout="fill"
             objectFit = "contain"*/
             alt ={myImage.alt}
@@ -75,7 +72,7 @@ return (
         <div className={styles.backdrop}>
             
             <div className={styles.title}>Apartment {props.appType}</div>
-                    <p className={styles.description}> {getPersons(props)} </p>
+                    <div className={styles.description}> {getPersons(props)} </div>
             
                 
             <div className={styles.prices}>

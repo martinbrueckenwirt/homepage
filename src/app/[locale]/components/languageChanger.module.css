@@ -1,0 +1,11 @@
+.languageButtons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    right: 20 px;
+    width: 25rem;
+
+
+    height: 3 rem;
+
+}

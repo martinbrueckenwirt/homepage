@@ -197,6 +197,7 @@
         height: 200px;
         animation-name:menueSlide;
         animation-duration:1.5s;
+        z-index:99;
         }
         
      .burgerMenueInvisible{

@@ -5,6 +5,9 @@
   "Cafe":{
     "Einleitung": "I am on the page"
   },
+  "Footer":{
+    "Einleitung": "I am on the page"
+  },
   "Home": {
       "apartment":"Apartment",
       "booknow": "Book now",

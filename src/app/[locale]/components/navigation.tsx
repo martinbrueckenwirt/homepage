@@ -59,13 +59,12 @@ export default   function Navigation({transparency,apartment,cafe, contact, abou
     const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
         /*component Startmit Großbuchstabe*/
 
-        let mySrc: any = {open};
-       
+        let mySrc: string = '/open_45x45.png';      
         if (Props.burgerMenueVisible === false) {
-              mySrc = '/../../../../public/open_45x45.png'
+              mySrc = '/open_45x45.png';
             }
         else if (Props.burgerMenueVisible === true) {
-            mySrc = {close}
+            mySrc = '/close_45x45.png';
         }
    
         return (<Image 
@@ -176,8 +175,8 @@ export default   function Navigation({transparency,apartment,cafe, contact, abou
                     ? `${styles.burgerMenue}`
                     : `${styles.burgerMenueInvisible}`}>
                 <ul >
-                    <li><a href="#">{apartment}</a></li>
-                    <li><a href="#">{cafe}</a></li>
+                    <li><a href="/apartments">{apartment}</a></li>
+                    <li><a href="/cafe">{cafe}</a></li>
                     <li><a href="#">{about}</a></li>
                     <li><a href="#">{contact}</a></li>
 

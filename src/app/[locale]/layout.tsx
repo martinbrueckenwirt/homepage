@@ -1,5 +1,6 @@
 import {notFound} from 'next/navigation';
 import Navigation from './components/navigation';
+import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 
 import {useTranslations} from 'next-intl';
@@ -25,6 +26,7 @@ export default function LocaleLayout({children, params: {locale}}) {
       <body>
         <Navigation transparency={false} apartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about ={aboutTrans}  locale={locale}/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

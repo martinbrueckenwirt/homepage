@@ -1,5 +1,5 @@
 import imageList from "../../data/image";
-import {AppartmentModuleProps, IAppartementTeaserImage, ImageType} from '../components/types';
+import {AppartmentModuleProps, IAppartementTeaserImage, ImageType} from '../app/[locale]/components/types';
 
 
 

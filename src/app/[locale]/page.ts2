@@ -1,0 +1,23 @@
+
+import styles  from './page.module.css'
+import React from 'react';
+import {useTranslations} from 'next-intl';
+import Image from 'next/image';
+
+import ApartmentModule from './components/apartementModule';
+import Bild from '../../../public/p1560079a.jpg'
+
+
+
+export default function Home() {
+    const t = useTranslations('Home');
+console.log('==========Home========')
+    
+return (
+   <>
+   <h1>{t('title')}</h1>
+    <Image src={Bild} alt="Next.js" width={200} height={160} /> 
+</>
+
+
+   )}

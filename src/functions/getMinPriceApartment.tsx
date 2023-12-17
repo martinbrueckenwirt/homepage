@@ -1,6 +1,6 @@
 import pricesSummer from "@/data/pricesSummer";
 import pricesWinter from "@/data/pricesWinter";
-import { MinPrice } from "../components/types";
+import { MinPrice } from "../app/[locale]/components/types";
 
 function getMinPriceWinter(pricesWinter: { type: string, date: string, price: number }[], type: string): number {
     const filteredPrices = pricesWinter.filter(item => item.type === type);

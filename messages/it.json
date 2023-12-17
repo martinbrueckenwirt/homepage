@@ -1,0 +1,28 @@
+{
+  "Apartments": {
+    "Einleitung": "ITALIENISCH I am on the page",
+    "zwei": "zwei weiss nicht wieso notwendig"
+  },
+
+  "Cafe":{
+    "Einleitung": "ITALIENISCH NOW I am on the page",
+    "zwei": "zwei weiss nicht wieso notwendig"
+  },
+  
+  "Home": {
+      "apartment":"Appartamento",
+      "booknow": "Prenota ora",
+      "details": "Dettagli",
+      "title": "ITALIA Hello world! ",
+      "pricesummer":"Prezzo Estate a partire da:",
+      "pricewinter":"Prezzo Inverno a partire da:",
+      "persons":"Persone"
+    },
+    "Navigation": {
+      "home": "Inizio",
+      "apartment": "Appartamenti",
+      "contact": "Contatto",
+      "cafe": "Cafe",
+      "about": "Chi Siamo"
+    }
+  }

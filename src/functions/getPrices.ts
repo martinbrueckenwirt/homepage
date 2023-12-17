@@ -1,7 +1,7 @@
 import pricesSummer from "../../data/pricesSummer";
 import pricesWinter from "../../data/pricesWinter";
 import pricesGeneral from "../../data/pricesGeneral";
-import { PricingList } from "../components/types";
+import { PricingList } from "../app/[locale]/components/types";
 
 /* ================================================   
     3 Varianten season

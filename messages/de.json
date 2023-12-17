@@ -1,0 +1,27 @@
+{
+    "Apartments":{
+      "Einleitung": "Bin auf der Seite"
+    },
+    "Cafe":{
+      "Einleitung": "Ich bin jetz auf der Seite "
+    },
+    "Home": {
+      "apartment":"Appartment",
+      "booknow": "Jetzt Buchen",
+      "details": "Details",
+      "title": "Hello world!",
+      "pricesummer":"Preis Sommer ab:",
+      "pricewinter":"Preis Winter ab:",
+      "persons":"Personen"
+    },
+    "Navigation": {
+      "home": "Home",
+      "apartment": "Appartments",
+      "contact": "Kontakt",
+      "cafe": "Cafe",
+      "about": "Über uns"
+    }
+
+
+    
+  }

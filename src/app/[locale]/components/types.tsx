@@ -63,6 +63,8 @@ export type NavigationPropsNew = {
    cafe:string;
    about: string;
    contact: string;
+   castleview: string;
+   castleviewpricing: string;
 }
 
 

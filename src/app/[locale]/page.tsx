@@ -1,9 +1,30 @@
 
 import styles  from './page.module.css'
 import React from 'react';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
 
 import ApartmentModule from './components/apartementModule';
+
+import {getTranslations} from 'next-intl/server';
+ 
+export async function generateMetadata({params: {locale}}) {
+  const t = await getTranslations({locale, namespace: 'Metadata'});
+ 
+  return {
+      title: t('title'),
+      description: t('description'),
+      alternates: {
+          canonical: `/de`,
+          languages: {
+                'it': `/it`,
+                'en': `/en`
+          }
+      }
+  };
+}
+
+
 
 
 

@@ -5,6 +5,12 @@
     "Cafe":{
       "Einleitung": "Ich bin jetz auf der Seite "
     },
+    "Castleview":{
+      "Einleitung": "Ich bin jetz auf der Seite"
+    },
+     "CastleviewPricing":{
+      "Einleitung": "Ich bin jetz auf der Seite"
+    },
     "Footer":{
       "Einleitung": "Ich bin jetz auf der Seite"
     },
@@ -17,12 +23,18 @@
       "pricewinter":"Preis Winter ab:",
       "persons":"Personen"
     },
+     "Metadata":{
+      "title": "Moderne Ferienwohnungen direkt am Schigebiet Osttirol",
+      "description":"Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß."
+    },
     "Navigation": {
       "home": "Home",
       "apartment": "Appartments",
       "contact": "Kontakt",
       "cafe": "Cafe",
-      "about": "Über uns"
+      "about": "Über uns",
+      "castleview": "Type A",
+      "castleviewpricing": "Preisliste"
     }
 
 

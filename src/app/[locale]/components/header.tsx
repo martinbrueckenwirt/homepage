@@ -1,14 +1,14 @@
 'use client'
 import React from 'react'
 import Head from 'next/head'
-import useTranslation from 'next-translate/useTranslation'
+import {useTranslations} from 'next-intl';
 import styles from '../components/header.module.css'
 
 /* *a* Title entfernen!!!!!!!!!!!!!!!!!!!!!*/
 
 export default function Header() {
 
-    const { t, lang } = useTranslation('common')
+    const t = useTranslations('Common');
     const title = t('title')
     const headTitle = `${title} (${lang.toUpperCase()})`
     

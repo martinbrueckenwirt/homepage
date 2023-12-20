@@ -5,6 +5,13 @@
   "Cafe":{
     "Einleitung": "I am on the page"
   },
+    "Castleview":{
+      "Einleitung": "I am on the page"
+    },
+     "CastleviewPricing":{
+      "Einleitung": "I am on the page"
+    },
+
   "Footer":{
     "Einleitung": "I am on the page"
   },
@@ -17,11 +24,17 @@
       "pricewinter":"Preis winter from:",
       "persons":"Persons"
     },
+     "Metadata":{
+      "title": "Holiday Apartments directly at skiing area Thurntaler Hochpustertal Sillian",
+      "description":"holidays with friends or family, children friendly, comfortable apartments for holidays; coffee shop with Austrian and Italian coffee; famous for homemade cakes; directly at skiing area Thurntaler Hochpustertal; directly at the skiing area."
+    },
     "Navigation": {
       "home": "Home",
       "apartment": "Apartments",
       "contact": "Contact",
       "cafe": "Cafe",
-      "about": "About"
+      "about": "About",
+      "castleview": "Type A",
+      "castleviewpricing": "Pricing"
     }
   }

@@ -1,13 +1,20 @@
 {
   "Apartments": {
-    "Einleitung": "ITALIENISCH I am on the page",
-    "zwei": "zwei weiss nicht wieso notwendig"
+    "Einleitung": "ITALIENISCH I am on the page"
+    
   },
 
   "Cafe":{
-    "Einleitung": "ITALIENISCH NOW I am on the page",
-    "zwei": "zwei weiss nicht wieso notwendig"
+    "Einleitung": "ITALIENISCH NOW I am on the page"
+    
   },
+      "Castleview":{
+      "Einleitung": "ITALIENISCH NOW I am on the page"
+    },
+     "CastleviewPricing":{
+      "Einleitung": "ITALIENISCH NOW I am on the page"
+    },
+
   "Footer":{
     "Einleitung": "ITALIENSICH I am on the page"
   },
@@ -20,11 +27,17 @@
       "pricewinter":"Prezzo Inverno a partire da:",
       "persons":"Persone"
     },
+     "Metadata":{
+      "title": "Appartamenti direttamente al comprensorio sciistico",
+      "description":"Appartamenti direttamente sulle piste; 2-6 persone, 32 m ² - 85 m ²; molto adatto ai bambini, ampio giardino, colazione a buffet presso il Cafe House con cappuccino perfetto al piano terra. Elegante, accogliente e luminoso appartamento con soggiorno, camere da letto e cucine completamente attrezzate"
+    },
     "Navigation": {
       "home": "Inizio",
       "apartment": "Appartamenti",
       "contact": "Contatto",
       "cafe": "Cafe",
-      "about": "Chi Siamo"
+      "about": "Chi Siamo",
+       "castleview": "Type A",
+      "castleviewpricing": "Preci"
     }
   }

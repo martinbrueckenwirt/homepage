@@ -3,19 +3,23 @@ import Navigation from './components/navigation';
 import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';
+import  JsonLD  from "../../../data/metadata";
 
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
+
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
 /* *a* Photo */
 
+
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.derbrueckenwirt.at/'),
-  title: "Moderne Ferienwohnungen direkt am Schigebiet Osttirol",
+  title: "Moderne Appartements Ferienwohnungen direkt am Schigebiet Osttirol",
   description: "Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
   applicationName: "Brückenwirt Appartements",
   referrer: 'origin-when-cross-origin',
-  keywords: ["Ferienwohnung", "Appartement", "Osttirol", "Sillian", "Thurntaler", "Schigebiet", "Urlaub", "Familienurlaub", "kinderfreundlich", "Wandern", "Mountainbiken", "Dolomiten", "Hochpustertal","Urlaub mit Hund"],
+  keywords: ["Appartement", "Ferienwohnung","Osttirol", "Sillian", "Thurntaler", "Schigebiet", "Urlaub", "Familienurlaub", "kinderfreundlich", "Wandern", "Mountainbiken", "Dolomiten", "Hochpustertal","Urlaub mit Hund"],
   verification: {
     google: "google3134a8bd7a2aec41",
   },
@@ -49,14 +53,20 @@ export const metadata: Metadata = {
 }
 
 
+function getJsonLDById(id: number) {
+  const object = JsonLD.find((item) => item.id === id);
+  return object;
+}
+
+
 // Can be imported from a shared config
 const locales = ['en', 'de','it'];
  
 export default function LocaleLayout({children, params: {locale}}) {
   // Validate that the incoming `locale` parameter is valid
-  const t = useTranslations('Navigation');
+  const t = useTranslations('navigation');
   const myLocale =useTranslations.locale;
-  const apartmentTrans = t('apartment');
+  const apartmentTrans = t('appartment');
   const cafeTrans = t('cafe');
   const contactTrans = t('contact');
   const aboutTrans = t('about');
@@ -64,12 +74,17 @@ export default function LocaleLayout({children, params: {locale}}) {
   const castleviewpricing = t('castleviewpricing');
 
   if (!locales.includes(locale as any)) notFound();
+
+
  
   return (
     <html lang={locale}>
-      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLDById(1)) }}
+      />
       <body>
-        <Navigation transparency={false} apartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+        <Navigation transparency={false} appartement={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
         {children}
         <Footer/>
       </body>

@@ -25,7 +25,7 @@ import italian   from '../../../../public/italienisch.webp';
 import Link from 'next/link';  
 
 
-export default function Navigation({ transparency, apartment, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
+export default function Navigation({ transparency, appartement, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
 
     
     /*const t = useTranslations('Navigation'); */
@@ -161,9 +161,7 @@ export default function Navigation({ transparency, apartment, cafe, contact, abo
      
                 
         <ul className={styles.menu}>
-            <li> <a href="/apartments">{apartment}</a></li>
-            <li> <a href="/apartments/castleview">{castleview}</a></li> 
-            <li> <a href="/apartments/castleview/pricing/">{castleviewpricing}</a></li>      
+            <li> <a href="/appartement">{appartement}</a></li>
             <li><a href="/cafe">{cafe}</a></li>
             <li><a href="#">{about}</a></li>
             <li><a href="#">{contact}</a></li>
@@ -177,7 +175,7 @@ export default function Navigation({ transparency, apartment, cafe, contact, abo
                     ? `${styles.burgerMenue}`
                     : `${styles.burgerMenueInvisible}`}>
                 <ul >
-                    <li><a href="/apartments">{apartment}</a></li>
+                    <li><a href="/appartement">{appartement}</a></li>
                     <li><a href="/cafe">{cafe}</a></li>
                     <li><a href="#">{about}</a></li>
                     <li><a href="#">{contact}</a></li>

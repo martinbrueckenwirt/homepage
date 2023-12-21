@@ -1,25 +1,22 @@
 {
-  "Apartments": {
-    "Einleitung": "ITALIENISCH I am on the page"
-    
-  },
+  "appartements":{
+      "title": "Moderni appartamenti/appartamenti per le vacanze direttamente sul comprensorio sciistico",
+      "description":"Moderni appartamenti / appartamenti per le vacanze direttamente nel comprensorio sciistico Sillian Thurntaler per la vostra vacanza perfetta nel Tirolo Orientale; 2-6 persone; molto adatto ai bambini, ampio giardino, 32m²- 85m²; attrezzature di alta qualità; Colazione a buffet in casa, caffetteria con cappuccino perfetto al piano terra.",
+      "h1": "Appartamenti",
+      "h1subtitle":"h1 subtitle"
+   
+    },
 
   "Cafe":{
     "Einleitung": "ITALIENISCH NOW I am on the page"
     
   },
-      "Castleview":{
-      "Einleitung": "ITALIENISCH NOW I am on the page"
-    },
-     "CastleviewPricing":{
-      "Einleitung": "ITALIENISCH NOW I am on the page"
-    },
-
+    
   "Footer":{
     "Einleitung": "ITALIENSICH I am on the page"
   },
   "Home": {
-      "apartment":"Appartamento",
+      "appartment":"Appartamento",
       "booknow": "Prenota ora",
       "details": "Dettagli",
       "title": "ITALIA Hello world! ",
@@ -31,9 +28,9 @@
       "title": "Appartamenti direttamente al comprensorio sciistico",
       "description":"Appartamenti direttamente sulle piste; 2-6 persone, 32 m ² - 85 m ²; molto adatto ai bambini, ampio giardino, colazione a buffet presso il Cafe House con cappuccino perfetto al piano terra. Elegante, accogliente e luminoso appartamento con soggiorno, camere da letto e cucine completamente attrezzate"
     },
-    "Navigation": {
+    "navigation": {
       "home": "Inizio",
-      "apartment": "Appartamenti",
+      "appartment": "Appartamenti",
       "contact": "Contatto",
       "cafe": "Cafe",
       "about": "Chi Siamo",

@@ -16,12 +16,13 @@
 
     .topBarTransparent{
         top:0px;
+   
         display: flex;
         justify-content: space-between;
         position: fixed;
         width:100%;
-        height: 45px;
-        background: rgb(200, 255, 0);
+        height: 50px;
+        background: var(--background-light);
     }
     
     .telefoneMailWrapper{
@@ -38,9 +39,10 @@
     .contact{
         display: flex;
         padding-left: 1rem;
+        font-size: var(--fontsize-navigationText);
     }
     .contactSpacer{
-        padding-left: 8px;
+        padding-left: 0.5rem;
     }
     
     .languages{
@@ -70,7 +72,7 @@
     
     /* navbar */
     .navbar{
-        background :lime;
+        background :var(--background-light);
         position: fixed;
         top:60px;
         height: 50px;
@@ -81,11 +83,11 @@
         
     }
     .navbarTransparent{
-        background: red; 
+        background: var(--background-light);
         position: fixed;
-        top:60px;
-        height: 50px;
-          width: 100%;
+        top:45px;
+        height: 60px;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -125,6 +127,7 @@
         align-items: center;
         list-style:none;
         padding-right: 2rem;
+        font-size: var(--fontsize-navigationText);
     }
     
   
@@ -198,6 +201,7 @@
         animation-name:menueSlide;
         animation-duration:1.5s;
         z-index:99;
+        font-size: var(--fontsize-navigationText);
         }
         
      .burgerMenueInvisible{

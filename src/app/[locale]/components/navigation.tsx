@@ -13,7 +13,7 @@ import { GetBurgerImageProps} from './types';
 import { NavigationPropsNew } from './types';
 import { useRouter, usePathname } from 'next/navigation';
 import LanguageChanger from './languageChanger';
-
+import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
 import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
 import open from '../../../../public/open_45x45.png';
@@ -91,7 +91,7 @@ export default function Navigation({ transparency, appartement, cafe, contact, a
                         width={20}
                         alt="Telefon"
                         />   
-                    <div className = {styles.contactSpacer}>+43 664 80 55 63 922 </div>
+                        <div className = {`${styles.contactSpacer} ${heroFont.className}`} >+43 664 80 55 63 922 </div>
                 </div>
                 <div className={styles.contact}>
                 <Image 
@@ -100,7 +100,7 @@ export default function Navigation({ transparency, appartement, cafe, contact, a
                 width={20}
                 alt = "Mail"
                 />   
-                 <div className = {styles.contactSpacer}>martin@derbrueckenwirt.at</div>
+                        <div className={`${styles.contactSpacer} ${heroFont.className}`}>martin@derbrueckenwirt.at</div>
                 </div>
             </div>
             <div className = {styles.languages}>

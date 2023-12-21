@@ -15,6 +15,7 @@
   --fontsize-h1Text:2.5em;
   --fontsize-h2Text:2.5em;
   --fontsize-h3Text:2em;
+  --fontsize-navigationText:1.5em;
   --fontsize-normalText:1.1em;
   --fontsize-footerText:0.9em;
 
@@ -40,4 +41,13 @@ body {
     
 }
 
+.heroSection{
+  position: absolute;
+  top: 100rem;}
+
+.heroText{
+  font-size: var(--fontsize-hero);
+  margin-bottom: 2rem;
+  background-color: var(--background-verylight);
+}
 

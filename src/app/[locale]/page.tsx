@@ -1,8 +1,11 @@
 
-import styles  from './page.module.css'
+import styles from './page.module.css'
+import globalStyles from '../globals.css';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
+import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
+
 
 import ApartmentModule from './components/apartementModule';
 
@@ -29,13 +32,13 @@ export async function generateMetadata({params: {locale}}) {
 
 
 export default function Home() {
-    const t = useTranslations('Home');
+    const t = useTranslations('home');
 
     
 return (
     <>
-
-   <h1>{t('title')}</h1>
+   <section className = {globalStyles.heroSection}>
+   <h1 className ={`${heroFont.className} ${globalStyles.heroText}`} >{t('title')}</h1>
    
     <div className = {styles.content}>
         <p>
@@ -59,7 +62,9 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
         </p>
 
     </div>
-         
+
+   </section>
+
     <section    className = {styles.apartmentContainerxx}>
         <ApartmentModule appType={'A'} />       
         <ApartmentModule appType = {'B'} />

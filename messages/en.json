@@ -12,8 +12,8 @@
   "Footer":{
     "Einleitung": "I am on the page"
   },
-  "Home": {
-      "apartment":"Apartment",
+  "home": {
+      "appartment":"Apartment",
       "booknow": "Book now",
       "details": "Details",
       "title": "Hello world! ENGLISH",

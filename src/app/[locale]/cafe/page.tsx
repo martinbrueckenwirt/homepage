@@ -1,5 +1,6 @@
 import styles  from './page.module.css' 
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
+
 
 export default function Apartments() {
     const t = useTranslations('Cafe');

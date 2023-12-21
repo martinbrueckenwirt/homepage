@@ -3,7 +3,8 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
-import styles from 'page.module.css';
+import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/functions/fonts';
+import styles from 'page.module.css'
 
 function getJsonLDById(id: number) {
    const object = JsonLD.find((item) => item.id === id);

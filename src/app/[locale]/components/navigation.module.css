@@ -9,19 +9,19 @@
         display: flex;
         justify-content: space-between;
         position: fixed;
-        height: 45px;
+        height: 60px;
         width:100%;
         background: blue;
     }
 
     .topBarTransparent{
         top:0px;
-   
+        height:60px; 
         display: flex;
         justify-content: space-between;
         position: fixed;
         width:100%;
-        height: 50px;
+      
         background: var(--background-light);
     }
     
@@ -75,7 +75,7 @@
         background :var(--background-light);
         position: fixed;
         top:60px;
-        height: 50px;
+        height: 60px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -85,7 +85,7 @@
     .navbarTransparent{
         background: var(--background-light);
         position: fixed;
-        top:45px;
+        top:60px;
         height: 60px;
         width: 100%;
         display: flex;

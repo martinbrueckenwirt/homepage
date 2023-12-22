@@ -5,6 +5,7 @@ import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
 import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/functions/fonts';
 import styles from 'page.module.css'
+import globalStyles from '../styles/globalStyles'
 
 function getJsonLDById(id: number) {
    const object = JsonLD.find((item) => item.id === id);
@@ -35,7 +36,7 @@ export async function generateMetadata({params: {locale}}) {
 
 
 
-export default function Page() {
+export default function Appartement() {
     const t = useTranslations('appartements');
 
   
@@ -52,7 +53,7 @@ export default function Page() {
                 />
         </Head>
         
-      <h1>  {h1}
+      <h1 className={heroSection}>  {h1}
                 <p>{h1subtitle}</p>
        </h1>
       </>

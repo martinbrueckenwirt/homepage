@@ -1,11 +1,10 @@
 
-import styles from './page.module.css'
-import globalStyles from '../globals.css';
+import styles from './page.module.css';
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
-
+import globalStyles from '../styles/globalStyles.css';
 
 import ApartmentModule from './components/apartementModule';
 
@@ -37,7 +36,7 @@ export default function Home() {
     
 return (
     <>
-   <section className = {globalStyles.heroSection}>
+   <section className = {heroSection}>
    <h1 className ={`${heroFont.className} ${globalStyles.heroText}`} >{t('title')}</h1>
    
     <div className = {styles.content}>

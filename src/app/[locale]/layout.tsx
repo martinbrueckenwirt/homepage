@@ -4,8 +4,9 @@ import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';
 import  JsonLD  from "../../../data/metadata";
-
+import '../styles/globalStyles.css';
 import { useTranslations } from 'next-intl';
+import React from 'react';
 
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
@@ -78,13 +79,13 @@ export default function LocaleLayout({children, params: {locale}}) {
 
  
   return (
-    <html lang={locale}>
+    <html lang={locale} >
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLDById(1)) }}
       />
       <body>
-        <Navigation transparency={false} appartement={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+        <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
         {children}
         <Footer/>
       </body>

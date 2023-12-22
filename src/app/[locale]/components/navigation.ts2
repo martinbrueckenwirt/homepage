@@ -12,6 +12,7 @@ import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from './types';
 import { NavigationPropsNew } from './types';
 import { useRouter, usePathname } from 'next/navigation';
+import LanguageChanger from './languageChanger';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
 import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
@@ -23,9 +24,12 @@ import english from '../../../../public/englisch.webp';
 import italian   from '../../../../public/italienisch.webp';
 import Link from 'next/link';  
 
-export default function Navigation({ transparency, appartment, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
- 
- 
+
+export default function Navigation({ transparency, appartement, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
+
+    
+    /*const t = useTranslations('Navigation'); */
+    /*const t = await getTranslations('Navigation');*/
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
     /*const [isBurgerMenueClicked, setIsBurgerMenueClicked]= useState<boolean>(false);   *a* */
@@ -33,15 +37,10 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
  
     const router = useRouter();
     const pathname = usePathname();
-    const pathWithoutLang = pathname.substring(4);
-
-    function getNewPath(lang) {
-        let newPath = lang.concat(pathWithoutLang);  
-        locale = lang.substring(1,2);
-    return (newPath)
-    }
-
-    
+  
+    const handleChange = e => {
+      router.push(pathname, { locale: e.target.value });
+    };
 
     // toggle burge Menue change
 
@@ -107,9 +106,31 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
             <div className = {styles.languages}>
                 <span >
                     <ul className ={styles.languagesInRow}>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/de/')}> <Image src={german} alt="german" width={25} height={25} />  </Link> </li>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/en/')}> <Image src={english} alt="english" width={25} height={25} /> </Link></li>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/it/')}> <Image src={italian} alt="italian" width={25} height={25} /> </Link></li>
+                       <li><LanguageChanger locale={locale}/> </li>
+                       
+                        <li className = {styles.languageChoser}><a href="#">                
+                            <Image src={german}
+                            alt = "Deutsch"
+                            height ={20}
+                            width ={25}
+                            />
+                            </a>
+                            </li>
+                        <li className = {styles.languageChoser}><a href="#">
+                            <Image src={english}
+                            alt = "Englisch"
+                            height ={20}
+                            width ={25}
+                            />
+                             </a></li>
+                        <li className = {styles.languageChoser}><a href="#">
+                        <Image src={italian}
+                            alt = "italienisch"
+                            height ={20}
+                            width ={25}
+                            />
+                            
+                        </a></li>
                     </ul>
                 </span>
             
@@ -139,8 +160,8 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         </div>
      
                 
-        <ul className={`${styles.menu} ${heroFont.className}`}>
-            <li> <a href="/appartement">{appartment}</a></li>
+        <ul className={styles.menu}>
+            <li> <a href="/appartement">{appartement}</a></li>
             <li><a href="/cafe">{cafe}</a></li>
             <li><a href="#">{about}</a></li>
             <li><a href="#">{contact}</a></li>
@@ -154,7 +175,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
                     ? `${styles.burgerMenue}`
                     : `${styles.burgerMenueInvisible}`}>
                 <ul >
-                    <li><a href="/appartement">{appartment}</a></li>
+                    <li><a href="/appartement">{appartement}</a></li>
                     <li><a href="/cafe">{cafe}</a></li>
                     <li><a href="#">{about}</a></li>
                     <li><a href="#">{contact}</a></li>

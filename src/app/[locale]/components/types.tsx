@@ -59,7 +59,7 @@ export type NavigationProps = {
 export type NavigationPropsNew = {
    transparency: boolean;
    locale: string;
-   appartement:string;
+   appartment:string;
    cafe:string;
    about: string;
    contact: string;

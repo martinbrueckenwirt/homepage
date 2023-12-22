@@ -19,7 +19,7 @@ import {useTranslations} from 'next-intl';
 export default function ApartmentModule(props:AppartmentModuleProps) {
 
 let myImage: IAppartementTeaserImage;
-    const t = useTranslations('Home');
+    const t = useTranslations('home');
     myImage = getApartmentTeaser(props);
     console.log(myImage);
     
@@ -77,7 +77,7 @@ return (
     <div className={styles.overlay}>
         <div className={styles.backdrop}>
             
-            <div className={styles.title}> {t('apartment')} {props.appType}</div>
+            <div className={styles.title}> {t('appartment')} {props.appType}</div>
                     <div className={styles.description}> {getPersons(props)} </div>
             
                 
@@ -93,7 +93,7 @@ return (
                 <button className={styles.buttonLeft}> {t('booknow')}</button>        
             </div>
 
-            <Link href="/app/lang/apartment/castleview/page.tsx">
+            <Link href="#">
                 <div className={styles.button}>
                     <button className={styles.buttonRight}> {t('details')}</button>        
                 </div>

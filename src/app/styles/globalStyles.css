@@ -45,10 +45,15 @@ body {
 .heroSection{
   position: absolute;
   top: 100rem;}
+  .content {
+    background-color: lime;
+ }
 
 .heroText{
   font-size: var(--fontsize-hero);
-  margin-bottom: 2rem;
-  background-color: var(--background-verylight);
+  
+/*  background-color: var(--background-verylight);*/
+
+  background-color: red
 }
 

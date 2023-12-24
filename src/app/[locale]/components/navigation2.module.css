@@ -5,18 +5,7 @@
     }
     
        
-    .logoContainer{
-        position: absolute;
-        top: 0px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        background: var(--background-light);
-        
-       z-index:91;
-      
-    }
+    
     /* wird nicht mehr verwendet */
     .topBar{
           /* wird nicht mehr verwendet */
@@ -30,9 +19,9 @@
     }
 
     .topBarTransparent{
-        /*top:0px;*/
-        top: 50px;
-        height:60px; 
+        top:0px;
+      
+        height:80px; 
         display: flex;
         justify-content: space-between;
         position: fixed;
@@ -123,8 +112,8 @@
     .navbarTransparent{
         background: var(--background-light);
         position: fixed;
-        /*top:60px;*/
-        top: 100px;
+        top:60px;
+ 
         height: 60px;
         width: 100%;
         display: flex;
@@ -206,14 +195,11 @@
         }
     */
     .topBarTransparent{
-        top:50px;
+        top:0px;
         height:60px; 
      
     }
 
-    .navbarTransparent{
-        top:110px;
-    }
    
         .menu{
             margin-top: 15px;

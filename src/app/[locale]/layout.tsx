@@ -1,5 +1,5 @@
 import {notFound} from 'next/navigation';
-import Navigation from './components/navigation';
+import Navigation from './components/navigation2';
 import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';

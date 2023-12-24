@@ -5,7 +5,7 @@
 /*burgerimage*/
 
 import Image from 'next/image'
-import styles  from './navigation.module.css'
+import styles  from './navigation2.module.css'
 import React from 'react';
 import { useState } from "react";
 import { MouseEvent } from 'react';
@@ -51,31 +51,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         )
     }
 
-    const TopLogoContainer = () => {
-        return (
-        <>
-        <div className={styles.logoContainer} >
-        <a href ="/home" className = {styles.logo}>
-            <Image 
-            src = {logo}
-            alt = "logo"
-            width ={200}
-            height ={60}
-            />
-        </a>
-        <a href ="/home" className = {styles.logoBurgersize}>
-            <Image 
-            src = {logo}
-            alt = "logo"
-            width ={148}
-            height ={45}
-            />
-        </a>
-        </div>
-        </>
-        )
-    }
-
+   
     // toggle burge Menue change
 
     const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -112,7 +88,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
 
 
         <>
-       <TopLogoContainer />
+
         <div className = {topTransparent === true 
             ? styles.topBar
             : styles.topBarTransparent     
@@ -151,7 +127,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
            
         </div>
         
-      
+        <HorizontalRow />
        
     
     <nav className = {topTransparent === true 
@@ -159,13 +135,22 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         : styles.navbarTransparent 
         }>
    
-  
+
         <a href ="#" className = {styles.logo}>
-    {/* *a* Add your comment here */}
+            <Image 
+            src = {logo}
+            alt = "logo"
+            width ={200}
+            height ={60}
+            />
         </a>
-    
         <a href ="#" className = {styles.logoBurgersize}>
-           
+            <Image 
+            src = {logo}
+            alt = "logo"
+            width ={148}
+            height ={45}
+            />
         </a>
             
      

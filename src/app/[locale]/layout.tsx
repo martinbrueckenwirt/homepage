@@ -7,7 +7,8 @@ import  JsonLD  from "../../../data/metadata";
 import '../styles/globalStyles.css';
 import { useTranslations } from 'next-intl';
 import React from 'react';
-
+import Loading from './loading';
+import { Suspense } from 'react';
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
 /* *a* Photo */
@@ -76,18 +77,24 @@ export default function LocaleLayout({children, params: {locale}}) {
 
   if (!locales.includes(locale as any)) notFound();
 
+/* NAVIGATION 
+  <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
 
+  Achtung 
+  suppressHydrationWarning={true}
+*/
  
+
+
   return (
-    <html lang={locale} >
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLDById(1)) }}
-      />
+    <html lang={locale} suppressHydrationWarning={true} >
+      
       <body>
-        <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+      <Suspense fallback ={<Loading/>}>
+       
         {children}
         <Footer/>
+        </Suspense>
       </body>
     </html>
   );

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import getMinPriceApartment from '../../../functions/getMinPriceApartment';
 import { MinPrice } from './types';
 import getPersonsForType from '../../../functions/getPersonsForType';
+import ApartmentPersonsCount from './apartmentPersonsCount';
 import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 
@@ -21,16 +22,46 @@ export default function ApartmentModule(props:AppartmentModuleProps) {
 let myImage: IAppartementTeaserImage;
     const t = useTranslations('home');
     myImage = getApartmentTeaser(props);
-    let persons: string;
-    let prices: MinPrice; 
     
-    prices= getMinPriceApartment(props.appType);
-    persons = getPersonsForType(props.appType);
+    console.log(' ApartmentModule props' ,props);
+    console.log(' ApartmentModule' ,myImage);
+    
+    
+
+   async function getMinprices(type: AppartmentModuleProps): any {
+        let prices: MinPrice; 
+        let myType = type.appType;
+        prices = getMinPriceApartment(myType);
+        console.log(' ApartmentModule  ' ,myType);
+        return (
+        <>
+                <p>{t('pricesummer')} {prices.minPriceSummer} </p>
+                <p>{t('pricewinter')} {prices.minPriceWinter} </p>
+        </>
+        )
+    }
+
+    async function getPersons(type: AppartmentModuleProps): any {
+        let persons: string;
+        let myType = type.appType;
+        persons = await getPersonsForType(myType);
+
+        return (
+            <>
+                <p>{persons} {t('persons')} </p>
+                
+            </>
+        )
+    }
+
+
 
 return (
 <>
 
 <div className={styles.apartmentCard}>
+            
+   
 
     <div className ={styles.image}> 
            
@@ -38,8 +69,8 @@ return (
                     /*fill*/
                     /*objectFit='contain' */
                     priority={false}
-                    src={myImage.imageName}
-                   /* src= '/P2535150-HDR-1.jpg' */
+                    /*src={myImage.imageName}*/
+                    src= '/P2535150-HDR-1.jpg'
                     /* width = {myImage.width}
                      height ={myImage.height}*/
                     width={800}
@@ -47,7 +78,7 @@ return (
                     /*sizes="calc(50vw - 8px)"*/
            /* layout="fill"
             objectFit = "contain"*/
-            alt ={myImage.alt} 
+            /*alt ={myImage.alt} */
             alt = "test"
         />
 		
@@ -56,14 +87,11 @@ return (
     <div className={styles.overlay}>
         <div className={styles.backdrop}>
             
-            <div className={styles.title}> {t('appartment')} {props.appType}</div>
-                    <div className={styles.description}>  {persons} {t('persons')}</div>
-            
-                
-            <div className={styles.prices}>
-                <p>{t('pricesummer')} {prices.minPriceSummer} </p>
-                <p>{t('pricewinter')} {prices.minPriceWinter} </p>
-            </div>
+        <div className={styles.title}> {t('appartment')} {props.appType}</div>
+        <div className={styles.description} > 
+        <ApartmentPersonsCount props="A"  />
+        {t('persons')}
+         </div>
         </div>        
         
        

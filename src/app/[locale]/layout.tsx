@@ -1,5 +1,5 @@
 import {notFound} from 'next/navigation';
-import Navigation from './components/navigation2';
+import Navigation from './components/navigation';
 import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';
@@ -82,16 +82,19 @@ export default function LocaleLayout({children, params: {locale}}) {
 
   Achtung 
   suppressHydrationWarning={true}
+  *a* jsonLD nicht eingebunden
+  
 */
  
 
 
   return (
-    <html lang={locale} suppressHydrationWarning={true} >
+    <html lang={locale}  >
       
       <body>
       <Suspense fallback ={<Loading/>}>
-       
+      <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+
         {children}
         <Footer/>
         </Suspense>

@@ -23,66 +23,78 @@ let myImage: IAppartementTeaserImage;
     myImage = getApartmentTeaser(props);
     let persons: string;
     let prices: MinPrice; 
+    let localImage: string;
+    let localAlt:string;
+
+    if (props.appType === "Z") {
+        console.log('Brückenwirt');
+        localImage
+    }
     
+    else{
     prices= getMinPriceApartment(props.appType);
     persons = getPersonsForType(props.appType);
+    
+    localImage = myImage.imageName;
+    localAlt = myImage.alt;
+    console.log('appartementModule ', localImage);
+    }
+
+
 
 return (
 <>
 
-<div className={styles.apartmentCard}>
+    <div className={styles.apartmentCard}>
 
-    <div className ={styles.image}> 
-           
-    <Image
-                    /*fill*/
-                    /*objectFit='contain' */
-                    priority={false}
-                    src={myImage.imageName}
-                   /* src= '/P2535150-HDR-1.jpg' */
-                    /* width = {myImage.width}
-                     height ={myImage.height}*/
-                    width={800}
-                    height={400}
-                    /*sizes="calc(50vw - 8px)"*/
-           /* layout="fill"
-            objectFit = "contain"*/
-            alt ={myImage.alt} 
-            alt = "test"
-        />
-		
-            </div>
-
-    <div className={styles.overlay}>
-        <div className={styles.backdrop}>
+        <div className ={styles.image}> 
             
-            <div className={styles.title}> {t('appartment')} {props.appType}</div>
-                    <div className={styles.description}>  {persons} {t('persons')}</div>
+        <Image
+                        fill={true}
+                        /*width={300}
+                        height={300}*/
+                        /*objectFit='contain' */
+                        priority={false}
+                        src={localImage}
+                        sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
             
+                alt ={myImage.alt} 
                 
-            <div className={styles.prices}>
-                <p>{t('pricesummer')} {prices.minPriceSummer} </p>
-                <p>{t('pricewinter')} {prices.minPriceWinter} </p>
-            </div>
-        </div>        
-        
-       
-                        
-        <div className={styles.buttonContainer}>
-            <div >
-                <button className={styles.buttonLeft}> {t('booknow')}</button>        
-            </div>
-
-            <Link href="#">
-                <div className={styles.button}>
-                    <button className={styles.buttonRight}> {t('details')}</button>        
+            />
+            
                 </div>
-            </Link>
+
+        <div className={styles.overlay}>
+            <div className={styles.backdrop}>
+                
+                <div className={styles.title}> {t('appartment')} {props.appType}</div>
+                        <div className={styles.description}>  {persons} {t('persons')}</div>
+                
+                    
+                <div className={styles.prices}>
+                    <p>{t('pricesummer')} {prices.minPriceSummer} </p>
+                    <p>{t('pricewinter')} {prices.minPriceWinter} </p>
+                </div>
+            </div>        
+            
+        
+                            
+            <div className={styles.buttonContainer}>
+                <div >
+                    <button className={styles.buttonLeft}> {t('booknow')}</button>        
+                </div>
+
+                <Link href="#">
+                    <div className={styles.button}>
+                        <button className={styles.buttonRight}> {t('details')}</button>        
+                    </div>
+                </Link>
 
 
-        </div>
-    </div>      
-</div>
+            </div>
+        </div>      
+    </div>
+
 </>
 
 

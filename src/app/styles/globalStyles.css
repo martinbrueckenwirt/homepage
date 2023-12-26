@@ -10,11 +10,16 @@
   --background-light: #f2f3f5;
   --background-medium: #d7e1e6;
   --background-dark: #2f3436;
+  --red:rgb(245, 8, 8);
+
  
-  --fontsize-hero:10em;
+  --fontsize-hero:6em;
   --fontsize-h1Text:2.5em;
   --fontsize-h2Text:2.5em;
   --fontsize-h3Text:2em;
+  --fontsize-h4Text:1.5em;
+  --fontsize-h5Text:1em;
+  
   --fontsize-navigationText:1em;
   --fontsize-navigationMenu:1.5em;
   --fontsize-normalText:1.1em;
@@ -22,8 +27,9 @@
 
   --fontweight-hero:800;
   --fontweight-h1Text:600;
-  --fontweight-h2Text:600;
+  --fontweight-h2Text:500;
   --fontweight-h3Text:400;
+  --fontweight-h4Text:300;
   --fontweight-normalText:400;
   --fontweight-footerText:200;
 
@@ -49,31 +55,6 @@ body {
   
   width:100%;
   margin-top: 0px;
-  /*background-color: red;*/
-  
-
-}
-.heroSection{
-  padding-top: 10rem;
-  /*background-color: yellow;*/
-  z-index:90;
-
  }
 
-.heroText{
-  font-size: var(--fontsize-hero);
-  
-/*  background-color: var(--background-verylight);*/
-
-  background-color: lime;
-  /*display:none;
-  /*height: 20rem;*/
-}
-
-.heroContent{
-  font-size: var(--fontsize-normalText);
-  
-/*  background-color: var(--background-verylight);*/
-  /*background-color: blue;*/
-}
 

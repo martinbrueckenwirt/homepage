@@ -14,12 +14,17 @@
     },
     "home": {
       "appartment":"Appartment",
+      "appartmentContainerHeadline": "Ihre Ferienwohnung",
       "booknow": "Jetzt Buchen",
       "details": "Details",
-      "title": "Hello world!",
+      "herotext": "Moderne Ferienwohnungen direkt am Schigebiet",
+      "heroimagealt": "Haus Brückenwirt mit Schmetterling im Vordergrund",
+      "title": "Urlaub in den Bergen",
       "pricesummer":"Preis Sommer ab:",
       "pricewinter":"Preis Winter ab:",
-      "persons":"Personen"
+      "persons":"Personen",
+      "text1":"Willkommen in unseren  <b>Appartements / Ferienwohnungen</b> direkt am Schigebiet Thurntaler Sillian.<br><br> Genießen Sie Ihren verdienten <b>Wohlfühlurlaub inmitten der Berge</b>. Die Drei Zinnen, die Lienzer Dolomiten, die Villgrater Berge bilden zu allen Jahreszeiten die imposante Kulisse für Ihre Unternehmungen.",
+      "textmodul":"Ferienwohnungen mit 32m²-85m² für 2-7 Personen <br> <br>  Jede Wohnung mit eigenem Balkon <br> <br> vollwertige Küchen <br> <br>getrennte Schlafräume - für Ihre besondere Privatsphäre <br> <br>Echtholzböden<br> <br>großer Garten mit Liegewiese zur freien Verwendung, mit Kinderspielgeräten <br><br>Frühstück im Café im Erdgeschoß"
     },
      "Metadata":{
       "title": "Moderne Ferienwohnungen direkt am Schigebiet Osttirol",
@@ -34,7 +39,7 @@
       "castleview": "Type A",
       "castleviewpricing": "Preisliste"
     }
-
+ }
 
     
-  }
+  

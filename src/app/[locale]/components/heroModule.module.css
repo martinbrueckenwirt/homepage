@@ -1,0 +1,164 @@
+.heroSection{
+  position: relative;
+  /*top: 120px;*/
+  top:156px;
+  z-index:90;
+ }
+
+ .headlineContainer{
+  position: relative;
+  /*top: 100px;*/
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  padding: 5px;
+  
+  /*height: 12rem;*/
+  
+  color: var(--red);
+ 
+  /*display:none;
+  /*height: 20rem;*/
+  z-index:99;
+}
+
+.heroText{
+ /* position: relative;
+  display:flex;
+ /* justify-content: flex-start;
+  align-content: center;*/
+  left: 3rem;
+  height: auto;
+  font-size: var(--fontsize-hero);
+  font-weight: var(--fontweight-h3Text);
+  color: var(--red);
+ 
+  /*display:none;
+  /*height: 20rem;*/
+  z-index:99;
+}
+
+
+
+
+.bookButton{
+
+  margin-right:3rem;
+  width: 10rem;
+  height: 5rem;
+  background-color: var(--red);
+  border:1px solid var(--red);
+  font-size: 20px;
+  font-weight:bold
+  
+
+}
+
+.bookButton:hover{
+
+  background-color: var(--red);
+  border:1px solid var(--red);
+  color: rgb(245, 245, 245);
+  transition: all 0.5s ease;
+
+
+}
+
+
+.imageContainer {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  /*height: 50vw;*/
+  height: 35vw;
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /*height: 50vw;*/
+  height: 35vw;
+  /*object-fit: cover;*/
+}
+
+@media(max-width:399px){    
+  .heroText{
+    margin-top:1.8rem;
+    font-size: var(--fontsize-h4Text);
+  font-weight: var(--fontweight-h4Text);
+
+  }
+ 
+  .bookButton{
+    margin-top:1.5rem;
+    margin-right:1.8rem;
+    width: 5rem;
+    height: 2rem;
+    font-size: 12px;
+    font-weight:bold
+  }
+
+}
+
+@media(min-width:400px) and (max-width: 779px){    
+  .heroText{
+    margin-top:1.8rem;
+    font-size: var(--fontsize-h3Text);
+  font-weight: var(--fontweight-h3Text);
+
+  }
+ 
+  .bookButton{
+    margin-top:1rem;
+    width: 10rem;
+    height: 3rem;
+    font-size: 20px;
+    font-weight:bold
+  }
+}
+
+@media(min-width:780px)  and (max-width: 1079px){
+  .heroText{
+    font-size: var(--fontsize-h2Text);
+  font-weight: var(--fontweight-h3Text);
+  }
+ 
+  .bookButton{
+    width: 10rem;
+    height: 4rem;
+    font-size: 20px;
+    font-weight:bold
+  }
+}
+
+@media(min-width:1080px)and (max-width: 1999px){
+  .heroText{
+    padding: 1rem;
+    font-size: var(--fontsize-h1Text);
+  font-weight: var(--fontweight-h3Text);
+  }
+ 
+  .bookButton{
+    width: 10rem;
+    height: 4.5rem;
+    font-size: 20px;
+    font-weight:bold
+  }
+}
+@media(min-width:2000px){
+  .heroText{
+    font-size: var(--fontsize-hero);
+  font-weight: var(--fontweight-h3Text);
+  }
+ 
+  .bookButton{
+    width: 10rem;
+    height: 5rem;
+    font-size: 20px;
+    font-weight:bold
+  }
+}

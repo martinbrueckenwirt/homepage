@@ -1,0 +1,40 @@
+
+import styles from './page.module.css';
+import React from 'react';
+import HeroImage from '../../../public/P1540356-25-1.webp';
+import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
+/*import HeroImage from '../../../public/P1190113.webp';*/
+
+import ApartmentModule from './components/apartementModule';
+import BrueckenwirtModule from './components/brueckenwirtModule';
+
+
+
+
+
+
+
+export default function Home() {
+    
+return (
+    <>
+
+    
+  
+    <section>
+    <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
+
+     </h2>
+        <ApartmentModule appType = {'A'} /> 
+        <ApartmentModule appType={'C'} />       
+        <ApartmentModule appType = {'B'} />
+       
+        <ApartmentModule appType = {'C'} /> 
+        <ApartmentModule appType = {'C'} />  
+        <BrueckenwirtModule />
+         </section>
+  
+
+</>
+    )
+}

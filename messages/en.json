@@ -14,12 +14,18 @@
   },
   "home": {
       "appartment":"Apartment",
+      "appartmentContainerHeadline": "Your holiday apartment",
       "booknow": "Book now",
       "details": "Details",
-      "title": "Hello world! ENGLISH",
+      "herotext": "Modern holiday apartments directly at the ski area",
+      "heroimagealt": "Brückenwirt with butterfly in the foreground",
+      "title": "Holidays in the mountains",
       "pricesummer":"Price summer from:",
       "pricewinter":"Preis winter from:",
-      "persons":"Persons"
+      "persons":"Persons",
+      "text1":"Welcome to our <b>apartments / holiday flats</b> directly at the Thurntaler Sillian ski area.<br><br> Enjoy your well-deserved <b>feel-good holiday in the middle of the mountains</b>. The Three Peaks, the Lienz Dolomites and the Villgrat Mountains form the impressive backdrop for your activities in all seasons.",
+      "textmodul":"Apartments with 32m²-85m² for 2-7 persons, <br> <br> each apartment with its own balcony, <br> <br> fully-fledged <br> <br>kitchens, separate bedrooms - for your special privacy, <br> <br>real wood floors,<br> <br>large garden with lawn for free use, with children's play equipment, <br><br>breakfast in the café on the ground floor"
+   
     },
      "Metadata":{
       "title": "Holiday Apartments directly at skiing area Thurntaler Hochpustertal Sillian",

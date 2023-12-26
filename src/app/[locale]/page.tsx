@@ -4,7 +4,10 @@ import React from 'react';
 import { useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
-
+import  Hero from './components/heroModule';
+import HeroImage from '../../../public/P1540356-25-1.webp';
+/*import HeroImage from '../../../public/P1190113.webp';*/
+import TextModule from './components/textModule';
 
 import ApartmentModule from './components/apartementModule';
 
@@ -33,43 +36,55 @@ export async function generateMetadata({params: {locale}}) {
 export default function Home() {
     const t = useTranslations('home');
 
+    let imageAlt: string="";
+    imageAlt = t('heroimagealt');
+
+    let text1: string ="";
+    let appartmentContainerHeadline: string ="";
+    appartmentContainerHeadline = t("appartmentContainerHeadline"); 
+   
+
+    /* Muster für zb "<important> abc </important" */
+    /*text1 = t.markup('text1',{
+        important:(chunks) => `<b>${chunks}</b>`
+   
+    })    */ 
+   
     
 return (
     <>
 
     <div className = "content">
     
-   <section className = "heroSection">
-        <h1 className ={`${heroFont.className} heroText`} >{t('title')}</h1>
-        
-            <div className = {`${heroFont.className} heroContent`}>
-                <p>
-                    1) Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+  
+            <Hero 
+                imageUrl = {HeroImage}
+                imageUrlAlt = {imageAlt}
+                calledFrom = "home">
+            </Hero>
 
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
-
-                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
-
-                    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer
-                </p>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
-
-                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
-
-                    Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer
-                </p>
-
+            <div className={styles.textContainer}>
+                <div className={`${h1Font.className} ${styles.text}`}>
+                    <p dangerouslySetInnerHTML={{ __html: text1 }} />
+                    <div dangerouslySetInnerHTML={{__html: t.raw('text1')}} />
+                    
+                </div>
             </div>
-   </section>
 
-    <section    className = {styles.apartmentContainervv}>
-        <ApartmentModule appType={'A'} />       
+    <section>
+    <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
+        {appartmentContainerHeadline}
+     </h2>
+     <div className={styles.modulesContainer}>
+        <ApartmentModule appType = {'A'} /> 
+        <ApartmentModule appType={'C'} />       
         <ApartmentModule appType = {'B'} />
-<ApartmentModule appType = {'C'} /> 
+       
+        <ApartmentModule appType = {'C'} /> 
+        <ApartmentModule appType = {'C'} />  
+        <TextModule />
+
+        </div>
          </section>
   
 

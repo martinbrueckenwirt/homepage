@@ -1,0 +1,23 @@
+
+.textModule{
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+@media(max-width:399px){   }
+
+@media(min-width:400px) and (max-width: 779px){  }
+
+@media(min-width:780px)  and (max-width: 1079px){}
+
+@media(min-width:1080px)and (max-width: 1899px){}
+
+@media(min-width:1900px){
+
+    .textModule{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h2Text);
+    }
+}

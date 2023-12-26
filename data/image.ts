@@ -4,8 +4,8 @@ const imageList = [
 		images: [
 			{
 				small: "/P2535132-1-small2.webp",
-				full: "/P2535132-1.jpg",
-				teaser: true,
+				full: "/P1190113_1500x1000",
+				teaser: false,
 				description: "TEST A Gang1 small2",
 				descriptionEn: "EN A Floor",
 				descriptionIt: "IT  A Floor",
@@ -15,6 +15,35 @@ const imageList = [
 				width: 1500,
                 priority: true,
                 sortnumber:1
+			},
+		
+			{
+				small: "/P2535132-1-small2.webp",
+				full: "/P1190113_1500x1000_60_web",
+				teaser: false,
+				description: "TEST A Gang1 small2",
+				descriptionEn: "EN A Floor",
+				descriptionIt: "IT  A Floor",
+				alt:"Alt Gang1",
+				copyright: "Brückenwirt Appartements",
+				height: 1125,
+				width: 1500,
+                priority: true,
+                sortnumber:1
+			},
+			{
+				small: "/P1190113.jpg",
+				full: "/P1190113_1500x1000.webp",
+				teaser: false,
+				description: "TEST A Gang1 small2",
+				descriptionEn: "EN A Floor",
+				descriptionIt: "IT  A Floor",
+				alt:"das ist das neue Testbild App A",
+				copyright: "Brückenwirt Appartements",
+				height: 1125,
+				width: 1500,
+                priority: true,
+                sortnumber:2
 			},
             {
 				small: "/P2535145-1-small2.webp",
@@ -75,8 +104,8 @@ const imageList = [
 			},
 			{
 				small: "/P1560052-small.webp",
-				full: "/P1560052.jpg",
-				teaser: false,
+				full: "/P2535150-HDR-1.jpg",
+				teaser: true,
 				description: "TEST A Biene",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -179,9 +208,23 @@ const imageList = [
 		id: "B",
 		images: [
 			{
-				small: "/P2535150-HDR-1.jpg",
+				small: "/P1210796_web.jpg",
 				full: "/P2535150-HDR-1.jpg",
 				teaser: true,
+				description: "TEST B Bild zu klein ",
+				descriptionEn: "EN A Flower1",
+				descriptionIt: "IT  A Flower 2",
+			 	alt:"Alt Gang 3",
+				copyright: "Brückenwirt Appartements",
+				height: 1125,
+				width: 1500,
+                priority: true,
+                sortnumber:1,
+			},
+			{
+				small: "/P2535150-HDR-1.jpg",
+				full: "/P2535150-HDR-1.jpg",
+				teaser: false,
 				description: "TEST B Gang3 ",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",

@@ -15,6 +15,12 @@ export type BurgerMenueProps ={
     menueSlide:string;
 }
 
+export type HeroProps = {
+    imageUrl: string;
+    imageUrlAlt: string;
+    calledFrom: string; 
+}
+
 export type GetBurgerImageProps = {
     burgerMenueVisible: boolean;
 }

@@ -6,7 +6,7 @@ import Image from 'next/image'
 import getMinPriceApartment from '../../../functions/getMinPriceApartment';
 import { MinPrice } from './types';
 import getPersonsForType from '../../../functions/getPersonsForType';
-import ApartmentPersonsCount from './apartmentPersonsCount';
+import ApartmentPersonsCount from './apartmentPersonsCount.-notNeededtsx';
 import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 

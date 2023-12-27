@@ -10,6 +10,7 @@ import HeroImage from '../../../public/P1540356-25-1.webp';
 import TextModule from './components/textModule';
 
 import ApartmentModule from './components/apartementModule';
+import CafeModule from './components/cafeModule';
 
 import {getTranslations} from 'next-intl/server';
  
@@ -42,6 +43,10 @@ export default function Home() {
     let text1: string ="";
     let appartmentContainerHeadline: string ="";
     appartmentContainerHeadline = t("appartmentContainerHeadline"); 
+    let cafeContainerHeadline: string ="";
+    cafeContainerHeadline = t("cafeContainerHeadline"); 
+    let textCafe: string ="";
+    
    
 
     /* Muster für zb "<important> abc </important" */
@@ -51,12 +56,12 @@ export default function Home() {
     })    */ 
    
     
+
 return (
     <>
 
     <div className = "content">
-    
-  
+         
             <Hero 
                 imageUrl = {HeroImage}
                 imageUrlAlt = {imageAlt}
@@ -65,7 +70,7 @@ return (
 
             <div className={styles.textContainer}>
                 <div className={`${h1Font.className} ${styles.text}`}>
-                    <p dangerouslySetInnerHTML={{ __html: text1 }} />
+                {/*    <p dangerouslySetInnerHTML={{ __html: text1 }} />*/}
                     <div dangerouslySetInnerHTML={{__html: t.raw('text1')}} />
                     
                 </div>
@@ -82,11 +87,17 @@ return (
        
         <ApartmentModule appType = {'C'} /> 
         <ApartmentModule appType = {'C'} />  
-        <TextModule />
+       <TextModule /> 
 
         </div>
-         </section>
-  
+    </section>
+
+    <section>
+    <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
+        {cafeContainerHeadline}
+     </h2>
+<CafeModule /> 
+    </section>
 
 </div >
 </>

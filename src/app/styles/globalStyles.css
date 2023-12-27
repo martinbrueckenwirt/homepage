@@ -9,13 +9,14 @@
   --background-white:#fff;  
   --background-light: #f2f3f5;
   --background-medium: #d7e1e6;
+  --background-medium-warm: rgb(236, 234, 228);
   --background-dark: #2f3436;
   --red:rgb(245, 8, 8);
 
  
   --fontsize-hero:6em;
   --fontsize-h1Text:2.5em;
-  --fontsize-h2Text:2.5em;
+  --fontsize-h2Text:2.2em;
   --fontsize-h3Text:2em;
   --fontsize-h4Text:1.5em;
   --fontsize-h5Text:1em;

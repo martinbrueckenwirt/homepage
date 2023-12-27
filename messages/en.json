@@ -5,8 +5,18 @@
      "h1": "Apartments",
       "h1subtitle":"h1 subtitle"
     },
-  "Cafe":{
-    "Einleitung": "I am on the page"
+  "cafe":{
+    "quote": "<q>The most beautiful sun terrace in the Pustertal</q>",
+    "text1": "Very cozy",
+    "text2": "Sun terrace open all year round",
+    "text3": "Perfect cappuccino",  
+    "text4": "Homemade cakes and tarts",
+    "text5": "Iced coffee and ice cups", 
+    "text6": "Organic fruit juices",
+    "text7": "Seating in the cool garden",
+    "altBild1":"",
+    "altBild2":"",
+    "altBild3":""
   },
   
   "Footer":{
@@ -16,6 +26,7 @@
       "appartment":"Apartment",
       "appartmentContainerHeadline": "Your holiday apartment",
       "booknow": "Book now",
+      "cafeContainerHeadline": "Cafe Brückenwirt",
       "details": "Details",
       "herotext": "Modern holiday apartments directly at the ski area",
       "heroimagealt": "Brückenwirt with butterfly in the foreground",
@@ -24,8 +35,13 @@
       "pricewinter":"Preis winter from:",
       "persons":"Persons",
       "text1":"Welcome to our <b>apartments / holiday flats</b> directly at the Thurntaler Sillian ski area.<br><br> Enjoy your well-deserved <b>feel-good holiday in the middle of the mountains</b>. The Three Peaks, the Lienz Dolomites and the Villgrat Mountains form the impressive backdrop for your activities in all seasons.",
-      "textmodul":"Apartments with 32m²-85m² for 2-7 persons, <br> <br> each apartment with its own balcony, <br> <br> fully-fledged <br> <br>kitchens, separate bedrooms - for your special privacy, <br> <br>real wood floors,<br> <br>large garden with lawn for free use, with children's play equipment, <br><br>breakfast in the café on the ground floor"
-   
+      "textmodul1":"Holiday apartments with 32m²-85m² for 2-7 people",
+      "textmodul2":"Each apartment has its own <b>balcony</b>",
+      "textmodul3":"Full-fledged kitchens",
+      "textmodul4":"Separate bedrooms - for your special <b>privacy</b>",
+      "textmodul5":"Real wood floors",
+      "textmodul6":"Large garden with lawn with children's play equipment",
+      "textmodul7":"Pets welcome"
     },
      "Metadata":{
       "title": "Holiday Apartments directly at skiing area Thurntaler Hochpustertal Sillian",

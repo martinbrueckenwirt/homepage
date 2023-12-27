@@ -5,9 +5,22 @@
       "h1": "Appartments",
       "h1subtitle":"h1 subtitle"
     },
-    "Cafe":{
-      "Einleitung": "Ich bin jetz auf der Seite "
-    },
+    "cafe":{
+      "quote": "<q>Die schönste Sonnenterrasse im Pustertal</q>",
+      "text1": "Urgemütlich",
+      "text2": "Sonnenterrasse ganzjährig geöffnet",
+      "text3": "Perfekter Cappuccino",  
+      "text4": "Hausgemachte Kuchen und Torten",
+      "text5": "Eiskaffee und Eisbecher", 
+      "text6": "Bio-Obstsäfte",
+      "text7": "Sitzplätze im kühlen Garten",
+      "text8": "Auch für Feste und Events",
+      "altBild1":"",
+      "altBild2":"",
+      "altBild3":"",
+      "altBild4":""
+      
+     },
   
     "Footer":{
       "Einleitung": "Ich bin jetz auf der Seite"
@@ -16,6 +29,7 @@
       "appartment":"Appartment",
       "appartmentContainerHeadline": "Ihre Ferienwohnung",
       "booknow": "Jetzt Buchen",
+      "cafeContainerHeadline": "Cafe Brückenwirt",
       "details": "Details",
       "herotext": "Moderne Ferienwohnungen direkt am Schigebiet",
       "heroimagealt": "Haus Brückenwirt mit Schmetterling im Vordergrund",
@@ -24,7 +38,14 @@
       "pricewinter":"Preis Winter ab:",
       "persons":"Personen",
       "text1":"Willkommen in unseren  <b>Appartements / Ferienwohnungen</b> direkt am Schigebiet Thurntaler Sillian.<br><br> Genießen Sie Ihren verdienten <b>Wohlfühlurlaub inmitten der Berge</b>. Die Drei Zinnen, die Lienzer Dolomiten, die Villgrater Berge bilden zu allen Jahreszeiten die imposante Kulisse für Ihre Unternehmungen.",
-      "textmodul":"Ferienwohnungen mit 32m²-85m² für 2-7 Personen <br> <br>  Jede Wohnung mit eigenem Balkon <br> <br> vollwertige Küchen <br> <br>getrennte Schlafräume - für Ihre besondere Privatsphäre <br> <br>Echtholzböden<br> <br>großer Garten mit Liegewiese zur freien Verwendung, mit Kinderspielgeräten <br><br>Frühstück im Café im Erdgeschoß"
+      "textmodul1":"Ferienwohnungen mit 32m²-85m² für 2-7 Personen",
+      "textmodul2":"Jede Wohnung mit eigenem <b>Balkon</b>",
+      "textmodul3":"Vollwertige Küchen",
+      "textmodul4":"Getrennte Schlafräume - für Ihre besondere <b>Privatsphäre</b>",
+      "textmodul5":"Echtholzböden",
+      "textmodul6":"Großer Garten mit Liegewiese mit Kinderspielgeräten",
+      "textmodul7":"Haustiere willkommen"
+
     },
      "Metadata":{
       "title": "Moderne Ferienwohnungen direkt am Schigebiet Osttirol",

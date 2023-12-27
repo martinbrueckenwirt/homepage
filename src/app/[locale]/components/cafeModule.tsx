@@ -41,7 +41,7 @@ return (
 
 <div className ={styles.outerWrapper}>
 
-<div>
+<div className={styles.quoteContainer}> 
     <span className ={`${h1Font.className} ${styles.quote}`}> {quote} </span>
     <span className ={`${h1Font.className} `}> Lukas.H </span>
     
@@ -109,9 +109,7 @@ return (
   />
     </div>
 
-    <div className ={`${h1Font.className} ${styles.box5}`}>
-        <p>{text8}</p>
-    </div>
+    
     
     
 </div>

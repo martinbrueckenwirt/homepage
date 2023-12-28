@@ -35,6 +35,8 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
     const router = useRouter();
     const pathname = usePathname();
     const pathWithoutLang = pathname.substring(4);
+    let  phoneNumber: string = "+43664805563922";
+    let  email: string = "office@derbrueckenwirt.at";
 
     function getNewPath(lang) {
         let newPath = lang.concat(pathWithoutLang);  
@@ -127,7 +129,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                         width={20}
                         alt="Telefon"
                         />   
-                        <div className = {`${styles.contactSpacer} ${navbarFont.className}`} >+43 664 80 55 63 922 </div>
+                        <div className = {`${styles.contactSpacer} ${navbarFont.className}`} ><a href={`tel:${phoneNumber}`}>+43 664 80 55 63 922</a> </div>
                 </div>
                 <div className={styles.contact}>
                 <Image 
@@ -136,7 +138,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 width={20}
                 alt = "Mail"
                 />   
-                        <div className={`${styles.contactSpacer} ${navbarFont.className}`}>martin@derbrueckenwirt.at</div>
+                        <div className={`${styles.contactSpacer} ${navbarFont.className}`}><a href={`mailto:${email}`}>office@derbrueckenwirt.at</a> </div>
                 </div>
             </div>
             <div className = {styles.languages}>

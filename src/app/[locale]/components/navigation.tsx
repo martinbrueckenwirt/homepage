@@ -17,13 +17,14 @@ import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
 import open from '../../../../public/open_45x45.png';
 import close from '../../../../public/close_45x45.png';
-import logo from '../../../../public/logoneu_200_60_180.png';
-import german from '../../../../public/deutsch.webp';
-import english from '../../../../public/englisch.webp';
-import italian   from '../../../../public/italienisch.webp';
+import logo from '../../../../public/Logo2023_250x37.webp';
+import logosmall from '../../../../public/Logo2023_148x22.webp';
+import german from '../../../../public/Deutschland_30x25.webp';
+import english from '../../../../public/England_30x25.webp';
+import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
 
-export default function Navigation({ transparency, appartment, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
+export default function Navigation({ transparency, home, appartment, cafe, contact, about, locale}: NavigationPropsNew) {
  
  
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
@@ -55,20 +56,20 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         return (
         <>
         <div className={styles.logoContainer} >
-        <a href ="/home" className = {styles.logo}>
+        <a href ="/" className = {styles.logo}>
             <Image 
             src = {logo}
             alt = "logo"
-            width ={200}
-            height ={60}
+            width ={250}
+            height ={37}
             />
         </a>
-        <a href ="/home" className = {styles.logoBurgersize}>
+        <a href ="/" className = {styles.logoBurgersize}>
             <Image 
-            src = {logo}
+            src = {logosmall}
             alt = "logo"
             width ={148}
-            height ={45}
+            height ={22}
             />
         </a>
         </div>
@@ -180,10 +181,11 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
      
                 
         <ul className={`${styles.menu} ${navbarFont.className}`}>
+            <li> <a href="/">{home}</a></li>
             <li> <a href="/appartement">{appartment}</a></li>
             <li><a href="/cafe">{cafe}</a></li>
             <li><a href="#">{about}</a></li>
-            <li><a href="#">{contact}</a></li>
+            <li><a href="/contact">{contact}</a></li>
 
         </ul>
 
@@ -194,10 +196,11 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
                     ? `${styles.burgerMenue}`
                     : `${styles.burgerMenueInvisible}`}>
                 <ul >
+                    <li> <a href="/">{home}</a></li>
                     <li><a href="/appartement">{appartment}</a></li>
                     <li><a href="/cafe">{cafe}</a></li>
                     <li><a href="#">{about}</a></li>
-                    <li><a href="#">{contact}</a></li>
+                    <li><a href="/contact">{contact}</a></li>
 
                 </ul>
             </div>

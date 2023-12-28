@@ -21,18 +21,52 @@
       "altBild4":"Eisbecher mit Obst und Sahne"
       
      },
+     "contact":{
+      "title": "Kontakt Brückenwirt Appartements",
+      "description":"Brückenwirt Appartements Telefonnummer, eMail, Facebook, Instagram, Anreise,Geo-Koordinaten, mapcode, Landkarte, Reservierung, Öffnungszeiten Cafe",
+      "h1": "Kontakt - so erreichen Sie uns",
+      "headline": "Wir freuen uns auf Ihren Besuch und Ihre Nachricht",
+      "headlineCafe":"Öffnungszeiten Cafe",
+      "openDays":"Montag - Sonntag, Dienstag geschlossen",
+      "address":"Adresse",
+      "phone":"Telefon",
+      "email":"eMail",
+      "geocoordinates":"Geo-Koordinaten",
+      "mapcode":"Mapcode/Navigation",
+      "map":"Landkarte"
+    
+    },
   
     "Footer":{
       "Einleitung": "Ich bin jetz auf der Seite"
     },
+    "history":{
+      "altImage1":"historisches Bild des Bauernhofes Brückenwirt",
+      "altImage2":"Hochwasser rinnt durch das Haus Brückenwirt",
+      "altImage3":"Das Haus Brückenwirt nach der Revitalisierung",
+      "beginning":"Der Brückenwirt in Heinfels bei Sillian ist schon seit über <b>150 Jahren</b> in Familienbesitz. Die Geschichte des „Brückenwirtes“ reicht zurück bis in das Jahr 1868.",
+      "beginning2":"Seit 1969 trägt das damalige Wirtshaus „Oberthaler“ den Namen „Brückenwirt“, der auf die benachbarte Holzbrücke (Punbrugge) Bezug nimmt.",
+      "beginning3":"Ursprünglich wurde in diesem traditionsbewussten Haus neben der Gastwirtschaft eine hauseigene Metzgerei und eine kleine Landwirtschaft betrieben. Das Wirtshaus am Eingang ins Villgratental war ein bedeutender Einkehrort und Übernachtungsstätte für Fuhrleute und Handelsreisende Richtung Lienz und Italien.",
+      "highWater":"1963 übernahmen Gertrud (geb. Oberthaler) und Heribert Pichler das Anwesen.",
+      "highWater2":"Mittlerweile in die Jahre gekommen renovierten sie mit viel Liebe und Eifer die alten Gemäuer. Jedoch kurz vor Fertigstellung wird der alte Gasthof durch eine Hochwasserkatastrophe 1966 schwer in Mitleidenschaft gezogen. Durch die starken Regenfälle um den 17. August suchte sich der Villgraterbach ein neues Bachbett und floss durch das Untergeschoss des Gebäudes.",
+      "highWater3":"Nach erfolglosen Sanierungsmaßnahmen des alten Gehöfts wurde von 1967 - 1969 der heutige Brückenwirt erbaut. Gertrud und Heribert Pichler haben mit viel Fleiß und Liebe ein traditionsbewusstes Unternehmen geschaffen. Mit der Übergabe der Elterngeneration an die nachfolgende Generation erfolgen die Weiterentwicklung des Brückenwirts und die Anpassung an die Bedürfnisse der Gegenwart.",
+    
+      "revitalisation":"2014 wurde der Brückenwirt generalsaniert, revitalisiert und im Herbst 2014 neu eröffnet. Die Zimmer wurden zu hochwertigen  Appartements umgebaut. Jede Ferienwohnung hat Zugang zu mindestens einem Balkon mit freiem Ausblick nach Osten in Richtung Lienz, nach Süden zu den Karnischen Alpen oder nach Westen. Jedes Appartement hat seine ganz persönliche Note. "
+    },
+
     "home": {
       "appartment":"Appartment",
       "appartmentContainerHeadline": "Ihre Ferienwohnung",
       "booknow": "Jetzt Buchen",
       "cafeContainerHeadline": "Cafe Brückenwirt",
+      "cafeIntro":"<b>Café Brückenwirt</b> ist ein gemütliches Café mit einer <b>wunderschönen Sonnenterrasse</b> im Pustertal. Hier können Sie einen perfekten Cappuccino genießen, der aus der berühmten Brückenwirt-Mischung zubereitet wird. Das Café bietet auch <b>hausgemachte Torten</b> und Kuchen, Eisbecher und <b>Eis vom Bio-Bergbauernhof aus dem Villgratental</b> sowie Bio-Obstsäfte. Der große Garten mit Kinderspielplatz ist ein weiteres Highlight des Cafés. Das Café ist sehr verkehrsgünstig gelegen und bietet das ganze Jahr über eine herzliche und persönliche Atmosphäre.",
       "details": "Details",
+      "history": "Unsere Geschichte hat Vieles zu erzählen",
+      "historyContainerHeadline":"Unsere bewegte Geschichte",
       "herotext": "Moderne Ferienwohnungen direkt am Schigebiet",
       "heroimagealt": "Haus Brückenwirt mit Schmetterling im Vordergrund",
+      "metaDescription":"Wunderschön gelegenes Appartementhaus mit modernen Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; sehr kinderfreundlich, großer Garten,  hochwertige Ausstattung, Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
+      "metaTitle":"Moderne Ferienwohnungen direkt am Schigebiet in Osttirol",
       "title": "Urlaub in den Bergen",
       "pricesummer":"Preis Sommer ab:",
       "pricewinter":"Preis Winter ab:",
@@ -52,7 +86,7 @@
       "description":"Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß."
     },
     "navigation": {
-      "home": "Home",
+      "home": "Brückenwirt",
       "appartment": "Appartments",
       "contact": "Kontakt",
       "cafe": "Cafe",

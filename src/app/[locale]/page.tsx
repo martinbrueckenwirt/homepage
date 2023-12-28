@@ -11,15 +11,16 @@ import TextModule from './components/textModule';
 
 import ApartmentModule from './components/apartementModule';
 import CafeModule from './components/cafeModule';
+import History from './components/history';
 
 import {getTranslations} from 'next-intl/server';
  
 export async function generateMetadata({params: {locale}}) {
-  const t = await getTranslations({locale, namespace: 'Metadata'});
+  const t = await getTranslations({locale, namespace: 'home'});
  
   return {
-      title: t('title'),
-      description: t('description'),
+      title: t('metaTitle'),
+      description: t('metaDescription'),
       alternates: {
           canonical: `/de`,
           languages: {
@@ -41,12 +42,17 @@ export default function Home() {
     imageAlt = t('heroimagealt');
 
     let text1: string ="";
+    let cafeIntro:string=""
     let appartmentContainerHeadline: string ="";
     appartmentContainerHeadline = t("appartmentContainerHeadline"); 
     let cafeContainerHeadline: string ="";
     cafeContainerHeadline = t("cafeContainerHeadline"); 
     let textCafe: string ="";
-    
+    let history: string ="";
+    history = t("history"); 
+    let historyContainerHeadline: string ="";
+    historyContainerHeadline = t("historyContainerHeadline"); 
+   
    
 
     /* Muster für zb "<important> abc </important" */
@@ -67,7 +73,7 @@ return (
                 imageUrlAlt = {imageAlt}
                 calledFrom = "home">
             </Hero>
-
+    <section>
             <div className={styles.textContainer}>
                 <div className={`${h1Font.className} ${styles.text}`}>
                 {/*    <p dangerouslySetInnerHTML={{ __html: text1 }} />*/}
@@ -76,7 +82,7 @@ return (
                 </div>
             </div>
 
-    <section>
+    
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {appartmentContainerHeadline}
      </h2>
@@ -93,11 +99,33 @@ return (
     </section>
 
     <section>
+
+    <div className={styles.textContainer}>
+                <div className={`${h1Font.className} ${styles.text}`}>
+                {/*    <p dangerouslySetInnerHTML={{ __html: text1 }} />*/}
+                    <div dangerouslySetInnerHTML={{__html: t.raw('cafeIntro')}} />
+                    
+                </div>
+            </div>
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {cafeContainerHeadline}
      </h2>
 <CafeModule /> 
     </section>
+
+    <section className='section'>
+
+<div className={styles.textContainer}>
+            <div className={`${h1Font.className} ${styles.text}`}>
+                <div dangerouslySetInnerHTML={{__html: t.raw('history')}} />
+                
+            </div>
+        </div>
+<h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
+    {historyContainerHeadline}
+ </h2>
+<History /> 
+</section>
 
 </div >
 </>

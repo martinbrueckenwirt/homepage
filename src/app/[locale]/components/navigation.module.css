@@ -279,6 +279,7 @@
         height: 200px;
         animation-name:menueSlideOut;
         animation-duration:1.5s;
+        z-index:99;
         /*display:none;*/
     }
     .burgerMenue ul {

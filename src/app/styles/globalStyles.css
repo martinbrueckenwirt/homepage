@@ -20,6 +20,7 @@
   --fontsize-h3Text:2em;
   --fontsize-h4Text:1.5em;
   --fontsize-h5Text:1em;
+  --fontsize-h6Text:0.9em;
   
   --fontsize-navigationText:1em;
   --fontsize-navigationMenu:1.5em;
@@ -55,7 +56,13 @@ body {
 .content{
   
   width:100%;
-  margin-top: 0px;
+  margin:0;
+  padding:0;
+
  }
 
+ .section{
+  /*max-width:100%;*/
+  margin-top: 0px;
+ }
 

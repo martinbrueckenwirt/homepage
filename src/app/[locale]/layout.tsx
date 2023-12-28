@@ -68,17 +68,17 @@ export default function LocaleLayout({children, params: {locale}}) {
   // Validate that the incoming `locale` parameter is valid
   const t = useTranslations('navigation');
   const myLocale =useTranslations.locale;
+  const home = t('home');
   const apartmentTrans = t('appartment');
   const cafeTrans = t('cafe');
   const contactTrans = t('contact');
   const aboutTrans = t('about');
-  const castleview = t('castleview');
-  const castleviewpricing = t('castleviewpricing');
+  
 
   if (!locales.includes(locale as any)) notFound();
 
 /* NAVIGATION 
-  <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+  <Navigation transparency={false} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} />
 
   Achtung 
   suppressHydrationWarning={true}
@@ -93,7 +93,7 @@ export default function LocaleLayout({children, params: {locale}}) {
       
       <body>
       <Suspense fallback ={<Loading/>}>
-      <Navigation transparency={false} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} castleview={castleview} castleviewpricing={castleviewpricing}/>
+      <Navigation transparency={false} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} />
 
         {children}
         <Footer/>

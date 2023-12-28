@@ -23,18 +23,49 @@
     "altBild4":"Coppa gelato con frutta e panna"
     
   },
+  "contact":{
+    "title": "Contatte Brückenwirt Appartements",
+    "description":"Brückenwirt Appartements numero di telefono, email, Facebook, Instagram, arrivo, coordinate geografiche, codice mappa, mappa, Prenotazione, Orari di apertura cafe",
+    "h1": "Contatto - come raggiungerci",
+    "headline": "Aspettiamo con ansia la tua visita e il tuo messaggio",
+    "headlineCafe":"Orari di apertura cafe",
+    "openDays":"Lunedì - domenica, chiuso il martedì",
+    "address":"Indirizzo",
+    "phone":"Telefono",
+    "email":"e-Mail",
+    "geocoordinates":"Coordinate geografiche",
+    "mapcode":"Mapcode/navigazione",
+    "map":"carta geografica"
+  },
     
   "Footer":{
     "Einleitung": "ITALIENSICH I am on the page"
+  },
+  "history":{
+    "altImage1":"Foto storica del maso Brückenwirt",
+    "altImage2":"L'acqua della piena attraversa la casa Brückenwirt",
+    "altImage3":"La casa Brückenwirt dopo la ristrutturazione",
+    "beginning":"Il Brückenwirt a Heinfels presso Sillian è di proprietà della famiglia da oltre <b>150 anni</b>. La storia del “Brückenwirt” risale al 1868.",
+    "beginning2":"Dal 1969 l'allora locanda “Oberthaler” si chiama “Brückenwirt”, in riferimento al vicino ponte di legno (Punbrugge).",
+    "beginning3":"In origine, oltre al ristorante, questa casa tradizionale aveva anche una propria macelleria e una piccola azienda agricola. La locanda all'ingresso della Villgratental era un importante luogo di sosta e di pernottamento per carrettieri e mercanti in viaggio verso Lienz e l'Italia.",
+    "highWater":"Nel 1963 Gertrud (nata Oberthaler) e Heribert Pichler rilevarono la proprietà.",
+    "highWater2":"Ormai avanti negli anni, hanno ristrutturato le vecchie mura con tanto amore e zelo. Tuttavia, poco prima del completamento, la vecchia locanda fu gravemente colpita da un’alluvione nel 1966. A causa delle forti piogge intorno al 17 agosto, il Villgraterbach ha trovato un nuovo letto e scorreva attraverso il seminterrato dell'edificio.",
+    "highWater3":"Dopo una ristrutturazione fallita del vecchio maso, tra il 1967 e il 1969 fu costruito l'odierno Brückenwirt. Gertrud e Heribert Pichler hanno creato con tanto duro lavoro e amore un'azienda attenta alla tradizione. Con il passaggio di consegne dalla generazione madre a quella successiva, l'ospite ponte si sviluppa ulteriormente e si adatta alle esigenze del presente.",
+    "revitalisation":"Nel 2014 il Brückenwirt è stato completamente rinnovato, rivitalizzato e riaperto nell'autunno 2014. Le camere sono state trasformate in appartamenti di alta qualità. Ogni appartamento ha accesso ad almeno un balcone con vista libera a est verso Lienz, a sud verso le Alpi Carniche oppure a ovest. Ogni appartamento ha il suo tocco personale."
   },
   "home": {
       "appartment":"Appartamento",
       "appartmentContainerHeadline": "Qui è dove vivi",
       "booknow": "Prenota ora",
       "cafeContainerHeadline": "Cafe Brückenwirt",
+      "cafeIntro":"<b>Café Brückenwirt</b> è un accogliente caffè con una <b>bellissima terrazza soleggiata</b> in Val Pusteria. Qui potrete gustare un perfetto cappuccino preparato con la famosa miscela Brückenwirt. Il caffè offre anche <b>crostate</b> e torte fatte in casa, coppe di gelato e <b>gelati del maso di montagna biologico nella Villgratental</b> nonché succhi di frutta biologici.L'ampio giardino con parco giochi per bambini è un altro punto forte dell'offerta. il caffè. Il caffè è situato in una posizione molto comoda e offre un'atmosfera calda e personale tutto l'anno",
       "details": "Dettagli",
+      "history":"La nostra storia ha molto da raccontare",
+      "historyContainerHeadline": "La nostra storia movimentata",
       "herotext": "Moderni appartamenti per le vacanze direttamente sul comprensorio sciistico",
-      "heroimagealt": "Brückenwirt con farfalla",
+      "heroimagealt": "La nostra storia movimentata",
+      "metaDescription":"BPalazzina in splendida posizione con moderni appartamenti/appartamenti per vacanze direttamente nel comprensorio sciistico Sillian/Thurntaler per la vostra vacanza perfetta nel Tirolo Orientale; molto adatto ai bambini, ampio giardino, arredamento di alta qualità, colazione a buffet in casa, bar con un perfetto cappuccino al piano terra.",
+      "metaTitle":"Moderni appartamenti per vacanze direttamente nel comprensorio sciistico del Tirolo Orientale",
       "title": "Vacanze in montagna ",
       "pricesummer":"Prezzo Estate a partire da:",
       "pricewinter":"Prezzo Inverno a partire da:",
@@ -54,7 +85,7 @@
       "description":"Appartamenti direttamente sulle piste; 2-6 persone, 32 m ² - 85 m ²; molto adatto ai bambini, ampio giardino, colazione a buffet presso il Cafe House con cappuccino perfetto al piano terra. Elegante, accogliente e luminoso appartamento con soggiorno, camere da letto e cucine completamente attrezzate"
     },
     "navigation": {
-      "home": "Inizio",
+      "home": "Brückenwirt",
       "appartment": "Appartamenti",
       "contact": "Contatto",
       "cafe": "Cafe",

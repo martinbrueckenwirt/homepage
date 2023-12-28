@@ -20,18 +20,51 @@
     "altBild3":"Two children drink fruit juice",
     "altBild4":"Ice cream sundae with fruit and cream"
   },
+  "contact":{
+    "title": "Contact Brückenwirt Appartements",
+    "description":"Brückenwirt Appartements telephone number, email, Facebook, Instagram, arrival, geo coordinates, map code, map, reservation, opening times cafe",
+    "h1": "Contact - how to reach us",
+    "headline": "We look forward to your visit and your message",
+    "headlineCafe":"Opening times cafe",
+    "openDays":"Monday - Sunday, closed Tuesday",
+    "address":"Address",
+    "phone":"Phone",
+    "email":"Mail",
+    "geocoordinates":"Geo coordinates",
+    "mapcode":"Mapcode/navigation",
+    "map":"Map"
+
+   },
   
   "Footer":{
     "Einleitung": "I am on the page"
+  },
+  "history":{
+    "altImage1":"Historical picture of the Brückenwirt farm",
+    "altImage2":"Flood water runs through the Brückenwirt house",
+    "altImage3":"The Brückenwirt house after revitalization",
+    "beginning":"The Brückenwirt in Heinfels near Sillian has been family-owned for over <b>150 years</b>. The history of the “Brückenwirt” goes back to 1868.",
+    "beginning2":"Since 1969, the then “Oberthaler” inn has been called “Brückenwirt”, which refers to the neighboring wooden bridge (Punbrugge).",
+    "beginning3":"Originally, in addition to the restaurant, this traditional house also had its own butcher's shop and a small farm. The inn at the entrance to the Villgratental was an important place to stop and stay overnight for carters and merchants traveling to Lienz and Italy.",
+    "highWater":"In 1963 Gertrud (born Oberthaler) and Heribert Pichler took over the property.",
+    "highWater2":"Now getting on in years, they renovated the old walls with a lot of love and zeal. However, shortly before completion, the old inn was severely affected by a flood disaster in 1966. Due to the heavy rains around August 17th, the Villgraterbach found a new stream bed and flowed through the basement of the building.",
+    "highWater3":"After unsuccessful renovation measures on the old farm, today's Brückenwirt was built between 1967 and 1969. Gertrud and Heribert Pichler have created a tradition-conscious company with a lot of hard work and love. With the handover from the parent generation to the next generation, the bridge host further develops and adapts to the needs of the present.",
+    "revitalisation":"In 2014 the Brückenwirt was completely renovated, revitalized and reopened in autumn 2014. The rooms have been converted into high-quality apartments. Each holiday apartment has access to at least one balcony with a clear view to the east towards Lienz, to the south to the Carnic Alps or to the west. Each apartment has its own personal touch. "
   },
   "home": {
       "appartment":"Apartment",
       "appartmentContainerHeadline": "Your holiday apartment",
       "booknow": "Book now",
       "cafeContainerHeadline": "Cafe Brückenwirt",
+      "cafeIntro":"<b>Café Brückenwirt</b> is a cozy café with a <b>beautiful sun terrace</b> in the Pustertal. Here you can enjoy a perfect cappuccino made from the famous Brückenwirt blend. The café also offers <b>homemade tarts</b> and cakes, sundaes and <b>ice cream from the organic mountain farm in the Villgratental</b> as well as organic fruit juices. The large garden with children's playground is another highlight of the café. The café is very conveniently located and offers a warm and personal atmosphere all year round.",
       "details": "Details",
+      "history":"Our history has a lot to tell",
+      "historyContainerHeadline":"Our eventful history",
       "herotext": "Modern holiday apartments directly at the ski area",
       "heroimagealt": "Brückenwirt with butterfly in the foreground",
+      "metaDescription":"Beautifully located apartment house with modern apartments / holiday apartments directly at the Sillian / Thurntaler ski area for your perfect holiday in East Tyrol; very child-friendly, large garden, high-quality furnishings, breakfast buffet in the house, cafe with a perfect cappucino on the ground floor.",
+      "metaTitle":"Modern holiday apartments directly at the ski area in East Tyrol",
+   
       "title": "Holidays in the mountains",
       "pricesummer":"Price summer from:",
       "pricewinter":"Preis winter from:",
@@ -50,7 +83,7 @@
       "description":"holidays with friends or family, children friendly, comfortable apartments for holidays; coffee shop with Austrian and Italian coffee; famous for homemade cakes; directly at skiing area Thurntaler Hochpustertal; directly at the skiing area."
     },
     "navigation": {
-      "home": "Home",
+      "home": "Brueckenwirt",
       "appartment": "Apartments",
       "contact": "Contact",
       "cafe": "Cafe",

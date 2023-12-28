@@ -16,7 +16,7 @@
     },
     "telephone": "+43-6336-4842",
     "photo": "",
-    "openingHours": "07:30-19:00",
+    "openingHours": "08:30-19:00",
     "paymentAccepted":"Cash,Credit Card, Bankomat",
     "priceRange": "$-$$",
     "FoodService": {

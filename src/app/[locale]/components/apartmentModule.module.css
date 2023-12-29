@@ -1,17 +1,23 @@
 /* *a*   1. breakpoints besser definieren, 2. image-sizes*/
+/*
+breakpoints: <400px;
+400-779 - 1 Spalte;
+780-1079 - 2 Spalten; 
+1080-1399- 2 Spalten
+1400-1999- 3 Spalten
+>2000px
+
+Animationen entfernt wegen Performance
+*/
+
 
 
 .apartmentCard{
-    /*display: inline-block;*/
-   
     position:relative;
-   /* width:30.3%;*/
     padding: 1rem;
-/*  bei größeren Auflösungen  width: calc(100% / 3); */
-    aspect-ratio: 4 / 3;
-   /* height:700px; */
-   
-    background-Color: var(--background-white);
+    background-Color: var(--background-dark);
+    height: calc(30vw);
+    /*background-color: red;*/
 }
 
 
@@ -20,7 +26,8 @@
    /* position: absolute;
     height: 10px; */
     position:relative; /* responsive image im Container*/
-    height: calc(30vw );
+    /*height: calc((100%/3)*4 );*/
+    height: calc(33vw * (3/4));
     display:flex;
     justify-content: center;
     z-index:1;
@@ -31,10 +38,12 @@
 .overlay{
     display: block;
     position: absolute;
-    top:1em;
+    top:0.1em;
+    height: calc(30vw);
+    /*height: 321px; */
     right:0.125em;
-    bottom:0.125em;
-    left:1em;
+    /*bottom:0.125em;*/
+    left:0.1em;
     
 }
 
@@ -42,7 +51,7 @@
     display: block;
     position: absolute;
     top: 1.2em;
-    left: 0.3em;
+    left: 1.6rem;
     font-size: xx-large;
     font-weight: 900;
     color:black;
@@ -52,18 +61,16 @@
 .backdrop{
     position: absolute;
     background-color: rgba(196, 196, 196, 0.2);
-    border-radius: 10px;;
     height: 11em;
-    width:calc(97%);
+    width: calc(100%);
     z-index:1;
-
-    
+  
 }
    
 .description{
     position: absolute;
     top: 3.5em;
-    left: 1em;
+    left: 1.6rem;
 
     font-weight: 300;
     font-size:x-large;
@@ -73,7 +80,7 @@
 .prices{
     position: absolute;
     top: 6em;
-    left: 1em;
+    left: 1.6rem;
     line-height: 0.125rem;
     font-weight: 200;
     font-size:large;
@@ -153,85 +160,78 @@
 
 
 @media(max-width:399px){    
+    
+    .apartmentCard{
+        width:calc(100vw);
+        height: calc(100vw);
+      } 
+      .overlay{
+        height: calc(100vw);
+    } 
+    
     .image{
         position:relative; /* responsive image im Container*/
-         height: calc(72vw );
+        height: calc(72vw );
                
      }
    
-    .apartmentCard{
-        display: inline-block;
-        
-         position:relative;
-         width:100%;
-        
-             padding: 0;
-     /*  bei größeren Auflösungen  width: calc(100% / 3); */
-         
-        /* height:700px; */
-        
-         background-Color: var(--background-white);
-     }
-     
-     
-     
-     .image{
-        position:relative; /* responsive image im Container*/
-         height: calc(75vw );
-               
-     }
-     
-     
-     .overlay{
-         display: block;
-         position: absolute;
-         top:0.2em; 
-         right:0.125em;
-         bottom:0.125em;
-         left:1em;
-         
-     }
-     
      .overlay .title{
          top: 1.2em;
          left: 0.3em;
           }
+
+          .buttonContainer{
+            bottom: 0.5em;
+            gap:1rem;
+        }
      
-     .backdrop{
-        width:calc(99%);
-               
-     }
+     
  
   
   }
   
   @media(min-width:400px) and (max-width: 779px){
+    .apartmentCard{
+        height: calc(100vw);
+      } 
+      .overlay{
+        height: calc(100vw);
+    } 
+    .overlay .title{
+        width: calc(100%);
+         }
     .image{
-        position:relative; /* responsive image im Container*/
-         height: calc(70vw );
-               
+        height:calc(75vw);        
      }
-
+     .buttonContainer{
+        bottom: 1em;
+    }
   }
   
   @media(min-width:780px) and (max-width: 1069px){    
 
 
     .apartmentCard{
-         }     
+        height: calc(50vw);
+      }    
      
      .image{
-         height: calc(35vw );     
-     }
-     
+         height: calc(50vw * (3/4));
+    }
+    .overlay{
+        height: calc(50vw);
+    }    
          
      .backdrop{
         width:calc(97%);
                
      }
+     .buttonContainer{
+        bottom: 1em;
+    }
      .buttonLeft{
         padding: 1rem;
-        height:2.5rem;
+        height:3rem;
         font-size: 15px;
         font-weight:bold;
         
@@ -240,7 +240,7 @@
         
     .buttonRight{
         padding: 1rem;
-        height:2.5rem;
+        height:3rem;
         font-size: 15px;
         font-weight:bold
     }
@@ -250,51 +250,38 @@
   @media(min-width:1070px)  and (max-width: 1399px){
     
     .apartmentCard{
-        margin:0.5rem;
-        padding: 0;
+       height: calc(50vw);
      }
-     
-     
      
      .image{
-       
-     }
+        height: calc(50vw * (3/4));
+    }
      
      
      .overlay{
-         display: block;
-         position: absolute;
-         top:0rem; 
-         right:0.125rem;
-         bottom:0.125rem;
-         left:1rem;
-         
-     }
-     
+         height: calc(50vw);
+     }    
      .overlay .title{
          top: 1.2em;
          left: 0.3em;
           }
      
      .backdrop{
-        width:calc(99%);
+        width:calc(100%);
                
      }
+     
         
      .buttonLeft{
         padding: 1rem;
-        height:2.5rem;
-        font-size: 15px;
+        height:3.5rem;
+        font-size: 20px;
         font-weight:bold;
-        
     }
-    
-        
-    
     .buttonRight{
         padding: 1rem;
-        height:2.5rem;
-        font-size: 15px;
+        height:3.5rem;
+        font-size: 20px;
         font-weight:bold
     }
     
@@ -302,15 +289,15 @@
   
 
   @media(min-width:1400px)and (max-width: 1999px){
- 
- 
-    
- 
+    .image{
+            height: calc(33vw * (3/4));
+         }
+         .buttonContainer{
+            bottom: 1em;
+        }
   }
-  @media(min-width:2000px){
-   
-    
-  }
+
+  @media(min-width:2000px){}
   
    
  

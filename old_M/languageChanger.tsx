@@ -10,13 +10,14 @@ import styles from './languageChanger.module.css';
 
 import Link from 'next/link';
 
-export default function LanguageChanger({ locale }) {
+export default function LanguageChanger({ locale }: { locale: string }) {
+/*export default function LanguageChanger({ locale }):string {*/
   const router = useRouter();
   const pathname = usePathname();
   const pathWithoutLang = pathname.substring(4);
   
   
-  function getNewPath(lang) {
+  function getNewPath(lang:string) {
     let newPath = lang.concat(pathWithoutLang);  
     return (newPath)
     }

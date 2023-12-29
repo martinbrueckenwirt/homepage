@@ -30,7 +30,6 @@
     }
 
     .topBarTransparent{
-        /*top:0px;*/
         top: 50px;
         height:60px; 
         display: flex;
@@ -111,8 +110,7 @@
         /*wird nicht mehr verwendet */
         background :var(--background-light);
         position: fixed;
-       top:60px;
-       
+        top:60px;
         height: 60px;
         width: 100%;
         display: flex;
@@ -124,7 +122,7 @@
         background: var(--background-light);
         position: fixed;
         /*top:60px;*/
-        top: 100px;
+        top: 110px;
         height: 60px;
         width: 100%;
         display: flex;
@@ -185,7 +183,10 @@
     .toggle{
         display: none;
         
+        
     }
+    
+  
     
     
     /*>600px*/
@@ -194,7 +195,7 @@
 
   }
     
-    
+
 
   
     
@@ -211,16 +212,6 @@
         font-size: var(--fontsize-navigationText);
     }
 
-    .topBarTransparent{
-        top:50px;
-        height:60px; 
-     
-    }
-
-    .navbarTransparent{
-        top:110px;
-    }
-   
         .menu{
             margin-top: 15px;
             display:none;
@@ -240,10 +231,21 @@
         }   
         .toggle{
             display: block;
-            padding-right: 2rem;
-         
+            /*padding-right: 2rem;*/
+            position:fixed;
+            top:123px;
+            left:85%;
             
         }
+        /*schließen Button*/
+        .alignRight{
+            position:fixed;
+            top:123px;
+            left:85%;
+
+        }
+        
+
        .checkboxInvisible{
             display: none;
         }
@@ -254,35 +256,36 @@
   }
    @keyframes menueSlide {
     from {left: -150px;}
-    to {left: 5px;}
+    to {left: 0px;}
         }
   @keyframes menueSlideOut {
-    from {left: 5px;}
-    to {left: -200px;}
+    from {left: 0px;}
+    to {left: -600px;}
         }
 
     .burgerMenue {   
         display:block;
         position: fixed;
-        top: 120px;
-        background-color: rgb(240, 175, 175);
-        width: 200px;
-        left: 5px;
-        height: 200px;
+        top: 110px;
+        background-color: var( --background-dark);
+        width: 100%;
+        height:100%;
         animation-name:menueSlide;
         animation-duration:1.5s;
         z-index:99;
         font-size: var(--fontsize-navigationMenu);
+       
         }
         
      .burgerMenueInvisible{
         /*display: block;*/
         position: fixed;
-        top: 120px;
-        background-color: rgb(240, 175, 175);
-        width: 200px;
-        left: -200px;
-        height: 200px;
+        top: 110px;
+        background-color: var( --background-dark);
+        width: 100%;
+        height:100%;
+        left: -600px;
+        font-size: var(--fontsize-navigationMenu);
         animation-name:menueSlideOut;
         animation-duration:1.5s;
         z-index:99;
@@ -290,39 +293,47 @@
     }
     .burgerMenue ul {
         list-style-type: none;
+        padding-top: 3rem;
+ 
     }
 
      .burgerMenueInvisible ul {
         list-style-type: none;
+        padding-top: 3rem;
     }
-    .burgerMenue >li {
+    .burgerMenue li {
+
         padding: 5px;
-        margin: 2px;
-        border: 1px;
-        border-color: black;
+        margin: 22px;
+        font-size: var(--fontsize-h1Text);
+
     }
 
-    .burgerMenue li :hover{
-        background-color:blue;
+    .burgerMenueInvisible li {
+        padding: 5px;
+        margin: 22px;
+        font-size: var(--fontsize-h1Text);
     }
+    .burgerMenue li :hover{
+        background-color:var(--red);
+    }
+
+    
 
     .burgerMenue ul a{
         text-decoration: none;
+        color: white
     }
     .burgerMenueInvisible ul a{
         text-decoration: none;
+        color: white;
     }
    
 }
 
     
 @media screen and (max-width: 850px){
-    /*   .nav{
-           display: block;
-           position: relative;
-           padding: 15px 20px;
-       }
-   */
+    
    .contact{
       
        font-size: var(---fontsize-h3Text);

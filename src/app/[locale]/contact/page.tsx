@@ -27,7 +27,7 @@ export async function generateMetadata({params: {locale}}) {
                 'en': `/en`
           }
       }
-  };
+  }
 }
 
 
@@ -44,17 +44,17 @@ export default function Contact() {
     let openDays: string = t('openDays');
     let openHours: string= "8:30-19:00";
     let address:string = t('address');
-    let adressLine:string = "Panzendorf 12, 9919 Heinfels, Austria"
+    let adressLine:string = 'Panzendorf 12, 9919 Heinfels, Austria';
     let phone:string = t('phone');
-    let phoneNr:string = "+43 4842 6336";
+    let phoneNr:string = '+4348426336';
     let email:string = t('email');
-    let emailAdress:string ="office@derbrueckenwirt.at";
-    let facebook:string = "Facebook";
-    let Instagram:string = "Instagram";
+    let emailAdress:string ='office@derbrueckenwirt.at';
+    let facebook:string = 'Facebook';
+    let Instagram:string = 'Instagram';
     let geocoordinates:string =t('geocoordinates');
-    let geocoordinatesValue:string = "46.742481, 12.425066";
+    let geocoordinatesValue:string = '46.742481, 12.425066';
     let mapCode:string =t('mapcode');
-    let mapCodeValue:string = "AUT 9BZZ.77";
+    let mapCodeValue:string = 'AUT 9BZZ.77';
     let map:string = t('map');
 
     /* Muster für zb "<important> abc </important" */
@@ -103,14 +103,16 @@ return (
                 
             </div>
             <div className ={styles.box6}>
-                <p> {phoneNr} </p>
+                <p> <a href={`tel:${phoneNr}`}>+43 4842 6336</a> </p>
             </div>
             <div className ={styles.box7}>
                 <p> {email} </p>
                 
             </div>
+
+          
             <div className ={styles.box8}>
-                <p> {emailAdress} </p>
+                <p> <a href={`mailto:${emailAdress}`}>office@derbrueckenwirt.at</a> </p>
                 
             </div>
             <div className ={styles.box9}>
@@ -119,7 +121,7 @@ return (
             </div>
             <div className ={styles.box10}>
                 <Link
-                href ="https://www.facebook.com/derbrueckenwirt1">
+                href ='https://www.facebook.com/derbrueckenwirt1'>
                 Link Facebook "Brückenwirt Appartements"
                 </Link>
             </div>

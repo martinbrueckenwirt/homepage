@@ -4,6 +4,7 @@
     padding-left: 2rem;
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h3Text);
+    max-height: calc(30vw);
 }
 
 @media(max-width:399px){   }

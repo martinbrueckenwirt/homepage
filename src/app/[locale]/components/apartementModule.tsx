@@ -8,6 +8,11 @@ import { MinPrice } from './types';
 import getPersonsForType from '../../../functions/getPersonsForType';
 import Link from 'next/link';
 import {useTranslations} from 'next-intl';
+import imageAppA from '../../../../public/P1190113-800x630-180-60.webp';
+import imageAppB from '../../../../public/P1210796-1-800x630-180-60.webp';
+import imageAppC from '../../../../public/P1210796-1-800x630-180-60.webp';
+import imageAppD from '../../../../public/P1430857-800x630-180-60.webp';
+import imageAppE from '../../../../public/P1360618-800x630-180-60.webp';
 
 
 
@@ -18,27 +23,53 @@ import {useTranslations} from 'next-intl';
 
 export default function ApartmentModule(props:AppartmentModuleProps) {
 
-let myImage: IAppartementTeaserImage;
+/*let myImage: IAppartementTeaserImage;*/
+let myImage: string;
     const t = useTranslations('home');
-    myImage = getApartmentTeaser(props);
+    /*myImage = getApartmentTeaser(props);  */
+   
+
     let persons: string;
     let prices: MinPrice; 
-    let localImage: string;
-    let localAlt:string;
-
-    if (props.appType === "Z") {
-        console.log('Brückenwirt');
-        localImage
-    }
+    let localImage: any;
+    let localAlt:string ="Bild der Ferienwohnung";
+    /*Achtung! das OBERSTE Bild braucht Priority=true*/
+    let priority: boolean = false;
     
-    else{
+
+    if (props.appType === "A") {
+        localImage = imageAppA
+        priority=true;
+    }
+
+    if (props.appType === "B") {
+        localImage = imageAppB
+        priority=false;
+    }
+    if (props.appType === "C") {
+         localImage = imageAppC
+         priority=false;
+    }
+    if (props.appType === "D") {
+        localImage = imageAppD
+        priority=false;
+   }    
+   if (props.appType === "E") {
+    localImage = imageAppE
+    priority=false;
+}
+
+
+   
     prices= getMinPriceApartment(props.appType);
     persons = getPersonsForType(props.appType);
     
-    localImage = myImage.imageName;
-    localAlt = myImage.alt;
-    console.log('appartementModule ', localImage);
-    }
+    /*localImage = myImage.imageName;
+    localAlt = myImage.alt;*/
+
+
+
+   
 
 
 
@@ -51,14 +82,15 @@ return (
             
         <Image
                         fill={true}
-                        /*width={300}
-                        height={300}*/
+                        /*src="/../../../../public/P2535150-HDR-1.jpg"*/
+                       src={localImage}
+                        /*width={800}
+                        height={630}*/
                         /*objectFit='contain' */
-                        priority={false}
-                        src={localImage}
-                        sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-            
-                alt ={myImage.alt} 
+                        priority={priority}
+                      
+                        sizes ="(max-width:779x) 100vw, (max-width:1399) 50vw, 33vw)"
+                        alt ={localAlt} 
                 
             />
             
@@ -89,11 +121,11 @@ return (
                         <button className={styles.buttonRight}> {t('details')}</button>        
                     </div>
                 </Link>
-
-
             </div>
         </div>      
     </div>
+
+
 
 </>
 

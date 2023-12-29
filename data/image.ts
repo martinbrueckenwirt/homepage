@@ -4,7 +4,7 @@ const imageList = [
 		images: [
 			{
 				small: "/P2535132-1-small2.webp",
-				full: "/P1190113_1500x1000",
+				full: "/P2535150-HDR-1-800-600-180-60.webp",
 				teaser: false,
 				description: "TEST A Gang1 small2",
 				descriptionEn: "EN A Floor",
@@ -91,7 +91,7 @@ const imageList = [
 			{
 				small: "/P1550975-small.webp",
 				full: "/P1550975.jpg",
-				teaser: false,
+				teaser: true,
 				description: "TEST A Blumen gelb",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",
@@ -105,7 +105,7 @@ const imageList = [
 			{
 				small: "/P1560052-small.webp",
 				full: "/P2535150-HDR-1.jpg",
-				teaser: true,
+				teaser: false,
 				description: "TEST A Biene",
 				descriptionEn: "EN A Flower1",
 				descriptionIt: "IT  A Flower 2",

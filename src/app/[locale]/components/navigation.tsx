@@ -106,7 +106,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
    
         return (<Image 
                 src={mySrc}
-                height = {30}
+                height = {45}
                 width={45}
                 alt= "öffnen"
             />)
@@ -176,7 +176,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
         <div className = {styles.toggle} onClick={handleClickMenueToggle}>
             <input type='checkbox' id="navBurgerCheckbox" className={styles.checkboxInvisible}/>
                 <label htmlFor="navBurgerCheckbox" >
-                    <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
+                <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
                 </label>  
             
         </div>
@@ -197,14 +197,25 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             <div className={isBurgerMenueVisible === true
                     ? `${styles.burgerMenue}`
                     : `${styles.burgerMenueInvisible}`}>
-                <ul >
-                    <li> <a href="/">{home}</a></li>
+
+                <div className = {`${styles.toggle} ${styles.alignRight}`} onClick={handleClickMenueToggle}>
+                     <input type='checkbox' id="navBurgerCheckbox2" className={styles.checkboxInvisible}/>
+                    <label htmlFor="navBurgerCheckbox" >
+                                    <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
+                              
+                    </label>  
+            
+                </div>
+             
+                <ul className={navbarFont.className}>
+                    <li><a href="/">{home}</a></li>
                     <li><a href="/appartement">{appartment}</a></li>
                     <li><a href="/cafe">{cafe}</a></li>
                     <li><a href="#">{about}</a></li>
                     <li><a href="/contact">{contact}</a></li>
 
                 </ul>
+                
             </div>
         </div>
 

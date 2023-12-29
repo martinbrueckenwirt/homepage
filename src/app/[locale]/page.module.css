@@ -1,6 +1,5 @@
 
  .appartmentContainer{
-   
   margin-left: 8rem;
   margin-top: 2rem;
   padding: 1rem;
@@ -9,24 +8,28 @@
   background-color: var(--background-light);
   font-size: var(--fontsize-h1Text);
   font-weight: var(--fontweight-h2Text);
-  animation-name : slideIn;
-  animation-duration: 2s;
+ /* animation-name : slideIn;
+  animation-duration: 2s;*/
 }
 
- @keyframes slideIn {
+ /*@keyframes slideIn {
   from {margin-left: -50rem;}
   to {margin-left: 8rem;}
-      }
+      }*/
 
  .modulesContainer{
-  padding-left:0.5rem;
-  padding-right:0.5rem;
-  padding-bottom: 5rem;
-  display:grid;
-  gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
-    
- }
+    margin-top: 220px;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
+   /* padding-bottom: 5rem;*/
+    display:grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(590px, auto);
+    justify-content: center;
+    align-items: center;
+      
+  }
 
 
  .textContainer{
@@ -35,17 +38,13 @@
  }
  
  .text{
-   /*position: absolute;*/
-
    margin-top: 170px; /*gleicht Höhe des Headers aus*/
    padding-top:5rem;
    padding-bottom: 5rem;
    padding-right: 5rem;
    width:50%;
-
    font-size: var(--fontsize-h1Text);
    font-weight: var(--fontweight-h3Text);
-
  }
 
  
@@ -54,6 +53,7 @@
  @media(max-width:399px){   
   
   .modulesContainer{
+    margin-top:220px;
     display:grid;
     gap: 1px;
     grid-template-columns: 1fr;
@@ -79,16 +79,17 @@
     
 }
 
- @keyframes slideIn {
+ /*@keyframes slideIn {
   from {margin-left: -50rem;}
   to {margin-left: 4rem;}
-      }
+      }*/
     
    
  }
  
  @media(min-width:400px) and (max-width: 779px){    
   .modulesContainer{
+    margin-top:220px;
     display:grid;
     gap: 1px;
     grid-template-columns: 1fr;
@@ -113,16 +114,17 @@
       font-weight: var(--fontweight-h2Text);
  }
   
-   @keyframes slideIn {
+ /*  @keyframes slideIn {
     from {margin-left: -50rem;}
     to {margin-left: 4rem;}
-        }
+        }*/
     
  }
  
  @media(min-width:780px)  and (max-width: 1079px){
 
   .modulesContainer{
+    margin-top:220px;
     display:grid;
     gap: 1px;
     grid-template-columns: repeat(2, 1fr);
@@ -143,16 +145,44 @@
       font-size: var(--fontsize-h4Text);
       font-weight: var(--fontweight-h2Text);
      }
-    @keyframes slideIn {
+   /* @keyframes slideIn {
       from {margin-left: -50rem;}
       to {margin-left: 4rem;}
-          }
+          }*/
    
    
  }
  
- @media(min-width:1080px)and (max-width: 1999px){
+ @media(min-width:1080px)and (max-width: 1399px){
   .modulesContainer{
+    grid-template-columns: repeat(2, 1fr);
+         }
+  
+         .text{
+   margin-top: 130px; /*gleicht Höhe des Headers aus*/
+   padding-top:3rem;
+   padding-bottom:3rem;
+   padding-right: 4rem;
+   width:60%;
+   font-size: var(--fontsize-h4Text);
+   font-weight: var(--fontweight-h3Text);
+ 
+   }
+   .appartmentContainer{
+         margin-left: 4rem;
+      font-size: var(--fontsize-h2Text);
+      font-weight: var(--fontweight-h3Text);
+    }
+   /* @keyframes slideIn {
+      from {margin-left: -50rem;}
+      to {margin-left: 4rem;}
+          }*/
+
+ }
+
+ @media(min-width:1400px)and (max-width: 1999px){
+  .modulesContainer{
+    margin-top:220px;
     display:grid;
     gap: 1px;
     grid-template-columns: repeat(3, 1fr);
@@ -168,26 +198,19 @@
  
    }
    .appartmentContainer{
-   
-      margin-left: 4rem;
+         margin-left: 4rem;
       font-size: var(--fontsize-h2Text);
       font-weight: var(--fontweight-h3Text);
     }
-    @keyframes slideIn {
+   /* @keyframes slideIn {
       from {margin-left: -50rem;}
       to {margin-left: 4rem;}
-          }
+          }*/
 
  }
- @media(min-width:2000px){
-   .text{
-     
-   }
-   .appartmentContainer{
-        
-    }
+ @media(min-width:2000px){}
    
- }
+ 
  
   
 

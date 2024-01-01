@@ -2,27 +2,22 @@
 import Image from "next/image"
 import getImageToEnlarge from "../../../functions/getImageToEnlarge"
 import {useEffect, useState} from "react" 
+import myImage from "../../../../public/P1210796-1-800x630-180-60.webp"
 
 
-
-const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage, type}) =>{
+const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage, imageList}) =>{
     const [dataReceived, setDataReceived] = useState(null);
     const [altAttribut, setAltAttribut] = useState(null);
     const [desc,setDesc] =useState(null);
     const [imgSrc, setImgSrc] = useState(null);
-    const [height,setHeight] = useState(null);
-    const [width, setWidth] = useState(null);
-    const [priority,setPriority] = useState(null);
-
-
+ 
+    
     function copyData(param){
         setAltAttribut(param.alt);
         setDesc(param.description);
         setImgSrc(param.enlargeImage);
-        setHeight(param.height);
-        setWidth(param.width);
-        setPriority(param.priority);
-        setDataReceived(1);;
+        
+        console.log('%c copyData', 'background: #0000ff; color: white', imgSrc)
     }
  
     let mydata =[]
@@ -30,11 +25,10 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
         let response =[]
         async function getData() {
             
-            let data = await getImageToEnlarge(clickedImage,type)
+            let data = await getImageToEnlarge(clickedImage,imageList)
             .then((response) => mydata={...response})
             .then(mydata => {
-       
-                /*console.log('%c imageData useEffect', 'background: #0000ff; color: white');*/
+                      
                 copyData(mydata);
                 
 
@@ -43,8 +37,15 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
         }
           
         getData()
+        console.log('%c imageData useEffect', 'background: #0000ff; color: white')
 
     })
+
+    useEffect( () =>{   
+        setDataReceived(1);
+        console.log('%c imageData useEffect', 'background: #0000ff; color: white');
+        console.log('%c imgSrc', 'background: #0000ff; color: white', imgSrc);
+    },[imgSrc])
     
   
     const handleCloseClick = (e) => {
@@ -53,7 +54,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
         }
     };
 
-   
+     
 
     /*console.log('%c imageData', 'background: #00ff00; color: red'); */
 
@@ -82,19 +83,24 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
     /*arrow: https://www.svgviewer.dev/s/442312/right optimized*/
     /*close*/
     /*<svg width="800" height="800" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#444" d="M15.1 3.1 12.9.9 8 5.9 3.1.9.9 3.1l5 4.9-5 4.9 2.2 2.2 4.9-5 4.9 5 2.2-2.2-5-4.9z"/></svg> */
-   if (dataReceived){
+   if (mydata){
 
     return (<>  
     
         <div className="overlay close" onClick={handleCloseClick} ></div>
-        
-        <Image 
+        <p>{imgSrc}</p>
+            
+        {imgSrc && (
+            <Image 
                         src= {imgSrc}
                         alt={altAttribut}
                         quality = {30}
                         width = {300}
                         height ={225}
+                       
                     />
+                    )
+                }
                     <span className="close" onClick={handleCloseClick} >X</span>
          <div  className="overlay-arrows-right"  onClick={handleClickNext} >
             <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +108,7 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
                 fill="#1C1C1F"/>
            </svg> */
           
-         
+        
          </div>   
         <div> *a* Pfeile rechts und links 19:00 inkl css</div>
         <div  className="overlay-arrows-right"  onClick={handleClickPrev} >

@@ -1,8 +1,10 @@
+
 const withNextIntl = require('next-intl/plugin')();
+
  
-module.exports = withNextIntl({
- // images: {
- //   disableStaticImages: true,
+// weil Bilder tw nicht gefunden werden
+module.exports = withNextIntl(
+    //   disableStaticImages: true,
  // },
   // Other Next.js configuration ...
-});
+);

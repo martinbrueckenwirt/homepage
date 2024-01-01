@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import Modal from "./modal" 
 import getImageList from "../../../functions/getImageList"
 import {GalleryImage} from "../components/types"
-/*import Modal from "./modal_onlyIndex"*/
+
 
 
 
@@ -24,7 +24,6 @@ const Gallery = (props)  => {
     const[clickedImage,setClickedImage] = useState(null);
     const[currentIndex, setCurrentIndex] =useState(1); /*auf das 2. Element setzen, damit das 2. Bild in der Mitte ist */
     const [oldIndex, setOldIndex] = useState(1); /*analog currentindex */
-    const[clickedForward, setClickedforward] = useState(false);
     const [image1, setImage1] = useState<GalleryImage | null>();
     const [image2, setImage2] = useState<GalleryImage | null>();
     const [image3, setImage3] = useState<GalleryImage | null>();
@@ -52,9 +51,9 @@ const Gallery = (props)  => {
         useEffect
         (() => { if(clickedImage){
           
-          console.log('currentIndex update');
+         
         if (currentIndex === 0){
-          console.log('gallery2024 Stelle1 ', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+          
           setImage1(gridImages[lengthGridImages-1])
           setImage2(gridImages[currentIndex]);
           setImage3(gridImages[currentIndex+1]);
@@ -63,14 +62,14 @@ const Gallery = (props)  => {
    
         
         if (currentIndex === -1){
-          console.log('gallery2024 Stelle2 ', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+          
           setImage1(gridImages[(lengthGridImages-2)])
           setImage2(gridImages[(lengthGridImages-1)]);
           setImage3(gridImages[0]);
         }
         
         if (currentIndex > 1 ){
-          console.log('gallery2024 Stelle3 ', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+          
           setImage1(gridImages[currentIndex-2])
           setImage2(gridImages[currentIndex-1]);
           setImage3(gridImages[currentIndex]);
@@ -78,14 +77,14 @@ const Gallery = (props)  => {
         }
         
         if (currentIndex === 1){
-          console.log('gallery2024 Stelle4 ', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+          
           setImage1(gridImages[lengthGridImages-1])
           setImage2(gridImages[currentIndex-1]);
           setImage3(gridImages[currentIndex]);
         }
         
         if (currentIndex === lengthGridImages){
-          console.log('gallery2024 Stelle4 ', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+          
           setImage1(gridImages[lengthGridImages-2])
           setImage2(gridImages[lengthGridImages-1]);
           setImage3(gridImages[0]);
@@ -165,40 +164,48 @@ const Gallery = (props)  => {
 return(
 
     <>
-<p>hallo</p>
-<div className={styles.gallerygridcontainer}>
+
+<div className={styles.gallerygridContainer}>
+ 
+  <div className={styles.wrapper}>
+
+      <div className={styles.box1ArrowLeft} onClick={() => {clickHandlerPrev(image2.full)}}>
+          <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
+            fill="#1C1C1F"/>
+          </svg>
+      </div>
    
-      <div onClick={() => {clickHandlerPrev(image1.full)}}
+      <div className={styles.box2BildLinks} onClick={() => {clickHandlerPrev(image1.full)} }
       >
         {image1 && (  
-          <Image 
+          <Image className={styles.image}
             src= {image1.small}
             alt={image1.alt}
             quality = {30}
             width = {128}
             height ={96} 
-            /*fill */
+            /*fill */ 
           />  
         )}
         </div>
 
-      <div onClick={() => {clickHandler(image2.full)}}
+      <div className={styles.box3BildMitte} onClick={() => {clickHandler(image2.full)}}
       >
         {image2 && (
-          <Image 
+          <Image className={styles.image}
             src= {image2.small}
             alt={image2.alt}
             quality = {30}
             width = {128}
-            height ={96} 
-            /*fill */
+            height= {96} 
+            /* fill */
             />  
     )}
       </div>
-      <div onClick={() => {clickHandlerNext(image3.full)}}
+      <div className={styles.box4Bildrechts} onClick={() => {clickHandlerNext(image3.full)}}
        >
        {image3 && (
-          <Image 
+          <Image className={styles.image}
             src= {image3.small}
             alt={image3.alt}
             quality = {30}
@@ -208,8 +215,24 @@ return(
           />  
                   )}
         </div>
-     
-        
+
+        <div className={styles.box1ArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
+        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
+                fill="#1C1C1F"/>
+           </svg>
+      </div>
+        {clickedImage && (
+        <Modal 
+            clickedImage={clickedImage} 
+            handleClickNext={clickHandlerNext}
+            handleClickPrev={clickHandlerPrev}
+            setClickedImage={setClickedImage}
+            imageList={gridImages}
+        />)
+
+        } 
+  </div>
 </div> 
     
 
@@ -222,16 +245,3 @@ return(
 export default Gallery;
 
 
-export type GalleryImage = {
-    small:string;
-	full:string;
-    teaser:boolean;
-	description:string;
-	descriptionEn:string;
-	descriptionIt:string;
-	alt: string;
-	altEN:string;
-	altIT:string;
-	copyright: string;
-	sortnumber:number;
-}[];

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from "../[locale]/components/gallery.module.css";
 import Image from 'next/image'
 
-import GalleryA from '../[locale]/components/gallery2024'
+import GalleryA from '../[locale]/components/gallery'
 /*import GalleryA from '../[locale]/components/gallery_a_onlyIndex'*/
 
 /*import PricingTable from '../components/pricingTable' */

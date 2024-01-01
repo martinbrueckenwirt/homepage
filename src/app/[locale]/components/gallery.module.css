@@ -1,7 +1,70 @@
-.container{
+.gallerygridContainer{
 margin-top:320px;
 }
 
+.wrapper{
+    margin-top: 320px;
+    display: grid;
+    background-color: blue;
+    height:500px;
+    grid-template-columns: repeat(14), 1f;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.box1ArrowLeft{
+    grid-column:1;
+    background-color: red;
+    justify-self: center;
+}
+
+.box2BildLinks{
+    /*position:relative;*/
+    width: calc(30vw);
+    height: calc(21vw);
+    grid-column: 2 /6;
+    justify-self: center;
+
+    background-color: yellow;
+}
+
+
+
+.box3BildMitte{
+    position:relative;
+    width: calc(30vw);
+    height: calc(21vw);
+    grid-column: 6 / 10;
+    justify-self: center;
+    background-color: green;
+}
+
+.box4Bildrechts{
+    position:relative;
+    width: calc(30vw);
+    height: calc(21vw);
+    grid-column: 10 / 14;
+    justify-self: center;
+    background-color: rgb(243, 38, 174);
+}
+
+.image{
+    width: calc(30vw);
+    height: calc(21vw);
+    object-fit: cover;
+    object-position: center;
+}
+.image:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+}
+
+.box1ArrowRight{
+    grid-column: 14;
+    justify-self: center;
+    background-color: red;
+}
 .largeImageContainer{
    
     top: 0;

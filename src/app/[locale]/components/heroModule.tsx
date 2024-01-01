@@ -29,7 +29,7 @@ export default function Hero(props:HeroProps) {
 
                 priority={true}
             
-                sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
+                sizes ="(max-width:779px) 100vw, (max-width:1399px) 50vw, 33vw)"
 
                 alt ={props.imageUrlAlt}
                 />

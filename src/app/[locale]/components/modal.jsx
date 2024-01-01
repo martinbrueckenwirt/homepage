@@ -1,8 +1,8 @@
 
 import Image from "next/image"
-import getImageToEnlarge from "../functions/getImageToEnlarge.ts"
+import getImageToEnlarge from "../../../functions/getImageToEnlarge"
 import {useEffect, useState} from "react" 
-import { clear } from "console";
+
 
 
 const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage, type}) =>{

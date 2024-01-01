@@ -15,6 +15,20 @@ export type BurgerMenueProps ={
     menueSlide:string;
 }
 
+export type GalleryImage = {
+    small:string;
+	full:string;
+    teaser:boolean;
+	description:string;
+	descriptionEn:string;
+	descriptionIt:string;
+	alt: string;
+	altEN:string;
+	altIT:string;
+	copyright: string;
+	sortnumber:number;
+}[];
+
 export type HeroProps = {
     imageUrl: string;
     imageUrlAlt: string;

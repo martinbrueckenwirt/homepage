@@ -1,6 +1,6 @@
 
 import Image from "next/image"
-import getImageToEnlarge from "../../../functions/getImageToEnlarge.js"
+import getImageToEnlarge from "../../../functions/getImageToEnlarge"
 import {useEffect, useState} from "react" 
 
 
@@ -61,8 +61,8 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, imageList}) =>{
     return (<>  
     
     <div className="overlay close"></div>
-    
-    {dataReceived && (
+     {dataReceived && (
+   
     <Image 
                     src= {imgSrc}
                     alt={altAttribut}
@@ -91,8 +91,8 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, imageList}) =>{
                         src= {imgSrc}
                         alt={altAttribut}
                         quality = {30}
-                        width = {300}
-                        height ={225}
+                        width = {940}
+                        height ={750}
                     />
                     <span className="close" onClick={handleCloseClick} >X</span>
          <div  className="overlay-arrows-right"  onClick={handleClickNext} >

@@ -13,7 +13,7 @@ import Image from "next/image"
 import { useState, useEffect } from "react";
 /*import getImageList from "../functions/getImageList" */
 import Modal from "../components/modal"
-import imageList from "../../data/image";
+import imageList from "../../../../data/image";
 
 
 

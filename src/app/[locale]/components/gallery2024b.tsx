@@ -1,5 +1,10 @@
 "use client";
-  /*https://www.youtube.com/watch?v=KNEbqO-q1r8*/
+/*
+Kopie von gallery_a_onlyIndex
+*/
+
+
+/*https://www.youtube.com/watch?v=KNEbqO-q1r8*/
   /*muster: zb key-down-Event (Barriere Armut) https://github.com/igordanchenko/react-photo-album/tree/main/examples/lightbox */
   /* https://github.com/igordanchenko/yet-another-react-lightbox */
 
@@ -15,7 +20,7 @@ import getImageList from "../../../functions/getImageList"
 import Modal from "./modal_onlyIndex"
 
 function getInitialImages() {
-  let type = "typeA";
+  let type = "A";
      var resultGridImages = [];
      resultGridImages=getImageList(type); 
      /*console.log('getstatic  ',resultGridImages); */
@@ -27,11 +32,14 @@ function getInitialImages() {
 const GalleryA = ()  => {
  
     const[clickedImage,setClickedImage] = useState(false);
-    const[currentIndex, setCurrentIndex] =useState(0);
+    const[currentIndex, setCurrentIndex] =useState(1);
     /*console.log('im Haupt'); */
     let gridImages =[]; /*Liste der anzuzeigenden Bilder */
        gridImages = getInitialImages();
     
+    let displayImages =[]; /*Liste der anzuzeigenden Bilder */
+    
+
     /*console.log(gridImages); */
     /*gridImages = imageList.slice(); /*Duplikat Desktopansicht */
  
@@ -41,12 +49,32 @@ const GalleryA = ()  => {
     useEffect(() => {
         if ((!clickedImage) && (gridImages[0])) {
               setCurrentIndex(0);
-
         }
-           
-},[currentIndex, clickedImage, gridImages]);
+      },[currentIndex, clickedImage, gridImages]);
 
 
+      function setDisplayImages(currentIndex)
+      {
+        if (currentIndex == 0) {
+            displayImages[0] = gridImages[lengthImageGrid-1]; /*letztes Bild */
+            displayImages[1] = gridImages[0]; /*erstes Bild */    
+            displayImages[2] = gridImages[1]; /*zweites Bild */
+          }
+          /*letztes Bild */
+          else if (currentIndex == lengthImageGrid-1) {
+            displayImages[0] = gridImages[lengthImageGrid-2]; /*vorletztes Bild */
+            displayImages[1] = gridImages[[lengthImageGrid-1]; /*letztes Bild */    
+            displayImages[2] = gridImages[0]; /*erstes Bild */
+  
+          }
+          else {
+              displayImages[0] = gridImages[currentIndex-1]; 
+              displayImages[1] = gridImages[currentIndex];     
+              displayImages[2] = gridImages[currentIndex+1];
+          }
+    }
+
+    
       const clickHandler = (image, index) => {
         /* Klick auf Desktop */
         setCurrentIndex(index);
@@ -102,11 +130,30 @@ function checkIsClicked(index) {
      return result    
 }
 
+/*setDisplayImages(1);*/
 
 return(
-<div>
-    
-<div className={styles.gallerygridcontainer}>
+
+  <>
+<div className ={styles.container}>
+
+    <div className ={styles.largeImageContainer}>
+
+      <div className ={styles.largeImageContainer}> 
+   
+          {clickedImage && (
+              <Modal 
+                  clickedImage={currentIndex} 
+                  handleClickNext={handleClickNext}
+                  handleClickPrev={handleClickPrev}
+                  imageList = {gridImages}
+                
+              />)
+
+              }
+      </div>
+    </div>
+  <div className={styles.gallerygridcontainer}>
    
       
         {gridImages.map((image, index) => (
@@ -139,9 +186,10 @@ return(
         />)
 
         }
+  </div>
 </div>
 
-</div>
+</>
 
 )
 

@@ -1,3 +1,31 @@
+.container{
+margin-top:320px;
+}
+
+.largeImageContainer{
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.largeImage{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:1000px;
+    height:100%;
+    background-color: aliceblue;
+    object-fit: contain;
+
+}
+/*nur das Grid*/
 .gallerygridcontainer{
 display: grid;
 position:relative; /* wichtig für Fill der unterliegenden Image */ 
@@ -32,3 +60,6 @@ padding: 5px;
 .firstRun{
     background: blue;
 }
+
+
+

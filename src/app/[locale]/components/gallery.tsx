@@ -55,7 +55,7 @@ const Gallery = (props)  => {
         },[]);
 
   useEffect(() => {
-    console.log('jetzt ist Bild geladen- hier kommt der Test aber nie her');
+    console.log('jetzt ist Bild geladen- hier kommt der Test aber nie her ', image1);
         },[imageLoaded]);
 
         /*Bilder scrollen*/

@@ -5,6 +5,7 @@ import styles from "../[locale]/components/gallery.module.css";
 import Image from 'next/image'
 
 import GalleryA from '../[locale]/components/gallery'
+import Aptest from './components/aptest';
 /*import GalleryA from '../[locale]/components/gallery_a_onlyIndex'*/
 
 /*import PricingTable from '../components/pricingTable' */
@@ -18,7 +19,7 @@ export default function Page() {
 <>
 
 <div >
-            <GalleryA /> 
+            <GalleryA/> 
  
         </div >
 

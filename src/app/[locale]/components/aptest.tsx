@@ -1,82 +1,46 @@
-import styles  from './apartmentModule.module.css';
-import Image from 'next/image'
-import {AppartmentModuleProps, IAppartementTeaserImage} from './types';
+"use client"
+import { useEffect } from 'react';
+import imageList from '@/data/image';
+import Image from 'next/image';
+import { useState } from 'react';
 
-import imageAppA from '../../../../public/P2535150-HDR-1.jpg';
-import imageAppB from '../../../../public/P1560082-small2.webp';
-import imageAppC from '../../../../public/P1560072.jpg';
-
-export default function Aptest(props:AppartmentModuleProps) {
-
+export default function Aptest(props: AppartmentModuleProps) {
     let localImage: ImageData;
-    let localAlt:string ="Alt";
-    console.log('aptest' ,props);
-  /*  console.log('aptest' ,imageAppB);*/
+    let localAlt: string = "Alt";
+    const [isLoaded, setIsLoaded] = useState(false);
 
-    if (props.appType === "A") {
-        localImage = imageAppA
-        console.log('aptest-  im A' ,localImage);
-        }
+    function init() { 
+        console.log('aptest init');
+        localImage = imageList[1].full;
+        setIsLoaded(true);
+    }
 
-        if (props.appType === "B") {
-            localImage = imageAppB
-            
-            }
-            if (props.appType === "C") {
-                localImage = {imageAppC}
-                
-                }
+    useEffect(() => {
+        console.log('imageList:', localImage);
+       
+        // Add your logic here using the imageList variable
+    }, [localImage]);
 
-/*localImage = {imageAppA};*/
-console.log('aptest' ,localImage);
+    useEffect(() => {
+         init();
+    },[])
+    
 
-return (
-<>
+    return (
+        <>
+            {isLoaded && (
+                <Image
+                    src={localImage}
+                    width={300}
+                    height={300}
+                    priority={true}
+                    alt={localAlt}
+                />)}
+        </>
+    );
 
-<Image
-                        /*fill={true}*/
-                       src={localImage}
-                       /*src={localImage}*/
-                        width={300}
-                        height={300}
-                        /*objectFit='contain' */
-                        priority={true}
-                      
-                        /*sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"*/
-            
-                alt ={localAlt} 
-                
-            />
-<Image
-                        /*fill={true}*/
-                       src={imageAppB}
-                       /*src={localImage}*/
-                        width={300}
-                        height={300}
-                        /*objectFit='contain' */
-                        priority={true}
-                      
-                        /*sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"*/
-            
-                alt ={localAlt} 
-                
-            />
 
-<Image
-                        /*fill={true}*/
-                       src="/P2535150-HDR-1.jpg"
-                       /*src={localImage}*/
-                        width={300}
-                        height={300}
-                        /*objectFit='contain' */
-                        priority={true}
-                      
-                        /*sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"*/
-            
-                alt ={localAlt} 
-                
-            />
 
-</>
-)
+
+
 }

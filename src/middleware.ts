@@ -20,11 +20,10 @@ console.log('  Middleware response **********', NextResponse );*/
 export const config = {
   // Match only internationalized pathnames
   //matcher: ['/', '/(de|en|it)/:path*']
- // matcher: [
-   // '/((?!api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|images/books|icons|manifest).*)'
-// ]
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|apple-touch-icon.png|favicon.svg|images/books|icons|manifest).*)']
+
  
- matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|logo.png|sw.js).*)']
+//matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|logo.png|sw.js).*)']
 //matcher: ['/((?!api|assets|favicon.ico|logo.png|sw.js).*)']
 //von bing-chat matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|logo.png|sw.js|images).*)']
 

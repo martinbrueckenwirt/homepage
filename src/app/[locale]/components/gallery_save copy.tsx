@@ -27,15 +27,14 @@ const Gallery = (props)  => {
     const [oldIndex, setOldIndex] = useState(1); /*analog currentindex */
     const [image1, setImage1] = useState<StaticImageData>();
     const [image2, setImage2] = useState<GalleryImage | null>();
-  const [image3, setImage3] = useState();
-  const [imageName, setImageName] = useState("");
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [image3, setImage3] = useState([]);
+  const[imageName, setImageName] = useState("");
      
    
     let type:string = 'A';
    
     const myImageList:any = getImageList(type); // Get the list of images (from the file system
-    let gridImages:any[] = myImageList.slice(0);
+    let gridImages = myImageList.slice(0);
     let lengthGridImages = gridImages.length;  
 
     function init(){
@@ -44,25 +43,20 @@ const Gallery = (props)  => {
       setImageName(gridImages[0].full);
         setImage2(gridImages[1]);
       setImage3(gridImages[2]);
-      setImageLoaded(true);
       
-      console.log('test image1- hier ist schon der Fehler!', image1, gridImages);
-      console.log('test image1- hier wird der Fehler ausgelöst gridImages[0]', gridImages[0], 'image1', image1);
+      console.log(image1);
     }
     
       
         useEffect(() => { init();
         },[]);
 
-  useEffect(() => {
-    console.log('jetzt ist Bild geladen- hier kommt der Test aber nie her');
-        },[imageLoaded]);
 
         /*Bilder scrollen*/
         useEffect
         (() => { if(clickedImage){
           
-         console.log('gallery2024 useEffect eingang', 'currentIndex', currentIndex, 'oldIndex', oldIndex, gridImages[0]);
+         
         if (currentIndex === 0){
           
           setImage1(gridImages[lengthGridImages-1])
@@ -189,12 +183,12 @@ return(
    
       <div className={styles.box2BildLinks} onClick={() => {clickHandlerPrev(image1.full)} }
         >
-          {(imageLoaded === true) && (
+          {image1 && (
             <img src='/P1210796_web.jpg' alt='ttest' />
           )}
           
         
-          {(imageLoaded === true) && (
+          {image1 && (
             <Image className={styles.image}
               src='/public/P1210796_web.jpg'
               alt={image1.alt}
@@ -208,7 +202,7 @@ return(
 
       <div className={styles.box3BildMitte} onClick={() => {clickHandler(image2.full)}}
       >
-        {(imageLoaded === true) && (
+        {image2 && (
           <Image className={styles.image}
             src= {image2.small}
             alt={image2.alt}
@@ -223,7 +217,7 @@ return(
         >
           
           
-       {(imageLoaded === true) && (
+       {image3 && (
           <Image className={styles.image}
             src= {image3.small}
             alt={image3.alt}

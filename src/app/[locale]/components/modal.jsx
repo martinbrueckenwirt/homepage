@@ -102,20 +102,8 @@ const Modal = ({clickedImage, handleClickNext, handleClickPrev, setClickedImage,
                     )
                 }
                     <span className="close" onClick={handleCloseClick} >X</span>
-         <div  className="overlay-arrows-right"  onClick={handleClickNext} >
-            <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
-                fill="#1C1C1F"/>
-           </svg> */
-          
         
-         </div>   
-        <div> *a* Pfeile rechts und links 19:00 inkl css</div>
-        <div  className="overlay-arrows-right"  onClick={handleClickPrev} >
-            <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
-            fill="#1C1C1F"/>
-            </svg>*/
-        </div>   
+         
         
         </>
         )

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "Moderne Appartements Ferienwohnungen direkt am Schigebiet Osttirol",
   description: "Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
   applicationName: "Brückenwirt Appartements",
-  referrer: 'origin-when-cross-origin',
+  /*referrer: 'origin-when-cross-origin',*/
   keywords: ["Appartement", "Ferienwohnung","Osttirol", "Sillian", "Thurntaler", "Schigebiet", "Urlaub", "Familienurlaub", "kinderfreundlich", "Wandern", "Mountainbiken", "Dolomiten", "Hochpustertal","Urlaub mit Hund"],
   verification: {
     google: "google3134a8bd7a2aec41",

@@ -27,7 +27,7 @@ export type GalleryImage = {
 	altIT:string;
 	copyright: string;
 	sortnumber:number;
-}[];
+};
 
 export type HeroProps = {
     imageUrl: string;

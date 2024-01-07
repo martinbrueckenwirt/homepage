@@ -11,7 +11,7 @@
 import styles from "../components/gallery.module.css"
 import Image from "next/image"
 import { useState, useEffect } from "react";
-import getImageList from "../functions/getImageList"
+import getImageList from '../../../functions/getImageList';
 import Modal from "./modal"
 
 

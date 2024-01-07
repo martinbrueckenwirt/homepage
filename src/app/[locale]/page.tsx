@@ -1,31 +1,25 @@
 
-import React from 'react';
+import React, { use } from 'react';
 
 import styles from "../[locale]/components/gallery.module.css";
-import Image from 'next/image'
 
-import GalleryA from '../[locale]/components/gallery'
+import Gallery from '../[locale]/components/gallery';
 import Aptest from './components/aptest';
-/*import GalleryA from '../[locale]/components/gallery_a_onlyIndex'*/
-
-/*import PricingTable from '../components/pricingTable' */
 import {h1Font, h2Font, h3Font, heroFont, textFont, footerFont} from '../../functions/fonts'
-/*import pagestyles  from '../[locale]/components/gallery.module.css'*/
 
+import { GalleryImage } from './components/types';
+/* <Aptest appartmentTyp = {'A'}>/</Aptest>   */
 
-export default function Page() {
-    return(
+export default async function Page(): Promise<JSX.Element> {
+    // ...
+
+    let myAppartmentType = 'A'
+
+    return (
      
-<>
-
-<div >
-            <GalleryA/> 
- 
-        </div >
-
-
-
-</>
+        <Gallery appartmentTyp ={'A'}/>
+       
+        
     )
 }
 

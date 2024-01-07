@@ -37,10 +37,8 @@ const Gallery = ({appartmentTyp})  => {
 
 
   const [imageList, setImageList] = useState<GalleryImage[]>([]);
-  const [imageListIndex, setImageListIndex] = useState<number[]>([]);
   const [isLoaded, setisloaded] = useState<boolean>(false);
-  const [isImageListIndex, setIsImageListIndex] = useState<boolean>(false);
-  const[lengthImageList, setLengthImageList] = useState<number>(0);//Liste soll einen Index auf die orginale imageList halten; das rotate der imageList hat nicht funktioniert, weil die ImageList Objekte enthält.
+  const[lengthImageList, setLengthImageList] = useState<number>(0);
  
  
       
@@ -56,48 +54,29 @@ const Gallery = ({appartmentTyp})  => {
             setImageList(myLocalImageList);
             
             setisloaded(true);
-            
                      }
             };
             fetchData(appartmentTyp)
-            
   },[]);
 
-  function copyArray(myArray) {
-    console.log('copyArray eingang', myArray);
-    setImageListIndex(...myArray); 
-   
-    console.log('copyArray eingang', imageListIndex);
-    return imageListIndex
-  }
-
    useEffect(() => {
-    
-    function init() {
-    
-        if (isLoaded === true) {
-            let localArray:number[]=[];
-            setImage1(imageList[0]);
-            setImage2(imageList[1]);
-            setImage3(imageList[2]);
-            setImageLoaded(true);
-            setLengthImageList(imageList.length);
-            for ( let i=0; i<= imageList.length-1; i++ ) {
-            localArray.push(i);
-            }
-            console.log('imagelistIndex nach der schleife localArray FUNKTIONIERT ', localArray);
-            
-            const myArr = copyArray(localArray);
-            
-            console.log('imagelistIndex nach der schleife', myArr );
-
-        }
-    }
-        init();
-
+    if (isLoaded === true) {
+        setImage1(imageList[0]);
+        setImage2(imageList[1]);
+        setImage3(imageList[2]);
+        setImageLoaded(true);
+        setLengthImageList(imageList.length);
+        console.log('gallery2024 useEffect isLoaded ', imageList);
+        
+      
+   }
   },[isLoaded]);
 
-  
+  useEffect(() => {
+    if ((isLoaded === true) && (imageLoaded === true)) {
+        console.log('jetzt ist Bild geladen-jetzt sollte das Bild geladen sein ', image1);
+   }
+  },[isLoaded, imageLoaded]);
 
 
 
@@ -105,9 +84,25 @@ const Gallery = ({appartmentTyp})  => {
       useEffect
       (() => { if((clickedImage) && (!prevImageFirstPass)) {
         
-       console.log('gallery2024 useEffect prevImage ', imageList, imageListIndex);
+       console.log('gallery2024 useEffect prevImage ', imageList);
 
     
+        let element:any =imageList[0];
+        let remainingElements = imageList.slice(1);
+        const myLocalImageList = [...remainingElements, element];
+        console.log('gallery2024 useEffect prevImage 0', imageList, myLocalImageList);
+        setImageList([]);
+
+        console.log('gallery2024 useEffect prevImage 1', imageList, myLocalImageList);
+        setImageList(myLocalImageList.slice(0))
+        console.log('gallery2024 useEffect prevImage 2', imageList, myLocalImageList);
+        
+
+
+
+       
+       /*const myLocalImageList2:GalleryImage[] = myLocalImageList1.unshift(myLocalImageList1.pop());*/
+       console.log('arrayRotate ', imageList, myLocalImageList);
        
 
 /* if (reverse) arr.unshift(arr.pop());*/

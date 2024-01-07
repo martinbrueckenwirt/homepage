@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import Modal from "./modal" 
 import getImageList from "../../../functions/getImageList"
 import { GalleryImage } from "../components/types"
-import bild from "../../../../public/P1210796_web.jpg"
+import bild from "../../../../public/P1210796_web.webp"
 
 
 
@@ -184,13 +184,13 @@ return(
       <div className={styles.box2BildLinks} onClick={() => {clickHandlerPrev(image1.full)} }
         >
           {image1 && (
-            <img src='/P1210796_web.jpg' alt='ttest' />
+            <img src='/P1210796_web.webp' alt='ttest' />
           )}
           
         
           {image1 && (
             <Image className={styles.image}
-              src='/public/P1210796_web.jpg'
+              src='/public/P1210796_web.webp'
               alt={image1.alt}
             quality = {75}
             width = {940}

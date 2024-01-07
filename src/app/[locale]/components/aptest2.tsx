@@ -2,7 +2,8 @@
 import { use, useEffect } from 'react';
 import { GalleryImage } from './types';
 /*import imageList from '@/data/image';*/
-import styles from "./aptest.module.css";
+import styles from "../components/gallery.module.css"
+/*import styles from "./aptest.module.css"; */
 
 import Image from 'next/image';
 import { useState } from 'react';
@@ -63,8 +64,9 @@ export default function Aptest({appartmentTyp}): JSX.Element {
     const clickHandler = (image, index) => {}
 
     console.log('aptest imageList nach UseEffect:', imageList);
+
     
-   /* if (isLoaded === true) 
+    if (isLoaded === true) 
     {
         
         let myLocalImage=imageList[0].full;
@@ -88,14 +90,11 @@ export default function Aptest({appartmentTyp}): JSX.Element {
                            width = {128}
                            height ={96} 
                            /*fill */
-        /*kommentar               />
+                       />
                    </div>
                    </div>))
                }
                </div>
             );
-       }
-       
-       */
-
+       }    
 }

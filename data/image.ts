@@ -63,7 +63,7 @@ const imageList = [
 		id: "B",
 		images: [
 			{
-				small: "/P1210796_web.jpg",
+				small: "/P1210796_web.webp",
 				full: "/P2535150-HDR-1.jpg",
 				teaser: true,
 				description: "TEST B Bild zu klein ",

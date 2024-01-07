@@ -64,6 +64,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             alt = "logo"
             width ={250}
             height ={37}
+            priority={true}
             />
         </a>
         <a href ="/" className = {styles.logoBurgersize}>
@@ -72,6 +73,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             alt = "logo"
             width ={148}
             height ={22}
+            priority={true}
             />
         </a>
         </div>

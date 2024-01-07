@@ -2,14 +2,29 @@
 margin-top:320px;
 }
 
+.test{
+    position:absolute;
+    margin-top: 700px;
+    z-index:999;
+    background-color: red;
+    font-size: x-large;
+}
+
 .wrapper{
+    position:relative;
     margin-top: 320px;
     display: grid;
     background-color: blue;
-    height:500px;
+    
+    /*height: calc(21vw);*/
+    height: calc(31vw);
     grid-template-columns: repeat(14), 1f;
-    gap: 0.5em;
+    
+    gap: 0rem;
     align-items: center;
+    max-width:80%;
+    margin-left: calc(10vw);  
+    /*display: none;*/
 }
 
 .box1ArrowLeft{
@@ -19,12 +34,20 @@ margin-top:320px;
 }
 
 .box2BildLinks{
-    /*position:relative;*/
-    width: calc(30vw);
+    position:relative;
+    max-width: calc(23vw);
     height: calc(21vw);
     grid-column: 2 /6;
+    align-self: center;
     justify-self: center;
+    overflow: hidden;
 
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+    min-width: 50px;
+ 
     background-color: yellow;
 }
 
@@ -32,59 +55,87 @@ margin-top:320px;
 
 .box3BildMitte{
     position:relative;
-    width: calc(30vw);
+    max-width: calc(23vw);
     height: calc(21vw);
     grid-column: 6 / 10;
     justify-self: center;
     background-color: green;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    min-width: 50px;
 }
 
 .box4Bildrechts{
     position:relative;
-    width: calc(30vw);
+    max-width: calc(23vw);
     height: calc(21vw);
     grid-column: 10 / 14;
     justify-self: center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    min-width: 50px;
     background-color: rgb(243, 38, 174);
+}
+
+.wrapperModal{
+    position:relative;  
+   
+    margin-top: 350px;
+    display: grid;
+    width: 100%;
+    background-color:blueviolet;
+    height: calc(33vw);
+    grid-template-columns: repeat(5), 1f;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    display: none;  
+
 }
 
 .boxModal{
     position:relative;
-    top: -420px;
+   /* top: -40px;*/
     width: calc(45vw);
     height: calc(33vw);
-        grid-row: 2;
-    grid-column: 5 / 11;
+    grid-column: 2 / 4;
+    align-self: center;
     justify-self: center;
     background-color: rgb(38, 243, 137);
 }
 
 .boxModalArrowLeft{
-    position:relative;
-    top: -420px;
-    grid-row: 2;
-    grid-column: 4;
+    /*position:relative;*/
+    grid-column: 1;
+    align-self: center;
     justify-self: center;
     background-color: rgb(38, 243, 137);
 }
 .boxModalArrowRight{
     position:relative;
-    top: -420px;
-    grid-row: 2;
-    grid-column: 11;
+    grid-column: 5;
+    align-self: center;
     justify-self: center;
     background-color: rgb(38, 243, 137);
 }
 
 .boxModalCloseButton{
-    position:relative;
-    top: -680px;
+    position:absolute;
+    grid-column: 3;
+    grid-row: 1;
+    top: calc(1vw);
+    right: calc(2vw);
+    
     font-size: var(--fontsize-h3Text);
     /*align-self: center;*/
-    grid-row: 2;
-    grid-column: 10;
-    
-   
+
+
 }
 
 .image{
@@ -92,11 +143,15 @@ margin-top:320px;
     height: calc(21vw);
     object-fit: cover;
     object-position: center;
+    transition: transform 0.5s ease-in-out;
+
 }
 .image:hover{
+    overflow:visible;
     cursor: pointer;
     transform: scale(1.1);
-    transition: transform 0.5s ease;
+    z-index: 999;
+    
 }
 
 .box1ArrowRight{

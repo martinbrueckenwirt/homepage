@@ -1,0 +1,17 @@
+.test{
+position:absolute;
+margin-top:300px;
+z-index:1000;
+background-color: red;
+
+}
+
+.image{
+    position:absolute;
+    margin-top:350px;
+    z-index:1000;
+    background-color: red;
+    
+    }
+
+    

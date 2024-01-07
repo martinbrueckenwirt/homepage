@@ -5,7 +5,7 @@ import { GalleryImage } from "../../types/GalleryImage";
 export default function getImageList(type: string): GalleryImage[] {
     let filteredList: GalleryImage[] = [];
     let sortedImagesList: GalleryImage[] = [];
-
+   
     filteredList = imageList.filter(function (el) {
         return el.id === type;
     }) as GalleryImage[];

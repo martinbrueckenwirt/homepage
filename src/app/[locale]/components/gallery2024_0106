@@ -14,7 +14,7 @@ import { useState, useEffect } from "react";
 import Modal from "./modal" 
 import getImageList from "../../../functions/getImageList"
 import { GalleryImage } from "../components/types"
-
+import bild from "../../../../public/P1210796_web.webp"
 
 
 
@@ -27,14 +27,15 @@ const Gallery = (props)  => {
     const [oldIndex, setOldIndex] = useState(1); /*analog currentindex */
     const [image1, setImage1] = useState<StaticImageData>();
     const [image2, setImage2] = useState<GalleryImage | null>();
-  const [image3, setImage3] = useState([]);
-  const[imageName, setImageName] = useState("");
+  const [image3, setImage3] = useState();
+  const [imageName, setImageName] = useState("");
+  const [imageLoaded, setImageLoaded] = useState(false);
      
    
     let type:string = 'A';
    
     const myImageList:any = getImageList(type); // Get the list of images (from the file system
-    let gridImages = myImageList.slice(0);
+    let gridImages:any[] = myImageList.slice(0);
     let lengthGridImages = gridImages.length;  
 
     function init(){
@@ -43,20 +44,25 @@ const Gallery = (props)  => {
       setImageName(gridImages[0].full);
         setImage2(gridImages[1]);
       setImage3(gridImages[2]);
+      setImageLoaded(true);
       
-      console.log(image1);
+      console.log('test image1- hier ist schon der Fehler!', image1, gridImages);
+      console.log('test image1- hier wird der Fehler ausgelöst gridImages[0]', gridImages[0], 'image1', image1);
     }
     
       
         useEffect(() => { init();
         },[]);
 
+  useEffect(() => {
+    console.log('jetzt ist Bild geladen- hier kommt der Test aber nie her ', image1);
+        },[imageLoaded]);
 
         /*Bilder scrollen*/
         useEffect
         (() => { if(clickedImage){
           
-         
+         console.log('gallery2024 useEffect eingang', 'currentIndex', currentIndex, 'oldIndex', oldIndex, gridImages[0]);
         if (currentIndex === 0){
           
           setImage1(gridImages[lengthGridImages-1])
@@ -148,7 +154,7 @@ const Gallery = (props)  => {
             /* Logik ist im UseEffect */
 
             console.log('clickHandlerNext ausgang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
-            return;
+            return; 
           }
             
         
@@ -183,12 +189,12 @@ return(
    
       <div className={styles.box2BildLinks} onClick={() => {clickHandlerPrev(image1.full)} }
         >
-          {image1 && (
-            <img src='/P1210796_web.jpg' alt='ttest' />
+          {(imageLoaded === true) && (
+            <img src='/P1210796_web.webp' alt='ttest' />
           )}
           
         
-          {image1 && (
+          {(imageLoaded === true) && (
             <Image className={styles.image}
               src='/public/P1210796_web.webp'
               alt={image1.alt}
@@ -202,7 +208,7 @@ return(
 
       <div className={styles.box3BildMitte} onClick={() => {clickHandler(image2.full)}}
       >
-        {image2 && (
+        {(imageLoaded === true) && (
           <Image className={styles.image}
             src= {image2.small}
             alt={image2.alt}
@@ -217,7 +223,7 @@ return(
         >
           
           
-       {image3 && (
+       {(imageLoaded === true) && (
           <Image className={styles.image}
             src= {image3.small}
             alt={image3.alt}

@@ -3,7 +3,7 @@ import React, { use } from 'react';
 
 import styles from "../[locale]/components/gallery.module.css";
 
-import Gallery from '../[locale]/components/gallery';
+import Gallery from './components/gallery.tsx';
 import Aptest from './components/aptest';
 import {h1Font, h2Font, h3Font, heroFont, textFont, footerFont} from '../../functions/fonts'
 

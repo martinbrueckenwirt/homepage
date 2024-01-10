@@ -143,69 +143,25 @@ const Gallery = ({appartmentTyp})  => {
             return; 
           }
           
-  
-  /*blendet das modale Fenster ein*/
   function getModal() {
-    
-    if (clickedImage === null) {
-      return <></>;
-    }
-   
-   
-      
-
-    
-    
-    return (
-
-      <>
-    <div className={styles.modalOverlay} >
-          
-    <div className={styles.wrapperModal}>      
-      <div className={styles.boxModalArrowLeft} onClick={() => {clickHandlerPrev(image1.full)}}>
-        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
-            fill="#1C1C1F"/>
-          </svg>
-      </div>
- 
-          
-        <div className={styles.boxModal}>
-      
-        {(clickedImage !== null) && (
+    if (clickedImage !== null) {
+      return (
         <Modal 
             clickedImage={clickedImage} 
             handleClickNext={clickHandlerNext}
             handleClickPrev={clickHandlerPrev}
             setClickedImage={setClickedImage}
             imageList={imageList}
-            />)
-        }
-       
-        </div>  
-   
-        
-
-        
-        <div  className={styles.boxModalArrowRight} onClick={() => {clickHandlerNext(image3.full)}}>
-        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
-                fill="#1C1C1F"/>
-           </svg>
-      </div>
-     </div>
-   </div>
- </>
-)
+            />
+      )
+    }
   }
- 
-
-  /*Hauptgallery*/
   
 return(
 
     <>
 
-<div  className={styles.gallerygridContainer}>
+<div className={styles.gallerygridContainer}>
   
  
   <div className={styles.wrapper}>
@@ -218,10 +174,10 @@ return(
           </svg>
       </div>
    
-      <div  className={styles.box2BildLinks} onClick={() => {clickHandler(image1.full)} }
+      <div className={styles.box2BildLinks} onClick={() => {clickHandler(image1.full)} }
         >
          {(imageLoaded === true) && (
-            <Image  className={styles.image}
+            <Image className={styles.image}
               src={image1.small}
               alt={image1.alt}
             quality = {75}
@@ -259,7 +215,7 @@ return(
                   )}
         </div>
 
-        <div id="arrowRight" className={styles.box1ArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
+        <div className={styles.box1ArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
         <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
                 <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
                 fill="#1C1C1F"/>
@@ -269,8 +225,40 @@ return(
      
         
   </div>
-      {getModal()}
-  
+
+  <div className={styles.wrapperModal}>      
+      <div className={styles.boxModalArrowLeft} onClick={() => {clickHandlerNext(image2.full)}}>
+        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
+            fill="#1C1C1F"/>
+          </svg>
+      </div>
+ 
+        <div className={styles.boxModal}>
+         <p>{clickedImage}</p>
+        {(clickedImage !== null) && (
+        <Modal 
+            clickedImage={clickedImage} 
+            handleClickNext={clickHandlerNext}
+            handleClickPrev={clickHandlerPrev}
+            setClickedImage={setClickedImage}
+            imageList={imageList}
+            />)
+        }
+         <div className={styles.boxModalCloseButton} onClick={() => { clickHandler(image2.full) }}>
+        <span>X</span>
+        </div>
+        </div>  
+   
+        
+
+        
+        <div className={styles.boxModalArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
+        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
+                fill="#1C1C1F"/>
+           </svg>
+      </div>
+  </div>
 </div> 
     
 

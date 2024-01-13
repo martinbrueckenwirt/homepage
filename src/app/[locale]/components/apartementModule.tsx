@@ -89,7 +89,7 @@ return (
                         /*objectFit='contain' */
                         priority={priority}
                       
-                        sizes ="(max-width:779x) 100vw, (max-width:1399) 50vw, 33vw)"
+                        sizes ="(max-width:779px) 100vw, (max-width:1399px) 50vw, 33vw)"
                         alt ={localAlt} 
                 
             />

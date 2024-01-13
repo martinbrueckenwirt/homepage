@@ -4,7 +4,7 @@ import React, { use } from 'react';
 import styles from "../[locale]/components/gallery.module.css";
 
 import Gallery from './components/gallery.tsx';
-import Aptest from './components/aptest';
+
 import {h1Font, h2Font, h3Font, heroFont, textFont, footerFont} from '../../functions/fonts'
 
 import { GalleryImage } from './components/types';
@@ -17,7 +17,7 @@ export default async function Page(): Promise<JSX.Element> {
 
     return (
      
-        <Gallery appartmentTyp ={'A'}/>
+        <Gallery appType ={'A'}/>
        
         
     )

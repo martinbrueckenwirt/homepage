@@ -2,7 +2,8 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "originalKeywordKind": "off",
-    "react/no-unescaped-entities":"off"
+    "react/no-unescaped-entities":"off",
+    "no-undefined": "off"
    
   }
 }

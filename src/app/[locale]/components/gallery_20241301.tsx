@@ -12,13 +12,9 @@
 import styles from "../components/gallery.module.css"
 import Image, { StaticImageData } from "next/image"
 import { useState, useEffect } from "react";
-import Modal from "./modal" 
+import Modal from "./modal_1301" 
 import getImageList from "../../../functions/getImageList"
 import { GalleryImage } from "../components/types"
-
-
-
-
 
 
 const Gallery = ({appartmentTyp})  => {
@@ -26,8 +22,8 @@ const Gallery = ({appartmentTyp})  => {
     const[clickedImage,setClickedImage] = useState(null);
     const[currentIndex, setCurrentIndex] =useState(1); /*auf das 2. Element setzen, damit das 2. Bild in der Mitte ist */
     const [oldIndex, setOldIndex] = useState(1); /*analog currentindex */
-    const [image1, setImage1] = useState<StaticImageData>();
-    const [image2, setImage2] = useState<GalleryImage | null>();
+    const [image1, setImage1] = useState();
+    const [image2, setImage2] = useState();
     const [image3, setImage3] = useState();
     const [imageName, setImageName] = useState("");
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -37,8 +33,6 @@ const Gallery = ({appartmentTyp})  => {
     const [isLoaded, setisloaded] = useState<boolean>(false);
     const[lengthImageList, setLengthImageList] = useState<number>(0);
    
-   
-        
     
       
     useEffect(() =>{
@@ -77,64 +71,51 @@ const Gallery = ({appartmentTyp})  => {
 
         /*Bilder scrollen*/
         useEffect
-        (() => { if(clickedImage){
-          
-         console.log('gallery2024 useEffect eingang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+            (() => {
+                
+        if (clickedImage) {
+
+        if (currentIndex === -1) {
+            setCurrentIndex(lengthImageList-1);
+        }
+
         if (currentIndex === 0){
-          
           setImage1(imageList[lengthImageList-1])
           setImage2(imageList[currentIndex]);
           setImage3(imageList[currentIndex+1]);
-                   
-        }
+          }
    
-        
-        if (currentIndex === -1){
-          
+                
+        if ((currentIndex >= 1 ) && (currentIndex <= lengthImageList-2)){
+          setImage1(imageList[currentIndex-1])
+          setImage2(imageList[currentIndex]);
+          setImage3(imageList[currentIndex+1]);
+        }
+         if (currentIndex === (lengthImageList-1)){
           setImage1(imageList[(lengthImageList-2)])
           setImage2(imageList[(lengthImageList-1)]);
           setImage3(imageList[0]);
         }
         
-        if ((currentIndex > 1 )&& (currentIndex <= lengthImageList-1)){
-          
-          setImage1(imageList[currentIndex-1])
-          setImage2(imageList[currentIndex]);
-          setImage3(imageList[currentIndex+1]);
-
-        }
-        
-        if (currentIndex === 1){
-          
-          setImage1(imageList[0])
-          setImage2(imageList[currentIndex]);
-          setImage3(imageList[currentIndex+1]);
-        }
-        
-        if (currentIndex === lengthImageList){
-          
-          setImage1(imageList[lengthImageList-2])
-          setImage2(imageList[lengthImageList-1]);
-          setImage3(imageList[0]);
-        }
-        
-
-
-        if (currentIndex < 0){
-          setOldIndex(lengthImageList);}
-        else if (currentIndex === lengthImageList){
-          setOldIndex(0);
-        }
-        else {
+         if (currentIndex === (lengthImageList)){
+          setImage1(imageList[(lengthImageList-1)])
+          setImage2(imageList[(0)]);
+          setImage3(imageList[1]);
+          setOldIndex(0)       
+        } else
+        {
           setOldIndex(currentIndex);
         }
+        return;      
       }
         },[currentIndex, clickedImage]);
        
 
-        const clickHandler = (image:any) => {
-            /*Click auf das mittlere der Bilder in der 3er Liste*/   
+    const clickHandler = (image: any) => {
+             /*Click auf ein Bild in der 3er Liste*/   
             /* kein Scrollen*/         
+            
+            console.log('clickHandler', image);
             setClickedImage(image);
             setCurrentIndex(oldIndex);
                                                     
@@ -144,55 +125,87 @@ const Gallery = ({appartmentTyp})  => {
             
         }
    
-        const clickHandlerPrev = (image:any) => {
-          /*Click auf das linke der Bilder in der 3er Liste oder auf den Pfeil nach links*/   
-          /* kein Scrollen*/         
-            setClickedImage(image);
-            
-            console.log('gallery2024 clickHandlerPrev eingang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
-
+        const clickHandlerPrev = () => {
+          /*Click auf den Pfeil nach links*/   
+              
+            setClickedImage(image1.full); /*nur zur Unterstützung von UseEffect*/
             setCurrentIndex(oldIndex-1);
             /* Logik ist im UseEffect */
-
-            console.log('clickHandlerPrev ausgang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
             return;
           }
 
           
-        const clickHandlerNext = (image:any) => {
-          /*Click auf das linke der Bilder in der 3er Liste oder auf den Pfeil nach links*/   
-          /* kein Scrollen*/         
-            setClickedImage(image);
-            
-            console.log('gallery2024 clickHandlerNext eingang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
-
+        const clickHandlerNext = () => {
+          /*Click auf den Pfeil nach rechts*/   
+            setClickedImage(image3.full);/*nur zur Unterstützung von UseEffect*/
             setCurrentIndex(oldIndex+1);
-            /* Logik ist im UseEffect */
-
-            console.log('clickHandlerNext ausgang', 'currentIndex', currentIndex, 'oldIndex', oldIndex);
+           /* Logik ist im UseEffect */
             return; 
           }
-            
+          
+  
+  /*blendet das modale Fenster ein*/
+  function getModal() {
+    
+    if (clickedImage === null) {
+      return <></>;
+    }
+   
+   
+      
+
+    
+    
+    return (
+
+      <>
+    <div className={styles.modalOverlay} >
+          
+    <div className={styles.wrapperModal}>      
+      <div className={styles.boxModalArrowLeft} onClick={() => {clickHandlerPrev(image1.full)}}>
+        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
+            fill="#1C1C1F"/>
+          </svg>
+      </div>
+ 
+          
+        <div className={styles.boxModal}>
+      
+        {(clickedImage !== null) && (
+        <Modal 
+            clickedImage={clickedImage} 
+            handleClickNext={clickHandlerNext}
+            handleClickPrev={clickHandlerPrev}
+            setClickedImage={setClickedImage}
+            imageList={imageList}
+            />)
+        }
+       
+        </div>  
+   
         
-            
-         
 
-                                                    
-           
-
-
-  const checkIsClicked = (index:any) => {
-      return index === currentIndex;
+        
+        <div  className={styles.boxModalArrowRight} onClick={() => {clickHandlerNext(image3.full)}}>
+        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
+                fill="#1C1C1F"/>
+           </svg>
+      </div>
+     </div>
+   </div>
+ </>
+)
   }
+ 
 
-        
-
-
+  /*Hauptgallery*/
+  
 return(
 
     <>
 
-<div className={styles.gallerygridContainer}>
+<div  className={styles.gallerygridContainer}>
   
  
   <div className={styles.wrapper}>
@@ -205,13 +218,10 @@ return(
           </svg>
       </div>
    
-      <div className={styles.box2BildLinks} onClick={() => {clickHandlerPrev(image1.full)} }
+      <div  className={styles.box2BildLinks} onClick={() => {clickHandler(image1.full)} }
         >
-          
-
-        
-          {(imageLoaded === true) && (
-            <Image className={styles.image}
+         {(imageLoaded === true) && (
+            <Image  className={styles.image}
               src={image1.small}
               alt={image1.alt}
             quality = {75}
@@ -235,11 +245,9 @@ return(
             />  
     )}
       </div>
-      <div className={styles.box4Bildrechts} onClick={() => {clickHandlerNext(image3.full)}}
+      <div className={styles.box4Bildrechts} onClick={() => {clickHandler(image3.full)}}
         >
-          
-          
-       {(imageLoaded === true) && (
+      {(imageLoaded === true) && (
           <Image className={styles.image}
             src= {image3.small}
             alt={image3.alt}
@@ -251,7 +259,7 @@ return(
                   )}
         </div>
 
-        <div className={styles.box1ArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
+        <div id="arrowRight" className={styles.box1ArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
         <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
                 <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
                 fill="#1C1C1F"/>
@@ -261,40 +269,8 @@ return(
      
         
   </div>
-
-  <div className={styles.wrapperModal}>      
-      <div className={styles.boxModalArrowLeft} onClick={() => {clickHandlerNext(image2.full)}}>
-        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg"><path d="M11.546.57.698 10.994l-.09.08c-.363.35-.576.813-.608 1.364l.002.185c.03.49.243.954.664 1.354l-.005-.008 10.885 10.462a2.061 2.061 0 0 0 2.845 0 1.964 1.964 0 0 0 0-2.844l-9.403-9.03 9.403-9.144a1.964 1.964 0 0 0 0-2.844 2.061 2.061 0 0 0-2.845 0Z" 
-            fill="#1C1C1F"/>
-          </svg>
-      </div>
- 
-        <div className={styles.boxModal}>
-         
-        {clickedImage && (
-        <Modal 
-            clickedImage={clickedImage} 
-            handleClickNext={clickHandlerNext}
-            handleClickPrev={clickHandlerPrev}
-            setClickedImage={setClickedImage}
-            imageList={imageList}
-            />)
-        }
-         <div className={styles.boxModalCloseButton} onClick={() => { clickHandler(image2.full) }}>
-        <span>X</span>
-        </div>
-        </div>  
-   
-        
-
-        
-        <div className={styles.boxModalArrowRight} onClick={() => {clickHandlerNext(image2.full)}}>
-        <svg width="50" height="100" viewBox="-5 0 25 25" xmlns="http://www.w3.org/2000/svg">
-                <path d="m3.454.57 10.848 10.424.09.08c.363.35.576.813.608 1.364l-.002.185c-.03.49-.243.954-.664 1.354l.005-.008L3.454 24.431a2.061 2.061 0 0 1-2.845 0 1.964 1.964 0 0 1 0-2.844l9.403-9.03L.609 3.413a1.964 1.964 0 0 1 0-2.844 2.061 2.061 0 0 1 2.845 0Z" 
-                fill="#1C1C1F"/>
-           </svg>
-      </div>
-  </div>
+      {getModal()}
+  
 </div> 
     
 

@@ -2,13 +2,7 @@
 margin-top:320px;
 }
 
-.test{
-    position:absolute;
-    margin-top: 700px;
-    z-index:999;
-    background-color: red;
-    font-size: x-large;
-}
+
 
 .wrapper{
     position:relative;
@@ -36,7 +30,7 @@ margin-top:320px;
 .box2BildLinks{
     position:relative;
     max-width: calc(23vw);
-    height: calc(21vw);
+    height: calc(18vw);
     grid-column: 2 /6;
     align-self: center;
     justify-self: center;
@@ -56,7 +50,7 @@ margin-top:320px;
 .box3BildMitte{
     position:relative;
     max-width: calc(23vw);
-    height: calc(21vw);
+    height: calc(18vw);
     grid-column: 6 / 10;
     justify-self: center;
     background-color: green;
@@ -71,7 +65,7 @@ margin-top:320px;
 .box4Bildrechts{
     position:relative;
     max-width: calc(23vw);
-    height: calc(21vw);
+    height: calc(18vw);
     grid-column: 10 / 14;
     justify-self: center;
     overflow: hidden;
@@ -83,75 +77,9 @@ margin-top:320px;
     background-color: rgb(243, 38, 174);
 }
 
-.modalOverlay{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background: rgba(0,0,0,0.8);
-    z-index: 10;
-    
-}
-.wrapperModal{
-    position:absolute;  
-    margin-top: 300px;
-    display: grid;
-    width: 100%;
-    background-color:blueviolet;
-    height: calc(33vw);
-    grid-template-columns: repeat(5), 1f;
-    gap: 0.5em;
-    align-items: center;
-    justify-content: center;
-    z-index:999;
-    /*display:none;   */
-
-}
-
-
-.boxModal{
-    position:relative;
-   /* top: -40px;*/
-    width: calc(45vw);
-    height: calc(33vw);
-    grid-column: 2 / 4;
-    align-self: center;
-    justify-self: center;
-    background-color: rgb(38, 243, 137);
-}
-
-.boxModalArrowLeft{
-    /*position:relative;*/
-    grid-column: 1;
-    align-self: center;
-    justify-self: center;
-    background-color: rgb(38, 243, 137);
-}
-.boxModalArrowRight{
-    position:relative;
-    grid-column: 5;
-    align-self: center;
-    justify-self: center;
-    background-color: rgb(38, 243, 137);
-}
-
-.boxModalCloseButton{
-    position:absolute;
-    grid-column: 3;
-    grid-row: 1;
-    top: calc(1vw);
-    right: calc(2vw);
-    
-    font-size: var(--fontsize-h3Text);
-    /*align-self: center;*/
-
-
-}
-
 .image{
     width: calc(30vw);
-    height: calc(21vw);
+    height: calc(18vw);
     object-fit: cover;
     object-position: center;
     transition: transform 0.5s ease-in-out;
@@ -165,44 +93,14 @@ margin-top:320px;
     
 }
 
-.imageModal{
-    width: calc(45vw);
-    height: calc(33vw);
-    max-width: 940px;
-    max-height: 705px;
-    /*object-fit: cover;
-    object-position: center;*/
-    
-}
+
 
 .box1ArrowRight{
     grid-column: 14;
     justify-self: center;
     background-color: red;
 }
-.largeImageContainer{
-   
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 30rem;
-    background: rgba(0,0,0,0.5);
-    z-index: 10;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.largeImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:1000px;
-    height:100%;
-    background-color: aliceblue;
-    object-fit: contain;
-
-}
 /*nur das Grid*/
 .gallerygridcontainer{
 display: grid;
@@ -230,14 +128,55 @@ border: 5px solid rgb(7, 248, 228);
 
 }
 
-.red{
-background: red;
-padding: 5px;
+
+
+@media(max-width:399px){    }
+@media(min-width:400px) and (max-width: 779px){    }
+
+@media (max-width: 1069px){    
+/*nur mehr 1 Bild in der Reihe */
+.wrapper{
+       
+    /*height: calc(21vw);*/
+    height: calc(45vw);
+    width: calc(70vw);
+    grid-template-columns: 1f 1f 1f;
+        
+   /* max-width:80%;*/
+    margin-left: calc(15vw);  
+    /*display: none;*/
+}
+.gallerygridcontainer{
+    
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0.1rem;
+    grid-row-gap: 0.1 rem;
+    /*margin: 10em 10em 10em 10px;
+    max-width: 70%;*/
+    }
+
+.box2BildLinks{display: none;}
+.box3BildMitte{
+    
+    max-width: calc(60vw);
+    height: calc(45vw);
+    grid-column: 3 / 13;
+  
+}
+.box4Bildrechts{display:none;}
+
+.image{
+    width: calc(60vw);
+    height: calc(45vw);
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease-in-out;
+
 }
 
-.firstRun{
-    background: blue;
 }
 
-
+@media(min-width:1070px)  and (max-width: 1399px){    }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}
 

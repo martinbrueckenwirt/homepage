@@ -1,0 +1,111 @@
+.modalOverlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 10;
+    
+}
+.wrapperModal{
+    position:absolute;  
+    margin-top: 300px;
+    display: grid;
+    width: 100%;
+    background-color:blueviolet;
+    height: calc(33vw);
+    grid-template-columns: repeat(5), 1f;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    z-index:999;
+    /*display:none;   */
+
+}
+
+
+.boxModal{
+    position:relative;
+   /* top: -40px;*/
+    width: calc(45vw);
+    height: calc(33vw);
+    grid-column: 2 / 4;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(38, 243, 137);
+}
+
+.boxModalArrowLeft{
+    /*position:relative;*/
+    grid-column: 1;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(38, 243, 137);
+}
+.boxModalArrowRight{
+    position:relative;
+    grid-column: 5;
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(38, 243, 137);
+}
+
+.boxModalCloseButton{
+    position:absolute;
+    grid-column: 3;
+    grid-row: 1;
+    top: calc(1vw);
+    right: calc(2vw);
+    
+    font-size: var(--fontsize-h3Text);
+    /*align-self: center;*/
+
+
+}
+
+.imageModal{
+    width: calc(45vw);
+    height: calc(33vw);
+    max-width: 940px;
+    max-height: 705px;
+    /*object-fit: cover;
+    object-position: center;*/
+    
+}
+
+.largeImageContainer{
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    background: rgba(0,0,0,0.5);
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.largeImage{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:1000px;
+    height:100%;
+    background-color: aliceblue;
+    object-fit: contain;
+
+}
+
+@media(max-width:399px){    }
+@media(min-width:400px) and (max-width: 779px){    }
+@media(max-width:1069px)  {
+    /*bei kleinen Auflösungen keine Modalbox*/
+    .modalOverlay, .wrapperModal {
+    display:none}
+}
+
+@media(min-width:1070px)  and (max-width: 1399px){    }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

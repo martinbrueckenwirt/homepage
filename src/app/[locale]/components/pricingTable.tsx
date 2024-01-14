@@ -11,7 +11,7 @@ const PricingTable = (props:PricingList)  => {
 
 
 const prices = getPrices(props); 
-console.log('pricingTable ',prices);
+
 
 return (
 <>

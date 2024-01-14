@@ -4,7 +4,7 @@ import HeadDetails from "./headDetails"
 <link href="https://www.sporthotel-sillian.at/de/" hreflang="de" rel="alternate">
     <meta name="facebook-domain-verification" content="11bh26efgqzbx5fjd6qskdl2xrq50g"></meta>
 */
-const  Head = ({type}) => 
+const  Head = () => 
 {
 
     return (

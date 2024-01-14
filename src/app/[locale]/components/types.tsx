@@ -8,7 +8,7 @@ export type AppDescript = {
         type: string;
         persons: string;
         size: string;
-    }[];
+    };
 
 export type BurgerMenueProps ={
     visibility: boolean;  
@@ -78,20 +78,20 @@ export type NavigationProps = {
 }
 export type NavigationPropsNew = {
    transparency: boolean;
+    home: string;
    locale: string;
    appartment:string;
    cafe:string;
    about: string;
    contact: string;
-   castleview: string;
-   castleviewpricing: string;
-}
+   }
 
 
 export type Prices = {
-    type: string,
-    date: string,
-    price:number
+    type: string;
+    date: string;
+    price:number;
+ 
 }
 
 export type PricingList = {

@@ -1,18 +1,18 @@
 import imageList from "../../data/image";
-import { GalleryImage } from "../../types/GalleryImage";
+import { GalleryImage } from '../app/[locale]/components/types';
 
 
 export default function getImageList(type: string): GalleryImage[] {
-    let filteredList: GalleryImage[] = [];
+    let filteredList: { images: GalleryImage[] }[] = [];
     let sortedImagesList: GalleryImage[] = [];
    
     filteredList = imageList.filter(function (el) {
         return el.id === type;
-    }) as GalleryImage[];
+    }) as unknown as { images: GalleryImage[] }[];
 
     if (filteredList.length === 0) {
         console.log('getImagelist FEHLER - falscher Typ :', type);
-        return console.error();
+        return [];
     }
 
     sortedImagesList = filteredList[0].images;

@@ -14,7 +14,7 @@ import landkarteKlein from '../../../../public/Landkarte_ausschnitt.webp';
 
 import {getTranslations} from 'next-intl/server';
  
-export async function generateMetadata({params: {locale}}) {
+export async function generateMetadata({params: {locale}}: {params: {locale: any}}) {
   const t = await getTranslations({locale, namespace: 'contact'});
  
   return {

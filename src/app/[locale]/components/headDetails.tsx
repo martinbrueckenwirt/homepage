@@ -12,7 +12,7 @@ google + wird für Privatpersonen  nicht mehr unterstützt??  "https://plus.goog
 
 */
 
-constSchemaOrganisation = 
+const SchemaOrganisation = 
     { "@context": "https://schema.org",
  "@type": "Organization",
  "name": "Brückenwirt Appartements",
@@ -54,14 +54,14 @@ constSchemaOrganisation =
 
  ]};
 
- constSchemaWebsite ={
+ const SchemaWebsite ={
         "@context": "https://schema.org/",
         "@type": "WebSite",
         "name": "Brückenwirt Appartements",
         "url": "https://www.derbrueckenwirt.at"
         };
 
-constSchemaAccomodation ={
+const SchemaAccomodation ={
         "@context": "https://schema.org",
         "@type": "Accommodation",
         "@id": "Accommodation",
@@ -91,7 +91,7 @@ constSchemaAccomodation ={
 
 
 
- constSchemaHaunold ={
+ const SchemaHaunold ={
        "@context": "https://schema.org",
      "@type": "Apartment",
      "@id": "Apartment",
@@ -117,7 +117,7 @@ constSchemaAccomodation ={
      "yearBuilt": "2014"
     };
    
-    constSchemaBurgHeinfels ={
+    const SchemaBurgHeinfels ={
         "@context": "https://schema.org",
       "@type": "Apartment",
       "@id": "Apartment",
@@ -143,7 +143,7 @@ constSchemaAccomodation ={
       "yearBuilt": "2014"
      };
 
-     constSchemaThurntaler ={
+     const SchemaThurntaler ={
         "@context": "https://schema.org",
       "@type": "Apartment",
       "@id": "Apartment",
@@ -169,7 +169,7 @@ constSchemaAccomodation ={
       "yearBuilt": "2014"
      };
 
-     constSchemaHelm ={
+     const SchemaHelm ={
         "@context": "https://schema.org",
       "@type": "Apartment",
       "@id": "Apartment",
@@ -195,7 +195,7 @@ constSchemaAccomodation ={
       "yearBuilt": "2014"
      };
 
-     constSchemaDreiZinnen ={
+     const SchemaDreiZinnen ={
         "@context": "https://schema.org",
       "@type": "Suite",
       "@id": "Suite",
@@ -222,7 +222,7 @@ constSchemaAccomodation ={
      };
 
 
-     constSchemaCafe ={
+     const SchemaCafe ={
         "@context": "https://schema.org",
         "@type": "CafeOrCoffeeShop",
         "@id": "CafeOrCoffeeShop",
@@ -282,7 +282,7 @@ constSchemaAccomodation ={
           },
       };
 
-const  HeadDetails = ({type}) => 
+const  HeadDetails = (type:string) => 
 {
 
     switch (type){
@@ -292,15 +292,15 @@ const  HeadDetails = ({type}) =>
                     <meta name="description" content="Moderne Appartements / Ferienwohnungen direkt am Schigebiet ✔ 2-6 Personen ✔ sehr kinderfreundlich ✔ Haustiere erlaubt, großer Garten, hochwertige Ausstattung, getrennte Schlafräume, Cafe im Erdgeschoß."/>
                     <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaOrganisation) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaOrganisation) }}
                         />
                      <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaWebsite) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaWebsite) }}
                         />
                          <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaAccomodation) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaAccomodation) }}
                         />
  
                 </>
@@ -313,7 +313,7 @@ const  HeadDetails = ({type}) =>
                     <meta name="description" content="Moderne Ferienwohnung mit Blick auf das Schigebiet mit großem Balkon"/>
                     <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaHaunold) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaHaunold) }}
                         />
                    
                 </>
@@ -325,7 +325,7 @@ const  HeadDetails = ({type}) =>
                     <meta name="description" content="Moderne Ferienwohnung mit Blick in den Garten und die historische Burg Heinfels."/>
                     <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaHaunold) }}
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaHaunold) }}
                         />
                    
                 </>
@@ -337,7 +337,7 @@ const  HeadDetails = ({type}) =>
                         <meta name="description" content="Schöne Ferienwohnung mit Blick nach Westen auf das Schigebiet mit getrennten Schlafräumen."/>
                         <script
                         type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaThurntaler) }}
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaThurntaler) }}
                             />
                        
                     </>
@@ -349,7 +349,7 @@ const  HeadDetails = ({type}) =>
                         <meta name="description" content="Große sonnige Ferienwohnung mit  großem Balkon nach Süden und Ausblick auf die Karnischen Alpen."/>
                         <script
                         type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaHelm) }}
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaHelm) }}
                             />
                         
                     </>
@@ -361,7 +361,7 @@ const  HeadDetails = ({type}) =>
                             <meta name="description" content="Luxuriöse Ferienwohnung mit großem Balkon nach Süden. 2 getrennte Bäder und Infrarotkabine"/>
                             <script
                             type="application/ld+json"
-                            dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaDreiZinnen) }}
+                            dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaDreiZinnen) }}
                                 />
                             
                         </>
@@ -374,7 +374,7 @@ const  HeadDetails = ({type}) =>
                             <meta name="description" content="Perfekter Cappuccino, hausgemachte Kuchen und Torten, große sonnige Terasse nach Süden und Spielplatz"/>
                             <script
                             type="application/ld+json"
-                            dangerouslySetInnerHTML={{ __html: JSON.stringify(constSchemaCafe) }}
+                            dangerouslySetInnerHTML={{ __html: JSON.stringify(SchemaCafe) }}
                                 />
                             
                         </>

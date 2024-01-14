@@ -3,10 +3,10 @@ import {AppartmentModuleProps, IAppartementTeaserImage, ImageType} from '../app/
 
 
 
-export default function getApartmentTeaser(props:AppartmentModuleProps): IAppartementTeaserImage  
+export default function getApartmentTeaser(props:AppartmentModuleProps): unknown  
 {
 
-    let filteredList: any[];
+    let filteredList:any = [];
     let teaserImage: ImageType[]; /* array, aber es kommt nur 1 Element zurück */
 
     /*1 Bilderliste auf die Bilder des Appartments reduzieren */
@@ -16,7 +16,7 @@ export default function getApartmentTeaser(props:AppartmentModuleProps): IAppart
 
     if (filteredList.length === 0) {
     console.log('getApartmentTeaser FEHLER - falscher Typ :', props.appType);
-    return filteredList  
+    return filteredList;
     }
 
     
@@ -31,10 +31,10 @@ export default function getApartmentTeaser(props:AppartmentModuleProps): IAppart
     teaserImage = getTeaserImage(filteredList)
         
     const obj:IAppartementTeaserImage = {
-        imageName: teaserImage.full,
-        description: teaserImage.description,
-        alt: teaserImage.alt,
-        copyright: teaserImage.copyright,
+        imageName: teaserImage[0].full,
+        description: teaserImage[0].description,
+        alt: teaserImage[0].alt,
+        copyright: teaserImage[0].copyright,
         height: 630,
         width: 800,
         priority: true

@@ -2,39 +2,31 @@ import pricesSummer from "../../data/pricesSummer";
 import pricesWinter from "../../data/pricesWinter";
 import pricesGeneral from "../../data/pricesGeneral";
 import { PricingList } from "../app/[locale]/components/types";
+import { Prices } from "../app/[locale]/components/types";
+
 
 /* ================================================   
     3 Varianten season
     - "summer"  + apartmentType
     - "winter"  + apartmentType
-    - "general"
+    - "general" : braucht eigene Funktion
    ================================================ */
-export default function getPrices({ type, season }:PricingList) { 
+export default function getPrices({ type, season }:PricingList):Prices { 
 
-    let pricingList: any[];
-
-    
+    let prices: Prices[] = [];
+        
     if (season === 'summer') 
     { 
-        pricingList = pricesSummer.filter(function (el) {
-		return el.type === type;
-	    });
+        prices = pricesSummer.filter(function (el) {
+            return el.type === type;
+        }) as Prices[];
     } 
     
     else if (season === 'winter') 
     {
-        pricingList = pricesWinter.filter(function (el) {
+        prices = pricesWinter.filter(function (el) {
             return el.type === type;
-            });
-        
-    }    
-    else if (season === 'general')
-    {
-        pricingList = pricesGeneral
-    }
-
-    return pricingList;
-
-
-
+            }) as Prices[];
+      }    
+   return prices;
 } 

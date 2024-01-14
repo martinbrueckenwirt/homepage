@@ -90,11 +90,32 @@
       "appartment": "Appartments",
       "contact": "Kontakt",
       "cafe": "Cafe",
-      "about": "Über uns",
-      "castleview": "Type A",
-      "castleviewpricing": "Preisliste"
-    }
+      "about": "Über uns"
+      
+    },
+    "studio":{
+      "altLayout":"Grundriss",
+      "h1":"Studio",
+      "h1subtitle":"Studio mit Balkon - 32 m²",
+      "text1":"Unsere kleinste Ferienwohnung im 1. Stock, optimal für <b>2 Personen</b>.",
+      "text2":"Mit der ausziehbaren Couch können auch 3 Personen Platz finden.",
+      "text3":"Die Ferienwohnung bietet auf seinem <b>großzügigen Balkon</b> freien Blick nach Westen.",
+      "text4":"Große Fensterflächen bringen viel natürliches Licht in die hellen Räume.",
+      "text5":"Wohn-Schlafraum mit Doppelbett und ausziehbarer Schlafcouch",
+      "text6":"<b>Vollausgestattete Küche</b> mit Geschirrspüler, elektrischem Herd mit Backofen, Kühlschrank mit Gefrierfach, Geschirr und umfangreichen Küchenutensilien",
+      "text7":"<b>Echtholzböden</b>",
+      "text8":"Eigener großzügiger, sonniger Balkon (Echtholzboden) mit ca. 9 m², Tisch und Stühle am Balkon",
+      "text9":"WLAN, Sat TV, Safe",
+      "text10":"Badezimmer mit Dusche, WC, Föhn, Handtuchtrockner",
+      "text11":"Bettwäsche und genügend Handtücher im Preis enthalten",
+      "text12":"Waschmaschine, Trockenraum, Schischuhtrockner, Reparaturmöglichkeit Mountainbike im Keller",
+      "text13":"Babybett (bitte bei der Reservierung angeben)",
+      "text14":"Gartenbenutzung, Grillplatz, Spielplatz",
+      "text15":"<b>Frühstücksmöglichkeit</b> im Cafe (bitte Voranmeldung)",
+      "text16":"<b>Haustiere erlaubt</b>",
+      "winterSeason":"Winter"
  }
+}
 
     
   

@@ -1,4 +1,5 @@
 import image from '../../data/image';
+import { GalleryImage } from '../app/[locale]/components/types';
 /*import UseTranslation from 'next-translate/useTranslation'; */
 
 
@@ -8,7 +9,7 @@ export default async function getImageToEnlarge(clickedImage:any,imageList:any)
    console.log("getImageToEnlarge ",clickedImage, "imageList ", imageList)
    /* const myFinalImage = imageList[index]*/
    
-   const myFinalImage  = imageList.filter(function (el) {
+const myFinalImage  = imageList.filter(function (el: GalleryImage) {
     return el.full === clickedImage;
 }) as GalleryImage[];
   
@@ -22,7 +23,7 @@ export default async function getImageToEnlarge(clickedImage:any,imageList:any)
         altEN:myFinalImage[0].altEN,
         altIT:myFinalImage[0].altIT,
         copyright: "Brückenwirt Appartements",
-        priority: myFinalImage.priority
+        priority: true
     }
 
     console.log("getImageToEnlarge ",obj);

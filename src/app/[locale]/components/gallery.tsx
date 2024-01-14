@@ -19,6 +19,7 @@ import { AppartmentModuleProps } from "../components/types"
 import  Logo  from '../../../../public/Logo2023_148x22.webp'
 
 
+
 const Gallery = ({appType}:AppartmentModuleProps)  => {
 
   const[clickedImage,setClickedImage] = useState(null);
@@ -28,7 +29,6 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
   const [image1, setImage1] = useState<GalleryImage>();
   const [image2, setImage2] = useState<GalleryImage>();
   const [image3, setImage3] = useState<GalleryImage>();
-  const [imageName, setImageName] = useState("");
   const [imageLoaded, setImageLoaded] = useState(false);
 
 
@@ -36,9 +36,10 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
   const [isLoaded, setisloaded] = useState<boolean>(false);
   const[lengthImageList, setLengthImageList] = useState<number>(0);
  
-  
+
     
   useEffect(() =>{
+    console.log('Gallery useEffect 1', appType);
     async function fetchData (appType:string) {
     const response = await getImageList(appType);
     
@@ -48,12 +49,15 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
             setImageList(myLocalImageList);
             
             setisloaded(true);
+          
+
                      }
             };
             fetchData(appType)
   },[]);
 
    useEffect(() => {
+    console.log('Gallery useEffect 2', isLoaded);
     if (isLoaded === true) {
         setImage1(imageList[0]);
         setImage2(imageList[1]);
@@ -64,18 +68,14 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
    }
   },[isLoaded]);
 
-  useEffect(() => {
-    if ((isLoaded === true) && (imageLoaded === true)) {
-        console.log('jetzt ist Bild geladen-jetzt sollte das Bild geladen sein ', image1);
-   }
-  },[isLoaded, imageLoaded]);
+  
 
 
 
       /*Bilder scrollen*/
       useEffect
           (() => {
-              
+            console.log('Gallery useEffect 3', clickedNav);        
       if (clickedNav) {
 
       if (currentIndex === -1) {
@@ -149,16 +149,64 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
         }
         
 
-        function LoadImage(number:number) {
+        function loadImage(number:number) {
+          console.log('Gallery loadImage', number, imageLoaded);        
+            let myImageSmall:string = '';
+            let myImageAlt:string = '';
+            let myImagePriority:boolean= false;
+           
+            if (imageLoaded === true) {
+                if (number === 1) {
+                    myImageSmall = image1?.small ?? '';
+                    myImageAlt = image1?.alt ?? '';
+                }
+                if (number === 2) {
+                    myImageSmall = image2?.small ?? '';
+                    myImageAlt = image2?.alt ?? '';
+                    myImagePriority = true;
+                }
+                if (number === 3) {
+                    myImageSmall = image3?.small ?? '';
+                    myImageAlt = image3?.alt ?? '';
+                }
+
+                return( <>
+                <Image  className={styles.image}
+                    src={myImageSmall}
+                    alt={myImageAlt}
+                    quality={60}
+                    width={440}
+                    height={346} 
+                    priority={myImagePriority}
+                    sizes="(max-width: 399px) 300px,(max-with:799px) 300px, (max-width:1079px) 440px,(max-width:1399px) 440px,(max-width:1999px) 440px, 500px"
+                />  
+                </>
+                )
+        }
 
             return(
-               <></> 
+               <>
+               <Image  className={styles.image}
+                    src={Logo}
+                    alt={"Logo"}
+                    quality={60}
+                    width={440}
+                    height={346} 
+                    priority={false}
+                    sizes="(max-width: 399px) 300px,(max-with:799px) 300px, (max-width:1079px) 440px,(max-width:1399px) 440px,(max-width:1999px) 440px, 500px"
+                />  
+               </> 
             )
 
         }
 
 
 /*Hauptgallery*/
+
+
+if (imageLoaded === false) {
+  return (<></>)
+}
 
 return(
 
@@ -177,49 +225,17 @@ return(
     </div>
  
     <div  className={styles.box2BildLinks} onClick={() => {clickHandler(image1?.full)} }>
-         {(imageLoaded === true) && (
-                <Image  className={styles.image}
-                    src={image1.small}
-                    alt={image1.alt}
-                    quality={60}
-                    width={440}
-                    height={346} 
-                    priority={false}
-                    sizes="(max-width: 399px) 300px,(max-with:799px) 300px, (max-width:1079px) 440px,(max-width:1399px) 440px,(max-width:1999px) 440px, 500px"
-                />  
-        )}
-        </div>
+        {loadImage(1)}
+    
+    </div>
 
     <div className={styles.box3BildMitte} onClick={() => {clickHandler(image2?.full)}}
     >
-      {(imageLoaded === true) && (
-        <Image className={styles.image}
-          src= {image2?.small}
-          alt={image2?.alt}
-          quality = {60}
-          width = {440}
-          height= {346} 
-          priority = {true}
-          sizes = "(max-width: 399px) 300px,(max-with:799px) 300px, (max-width:1079px) 440px,(max-width:1399px) 440px,(max-width:1999px) 440px, 500px"
-        /* sizes = "(max-width: 399px) 300px,(max-with:799px) 650px, (max-width:1079px) 1000px,(max-width:1399px) 1200px,(max-width:1999px) 1800px, 25vw"*/
-          /* fill */
-          />  
-  )}
+    {loadImage(2)}
     </div>
     <div className={styles.box4Bildrechts} onClick={() => {clickHandler(image3?.full)}}
       >
-    {(imageLoaded === true) && (
-        <Image className={styles.image}
-          src= {image3?.small}
-          alt={image3?.alt}
-          quality = {60}
-          width = {440}
-          height ={346} 
-          priority = {false}
-          sizes = "(max-width: 399px) 300px,(max-with:799px) 300px, (max-width:1079px) 440px,(max-width:1399px) 440px,(max-width:1999px) 440px, 500px"
-          /*fill */
-        />  
-                )}
+    {loadImage(3)}
       </div>
 
       <div id="arrowRight" className={styles.box1ArrowRight} onClick={() => {clickHandlerNext()}}>

@@ -64,10 +64,10 @@ function getJsonLDById(id: number) {
 // Can be imported from a shared config
 const locales = ['en', 'de','it'];
  
-export default function LocaleLayout({children, params: {locale}}) {
+export default function LocaleLayout({children, params: {locale}}: {children: any, params: {locale: string}}) {
   // Validate that the incoming `locale` parameter is valid
   const t = useTranslations('navigation');
-  const myLocale =useTranslations.locale;
+  /*const myLocale =t.locale;*/
   const home = t('home');
   const apartmentTrans = t('appartment');
   const cafeTrans = t('cafe');

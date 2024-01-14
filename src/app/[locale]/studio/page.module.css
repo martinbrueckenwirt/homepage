@@ -1,0 +1,73 @@
+.container{
+position:relative;
+margin-top: 230px;
+}
+
+.h1{
+    margin-left: 80rem;
+    margin-bottom:0;
+    padding-bottom: 0;
+    font-weight: var(--fontweight-hero);
+    font-size: var(--fontsize-hero);
+}
+
+.subtitle{
+    margin-left: 80rem;
+    margin-bottom:0;
+    margin-top:0;
+    padding-bottom: 0;
+    font-weight: var(--fontweight-h2Text);
+    font-size: var(--fontsize-h2Text);
+}
+.grundriss{
+    margin-left: 30rem;
+    margin-bottom:2rem;
+    margin-top:5rem;
+    padding-bottom: 0; 
+}
+
+
+
+.textContainer{
+    margin-left: 20rem;
+    display: flex;
+    justify-content: center;
+}
+.textContainerText{
+    width: 80rem;
+    margin-top: 1rem;
+    font-weight: var(--fontweight-h3Text);
+    font-size: var(--fontsize-h4Text);
+}
+/*Einzelzeile des Containers*/
+.textContainerText div{
+    margin-top: 1rem;
+}
+
+.textDetails{
+    margin-top:1rem;
+    font-weight: var(--fontweight-h5Text);
+    font-size: var(--fontsize-h5Text);
+}
+/*Einzelzeile der Textdetails*/
+.textDetails div{
+    margin-top:1rem;
+   }
+
+.pricing{
+    margin-top: 5rem;
+
+}
+
+.pricingHeadline{
+    /*entspricht appartmentcontainer Startseite*/
+    margin-left: 8rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--background-light);
+  font-size: var(--fontsize-h1Text);
+  font-weight: var(--fontweight-h2Text);
+}
+

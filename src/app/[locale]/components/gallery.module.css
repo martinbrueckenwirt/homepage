@@ -1,14 +1,14 @@
 .gallerygridContainer{
-margin-top:320px;
+margin-top:1rem;
 }
 
 
 
 .wrapper{
     position:relative;
-    margin-top: 320px;
+    /*margin-top: 10px;*/
     display: grid;
-    background-color: blue;
+    /*background-color: blue;*/
     
     /*height: calc(21vw);*/
     height: calc(31vw);
@@ -23,7 +23,7 @@ margin-top:320px;
 
 .box1ArrowLeft{
     grid-column:1;
-    background-color: red;
+  /*  background-color: red;*/
     justify-self: center;
 }
 
@@ -42,7 +42,7 @@ margin-top:320px;
   min-height: 50px;
     min-width: 50px;
  
-    background-color: yellow;
+   /* background-color: yellow;*/
 }
 
 
@@ -53,7 +53,7 @@ margin-top:320px;
     height: calc(18vw);
     grid-column: 6 / 10;
     justify-self: center;
-    background-color: green;
+/*    background-color: green;*/
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -74,7 +74,7 @@ margin-top:320px;
     justify-content: center;
     min-height: 50px;
     min-width: 50px;
-    background-color: rgb(243, 38, 174);
+  /*  background-color: rgb(243, 38, 174);*/
 }
 
 .image{
@@ -98,7 +98,7 @@ margin-top:320px;
 .box1ArrowRight{
     grid-column: 14;
     justify-self: center;
-    background-color: red;
+   /* background-color: red;*/
 }
 
 /*nur das Grid*/
@@ -110,24 +110,10 @@ grid-column-gap: 0.1rem;
 grid-row-gap: 0.1 rem;
 justify-items: center; /*horizontal */
 align-items: stretch; /*vertikal */
-background: #eee;
+/*background: #eee;*/
 margin: 10em 10em 10em 10px;
 max-width: 70%;
 }
-.gridItem{
-background: yellow;
-padding: 20px;
-margin: 2px;
-
-}
-
-.gridItemClicked{
-background:green;
-padding: 2px;
-border: 5px solid rgb(7, 248, 228);
-
-}
-
 
 
 @media(max-width:399px){    }
@@ -168,6 +154,7 @@ border: 5px solid rgb(7, 248, 228);
 .image{
     width: calc(60vw);
     height: calc(45vw);
+    /*width:auto */
     object-fit: cover;
     object-position: center;
     transition: transform 0.5s ease-in-out;

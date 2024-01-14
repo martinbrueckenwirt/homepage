@@ -1,0 +1,38 @@
+.container { 
+    display:flex;
+    /*height: calc(31vw);*/
+    width: 100%;
+    margin-top: 3rem;;
+    flex-direction: row;    
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+.cell{
+    padding: 1.5rem;
+    background-color: var(--background-medium);
+    border-color: var(----background-dark);
+    border-width: 1px;
+    border-style: solid;
+    
+ }
+
+ .date{
+    display: flex;
+    justify-content: center;
+    color:var(--background-dark);
+    font-weight: var(--fontweight-h2Text);
+    font-size: var(--fontsize-h5Text);
+    padding-bottom: 1rem;
+ }
+
+ .price{
+    display: flex;
+    justify-content: center;
+    color:var(--background-dark);
+    font-weight: var(--fontweight-h2Text);
+    font-size: var(--fontsize-h3Text);
+    padding-bottom: 1rem;
+ }

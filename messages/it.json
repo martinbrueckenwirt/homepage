@@ -92,5 +92,26 @@
       "about": "Chi Siamo",
        "castleview": "Type A",
       "castleviewpricing": "Preci"
+    },
+    "studio":{
+      "altLayout":"Disposizione",
+      "h1":"Studio",
+      "h1subtitle":"Monolocale con balcone",
+      "text1":"Il nostro appartamento più piccolo al 1° piano, ideale per <b>2 persone</b>.",
+      "text2":"Il divano letto può ospitare 3 persone.",
+      "text3":"L'appartamento offre una vista libera sul suo <b>ampio balcone</b> verso ovest.",
+      "text4":"Le grandi finestre portano molta luce naturale nelle stanze luminose.",
+      "text5":"Soggiorno con letto matrimoniale e divano letto estraibile",
+      "text6":"<b>Cucina completamente attrezzata</b> con lavastoviglie, fornello elettrico con forno, frigorifero con congelatore, stoviglie e numerosi utensili da cucina",
+      "text7":"<b>Pavimenti in vero legno</b>",
+      "text8":"Proprio ampio balcone soleggiato (pavimento in vero legno) di circa 9 m², tavolo e sedie sul balcone",
+      "text9":"Wi-Fi, TV satellitare, cassaforte",
+      "text10":"Bagno con doccia, WC, asciugacapelli, scalda-asciugamani",
+      "text11":"Biancheria da letto e asciugamani sufficienti inclusi nel prezzo",
+      "text12":"Lavatrice, stenditoio, asciuga scarponi, possibilità di riparazione mountain bike nel seminterrato",
+      "text13":"Culla (da specificare al momento della prenotazione)",
+      "text14":"Uso del giardino, zona barbecue, parco giochi",
+      "text15":"<b>Opzione colazione</b> nella caffetteria (si prega di prenotare in anticipo)",
+      "text16":"<b>Animali ammessi</b>"
     }
   }

@@ -90,5 +90,26 @@
       "about": "About",
       "castleview": "Type A",
       "castleviewpricing": "Pricing"
+    },
+    "studio":{
+      "altLayout":"Layout",
+      "h1":"Studio",
+      "h1subtitle":"Studio with balcony - 32 m²",
+      "text1":"Our smallest holiday apartment on the 1st floor, ideal for <b>2 people</b>.",
+      "text2":"The pull-out couch can accommodate 3 people.",
+      "text3":"The holiday apartment offers a clear view to the west on its <b>generous balcony</b>.",
+      "text4":" Large windows bring lots of natural light into the bright rooms.",
+      "text5":"Living-bedroom with double bed and pull-out sofa bed",
+      "text6":"<b>Fully equipped kitchen</b> with dishwasher, electric stove with oven, refrigerator with freezer compartment, dishes and extensive kitchen utensils",
+      "text7":"<b>Real wood floors</b>",
+      "text8":"Own spacious, sunny balcony (real wood floor) with approx. 9 m², table and chairs on the balcony",
+      "text9":"WiFi, satellite TV, safe",
+      "text10":"Bathroom with shower, toilet, hairdryer, towel dryer",
+      "text11":"Bed linen and enough towels included",
+      "text12":"Washing machine, drying room, ski boot dryer, mountain bike repair option in the basement",
+      "text13":"Baby bed (please reserve)",
+      "text14":"Use of garden, barbecue area, playground",
+      "text15":"<b>Breakfast option</b> in the cafe (please book in advance)",
+      "text16":"<b>Pets Allowed</b>"
     }
   }

@@ -38,7 +38,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
     let  phoneNumber: string = "+43664805563922";
     let  email: string = "office@derbrueckenwirt.at";
 
-    function getNewPath(lang) {
+    function getNewPath(lang:string) {
         let newPath = lang.concat(pathWithoutLang);  
         locale = lang.substring(1,2);
     return (newPath)

@@ -93,6 +93,13 @@
        "castleview": "Type A",
       "castleviewpricing": "Preci"
     },
+    "pricingTableVarious":{
+      "finalCleaning": "Pulizia finale",
+      "breakfast":"Colazione al Café Brückenwirt al piano terra",
+      "localTax":"Tassa di soggiorno per persona/giorno",
+      "pets":"Animali domestici - spese di pulizia"
+    },
+
     "studio":{
       "altLayout":"Disposizione",
       "h1":"Studio",
@@ -112,6 +119,9 @@
       "text13":"Culla (da specificare al momento della prenotazione)",
       "text14":"Uso del giardino, zona barbecue, parco giochi",
       "text15":"<b>Opzione colazione</b> nella caffetteria (si prega di prenotare in anticipo)",
-      "text16":"<b>Animali ammessi</b>"
+      "text16":"<b>Animali ammessi</b>",
+      "winterSeason":"Inverno",
+      "summerSeason":"Estate",
+      "various":"Costi diversi"
     }
   }

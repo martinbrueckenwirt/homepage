@@ -97,5 +97,6 @@ export type Prices = {
 export type PricingList = {
     type: string,
     season: string,
+    
 }
 

@@ -8,8 +8,9 @@
   --foreground-: #FFF;
   --background-white:#fff;  
   --background-light: #f2f3f5;
-  --background-medium: #d7e1e6;
-  --background-medium-warm: rgb(247, 244, 238);
+  --background-medium: #c6c8ca;
+  --background-medium-warm: rgb(250, 241, 224);
+  --background-medium-cold: rgb(211, 234, 245);
   --background-dark: #2f3436;
   --red:rgb(245, 8, 8);
 

@@ -93,6 +93,12 @@
       "about": "Über uns"
       
     },
+     "pricingTableVarious":{
+      "finalCleaning": "Endreinigung",
+      "breakfast":"Frühstück im Cafe Brückenwirt im Erdgeschoß",
+      "localTax":"Ortstaxe pro Person/Tag",
+      "pets":"Haustiere - Reinigungskosten"
+    },
     "studio":{
       "altLayout":"Grundriss",
       "h1":"Studio",
@@ -113,7 +119,9 @@
       "text14":"Gartenbenutzung, Grillplatz, Spielplatz",
       "text15":"<b>Frühstücksmöglichkeit</b> im Cafe (bitte Voranmeldung)",
       "text16":"<b>Haustiere erlaubt</b>",
-      "winterSeason":"Winter"
+      "winterSeason":"Winter",
+      "summerSeason":"Sommer",
+      "various":"Sonstiges"
  }
 }
 

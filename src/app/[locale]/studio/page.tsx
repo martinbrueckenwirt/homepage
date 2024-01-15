@@ -9,6 +9,8 @@ import Gallery from '../components/gallery';
 import Image from 'next/image';
 import grundriss from '../../../../public/BrueckenwirtHochwasser.webp';
 import PricingTable from '../components/pricingTable';
+import pricesGeneral from '../../../../data/pricesGeneral'
+import PricingTableVarious from '../components/pricingTableVarious';
 
 
 function getJsonLDById(id: number) {
@@ -40,14 +42,14 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 
 
-export default function Appartement() {
+export default function Studio() {
     const t = useTranslations('studio');
 
   
     const h1 = t('h1');
     const h1subtitle = t('h1subtitle');
     const altLayout = t('altLayout');
-
+    const winterSeason = pricesGeneral.winterSeason;
     
     return (
     <>
@@ -58,7 +60,7 @@ export default function Appartement() {
                 />
         </Head>
     <section className={styles.container}> 
-        <h1 className={styles.h1} className={`${heroFont.className}  ${styles.h1}`}>  
+        <h1  className={`${heroFont.className}  ${styles.h1}`}>  
             {h1}
         </h1>
         <p className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</p>
@@ -67,8 +69,8 @@ export default function Appartement() {
 
     <Gallery appType ={'A'}/>
 
-        <section className={styles.textContainer}>
-                <div className={`${h1Font.className} ${styles.textContainerText}`}>
+        <section className={styles.textContainer1}>
+                <div className={`${h1Font.className} ${styles.textContainer1Text}`}>
                     <div dangerouslySetInnerHTML={{__html: t.raw('text1')}} />
                     <div dangerouslySetInnerHTML={{__html: t.raw('text2')}} />
                     <div dangerouslySetInnerHTML={{__html: t.raw('text3')}} />
@@ -76,38 +78,58 @@ export default function Appartement() {
                 </div>
 
         </section>
-        <Image className={styles.grundriss}
-            src={grundriss} 
-            alt={altLayout} 
-            height={500}
-            width={700}
-        />
-        <section className={styles.textContainer}>
-                <div className={`${h1Font.className} ${styles.textDetails}`}>
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text5')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text16')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text6')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text7')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text8')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text9')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text10')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text11')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text12')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text13')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text14')}} />
-                    <div dangerouslySetInnerHTML={{__html: t.raw('text15')}} />
 
-                </div>
-        </section>
+        <div className={styles.detailsContainer}>  
+            <Image className={styles.grundriss}
+                src={grundriss} 
+                alt={altLayout} 
+                height={500}
+                width={700}
+            />
+            <section className={styles.textContainer}>
+                    <div className={`${h1Font.className} ${styles.textContainer2Text}`}>
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text5')}} />
+                        <div dangerouslySetInnerHTML={{ __html: t.raw('text6') }} />
+                        <div className={styles.horizontalGap}></div>
+                       {/* <div dangerouslySetInnerHTML={{__html: t.raw('text16')}} /> */}
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text7')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text8')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text9')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text10')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text11')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text12')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text13')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text14')}} />
+                        <div dangerouslySetInnerHTML={{__html: t.raw('text15')}} />
+
+                    </div>
+            </section>
+        </div> 
         <section className={styles.pricing}>
-            <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{__html: t.raw('winterSeason')}} />
+                <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('winterSeason')}}
+                     />
+                
             <div>
             <PricingTable
                 type = {'A'}
-                season = {'winter'} 
+                season={'winter'} 
+                      
             />
-            </div>    
+                </div>    
+            <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{__html: t.raw('summerSeason')}} />
+            <div>
+            <PricingTable
+                type = {'A'}
+                season={'summer'} 
+                       
+            />
+            </div>  
+            <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('various') }} />
+            <div>
+             <PricingTableVarious/>
+            </div>   
             
+                
         </section>
     </>
       )

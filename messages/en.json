@@ -91,6 +91,12 @@
       "castleview": "Type A",
       "castleviewpricing": "Pricing"
     },
+    "pricingTableVarious":{
+      "finalCleaning": "Final Cleaning",
+      "breakfast":"Breakfast in the Cafe Brückenwirt on the ground floor",
+      "localTax":"Local tax per person/day",
+      "pets":"Pets - cleaning costs"
+    },
     "studio":{
       "altLayout":"Layout",
       "h1":"Studio",
@@ -110,6 +116,9 @@
       "text13":"Baby bed (please reserve)",
       "text14":"Use of garden, barbecue area, playground",
       "text15":"<b>Breakfast option</b> in the cafe (please book in advance)",
-      "text16":"<b>Pets Allowed</b>"
+      "text16":"<b>Pets Allowed</b>",
+      "winterSeason":"Winter",
+      "summerSeason":"Summer",
+      "various":"Various"
     }
   }

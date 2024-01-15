@@ -8,15 +8,23 @@
     justify-content: center;
     align-items: center;
 }
-    
+.season{
+   font-weight: var(--fontweight-h2Text);
+   font-size: var(--fontsize-h2Text);
+   margin-right: 3rem;
+} 
 
-.cell{
+.cell {
     padding: 1.5rem;
-    background-color: var(--background-medium);
+    background-color: var(--background-medium-warm);
     border-color: var(----background-dark);
     border-width: 1px;
     border-style: solid;
     
+ }
+
+ .cell:nth-child(even){
+    background-color: var(--background-medium-cold);
  }
 
  .date{

@@ -49,6 +49,7 @@ export default function Studio() {
     const h1 = t('h1');
     const h1subtitle = t('h1subtitle');
     const altLayout = t('altLayout');
+    const bookingButton = t('bookingButton');
     const winterSeason = pricesGeneral.winterSeason;
     
     return (
@@ -61,10 +62,11 @@ export default function Studio() {
         </Head>
     <section className={styles.container}> 
         <h1  className={`${heroFont.className}  ${styles.h1}`}>  
-            {h1}
+             <button className ={styles.bookButton}>{bookingButton}</button>
+             {h1}
         </h1>
         <p className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</p>
-      
+       
     </section>
 
     <Gallery appType ={'A'}/>

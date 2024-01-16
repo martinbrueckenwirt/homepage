@@ -7,15 +7,27 @@ margin-top: 230px;
 .h1{
     display:flex;
     justify-content:space-between;
-    margin-right: 20rem;
+    margin-right: 23rem;
     margin-bottom:0;
     padding-bottom: 0;
     font-weight: var(--fontweight-hero);
     font-size: var(--fontsize-hero);
 }
 
+.apartmentType{
+    margin-left: 23rem;
+}
+.subtitle{
+    margin-left: 23rem;
+    margin-bottom:0;
+    margin-top:0;
+    padding-bottom: 0;
+    font-weight: var(--fontweight-h2Text);
+    font-size: var(--fontsize-h2Text);
+}
+
 .bookButton{
-  margin-left:20rem;
+  
   /*width: 10rem;
   height: 5rem; */
   padding-left: 5rem;
@@ -38,16 +50,7 @@ margin-top: 230px;
 }
 
 
-.subtitle{
-    display:flex;
-    justify-content: flex-end;
-    margin-right: 20rem;
-    margin-bottom:0;
-    margin-top:0;
-    padding-bottom: 0;
-    font-weight: var(--fontweight-h2Text);
-    font-size: var(--fontsize-h2Text);
-}
+
 
 .textContainer1{
     

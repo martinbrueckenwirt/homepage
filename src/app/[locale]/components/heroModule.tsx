@@ -9,7 +9,8 @@ export default function Hero(props:HeroProps) {
 
     let myImage:string =  props.imageUrl;
     
-    const t = useTranslations('home');
+    const t = useTranslations('hero');
+    const bookingButton = t('bookingButton');
 
     return(
 

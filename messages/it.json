@@ -41,6 +41,10 @@
   "Footer":{
     "Einleitung": "ITALIENSICH I am on the page"
   },
+  "hero": {
+   "bookingButton":"Prenota ora",
+    "title":"Vacanze in montagna"
+  },
   "history":{
     "altImage1":"Foto storica del maso Brückenwirt",
     "altImage2":"L'acqua della piena attraversa la casa Brückenwirt",
@@ -89,9 +93,8 @@
       "appartment": "Appartamenti",
       "contact": "Contatto",
       "cafe": "Cafe",
-      "about": "Chi Siamo",
-       "castleview": "Type A",
-      "castleviewpricing": "Preci"
+      "about": "Chi Siamo"
+      
     },
     "pricingTableVarious":{
       "finalCleaning": "Pulizia finale",
@@ -104,7 +107,7 @@
       "altLayout":"Disposizione",
       "h1":"Studio",
        "bookingButton":"Prenota ora",
-      "h1subtitle":"Monolocale con balcone",
+      "h1subtitle":"32 m² per 2-3 persone",
       "text1":"Il nostro appartamento più piccolo al 1° piano, ideale per <b>2 persone</b>.",
       "text2":"Il divano letto può ospitare 3 persone.",
       "text3":"L'appartamento offre una vista libera sul suo <b>ampio balcone</b> verso ovest.",

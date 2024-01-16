@@ -1,9 +1,45 @@
 {
     "appartements":{
-      "title": "Moderne Appartements/Ferienwohnungen direkt am Schigebiet",
-      "description":"Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
-      "h1": "Appartments",
-      "h1subtitle":"h1 subtitle"
+      "metaTitle": "Moderne Appartements/Ferienwohnungen direkt am Schigebiet",
+      "metaDescription":"Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
+      "appartmentContainerHeadline": "Appartments/ Ferienwohnungen",
+      "subtitle":"Wohnen im Brückenwirt",
+      "heroImageAlt":"Kinderspielzeug liegt am Boden",
+       "bookingButton":"Jetzt buchen",
+      "moreDetails":"mehr Informationen",
+      "altStudio":"Bild des Appartement Studio",
+      "altJunior": "Bild des Appartement Junior",
+      "altFamily": "Bild des Appartement Family",
+      "altFamilyExclusive": "Bild des Appartement Family Exclusive",
+      "altTopSuite": "Bild des Appartement Top Suite",
+      "studioHeadline":"Studio",
+      "studioSubHeadline": "Das kuschelige Appartement",
+      "studioText1": "30m² für 2-3 Personen",
+      "studioText2": "geräumiger Schlafraum mit Doppelbett und Ausziehcouch",
+      "studioText3": "getrennte Küche, großzügiger Balkon Richtung Westen...",
+      "juniorHeadline":"Junior",
+      "juniorSubHeadline": "Das ruhige Appartment mit Blick ins Grüne",
+      "juniorText1": "37m² für 2-4 Personen",
+      "juniorText2": "geräumiger getrennter Schlafraum mit Doppelbett",
+      "juniorText3": "Wohnraum mit Ausziehcouch, großzügiger Balkon in Richtung Garten...",
+      "familyHeadline":"Family",
+      "familySubHeadline": "Appartement mit 2 Schlafzimmern und Balkon",
+      "familyText1": "56m² für 4-6 Personen",
+      "familyText2": "2 getrennte Schlafräume mit Doppelbetten",
+      "familyText3": "Wohnraum mit Ausziehcouch, großzügiger Balkon in Richtung Süden...",
+      "familyExclusiveHeadline":"FamilyExclusive",
+      "familyExclusiveSubHeadline": "Appartement mit 2 Schlafzimmern und Balkon",
+      "familyExclusiveText1": "56m² für 4-6 Personen",
+      "familyExclusiveText2": "2 getrennte Schlafräume mit Doppelbetten",
+      "familyExclusiveText3": "großzügiger Balkon in Richtung Süden, Wärmekabine...",
+      "topSuiteHeadline":"TopSuite",
+      "topSuiteSubHeadline": "Das großzügige Appartement unter dem Dach",
+      "topSuiteText1": "87m² für 4-7 Personen",
+      "topSuiteText2": "2 getrennte Schlafräume, 2 Bäder, Infrarotkabine",
+      "topSuiteText3": "großer gemütlicher Wohnraum..."
+
+
+
     },
     "cafe":{
       "quote": "<q>Die schönste Sonnenterrasse im Pustertal</q>",
@@ -52,6 +88,10 @@
       "highWater3":"Nach erfolglosen Sanierungsmaßnahmen des alten Gehöfts wurde von 1967 - 1969 der heutige Brückenwirt erbaut. Gertrud und Heribert Pichler haben mit viel Fleiß und Liebe ein traditionsbewusstes Unternehmen geschaffen. Mit der Übergabe der Elterngeneration an die nachfolgende Generation erfolgen die Weiterentwicklung des Brückenwirts und die Anpassung an die Bedürfnisse der Gegenwart.",
     
       "revitalisation":"2014 wurde der Brückenwirt generalsaniert, revitalisiert und im Herbst 2014 neu eröffnet. Die Zimmer wurden zu hochwertigen  Appartements umgebaut. Jede Ferienwohnung hat Zugang zu mindestens einem Balkon mit freiem Ausblick nach Osten in Richtung Lienz, nach Süden zu den Karnischen Alpen oder nach Westen. Jedes Appartement hat seine ganz persönliche Note. "
+    },
+    "hero": {
+   "bookingButton":"Jetzt buchen",
+   "title":"Urlaub in den Bergen"
     },
 
     "home": {
@@ -103,7 +143,7 @@
       "altLayout":"Grundriss",
       "h1":"Studio",
       "bookingButton":"Jetzt Buchen",
-      "h1subtitle":"Studio mit Balkon - 32 m²",
+      "h1subtitle":"32 m² für 2-3 Personen",
       "text1":"Unsere kleinste Ferienwohnung im 1. Stock, optimal für <b>2 Personen</b>.",
       "text2":"Mit der ausziehbaren Couch können auch 3 Personen Platz finden.",
       "text3":"Die Ferienwohnung bietet auf seinem <b>großzügigen Balkon</b> freien Blick nach Westen.",

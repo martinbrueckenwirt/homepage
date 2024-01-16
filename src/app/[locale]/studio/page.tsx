@@ -62,8 +62,9 @@ export default function Studio() {
         </Head>
     <section className={styles.container}> 
         <h1  className={`${heroFont.className}  ${styles.h1}`}>  
-             <button className ={styles.bookButton}>{bookingButton}</button>
-             {h1}
+                    <div className={styles.apartmentType}>{h1}</div>
+            <button className={styles.bookButton}>{bookingButton}</button>
+             
         </h1>
         <p className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</p>
        

@@ -51,6 +51,11 @@
     "highWater3":"After unsuccessful renovation measures on the old farm, today's Brückenwirt was built between 1967 and 1969. Gertrud and Heribert Pichler have created a tradition-conscious company with a lot of hard work and love. With the handover from the parent generation to the next generation, the bridge host further develops and adapts to the needs of the present.",
     "revitalisation":"In 2014 the Brückenwirt was completely renovated, revitalized and reopened in autumn 2014. The rooms have been converted into high-quality apartments. Each holiday apartment has access to at least one balcony with a clear view to the east towards Lienz, to the south to the Carnic Alps or to the west. Each apartment has its own personal touch. "
   },
+"hero": {
+   "bookingButton":"Book now",
+   "title":"Urlaub in den Bergen"
+},
+ 
   "home": {
       "appartment":"Apartment",
       "appartmentContainerHeadline": "Your holiday apartment",
@@ -87,9 +92,8 @@
       "appartment": "Apartments",
       "contact": "Contact",
       "cafe": "Cafe",
-      "about": "About",
-      "castleview": "Type A",
-      "castleviewpricing": "Pricing"
+      "about": "About"
+      
     },
     "pricingTableVarious":{
       "finalCleaning": "Final Cleaning",
@@ -101,7 +105,7 @@
       "altLayout":"Layout",
       "h1":"Studio",
       "bookingButton":"Book now",
-      "h1subtitle":"Studio with balcony - 32 m²",
+      "h1subtitle":"32 m² for 2-3 persons",
       "text1":"Our smallest holiday apartment on the 1st floor, ideal for <b>2 people</b>.",
       "text2":"The pull-out couch can accommodate 3 people.",
       "text3":"The holiday apartment offers a clear view to the west on its <b>generous balcony</b>.",

@@ -1,18 +1,26 @@
 .container { 
-    display:flex;
-    /*height: calc(31vw);*/
-    width: 100%;
-    margin-top: 3rem;;
-    flex-direction: row;    
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+   margin-top: 3rem;
+   margin-left: 1rem;
+   margin-right: 1rem;	 
 }
+
 .season{
+   display: flex;
+   justify-content: center;
    font-weight: var(--fontweight-h2Text);
    font-size: var(--fontsize-h2Text);
    margin-right: 3rem;
 } 
+
+.priceContainer{
+   display:flex;
+   /*height: calc(31vw);*/
+   flex-direction: row;   
+   flex-wrap:wrap; 
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+}
 
 .cell {
     padding: 1.5rem;
@@ -44,3 +52,65 @@
     font-size: var(--fontsize-h3Text);
     padding-bottom: 1rem;
  }
+
+@media(max-width:399px){  
+   .season{
+      font-weight: var(--fontweight-h4Text);
+      font-size: var(--fontsize-h4Text);
+  }
+  .date{
+   font-weight: var(--fontweight-h4Text);
+   font-size: var(--fontsize-h4Text);
+  }
+
+.price{
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h4Text);
+}
+}
+@media(min-width:400px) and (max-width: 779px){    
+   .season{
+      font-weight: var(--fontweight-h4Text);
+      font-size: var(--fontsize-h4Text);
+  }
+  .date{
+   font-weight: var(--fontweight-h4Text);
+   font-size: var(--fontsize-h4Text);
+  }
+
+.price{
+   font-weight: var(--fontweight-h4Text);
+   font-size: var(--fontsize-h3Text);
+}
+}
+@media(min-width:780px)  and (max-width: 1079px){
+   .season{
+      font-weight: var(--fontweight-h3Text);
+      font-size: var(--fontsize-h4Text);
+  }
+  .date{
+   font-weight: var(--fontweight-h4Text);
+   font-size: var(--fontsize-h4Text);
+  }
+
+.price{
+   font-weight: var(--fontweight-h4Text);
+   font-size: var(--fontsize-h3Text);
+}
+}
+@media(min-width:1080px)  and (max-width: 1399px){     
+.season{
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h4Text);
+}
+.date{
+font-weight: var(--fontweight-h4Text);
+font-size: var(--fontsize-h4Text);
+}
+
+.price{
+font-weight: var(--fontweight-h4Text);
+font-size: var(--fontsize-h3Text);
+}  }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

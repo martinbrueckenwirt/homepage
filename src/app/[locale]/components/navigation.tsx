@@ -11,7 +11,7 @@ import { useState } from "react";
 import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from './types';
 import { NavigationPropsNew } from './types';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname,useSelectedLayoutSegment } from 'next/navigation';
 import { navbarFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
 import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
@@ -23,6 +23,7 @@ import german from '../../../../public/Deutschland_30x25.webp';
 import english from '../../../../public/England_30x25.webp';
 import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
+import { useTranslations } from 'next-intl';
 
 export default function Navigation({ transparency, home, appartment, cafe, contact, about, locale}: NavigationPropsNew) {
  
@@ -35,13 +36,36 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
     const router = useRouter();
     const pathname = usePathname();
     const pathWithoutLang = pathname.substring(4);
+    const selectedLayoutSegment = useSelectedLayoutSegment();
+
     let  phoneNumber: string = "+43664805563922";
     let  email: string = "office@derbrueckenwirt.at";
+    let myLocale: string = "";
 
     function getNewPath(lang:string) {
         let newPath = lang.concat(pathWithoutLang);  
-        locale = lang.substring(1,2);
+        myLocale = lang.substring(1,3);
+        console.log('getNewPath',newPath, 'myLocale', myLocale)
     return (newPath)
+    }
+
+   
+    function getLocalizedUrl(page:string) {
+      
+       /* let localisedPage = `${pathname}/${page}`;*/
+        /*verhindern, dass myLocale mehrfach concatiniert wird */
+        console.log('getLocalizedUrl 0',router, pathname);
+        let countSlash = myLocale.split('/').length;
+        console.log('getLocalizedUrl',countSlash);
+        if (countSlash >= 1) {
+            myLocale = myLocale.substring(0,3);
+        }
+
+     /*  let localisedPage = `${myLocale}/${page}`; */
+      let localisedPage = page
+     
+       console.log("2 ",localisedPage,'path', page,'myLocale', myLocale );
+        return localisedPage;
     }
 
     const HorizontalRow = () => {
@@ -186,9 +210,9 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 
         <ul className={`${styles.menu} ${navbarFont.className}`}>
             <li> <a href="/">{home}</a></li>
-            <li> <a href="/appartement">{appartment}</a></li>
-            <li><a href="/cafe">{cafe}</a></li>
-            <li><a href="#">{about}</a></li>
+            <li> <a href={getLocalizedUrl("appartement")}>{appartment}</a></li>
+            <li><a href={getLocalizedUrl("cafe")}>{cafe}</a></li>
+            <li><a href="/studio">{about}</a></li>
             <li><a href="/contact">{contact}</a></li>
 
         </ul>
@@ -213,7 +237,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                     <li><a href="/">{home}</a></li>
                     <li><a href="/appartement">{appartment}</a></li>
                     <li><a href="/cafe">{cafe}</a></li>
-                    <li><a href="#">{about}</a></li>
+                    <li><a href="/studio">{about}</a></li>
                     <li><a href="/contact">{contact}</a></li>
 
                 </ul>

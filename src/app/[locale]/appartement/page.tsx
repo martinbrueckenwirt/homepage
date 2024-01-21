@@ -11,18 +11,18 @@ import Link from 'next/link';
 
 /*import HeroImage from '../../../public/P2535132-1.jpg';*/
 import HeroImage from '../../../../public/P2535132-1.jpg';
-import studio from '../../../../public/P1190113.webp';
-import junior from '../../../../public/P1210796_web.webp';
-import family from '../../../../public/P1360618-800x630-180-60.webp';
+import studio    from '../../../../public/P1190113.webp';
+import junior    from '../../../../public/P1210796_web.webp';
+import family    from '../../../../public/P1360618-800x630-180-60.webp';
 import familyExclusive from '../../../../public/P1360618-800x630-180-60.webp';
-import topSuite from '../../../../public/P1360933_web.jpg';
+import topSuite  from '../../../../public/P1360933_web.jpg';
 
 
 
 
 import {getTranslations} from 'next-intl/server';
  
-export async function generateMetadata({params: {locale}}) {
+export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'appartements'});
  
   return {

@@ -11,7 +11,7 @@ import { Prices } from "../app/[locale]/components/types";
     - "winter"  + apartmentType
     - "general" : braucht eigene Funktion
    ================================================ */
-export default function getPrices({ type, season }:PricingList):Prices { 
+export default function getPrices({ type, season }:PricingList):Prices[] { 
 
     let prices: Prices[] = [];
         

@@ -17,8 +17,8 @@ function getMinPriceSummer(pricesSummer: { type: string, date: string, price: nu
 function getMinPriceApartment(apartmentType: string): MinPrice {
     let minPriceWinter:number = 0;
     let minPriceSummer:number = 0;
-    minPriceSummer = getMinPriceSummer(pricesSummer, apartmentType);
     minPriceWinter = getMinPriceWinter(pricesWinter, apartmentType);
+    minPriceSummer = getMinPriceSummer(pricesSummer, apartmentType);
      
     return { minPriceSummer, minPriceWinter };
 };

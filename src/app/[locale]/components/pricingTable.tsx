@@ -25,6 +25,8 @@ return (
     <div className={`${h3Font.className} ${styles.container}`}> 
             
       <div className={styles.season}> {season}</div>
+        <div className={styles.priceContainer}>
+            
             {prices.map((price, index) => (
 
             <div className={styles.cell}  key={index}  >
@@ -32,10 +34,13 @@ return (
                     {price.date}            
                 </div>
                 <div className={styles.price}>
-                    {price.price}            
+                    <span> € {price.price}   </span>
+                               
                 </div>
-            </div>
-       ))}
+            </div>))
+            }
+        </div>	
+       
       </div>
 
  </>

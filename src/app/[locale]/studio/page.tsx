@@ -7,10 +7,12 @@ import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/func
 import styles from './page.module.css';
 import Gallery from '../components/gallery';
 import Image from 'next/image';
-import grundriss from '../../../../public/BrueckenwirtHochwasser.webp';
+import grundriss from '../../../../public/Appartements_1.webp';
 import PricingTable from '../components/pricingTable';
 import pricesGeneral from '../../../../data/pricesGeneral'
 import PricingTableVarious from '../components/pricingTableVarious';
+import {BgImage} from '../components/types';
+import BackgroundImage from '../components/backgroundImage';
 
 
 function getJsonLDById(id: number) {
@@ -22,7 +24,7 @@ function getJsonLDById(id: number) {
 
  
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
-  const t = await getTranslations({locale, namespace: 'appartements'});
+  const t = await getTranslations({locale, namespace: 'studio'});
  
     return {
       
@@ -61,12 +63,16 @@ export default function Studio() {
                 />
         </Head>
     <section className={styles.container}> 
-        <h1  className={`${heroFont.className}  ${styles.h1}`}>  
-                    <div className={styles.apartmentType}>{h1}</div>
+        <h1  className={`${heroFont.className}  ${styles.h1Container}`}>  
+                    <div >
+                        <div className={styles.h1}>{h1}</div>
+                        <div className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</div>
+                    
+                    </div>
             <button className={styles.bookButton}>{bookingButton}</button>
              
         </h1>
-        <p className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</p>
+        <BackgroundImage type ={'A'}/>
        
     </section>
 
@@ -108,7 +114,7 @@ export default function Studio() {
                     </div>
             </section>
         </div> 
-        <section className={styles.pricing}>
+        <section className={styles.containerPricing}>
                 <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('winterSeason')}}
                      />
                 

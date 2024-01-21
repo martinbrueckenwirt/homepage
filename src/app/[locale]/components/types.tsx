@@ -10,6 +10,10 @@ export type AppDescript = {
         size: string;
     };
 
+export type BgImage={
+    type: string;
+}
+
 export type BurgerMenueProps ={
     visibility: boolean;  
     menueSlide:string;
@@ -91,8 +95,7 @@ export type Prices = {
     type: string;
     date: string;
     price:number;
- 
-}
+ }
 
 export type PricingList = {
     type: string,

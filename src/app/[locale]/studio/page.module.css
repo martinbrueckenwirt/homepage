@@ -1,37 +1,43 @@
 .container{
 position:relative;
 margin-top: 230px;
+margin-bottom: 4rem;
+
+
 }
 
-
-.h1{
+.h1Container{
     display:flex;
     justify-content:space-between;
-    margin-right: 23rem;
+    width:100%;
+    margin-right: 1rem;
+    margin-left: 1rem;
     margin-bottom:0;
     padding-bottom: 0;
-    font-weight: var(--fontweight-hero);
-    font-size: var(--fontsize-hero);
+    
+}
+.h1{
+   
+    font-weight: var(--fontweight-h1Text);
+    font-size: var(--fontsize-h1Text);
 }
 
-.apartmentType{
-    margin-left: 23rem;
-}
 .subtitle{
-    margin-left: 23rem;
+    
     margin-bottom:0;
     margin-top:0;
     padding-bottom: 0;
-    font-weight: var(--fontweight-h2Text);
-    font-size: var(--fontsize-h2Text);
+    font-weight: var(--fontweight-h3Text);
+    font-size: var(--fontsize-h3Text);
 }
 
 .bookButton{
   
   /*width: 10rem;
   height: 5rem; */
-  padding-left: 5rem;
-  padding-right: 5rem;
+  height: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: var(--red);
     border:1px solid var(--red);    
   font-size: 20px;
@@ -53,13 +59,15 @@ margin-top: 230px;
 
 
 .textContainer1{
-    
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 .textContainer1Text{
-    width: 80rem;
+
     margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;;
     font-weight: var(--fontweight-h3Text);
     font-size: var(--fontsize-h3Text);
 }
@@ -71,15 +79,17 @@ margin-top: 230px;
 .detailsContainer{
     display:flex;
     justify-content: align-items;
-    margin-top: 10rem;
-    margin-left: 10rem;
-    width:90%;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    width:100%;
 
 }
 
 .grundriss{
+    width: 30%;
+    height: calc((30/4)*3vw);
     margin-top:1.3rem; /*Bild und Text oben gleiche Linie */
-    margin-right: 5rem;
+    margin-right: 2rem;
     margin-bottom:2rem;
     
     padding-bottom: 0; 
@@ -97,20 +107,176 @@ margin-top: 230px;
     height:2rem;
 }
 
-.pricing{
-    margin-top: 15rem;
-
+.containerpricing{
+    margin-top: 12rem;
+    
 }
 
 .pricingHeadline{
     /*entspricht appartmentcontainer Startseite*/
     margin-left: 40rem;
-  margin-top: 5rem;
-  padding: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  background-color: var(--background-light);
-  font-size: var(--fontsize-h1Text);
-  font-weight: var(--fontweight-h2Text);
+    margin-top: 5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--background-light);
+    font-size: var(--fontsize-h1Text);
+    font-weight: var(--fontweight-h2Text);
 }
 
+
+@media(max-width:399px){
+  
+    .detailsContainer{
+        margin-left: 2rem;
+        width:95%;
+        background-image: ;
+    }
+    
+    .h1{
+       
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h4Text);
+        
+    }
+    .bookButton{
+        
+      
+        margin-right:2rem;
+        font-size: 15px;
+        font-weight:bold
+    }
+    .subtitle{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .textContainer1Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .textContainer2Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .pricingHeadline{
+        margin-left: 5rem;
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h5Text);
+    }
+}
+
+@media(min-width:400px) and (max-width: 779px){
+    
+
+    .detailsContainer{
+        margin-left: 2rem;
+        width:95%;
+    }
+   
+    .h1{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h3Text);
+    }
+    
+    .bookButton{
+       
+        /*margin-right:0rem;*/
+        font-size: 15px;
+        font-weight:bold
+    }
+    .subtitle{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+        }
+    .textContainer1Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .textContainer2Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+
+    .pricingHeadline{
+        margin-left: 6rem;
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h5Text);
+    }
+   }
+@media(min-width:780px)  and (max-width: 1079px){
+    
+    .h1{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h3Text);
+        
+    }
+    .detailsContainer{
+        margin-left: 2rem;
+        width:95%;
+    }
+   
+    .bookButton{
+       
+        /*margin-right:0rem;*/
+        font-size: 15px;
+        font-weight:bold
+    }
+    .subtitle{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+        }
+    .textContainer1Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .textContainer2Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .pricingHeadline{
+        margin-left: 6rem;
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h5Text);
+    }
+}
+@media(min-width:1080px)  and (max-width: 1399px){    
+    .h1{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h3Text);
+        
+    }
+    .detailsContainer{
+        margin-left: 2rem;
+        width:95%;
+    }
+   
+   
+    .bookButton{
+       
+        /*margin-right:0rem;*/
+        font-size: 15px;
+        font-weight:bold
+    }
+    .subtitle{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+        }
+    .textContainer1Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .textContainer2Text{
+        font-weight: var(--fontweight-h5Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .pricingHeadline{
+        margin-left: 6rem;
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h5Text);
+    }
+
+
+
+}
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

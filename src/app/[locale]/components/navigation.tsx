@@ -4,6 +4,9 @@
 /*https://www.youtube.com/watch?v=-vzz1L9MQRM */
 /*burgerimage*/
 
+/* pathnames siehe: https://next-intl-docs.vercel.app/docs/routing/navigation */
+/*navigation.ts im /src*/
+
 import Image from 'next/image'
 import styles  from './navigation.module.css'
 import React from 'react';
@@ -23,7 +26,7 @@ import german from '../../../../public/Deutschland_30x25.webp';
 import english from '../../../../public/England_30x25.webp';
 import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
-import { useTranslations } from 'next-intl';
+
 
 export default function Navigation({ transparency, home, appartment, cafe, contact, about, locale}: NavigationPropsNew) {
  
@@ -44,8 +47,8 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
 
     function getNewPath(lang:string) {
         let newPath = lang.concat(pathWithoutLang);  
-        myLocale = lang.substring(1,3);
-        console.log('getNewPath',newPath, 'myLocale', myLocale)
+        /*myLocale = lang.substring(1,3);
+        console.log('getNewPath',newPath, 'myLocale', myLocale)*/
     return (newPath)
     }
 
@@ -54,17 +57,20 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
       
        /* let localisedPage = `${pathname}/${page}`;*/
         /*verhindern, dass myLocale mehrfach concatiniert wird */
-        console.log('getLocalizedUrl 0',router, pathname);
-        let countSlash = myLocale.split('/').length;
-        console.log('getLocalizedUrl',countSlash);
-        if (countSlash >= 1) {
+        const myRouter = useRouter();
+        let path = myRouter.asPath;
+        let mylocale = myRouter.locale;
+        console.log('getLocalizedUrl 0','pathname ',pathname,'path ', path, 'lang', locale, 'myLocale', mylocale);
+       /* let countSlash = myLocale.split('/').length;
+       /* console.log('getLocalizedUrl',countSlash); */
+       /* if (countSlash >= 1) {
             myLocale = myLocale.substring(0,3);
         }
 
-     /*  let localisedPage = `${myLocale}/${page}`; */
-      let localisedPage = page
+       let localisedPage = `${myLocale}/${page}`; */
+      let localisedPage = page 
      
-       console.log("2 ",localisedPage,'path', page,'myLocale', myLocale );
+     /*  console.log("2 ",localisedPage,'path', page,'myLocale', myLocale );*/
         return localisedPage;
     }
 
@@ -212,7 +218,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             <li> <a href="/">{home}</a></li>
             <li> <a href={getLocalizedUrl("appartement")}>{appartment}</a></li>
             <li><a href={getLocalizedUrl("cafe")}>{cafe}</a></li>
-            <li><a href="/studio">{about}</a></li>
+            <li><a href={`${locale}/studio`}>{about}</a></li>
             <li><a href="/contact">{contact}</a></li>
 
         </ul>

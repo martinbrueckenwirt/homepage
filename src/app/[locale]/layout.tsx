@@ -1,5 +1,5 @@
 import {notFound} from 'next/navigation';
-import Navigation from './components/navigation';
+import Navigation from './components/navigation.tsx';
 import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';
@@ -93,7 +93,7 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
       
       <body>
       <Suspense fallback ={<Loading/>}>
-      <Navigation transparency={false} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} locale={locale} />
+      <Navigation transparency={false} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
 
         {children}
         <Footer/>

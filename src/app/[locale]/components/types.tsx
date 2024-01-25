@@ -14,6 +14,10 @@ export type BgImage={
     type: string;
 }
 
+export type Booking = {
+    id: number;
+}
+
 export type BurgerMenueProps ={
     visibility: boolean;  
     menueSlide:string;

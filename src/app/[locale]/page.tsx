@@ -1,7 +1,7 @@
 
 import styles from './page.module.css';
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Metadata } from 'next';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
 import  Hero from './components/heroModule';
@@ -13,6 +13,8 @@ import TextModule from './components/textModule';
 import ApartmentModule from './components/apartementModule';
 import CafeModule from './components/cafeModule';
 import History from './components/history';
+import Booking from './components/booking';
+
 
 import {getTranslations} from 'next-intl/server';
  
@@ -53,6 +55,7 @@ export default function Home() {
     history = t("history"); 
     let historyContainerHeadline: string ="";
     historyContainerHeadline = t("historyContainerHeadline"); 
+    const locale = useLocale();
    
    
 
@@ -81,7 +84,11 @@ return (
                  </div>
             </div>
 
-    
+    <Booking 
+    id={"20845"} 
+    language={locale}
+    />
+
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {appartmentContainerHeadline}
      </h2>

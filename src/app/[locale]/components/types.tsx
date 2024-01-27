@@ -15,7 +15,8 @@ export type BgImage={
 }
 
 export type Booking = {
-    id: number;
+    id: string;
+    language: string;
 }
 
 export type BurgerMenueProps ={

@@ -9,7 +9,7 @@ export default function Booking(props: Booking) {
 
  	let myId=props.id;
 	let myLanguage=props.language;
-
+	
 	const htmlString =  `
 		<div id="vri-container-${myId}"></div>
 		<script type="text/javascript">

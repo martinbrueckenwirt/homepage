@@ -92,7 +92,7 @@ return (
     <Booking 
     id={"20845"} 
     language={locale}
-    />
+/> 
 
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {appartmentContainerHeadline}

@@ -1,3 +1,4 @@
+
 'use client';
 
 /*https://i18nexus.com/tutorials/nextjs/next-intl*/
@@ -9,18 +10,20 @@
 
 import Image from 'next/image'
 import styles  from './navigation.module.css'
-import React from 'react';
-import { useState,useEffect } from "react";
+import React, { use } from 'react';
+import {ChangeEvent, ReactNode, useTransition} from 'react';
+import { useState } from "react";
 import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from './types';
 import { NavigationPropsNew } from './types';
+import { useRouter, usePathname, useSelectedLayoutSegment } from 'next/navigation';
 import {locales} from '../../../navigation';
 import {useLocale, useTranslations} from 'next-intl';
 import { navbarFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
 import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
 import open from '../../../../public/open_45x45.png';
-import close from '../../../../public/close_45x45_red.png';
+import close from '../../../../public/close_45x45.png';
 import logo from '../../../../public/Logo2023_250x37.webp';
 import logosmall from '../../../../public/Logo2023_148x22.webp';
 import german from '../../../../public/Deutschland_30x25.webp';
@@ -37,23 +40,32 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
  
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
-    const [isStartUp, setIsStartUp]= useState<boolean>(true);
-    const {Link, useRouter, usePathname} = createSharedPathnamesNavigation({locales});
-    const router = useRouter();
+    /*const [isBurgerMenueClicked, setIsBurgerMenueClicked]= useState<boolean>(false);   *a* */
+    const [menueSlide,setMenueSlide]=useState<string> ("unClicked") /*funktioniert das?? *a* Hilfskonstrukt für Transform des slide-InMenue*/
+ 
+    const {Link, useRouter, usePathname, redirect} = createSharedPathnamesNavigation({locales});
+       const router = useRouter();
     let pathname = usePathname();
 
-    
+    const pathWithoutLang = pathname.substring(4);
+    const selectedLayoutSegment = useSelectedLayoutSegment();
+
     let  phoneNumber: string = "+43664805563922";
     let  email: string = "office@derbrueckenwirt.at";
     const locale = useLocale();
-  
+     const [isPending, startTransition] = useTransition();
   
 
     function setNewPath(lang:string) {
      
+         console.log('getNewPath 1',pathname, locale, lang);
         if (lang === locale) return;
-     
-        router.replace( pathname, { locale: lang } );
+
+        /*startTransition(() => {
+            router.replace(pathname, { locale: lang });
+        });
+       */
+    router.replace( pathname, { locale: lang } );
         
         return;
     }
@@ -104,24 +116,23 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
         event.preventDefault(); /*verhindern, dass event 2x gefired wird */
          
         setIsBurgerMenueVisible(!isBurgerMenueVisible);
-        setIsStartUp(false);
-    }
-
-    const handleClickBurgerMenue = (event: React.MouseEvent<HTMLDivElement>) => {
-        event.preventDefault(); /*verhindern, dass event 2x gefired wird */
-        setIsBurgerMenueVisible(false);     
-          
+        if (isBurgerMenueVisible === true){
+                setMenueSlide("unclicked") /*umgekehrte Darstellung */
+        } 
+        else  setMenueSlide("clicked")
+              
     }
     
  
     const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
+        /*component Startmit Großbuchstabe*/
 
-        let mySrc: string = open;      
+        let mySrc: string = '/open_45x45.png';      
         if (Props.burgerMenueVisible === false) {
-            mySrc = open;
+              mySrc = '/open_45x45.png';
             }
         else if (Props.burgerMenueVisible === true) {
-            mySrc = close;
+            mySrc = '/close_45x45.png';
         }
    
         return (<Image 
@@ -162,7 +173,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 </div>
             </div>
             <div className = {styles.languages}>
-                    <span className ={styles.languagesInRow}>
+                    <span >
                         <div className={styles.languageChoser} onClick={() => setNewPath("de")}>
                             <Image src={german} alt="german" width={30} height={25} /> 
                         </div>
@@ -187,7 +198,15 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
         : styles.navbarTransparent 
         }>
    
-        
+  
+        <a href ="#" className = {styles.logo}>
+    {/* *a* Add your comment here */}
+        </a>
+    
+        <a href ="#" className = {styles.logoBurgersize}>
+           
+        </a>
+            
      
 
         <div className = {styles.toggle} onClick={handleClickMenueToggle}>
@@ -200,7 +219,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
      
                 
         <ul className={`${styles.menu} ${navbarFont.className}`}>
-            <li> <Link href="/">{home}</Link></li>
+            <li> <a href="/">{home}</a></li>
             <li> <Link href="/appartement">{appartment}</Link> </li>
             <li> <Link href="/cafe">{cafe}</Link></li>
             <li> <Link href="/studio">{about}</Link> </li>
@@ -210,12 +229,11 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
 
     </nav>
 {/* burger menue */}
-        <div className={styles.visibility}> {/* ab600px*/}
+        <div className={styles.visibility}>
             <div className={isBurgerMenueVisible === true
-                ? `${styles.burgerMenue}`
-                : isStartUp === true
-                    ? `${styles.burgerMenuInvisible}`
-                    : `${styles.burgerMenueSlideOut}`}>
+                    ? `${styles.burgerMenue}`
+                    : `${styles.burgerMenueInvisible}`}>
+
                 <div className = {`${styles.toggle} ${styles.alignRight}`} onClick={handleClickMenueToggle}>
                      <input type='checkbox' id="navBurgerCheckbox2" className={styles.checkboxInvisible}/>
                     <label htmlFor="navBurgerCheckbox" >
@@ -225,15 +243,14 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             
                 </div>
              
-                <div className={`${navbarFont.className}`} onClick={handleClickBurgerMenue}>
-                <ul >
-                    <li> <Link href="/">{home}</Link></li>
-                    <li> <Link href="/appartement">{appartment}</Link> </li>
-                    <li> <Link href="/cafe">{cafe}</Link></li>
-                    <li> <Link href="/studio">{about}</Link> </li>
-                    <li> <Link href="/contact">{contact}</Link> </li>
+                <ul className={navbarFont.className}>
+                    <li><a href="/">{home}</a></li>
+                    <li><a href="/appartement">{appartment}</a></li>
+                    <li><a href="/cafe">{cafe}</a></li>
+                    <li><a href="/studio">{about}</a></li>
+                    <li><a href="/contact">{contact}</a></li>
+
                 </ul>
-                </div>
                 
             </div>
         </div>

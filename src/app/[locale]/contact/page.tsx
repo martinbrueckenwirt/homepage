@@ -1,7 +1,7 @@
 
 import styles from './page.module.css';
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -13,6 +13,7 @@ import landkarteKlein from '../../../../public/Landkarte_ausschnitt.webp';
 
 
 import {getTranslations} from 'next-intl/server';
+import {unstable_setRequestLocale} from 'next-intl/server'; 
  
 export async function generateMetadata({params: {locale}}: {params: {locale: any}}) {
   const t = await getTranslations({locale, namespace: 'contact'});
@@ -34,7 +35,9 @@ export async function generateMetadata({params: {locale}}: {params: {locale: any
 
 
 
-export default function Contact() {
+export default function Contact({params: {locale}}: {params: {locale: any}}) {
+    /*const locale = useLocale();*/
+    unstable_setRequestLocale(locale);
     const t = useTranslations('contact');
 
     let h1:string = t('h1');

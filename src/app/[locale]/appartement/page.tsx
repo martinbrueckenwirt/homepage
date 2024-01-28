@@ -1,6 +1,7 @@
 import styles from './page.module.css';
 import React from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import {unstable_setRequestLocale} from 'next-intl/server'; 
 import { Metadata } from 'next';
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
@@ -26,8 +27,8 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
   const t = await getTranslations({locale, namespace: 'appartements'});
  
   return {
-      title: t('metaTitle'),
-      description: t('metaDescription'),
+      title: t('title'),
+      description: t('description'),
       alternates: {
           canonical: `/de`,
           languages: {
@@ -43,7 +44,9 @@ function getJsonLDById(id: number) {
    return object;
 }
 
-export default function Appartements() {
+export default function Appartements({params: {locale}}: {params: {locale: any}}) {
+    /*const locale = useLocale();*/
+    unstable_setRequestLocale(locale);
     const t = useTranslations('appartements');
 
     let imageAlt: string = "";

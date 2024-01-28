@@ -39,7 +39,7 @@ export type GalleryImage = {
 };
 
 export type HeroProps = {
-    imageUrl: string;
+    imageUrl: any;
     imageUrlAlt: string;
     calledFrom: string; 
 }

@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import {unstable_setRequestLocale} from 'next-intl/server'; 
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
 import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/functions/fonts';
@@ -44,7 +45,9 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 
 
-export default function Studio() {
+export default function Studio({params: {locale}}: {params: {locale: any}}) {
+    /*const locale = useLocale();*/
+    unstable_setRequestLocale(locale);
     const t = useTranslations('studio');
 
   

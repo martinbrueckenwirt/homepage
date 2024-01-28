@@ -1,5 +1,5 @@
 import {notFound} from 'next/navigation';
-import Navigation from './components/navigation.tsx';
+import Navigation from './components/navigation';
 import Footer from './components/footer'
 import { NavigationPropsNew } from './components/types';
 import { Metadata } from 'next';
@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import React from 'react';
 import Loading from './loading';
 import { Suspense } from 'react';
+import {unstable_setRequestLocale} from 'next-intl/server';
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
 /* *a* Photo */
@@ -63,6 +64,10 @@ function getJsonLDById(id: number) {
 
 // Can be imported from a shared config
 const locales = ['en', 'de','it'];
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+}
  
 export default function LocaleLayout({children, params: {locale}}: {children: any, params: {locale: string}}) {
   // Validate that the incoming `locale` parameter is valid
@@ -73,6 +78,7 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
   const cafeTrans = t('cafe');
   const contactTrans = t('contact');
   const aboutTrans = t('about');
+  unstable_setRequestLocale(locale);
   
 
   if (!locales.includes(locale as any)) notFound();

@@ -17,8 +17,10 @@ import Booking from './components/booking';
 
 
 import {getTranslations} from 'next-intl/server';
- 
+import {unstable_setRequestLocale} from 'next-intl/server'; 
+
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
+   
   const t = await getTranslations({locale, namespace: 'home'});
  
   return {
@@ -38,7 +40,10 @@ export async function generateMetadata({params: {locale}}: {params: {locale: str
 
 
 
-export default function Home() {
+export default function Home({params: {locale}}: {params: {locale: any}}) {
+    
+    /*const locale = useLocale();*/
+    unstable_setRequestLocale(locale);
     const t = useTranslations('home');
 
     let imageAlt: string="";
@@ -55,7 +60,7 @@ export default function Home() {
     history = t("history"); 
     let historyContainerHeadline: string ="";
     historyContainerHeadline = t("historyContainerHeadline"); 
-    const locale = useLocale();
+
    
    
 

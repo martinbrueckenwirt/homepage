@@ -4,42 +4,62 @@
 /*https://www.youtube.com/watch?v=-vzz1L9MQRM */
 /*burgerimage*/
 
+/* pathnames siehe: https://next-intl-docs.vercel.app/docs/routing/navigation */
+/*navigation.ts im /src*/
+
 import Image from 'next/image'
-import styles  from './navigation2.module.css'
+import styles  from './navigation.module.css'
 import React from 'react';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from './types';
 import { NavigationPropsNew } from './types';
-import { useRouter, usePathname } from 'next/navigation';
+import {locales} from '../../../navigation';
+import {useLocale, useTranslations} from 'next-intl';
 import { navbarFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
 import phone from '../../../../public/telefon.webp';
 import mail from '../../../../public/umschlag.png';
 import open from '../../../../public/open_45x45.png';
-import close from '../../../../public/close_45x45.png';
-import logo from '../../../../public/logoneu_200_60_180.png';
-import german from '../../../../public/deutsch.webp';
-import english from '../../../../public/englisch.webp';
-import italian   from '../../../../public/italienisch.webp';
+import close from '../../../../public/close_45x45_red.png';
+import logo from '../../../../public/Logo2023_250x37.webp';
+import logosmall from '../../../../public/Logo2023_148x22.webp';
+import german from '../../../../public/Deutschland_30x25.webp';
+import english from '../../../../public/England_30x25.webp';
+import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
+import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+/*import Link from 'next-intl/link';*/
 
-export default function Navigation({ transparency, appartment, cafe, contact, about, locale, castleview,castleviewpricing}: NavigationPropsNew) {
+
+
+export default function Navigation({ transparency, home, appartment, cafe, contact, about}: NavigationPropsNew) {
  
  
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
-    /*const [isBurgerMenueClicked, setIsBurgerMenueClicked]= useState<boolean>(false);   *a* */
-    const [menueSlide,setMenueSlide]=useState<string> ("unClicked") /*funktioniert das?? *a* Hilfskonstrukt für Transform des slide-InMenue*/
- 
+    const [isStartUp, setIsStartUp]= useState<boolean>(true);
+    const {Link, useRouter, usePathname} = createSharedPathnamesNavigation({locales});
     const router = useRouter();
-    const pathname = usePathname();
-    const pathWithoutLang = pathname.substring(4);
+    let pathname = usePathname();
 
-    function getNewPath(lang) {
-        let newPath = lang.concat(pathWithoutLang);  
-        locale = lang.substring(1,2);
-    return (newPath)
+    
+    let  phoneNumber: string = "+43664805563922";
+    let  email: string = "office@derbrueckenwirt.at";
+    const locale = useLocale();
+  
+  
+
+    function setNewPath(lang:string) {
+     
+        if (lang === locale) return;
+     
+        router.replace( pathname, { locale: lang } );
+        
+        return;
     }
+
+   
+    
 
     const HorizontalRow = () => {
         return (
@@ -51,35 +71,62 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         )
     }
 
-   
+    const TopLogoContainer = () => {
+        return (
+        <>
+        <div className={styles.logoContainer} >
+        <a href ="/" className = {styles.logo}>
+            <Image 
+            src = {logo}
+            alt = "logo"
+            width ={250}
+            height ={37}
+            priority={true}
+            />
+        </a>
+        <a href ="/" className = {styles.logoBurgersize}>
+            <Image 
+            src = {logosmall}
+            alt = "logo"
+            width ={148}
+            height ={22}
+            priority={true}
+            />
+        </a>
+        </div>
+        </>
+        )
+    }
+
     // toggle burge Menue change
 
     const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement>) => {
         event.preventDefault(); /*verhindern, dass event 2x gefired wird */
          
         setIsBurgerMenueVisible(!isBurgerMenueVisible);
-        if (isBurgerMenueVisible === true){
-                setMenueSlide("unclicked") /*umgekehrte Darstellung */
-        } 
-        else  setMenueSlide("clicked")
-              
+        setIsStartUp(false);
+    }
+
+    const handleClickBurgerMenue = (event: React.MouseEvent<HTMLDivElement>) => {
+        event.preventDefault(); /*verhindern, dass event 2x gefired wird */
+        setIsBurgerMenueVisible(false);     
+          
     }
     
  
     const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
-        /*component Startmit Großbuchstabe*/
 
-        let mySrc: string = '/open_45x45.png';      
+        let mySrc: string = open;      
         if (Props.burgerMenueVisible === false) {
-              mySrc = '/open_45x45.png';
+            mySrc = open;
             }
         else if (Props.burgerMenueVisible === true) {
-            mySrc = '/close_45x45.png';
+            mySrc = close;
         }
    
         return (<Image 
                 src={mySrc}
-                height = {30}
+                height = {45}
                 width={45}
                 alt= "öffnen"
             />)
@@ -88,7 +135,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
 
 
         <>
-
+       <TopLogoContainer />
         <div className = {topTransparent === true 
             ? styles.topBar
             : styles.topBarTransparent     
@@ -102,7 +149,7 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
                         width={20}
                         alt="Telefon"
                         />   
-                        <div className = {`${styles.contactSpacer} ${navbarFont.className}`} >+43 664 80 55 63 922 </div>
+                        <div className = {`${styles.contactSpacer} ${navbarFont.className}`} ><a href={`tel:${phoneNumber}`}>+43 664 80 55 63 922</a> </div>
                 </div>
                 <div className={styles.contact}>
                 <Image 
@@ -111,23 +158,28 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
                 width={20}
                 alt = "Mail"
                 />   
-                        <div className={`${styles.contactSpacer} ${navbarFont.className}`}>martin@derbrueckenwirt.at</div>
+                        <div className={`${styles.contactSpacer} ${navbarFont.className}`}><a href={`mailto:${email}`}>office@derbrueckenwirt.at</a> </div>
                 </div>
             </div>
             <div className = {styles.languages}>
-                <span >
-                    <ul className ={styles.languagesInRow}>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/de/')}> <Image src={german} alt="german" width={30} height={25} />  </Link> </li>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/en/')}> <Image src={english} alt="english" width={30} height={25} /> </Link></li>
-                        <li className = {styles.languageChoser}><Link href={getNewPath('/it/')}> <Image src={italian} alt="italian" width={30} height={25} /> </Link></li>
-                    </ul>
+                    <span className ={styles.languagesInRow}>
+                        <div className={styles.languageChoser} onClick={() => setNewPath("de")}>
+                            <Image src={german} alt="german" width={30} height={25} /> 
+                        </div>
+                        <div className={styles.languageChoser} onClick={() => setNewPath("en")}>
+                            <Image src={english} alt="english" width={30} height={25} /> 
+                        </div>
+                        <div className={styles.languageChoser} onClick={() => setNewPath("it")}>
+                            <Image src={italian} alt="italian" width={30} height={25} /> 
+                        </div>
+                        
                 </span>
             
             </div>
            
         </div>
         
-        <HorizontalRow />
+      
        
     
     <nav className = {topTransparent === true 
@@ -135,57 +187,55 @@ export default function Navigation({ transparency, appartment, cafe, contact, ab
         : styles.navbarTransparent 
         }>
    
-
-        <a href ="#" className = {styles.logo}>
-            <Image 
-            src = {logo}
-            alt = "logo"
-            width ={200}
-            height ={60}
-            />
-        </a>
-        <a href ="#" className = {styles.logoBurgersize}>
-            <Image 
-            src = {logo}
-            alt = "logo"
-            width ={148}
-            height ={45}
-            />
-        </a>
-            
+        
      
 
         <div className = {styles.toggle} onClick={handleClickMenueToggle}>
             <input type='checkbox' id="navBurgerCheckbox" className={styles.checkboxInvisible}/>
                 <label htmlFor="navBurgerCheckbox" >
-                    <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
+                <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
                 </label>  
             
         </div>
      
                 
         <ul className={`${styles.menu} ${navbarFont.className}`}>
-            <li> <a href="/appartement">{appartment}</a></li>
-            <li><a href="/cafe">{cafe}</a></li>
-            <li><a href="#">{about}</a></li>
-            <li><a href="#">{contact}</a></li>
+            <li> <Link href="/">{home}</Link></li>
+            <li> <Link href="/appartement">{appartment}</Link> </li>
+            <li> <Link href="/cafe">{cafe}</Link></li>
+            <li> <Link href="/studio">{about}</Link> </li>
+            <li> <Link href="/contact">{contact}</Link> </li>
 
         </ul>
 
     </nav>
 {/* burger menue */}
-        <div className={styles.visibility}>
+        <div className={styles.visibility}> {/* ab600px*/}
             <div className={isBurgerMenueVisible === true
-                    ? `${styles.burgerMenue}`
-                    : `${styles.burgerMenueInvisible}`}>
+                ? `${styles.burgerMenue}`
+                : isStartUp === true
+                    ? `${styles.burgerMenuInvisible}`
+                    : `${styles.burgerMenueSlideOut}`}>
+                <div className = {`${styles.toggle} ${styles.alignRight}`} onClick={handleClickMenueToggle}>
+                     <input type='checkbox' id="navBurgerCheckbox2" className={styles.checkboxInvisible}/>
+                    <label htmlFor="navBurgerCheckbox" >
+                                    <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
+                              
+                    </label>  
+            
+                </div>
+             
+                <div className={`${navbarFont.className}`} onClick={handleClickBurgerMenue}>
                 <ul >
-                    <li><a href="/appartement">{appartment}</a></li>
-                    <li><a href="/cafe">{cafe}</a></li>
-                    <li><a href="#">{about}</a></li>
-                    <li><a href="#">{contact}</a></li>
-
+                    <li> <Link href="/">{home}</Link></li>
+                    <li> <Link href="/appartement">{appartment}</Link> </li>
+                    <li> <Link href="/cafe">{cafe}</Link></li>
+                    <li> <Link href="/studio">{about}</Link> </li>
+                    <li> <Link href="/contact">{contact}</Link> </li>
                 </ul>
-            </div>
+                </div>
+                
+            </div>  
         </div>
 
 </>

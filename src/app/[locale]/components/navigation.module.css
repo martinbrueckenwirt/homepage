@@ -5,33 +5,12 @@
     }
     
        
-    .logoContainer{
-        position: fixed;
-        top: 0px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        background: var(--background-light);
-        
-       z-index:99;
-      
-    }
-    /* wird nicht mehr verwendet */
-    .topBar{
-          /* wird nicht mehr verwendet */
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        height: 70px;
-        width:100%;
-        background: blue;
-        z-index:90;
-    }
+   
 
     .topBarTransparent{
-        top: 50px;
-        height:60px; 
+        /*top: 50px;*/
+        padding-top:1rem;
+        height:40px; 
         display: flex;
         justify-content: space-between;
         position: fixed;
@@ -55,8 +34,19 @@
     .contact{
         display: flex;
         padding-left: 1rem;
+      
         font-size: var(--fontsize-h4Text);
     }
+
+    .contact a{
+        text-decoration: none;
+        color: var( --font-color);
+    }
+
+    .contact a:hover{
+        color: var( --red);
+    }
+
     .contactSpacer{
         padding-left: 0.5rem;
     }
@@ -65,7 +55,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 2rem;
+        padding-right: 1rem;
                 
     }
     
@@ -81,36 +71,22 @@
     
     .languageChoser{
         margin-left: 6px;
-        padding: 0;          
+        padding: 0;    
+        font-weight: var(--fontweight-h2Text);      
+    }
+    .languageChoser:hover{
+        cursor: pointer;
+        color: var(--red);
     }
     
-    .lineHorizontalContainer{
-        position: fixed;
-        top: 60px;
-        width: 100%;
-        
-       z-index:91;
-      
-    }
 
-    .lineHorizontal{
+
         
-        /* align: right;   */
-        position:relative;
-        left: calc(70% - 2rem);
-        width: 30%;
-        border-top: 0px;
-        border-bottom: 1px solid red; /* Set the color to red */
-        height:1px;
-       
-        }    
-    
-    
     .navbarTransparent{
         background: var(--background-light);
         position: fixed;
         /*top:60px;*/
-        top: 110px;
+        top: 50px;
         height: 60px;
         width: 100%;
         display: flex;
@@ -119,53 +95,38 @@
         z-index:99; 
     }
     
-    .nav .a{
-        color: #fff
-    }
+ 
     
-    .nav .a:hover{
-            color: yellow; 
-    }
-    
-    .logo{
-        padding-left: 1rem;
-         
-    }
-    
-    .logoBurgersize{
-        display: none;
-    }
-        
-    
-    .logo a:hover{
-        color:#fff;
-    }
-    
+       
     #navBurgerCheckbox{
         display: none;
     }
    
     
     .menu{
+        width: 100%;
         display:flex;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: flex-end;
         padding-right: 2rem;
-
+       
     }
     
   
     .menu li{
             margin-left: 20px;
             list-style:none;
-            
-
-    }
+     }
 
     .menu li a{
         text-decoration: none;
         font-size: var(--fontsize-navigationMenu);
+        color: var(--font-color);
+    }
 
+    .menu li a:hover{
+        color: var(--red);
     }
       
     .toggle{

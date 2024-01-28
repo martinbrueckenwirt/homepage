@@ -1,57 +1,35 @@
 .heroSection{
   position: relative;
   /*top: 120px;*/
-  top:156px;
-  z-index:90;
+  top:111px;
+    z-index:90;
  }
-
- .headlineContainer{
-  position: relative;
-  /*top: 100px;*/
-  display:flex;
-  flex-direction:row;
-  align-items: center;
+ 
+ .buttonContainer{
+  position:absolute;
+  top:1rem;
+  display: flex;
   justify-content: space-between;
-  width:100%;
-  padding: 5px;
-  
-  /*height: 12rem;*/
-  
-  color: var(--red);
+  width: 100%;
  
-  /*display:none;
-  /*height: 20rem;*/
+
+ }
+.logo{
+  position:relative;
+  margin-left:2rem;
   z-index:99;
 }
-
-.heroText{
- /* position: relative;
-  display:flex;
- /* justify-content: flex-start;
-  align-content: center;*/
-  left: 3rem;
-  height: auto;
-  font-size: var(--fontsize-hero);
-  font-weight: var(--fontweight-h3Text);
-  color: var(--red);
  
-  /*display:none;
-  /*height: 20rem;*/
-  z-index:99;
-}
-
-
-
-
 .bookButton{
-
-  margin-right:3rem;
+  position:relative;
+  margin-right:2rem;
   width: 10rem;
   height: 5rem;
   background-color: var(--red);
   border:1px solid var(--red);
   font-size: 20px;
-  font-weight:bold
+  font-weight:bold;
+  z-index:99;
   
 
 }

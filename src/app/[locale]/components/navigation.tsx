@@ -71,32 +71,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
         )
     }
 
-    const TopLogoContainer = () => {
-        return (
-        <>
-        <div className={styles.logoContainer} >
-        <a href ="/" className = {styles.logo}>
-            <Image 
-            src = {logo}
-            alt = "logo"
-            width ={250}
-            height ={37}
-            priority={true}
-            />
-        </a>
-        <a href ="/" className = {styles.logoBurgersize}>
-            <Image 
-            src = {logosmall}
-            alt = "logo"
-            width ={148}
-            height ={22}
-            priority={true}
-            />
-        </a>
-        </div>
-        </>
-        )
-    }
+    
 
     // toggle burge Menue change
 
@@ -135,7 +110,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
 
 
         <>
-       <TopLogoContainer />
+       
         <div className = {topTransparent === true 
             ? styles.topBar
             : styles.topBarTransparent     
@@ -162,15 +137,15 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 </div>
             </div>
             <div className = {styles.languages}>
-                    <span className ={styles.languagesInRow}>
-                        <div className={styles.languageChoser} onClick={() => setNewPath("de")}>
-                            <Image src={german} alt="german" width={30} height={25} /> 
+                    <span className ={`${styles.languagesInRow} ${navbarFont.className}`} >
+                        <div className={styles.languageChoser} onClick={() => setNewPath("de")} >
+                            DE |
                         </div>
                         <div className={styles.languageChoser} onClick={() => setNewPath("en")}>
-                            <Image src={english} alt="english" width={30} height={25} /> 
+                            EN |
                         </div>
                         <div className={styles.languageChoser} onClick={() => setNewPath("it")}>
-                            <Image src={italian} alt="italian" width={30} height={25} /> 
+                            IT
                         </div>
                         
                 </span>

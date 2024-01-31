@@ -82,7 +82,10 @@ return (
                 imageUrlAlt = {imageAlt}
                 calledFrom = "home">
             </Hero>
-    <section>
+    <section className={styles.section}>
+                <h1 className={`${heroFont.className} ${styles.h1}`}>    
+                    <div dangerouslySetInnerHTML={{__html: t.raw('headline')}} />
+                    </h1>
             <div className={styles.textContainer}>
                 <div className={`${h1Font.className} ${styles.text}`}>
                     <div dangerouslySetInnerHTML={{__html: t.raw('text1')}} />

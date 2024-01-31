@@ -75,8 +75,8 @@
     "Einleitung": "ITALIENSICH I am on the page"
   },
   "hero": {
-   "bookingButton":"Prenota ora",
-    "title":"Vacanze in montagna"
+   "bookingButton":"Prenota ora"
+    
   },
   "history":{
     "altImage1":"Foto storica del maso Brückenwirt",
@@ -97,6 +97,7 @@
       "cafeContainerHeadline": "Cafe Brückenwirt",
       "cafeIntro":"<b>Café Brückenwirt</b> è un accogliente caffè con una <b>bellissima terrazza soleggiata</b> in Val Pusteria. Qui potrete gustare un perfetto cappuccino preparato con la famosa miscela Brückenwirt. Il caffè offre anche <b>crostate</b> e torte fatte in casa, coppe di gelato e <b>gelati del maso di montagna biologico nella Villgratental</b> nonché succhi di frutta biologici.L'ampio giardino con parco giochi per bambini è un altro punto forte dell'offerta. il caffè. Il caffè è situato in una posizione molto comoda e offre un'atmosfera calda e personale tutto l'anno",
       "details": "Dettagli",
+      "headline":"Vacanze in montagna",
       "history":"La nostra storia ha molto da raccontare",
       "historyContainerHeadline": "La nostra storia movimentata",
       "herotext": "Moderni appartamenti per le vacanze direttamente sul comprensorio sciistico",

@@ -4,3 +4,7 @@
 @media(min-width:1080px)  and (max-width: 1399px){    }
 @media(min-width:1400px)and (max-width: 1999px){}
 @media(min-width:2000px){}
+
+horizontal:
+navbar: 50 + 50 = 100
+hero = 700

@@ -164,7 +164,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
    
         
      
-
+  
         <div className = {styles.toggle} onClick={handleClickMenueToggle}>
             <input type='checkbox' id="navBurgerCheckbox" className={styles.checkboxInvisible}/>
                 <label htmlFor="navBurgerCheckbox" >
@@ -172,7 +172,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 </label>  
             
         </div>
-     
+    
                 
         <ul className={`${styles.menu} ${navbarFont.className}`}>
             <li> <Link href="/">{home}</Link></li>
@@ -191,7 +191,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
                 : isStartUp === true
                     ? `${styles.burgerMenuInvisible}`
                     : `${styles.burgerMenueSlideOut}`}>
-                <div className = {`${styles.toggle} ${styles.alignRight}`} onClick={handleClickMenueToggle}>
+                <div className = {`${styles.toggle} ${styles.close}`} onClick={handleClickMenueToggle}>
                      <input type='checkbox' id="navBurgerCheckbox2" className={styles.checkboxInvisible}/>
                     <label htmlFor="navBurgerCheckbox" >
                                     <GetBurgerImage burgerMenueVisible={isBurgerMenueVisible} />
@@ -200,7 +200,7 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
             
                 </div>
              
-                <div className={`${navbarFont.className}`} onClick={handleClickBurgerMenue}>
+                <div className={`${navbarFont.className} ${styles.burgerMenueItems}`} onClick={handleClickBurgerMenue}>
                 <ul >
                     <li> <Link href="/">{home}</Link></li>
                     <li> <Link href="/appartement">{appartment}</Link> </li>

@@ -85,8 +85,8 @@
     "revitalisation":"In 2014 the Brückenwirt was completely renovated, revitalized and reopened in autumn 2014. The rooms have been converted into high-quality apartments. Each holiday apartment has access to at least one balcony with a clear view to the east towards Lienz, to the south to the Carnic Alps or to the west. Each apartment has its own personal touch. "
   },
 "hero": {
-   "bookingButton":"Book now",
-   "title":"Urlaub in den Bergen"
+   "bookingButton":"Book now"
+   
 },
  
   "home": {
@@ -96,6 +96,7 @@
       "cafeContainerHeadline": "Cafe Brückenwirt",
       "cafeIntro":"<b>Café Brückenwirt</b> is a cozy café with a <b>beautiful sun terrace</b> in the Pustertal. Here you can enjoy a perfect cappuccino made from the famous Brückenwirt blend. The café also offers <b>homemade tarts</b> and cakes, sundaes and <b>ice cream from the organic mountain farm in the Villgratental</b> as well as organic fruit juices. The large garden with children's playground is another highlight of the café. The café is very conveniently located and offers a warm and personal atmosphere all year round.",
       "details": "Details",
+      "headline":"Holidays in the mountains",
       "history":"Our history has a lot to tell",
       "historyContainerHeadline":"Our eventful history",
       "herotext": "Modern holiday apartments directly at the ski area",

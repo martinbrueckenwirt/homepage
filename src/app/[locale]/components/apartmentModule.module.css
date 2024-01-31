@@ -15,7 +15,7 @@ Animationen entfernt wegen Performance
 .apartmentCard{
     position:relative;
     padding: 1rem;
-    background-Color: var(--background-dark);
+    background-Color: var(--background-card);
     height: calc(30vw);
     /*background-color: red;*/
 }
@@ -104,8 +104,8 @@ Animationen entfernt wegen Performance
     padding: 1rem;
     height:3em;
     z-index: 2;
-    background-color: rgb(245, 245, 245);
-    border:1px solid rgb(245, 245, 245);
+    background-color: var(--background-medium);
+    border:1px solid var(--background-medium);;
     font-size: 20px;
      font-weight:bold
 }
@@ -125,10 +125,10 @@ Animationen entfernt wegen Performance
 .buttonRight{
     padding: 1em;
     height:3em;
-    border: 1px solid rgb(245, 245, 245);
+    border: 1px solid var(--background-medium);
     background-color: transparent;
     z-index: 2;
-    color: rgb(245, 245, 245);
+    color: var(--background-dark);
     font-size: 20px;
     font-weight:bold
 }

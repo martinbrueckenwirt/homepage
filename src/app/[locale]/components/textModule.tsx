@@ -1,4 +1,5 @@
-import styles  from './textModule.module.css';
+import textStyles from './textModule.module.css';
+import styles from './apartmentModule.module.css';
 import {useTranslations} from 'next-intl';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
 
@@ -28,8 +29,9 @@ export default function TextModule() {
 
 
 
-    return (
-        <h3 className={`${h1Font.className} ${styles.textModule}`}>
+  return (
+      <div className={styles.apartmentCard}>
+        <h3 className={`${h1Font.className} ${textStyles.textModule}`}>
            <p dangerouslySetInnerHTML={{__html: t.raw('textmodul1')}} />
            <p dangerouslySetInnerHTML={{__html: t.raw('textmodul2')}} />
            <p dangerouslySetInnerHTML={{__html: t.raw('textmodul3')}} />
@@ -39,7 +41,7 @@ export default function TextModule() {
            <p dangerouslySetInnerHTML={{__html: t.raw('textmodul7')}} />
          
         </h3>
-
+    </div>  
     )
 }
 

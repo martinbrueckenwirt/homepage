@@ -90,13 +90,14 @@
       "revitalisation":"2014 wurde der Brückenwirt generalsaniert, revitalisiert und im Herbst 2014 neu eröffnet. Die Zimmer wurden zu hochwertigen  Appartements umgebaut. Jede Ferienwohnung hat Zugang zu mindestens einem Balkon mit freiem Ausblick nach Osten in Richtung Lienz, nach Süden zu den Karnischen Alpen oder nach Westen. Jedes Appartement hat seine ganz persönliche Note. "
     },
     "hero": {
-   "bookingButton":"Jetzt buchen",
-   "title":"Urlaub in den Bergen"
+   "bookingButton":"Jetzt buchen"
+   
     },
 
     "home": {
       "appartment":"Appartment",
       "appartmentContainerHeadline": "Ihre Ferienwohnung",
+      "headline":"Urlaub in den Bergen",
       "booknow": "Jetzt Buchen",
       "cafeContainerHeadline": "Cafe Brückenwirt",
       "cafeIntro":"<b>Café Brückenwirt</b> ist ein gemütliches Café mit einer <b>wunderschönen Sonnenterrasse</b> im Pustertal. Hier können Sie einen perfekten Cappuccino genießen, der aus der berühmten Brückenwirt-Mischung zubereitet wird. Das Café bietet auch <b>hausgemachte Torten</b> und Kuchen, Eisbecher und <b>Eis vom Bio-Bergbauernhof aus dem Villgratental</b> sowie Bio-Obstsäfte. Der große Garten mit Kinderspielplatz ist ein weiteres Highlight des Cafés. Das Café ist sehr verkehrsgünstig gelegen und bietet das ganze Jahr über eine herzliche und persönliche Atmosphäre.",

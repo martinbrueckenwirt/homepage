@@ -1,13 +1,16 @@
 .heroSection{
   position: relative;
-  /*top: 120px;*/
-  top:111px;
-    z-index:90;
+  
+  width: 100%;
+  top:100px; /*navigation:100px*/
+  height:700px;
+  z-index:90;
+
  }
  
  .buttonContainer{
   position:absolute;
-  top:1rem;
+  margin-top:3.5rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -64,12 +67,10 @@
 }
 
 @media(max-width:399px){    
-  .heroText{
-    margin-top:1.8rem;
-    font-size: var(--fontsize-h4Text);
-  font-weight: var(--fontweight-h4Text);
-
-  }
+  
+   .buttonContainer{
+      margin-top:2rem;
+   }
  
   .bookButton{
     margin-top:1.5rem;
@@ -83,27 +84,25 @@
 }
 
 @media(min-width:400px) and (max-width: 779px){    
-  .heroText{
-    margin-top:1.8rem;
-    font-size: var(--fontsize-h3Text);
-  font-weight: var(--fontweight-h3Text);
-
-  }
- 
+.heroSection{
+ /* top:-56px;*/
+}
+   .buttonContainer{
+      margin-top:2rem;
+   }
   .bookButton{
-    margin-top:1rem;
-    width: 10rem;
-    height: 3rem;
-    font-size: 20px;
+    margin-top:0.5rem;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 15px;
     font-weight:bold
   }
 }
 
 @media(min-width:780px)  and (max-width: 1079px){
-  .heroText{
-    font-size: var(--fontsize-h2Text);
-  font-weight: var(--fontweight-h3Text);
-  }
+  .buttonContainer{
+      margin-top:2rem;
+   }
  
   .bookButton{
     width: 10rem;
@@ -114,11 +113,9 @@
 }
 
 @media(min-width:1080px)and (max-width: 1999px){
-  .heroText{
-    padding: 1rem;
-    font-size: var(--fontsize-h1Text);
-  font-weight: var(--fontweight-h3Text);
-  }
+    .buttonContainer{
+      margin-top:2rem;
+   }
  
   .bookButton{
     width: 10rem;
@@ -128,10 +125,6 @@
   }
 }
 @media(min-width:2000px){
-  .heroText{
-    font-size: var(--fontsize-hero);
-  font-weight: var(--fontweight-h3Text);
-  }
  
   .bookButton{
     width: 10rem;

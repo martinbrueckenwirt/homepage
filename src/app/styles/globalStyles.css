@@ -9,6 +9,9 @@
   --background-white:#fff;  
   --background-light: #f2f3f5;
   --background-medium: #c6c8ca;
+  --background-card: #cdbdbd38;
+
+
   --background-medium-warm: rgb(250, 241, 224);
   --background-medium-cold: rgb(211, 234, 245);
   --background-dark: #2f3436;
@@ -16,7 +19,7 @@
   --font-color:black; 
 
  
-  --fontsize-hero:6em;
+  --fontsize-hero:5em;
   --fontsize-h1Text:2.5em;
   --fontsize-h2Text:2.2em;
   --fontsize-h3Text:2em;
@@ -24,8 +27,8 @@
   --fontsize-h5Text:1em;
   --fontsize-h6Text:0.9em;
   
-  --fontsize-navigationText:1em;
-  --fontsize-navigationMenu:1.5em;
+  --fontsize-navigationContact:1em;
+  --fontsize-navigationMenu:1.2em;
   --fontsize-normalText:1.1em;
   --fontsize-footerText:0.9em;
 

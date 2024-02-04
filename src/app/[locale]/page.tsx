@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
 import  Hero from './components/heroModule';
 /*import HeroImage from '../../../public/P1540356-25-1.webp';*/
-import HeroImage from '../../../public/P1540356_2550x898.webp';
+import HeroImage from '../../../public/P1540356-2550x1274-180-60.webp';
 /*import HeroImage from '../../../public/P1190113.webp';*/
 import TextModule from './components/textModule';
 

@@ -3,16 +3,18 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
 import { HeroProps } from './types';
-import {useTranslations} from 'next-intl';
+import {useLocale,useTranslations} from 'next-intl';
+
 import logo from '../../../../public/Logo2023_250x37.webp';
 import logosmall from '../../../../public/Logo2023_148x22.webp';
 
 export default function Hero(props:HeroProps) {
 
     let myImage:string =  props.imageUrl;
-    
+
     const t = useTranslations('hero');
     const bookingButton = t('bookingButton');
+
 
     return(
 

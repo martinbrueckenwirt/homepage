@@ -2,7 +2,7 @@
    
   .section{
     position: relative;
-    top:0px; /*direkt unmter Hero*/
+    top:1rem; /*direkt unmter Hero*/
     margin-top: 0px;
     padding-top: 0px ;
   }

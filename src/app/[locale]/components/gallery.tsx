@@ -39,7 +39,7 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
 
     
   useEffect(() =>{
-    console.log('Gallery useEffect 1', appType);
+    /*console.log('Gallery useEffect 1', appType);*/
     async function fetchData (appType:string) {
     const response = await getImageList(appType);
     
@@ -57,7 +57,7 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
   },[]);
 
    useEffect(() => {
-    console.log('Gallery useEffect 2', isLoaded);
+    /*console.log('Gallery useEffect 2', isLoaded);*/
     if (isLoaded === true) {
         setImage1(imageList[0]);
         setImage2(imageList[1]);
@@ -75,7 +75,7 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
       /*Bilder scrollen*/
       useEffect
           (() => {
-            console.log('Gallery useEffect 3', clickedNav);        
+            /*console.log('Gallery useEffect 3', clickedNav);  */      
       if (clickedNav) {
 
       if (currentIndex === -1) {
@@ -118,7 +118,7 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
            /*Click auf ein Bild in der 3er Liste*/   
           /* kein Scrollen*/         
           
-          console.log('clickHandler', image);
+         /* console.log('clickHandler', image);*/
           setClickedImage(image);
           setCurrentIndex(oldIndex);
                                                   
@@ -150,7 +150,7 @@ const Gallery = ({appType}:AppartmentModuleProps)  => {
         
 
         function loadImage(number:number) {
-          console.log('Gallery loadImage', number, imageLoaded);        
+       /*   console.log('Gallery loadImage', number, imageLoaded);    */    
             let myImageSmall:string = '';
             let myImageAlt:string = '';
             let myImagePriority:boolean= false;

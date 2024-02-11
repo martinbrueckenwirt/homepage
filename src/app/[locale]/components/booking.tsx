@@ -61,19 +61,14 @@ useEffect(() => {
 },[locale]);
  
 
-
 return (
 	<>
 	HELLO WORLD
 	<div dangerouslySetInnerHTML={{ __html: myLanguage === 'de' ? 'DE' : myLanguage === 'en' ? 'EN' : '' }}/> 	
-	
-	{/*<div dangerouslySetInnerHTML={{ __html: htmlString }}/> 	*/}
-	<div dangerouslySetInnerHTML={{ __html: htmlStringEN }}/> 	
+	{myLanguage === 'de' && <div dangerouslySetInnerHTML={{ __html: htmlString }}/>}
+	{myLanguage === 'en' && <div dangerouslySetInnerHTML={{ __html: htmlStringEN }}/>}
 	</>
-	)
-
-
-
+)
 	
 };
 

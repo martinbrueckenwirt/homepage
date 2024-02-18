@@ -4,11 +4,9 @@ import styles from './booking.module.css';
 import { Booking } from './types'
 import {useLocale} from 'next-intl';
 import {useEffect, useState} from 'react';
-import Script from 'next/script';
 
 
-
-export default function Booking(props: Booking) {
+export default function BookingEN(props: Booking) {
 
 	let myId=props.id;
 	let myLanguage=props.language;
@@ -16,6 +14,7 @@ export default function Booking(props: Booking) {
 	console.log("locale",locale);
 	myLanguage = locale;
 
+    myLanguage = 'en';
 	const htmlString =  `
 	<div id="vri-container-${myId}"></div>
 	<script type="text/javascript">
@@ -53,7 +52,7 @@ const htmlString3 ="geladen und englisch";
 	return (
 		<>
 		<div	className={styles.bookingTest} >		
-			BOOKING DEFAULT --  HELLO WORLD
+			Booking EN EN
 			{myLanguage === 'de' && isLoaded && <div dangerouslySetInnerHTML={{ __html: htmlString2 }}/>}
 			{myLanguage === 'en' && isLoaded && <div dangerouslySetInnerHTML={{ __html: htmlString3 }}/>}
 			<div className={styles.bookingTest} dangerouslySetInnerHTML={{ __html: myLanguage === 'de' ? 'DE' : myLanguage === 'en' ? 'EN' : '' }}/>
@@ -64,11 +63,3 @@ const htmlString3 ="geladen und englisch";
 				</>
 	);
 }
-	
-
-
-  
-
-
-
- 

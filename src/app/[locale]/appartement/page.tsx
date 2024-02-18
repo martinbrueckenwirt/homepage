@@ -9,19 +9,15 @@ import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/fu
 import Hero from '../components/heroModule';
 import Image from 'next/image';
 import Link from 'next/link';
+import {getTranslations} from 'next-intl/server';
 
-/*import HeroImage from '../../../public/P2535132-1.jpg';*/
+
 import HeroImage from '../../../../public/P2535132-1.jpg';
 import studio    from '../../../../public/P1190113.webp';
 import junior    from '../../../../public/P1210796_web.webp';
 import family    from '../../../../public/P1360618-800x630-180-60.webp';
 import familyExclusive from '../../../../public/P1360618-800x630-180-60.webp';
 import topSuite  from '../../../../public/P1360933_web.jpg';
-
-
-
-
-import {getTranslations} from 'next-intl/server';
  
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'appartements'});
@@ -88,7 +84,7 @@ export default function Appartements({params: {locale}}: {params: {locale: any}}
 
 return (
     <>
-<Head>
+    <Head>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(getJsonLDById(2)) }}

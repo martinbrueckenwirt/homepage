@@ -81,17 +81,11 @@ export type MinPrice = {
 }
 
 export type NavigationProps = {
-    windowScrollPosition: number;
-    transparency: boolean;
-   
-}
-export type NavigationPropsNew = {
-   transparency: boolean;
     home: string;
     appartment:string;
-   cafe:string;
-   about: string;
-   contact: string;
+    cafe:string;
+    about: string;
+    contact: string;
    }
 
 

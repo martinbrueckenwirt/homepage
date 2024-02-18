@@ -1,7 +1,7 @@
 import {notFound} from 'next/navigation';
 import Navigation from './components/navigation';
 import Footer from './components/footer'
-import { NavigationPropsNew } from './components/types';
+import { NavigationProps } from './components/types';
 import { Metadata } from 'next';
 import  JsonLD  from "../../../data/metadata";
 import '../styles/globalStyles.css';
@@ -12,7 +12,7 @@ import { Suspense } from 'react';
 import {unstable_setRequestLocale} from 'next-intl/server';
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
-/* *a* Photo */
+/* *a*todo Photo ergänzen*/
 
 
 
@@ -49,10 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Moderne Ferienwohnungen direkt am Schigebiet Osttirol",
     description: "Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
-
-
   }
-
 }
 
 
@@ -71,14 +68,16 @@ export function generateStaticParams() {
  
 export default function LocaleLayout({children, params: {locale}}: {children: any, params: {locale: string}}) {
   // Validate that the incoming `locale` parameter is valid
+  unstable_setRequestLocale(locale);
   const t = useTranslations('navigation');
-  /*const myLocale =t.locale;*/
+  // const myLocale =locale;
+  // console.log('Layout myLocale',myLocale);
   const home = t('home');
   const apartmentTrans = t('appartment');
   const cafeTrans = t('cafe');
   const contactTrans = t('contact');
   const aboutTrans = t('about');
-  unstable_setRequestLocale(locale);
+
   
 
   if (!locales.includes(locale as any)) notFound();
@@ -92,15 +91,11 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
   
 */
  
-
-
   return (
     <html lang={locale}  >
-      
       <body>
-      <Suspense fallback ={<Loading/>}>
-      <Navigation transparency={false} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
-
+        <Suspense fallback ={<Loading/>}>
+        <Navigation home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
         {children}
         <Footer/>
         </Suspense>

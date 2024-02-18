@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 /*https://i18nexus.com/tutorials/nextjs/next-intl*/
 /*https://www.youtube.com/watch?v=-vzz1L9MQRM */
@@ -7,13 +7,14 @@
 /* pathnames siehe: https://next-intl-docs.vercel.app/docs/routing/navigation */
 /*navigation.ts im /src*/
 
-import Image from 'next/image'
+import Image from 'next/image';
+import { StaticImageData } from 'next/image';
 import styles  from './navigation.module.css'
 import React from 'react';
 import { useState,useEffect } from "react";
 import { MouseEvent } from 'react';
 import { GetBurgerImageProps} from './types';
-import { NavigationPropsNew } from './types';
+import { NavigationProps } from './types';
 import {locales} from '../../../navigation';
 import {useLocale, useTranslations} from 'next-intl';
 import { navbarFont, h1Font, h2Font, h3Font, textFont, footerFont } from '../../../functions/fonts';
@@ -32,7 +33,7 @@ import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 
 
 
-export default function Navigation({ transparency, home, appartment, cafe, contact, about}: NavigationPropsNew) {
+export default function Navigation({ home, appartment, cafe, contact, about}: NavigationProps) {
  
  
     const [topTransparent, setTopTransparent] = useState<boolean>(false);
@@ -91,10 +92,12 @@ export default function Navigation({ transparency, home, appartment, cafe, conta
  
     const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
 
-        let mySrc: string = open;      
+       
+
+        let mySrc: StaticImageData = open;      
         if (Props.burgerMenueVisible === false) {
             mySrc = open;
-            }
+        }
         else if (Props.burgerMenueVisible === true) {
             mySrc = close;
         }

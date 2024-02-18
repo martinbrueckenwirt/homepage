@@ -10,58 +10,32 @@ import Script from 'next/script';
 
 export default function Booking(props: Booking) {
 
-	let myId=props.id;
-	let myLanguage=props.language;
-	const locale = useLocale();
-	console.log("locale",locale);
-	myLanguage = locale;
-
-	const htmlString =  `
-	<div id="vri-container-${myId}"></div>
-	<script type="text/javascript">
-		( function ( v, i, o, m, a ){
-			if ( !( o in v ) ) {
-				v.vioma_vri=o;
-				v[o] || ( v[o] = function ( ){ ( v[o].q = v[o].q || [] ).push ( arguments ); } );
-				m = i.createElement( 'script' ), a = i.scripts[0];
-				m.src = 'https://cst-client-hotel-brueckenwirt.viomassl.com/js/vri/vri.js';
-				a.parentNode.insertBefore ( m, a );
-			}
-		} )( window, document, 'vcst' );
-		vcst( {load: 'init', url: 'https://cst-client-hotel-brueckenwirt.viomassl.com/', set_language: ${JSON.stringify(myLanguage)}} );
-		vcst( {id: ${JSON.stringify(myId)}} );
 	
-	</script>
-`;
-const htmlString2 ="geladen und deutsch";
-const htmlString3 ="geladen und englisch";
-
+	const locale = useLocale();
+	console.log("booking locale",locale);
+	
 
 
 	const [isLoaded, setIsLoaded] = useState(true);
 
 	useEffect(() => {
-		const timer = setTimeout(() => {
-			setIsLoaded(true);
-		}, 2000); // Adjust the delay time as needed
-
-		return () => clearTimeout(timer);
-	}, []);
-
-	
+		const eventDetail = {
+			detail:{
+				apartmentId: props.apartmentId,
+				language: locale
+			}
+		};
+        const event = new CustomEvent('viomaLoadEvent', eventDetail );
+        document.dispatchEvent(event);
+    }, [locale,props.apartmentId]);
+ 
 
 	return (
 		<>
 		<div	className={styles.bookingTest} >		
 			BOOKING DEFAULT --  HELLO WORLD
-			{myLanguage === 'de' && isLoaded && <div dangerouslySetInnerHTML={{ __html: htmlString2 }}/>}
-			{myLanguage === 'en' && isLoaded && <div dangerouslySetInnerHTML={{ __html: htmlString3 }}/>}
-			<div className={styles.bookingTest} dangerouslySetInnerHTML={{ __html: myLanguage === 'de' ? 'DE' : myLanguage === 'en' ? 'EN' : '' }}/>
-			{isLoaded && <div dangerouslySetInnerHTML={{ __html: htmlString }}/>}
 		</div>
-		
-					
-				</>
+		</>
 	);
 }
 	

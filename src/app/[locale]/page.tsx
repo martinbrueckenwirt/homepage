@@ -14,6 +14,8 @@ import ApartmentModule from './components/apartementModule';
 import CafeModule from './components/cafeModule';
 import History from './components/history';
 import Booking from './components/booking';
+import Script from 'next/script';
+// import viomaIntegration from '../../../public/scripts/viomaIntegration.js';
 
 
 import {getTranslations} from 'next-intl/server';
@@ -142,6 +144,9 @@ return (
 </section>
 
 </div >
+
+
 </>
-    )
+
+)
 }

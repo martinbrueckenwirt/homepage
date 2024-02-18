@@ -40,6 +40,7 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
     const [isStartUp, setIsStartUp]= useState<boolean>(true);
     const {Link, useRouter, usePathname} = createSharedPathnamesNavigation({locales});
+    const [myPathname, setMyPathname] = useState<string>("");
     const router = useRouter();
     let pathname = usePathname();
 
@@ -48,17 +49,29 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
     let  email: string = "office@derbrueckenwirt.at";
     const locale = useLocale();
   
-  
-
+    function useLanguageChange() {
+        const router = useRouter();
+       
+        useEffect(() => {
+            const event = new CustomEvent('viomaReloadHack', {} );
+            document.dispatchEvent(event);
+          console.log('useEffect - useLanguageChange',router,pathname);
+          
+        }, [pathname,router]);
+      }
+    
     function setNewPath(lang:string) {
-     
         if (lang === locale) return;
      
         router.replace( pathname, { locale: lang } );
-        
-        return;
+             
+       return;
     }
 
+    
+    
+    
+    
    
     
 

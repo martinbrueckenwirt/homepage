@@ -10,6 +10,7 @@ import React from 'react';
 import Loading from './loading';
 import { Suspense } from 'react';
 import {unstable_setRequestLocale} from 'next-intl/server';
+import Script from 'next/script';
 
 /*das ist nur der Default, je page werden diese Informationen neu gesetzt*/
 /* *a*todo Photo ergänzen*/
@@ -99,7 +100,12 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
         {children}
         <Footer/>
         </Suspense>
+        <div id="parent-container-de" />
+        <div id="parent-container-en" />
+        <div id="parent-container-it" />
+        <script id='viomaIntegration' src='/scripts/viomaIntegration.js' />
       </body>
+
     </html>
   );
 }

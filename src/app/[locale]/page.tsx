@@ -94,10 +94,8 @@ return (
                  </div>
             </div>
 
-    <Booking 
-    id={"20845"} 
-    language={locale}
-/> 
+     <Booking apartmentId={"20845"}/>
+
 
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {appartmentContainerHeadline}

@@ -29,9 +29,6 @@ import english from '../../../../public/England_30x25.webp';
 import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
-/*import Link from 'next-intl/link';*/
-
-
 
 export default function Navigation({ home, appartment, cafe, contact, about}: NavigationProps) {
  
@@ -49,16 +46,6 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
     let  email: string = "office@derbrueckenwirt.at";
     const locale = useLocale();
   
-    function useLanguageChange() {
-        const router = useRouter();
-       
-        useEffect(() => {
-            const event = new CustomEvent('viomaReloadHack', {} );
-            document.dispatchEvent(event);
-          console.log('useEffect - useLanguageChange',router,pathname);
-          
-        }, [pathname,router]);
-      }
     
     function setNewPath(lang:string) {
         if (lang === locale) return;
@@ -67,13 +54,6 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
              
        return;
     }
-
-    
-    
-    
-    
-   
-    
 
     const HorizontalRow = () => {
         return (
@@ -86,7 +66,6 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
     }
 
     
-
     // toggle burge Menue change
 
     const handleClickMenueToggle = (event: React.MouseEvent<HTMLDivElement>) => {

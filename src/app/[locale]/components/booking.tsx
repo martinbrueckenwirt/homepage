@@ -9,15 +9,14 @@ import Script from 'next/script';
 
 
 export default function Booking(props: Booking) {
-
+	// laden der viomaIntegration.js, der Vioma-Buchungsstrecke
+	// das eigentliche Laden erfolgt im JavaScript-Code, der in /public/scripts/viomaIntegration.js liegt
+	// Übergabe der Apartment-ID und der Sprache
 	
 	const locale = useLocale();
-	console.log("booking locale",locale);
-	
-
-
 	const [isLoaded, setIsLoaded] = useState(true);
 
+	// useEffect feuert ein Event, das von /public/scripts/viomaIntegration.js abgefangen wird	
 	useEffect(() => {
 		const eventDetail = {
 			detail:{
@@ -30,13 +29,7 @@ export default function Booking(props: Booking) {
     }, [locale,props.apartmentId]);
  
 
-	return (
-		<>
-		<div	className={styles.bookingTest} >		
-			BOOKING DEFAULT --  HELLO WORLD
-		</div>
-		</>
-	);
+	return ;
 }
 	
 

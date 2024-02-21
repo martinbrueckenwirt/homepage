@@ -100,9 +100,6 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
         {children}
         <Footer/>
         </Suspense>
-        <div id="parent-container-de" />
-        <div id="parent-container-en" />
-        <div id="parent-container-it" />
         <script id='viomaIntegration' src='/scripts/viomaIntegration.js' />
       </body>
 

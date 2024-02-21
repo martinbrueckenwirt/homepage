@@ -33,9 +33,9 @@
  
  }
  .appartmentContainer{
-  margin-left: 8rem;
+
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: flex-start;
   background-color: var(--background-light);
@@ -93,7 +93,7 @@
   
    
    .appartmentContainer{
-      margin-left: 4rem;
+
       font-size: var(--fontsize-h4Text);
       font-weight: var(--fontweight-h2Text);
     
@@ -129,7 +129,7 @@
   
    
    .appartmentContainer{
-      margin-left: 4rem;
+
       font-size: var(--fontsize-h4Text);
       font-weight: var(--fontweight-h2Text);
  }
@@ -161,7 +161,6 @@
  
    }
    .appartmentContainer{
-      margin-left: 4rem;
       font-size: var(--fontsize-h4Text);
       font-weight: var(--fontweight-h2Text);
      }
@@ -189,7 +188,6 @@
  
    }
    .appartmentContainer{
-         margin-left: 4rem;
       font-size: var(--fontsize-h2Text);
       font-weight: var(--fontweight-h3Text);
     }
@@ -218,7 +216,6 @@
  
    }
    .appartmentContainer{
-         margin-left: 4rem;
       font-size: var(--fontsize-h2Text);
       font-weight: var(--fontweight-h3Text);
     }

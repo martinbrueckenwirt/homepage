@@ -1,5 +1,6 @@
 // buchungstrecke von vioma
 // https://cst-client-hotel-brueckenwirt.viomassl.com/js/vri/vri.js
+// Einbindung im Layout.tsx
 
 var sessionLanguage = getLanguageFromPath();
 

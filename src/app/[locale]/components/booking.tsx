@@ -29,7 +29,7 @@ export default function Booking(props: Booking) {
     }, [locale,props.apartmentId]);
  
 
-	return ;
+	return(<></>);
 }
 	
 

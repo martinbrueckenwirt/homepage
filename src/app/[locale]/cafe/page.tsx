@@ -6,7 +6,7 @@ import { useState, useEffect} from 'react';
 
 // import BookingEN from '../components/bookingEN';
 import Booking from '../components/booking';
-import CafeSlider from '../components/cafeSlider';
+import Slider from '../components/slider';
 
 
 export default function Cafe({params: {locale}}: {params: {locale: any}}) {
@@ -26,7 +26,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
         <>    
          
             <div className={styles.test} >
-                <CafeSlider />
+                <Slider />
             TEST Hauptcontainer 
             </div>
             <Booking apartmentId={"20845"}/>

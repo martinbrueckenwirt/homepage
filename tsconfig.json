@@ -61,6 +61,6 @@
     "src/app/[locale]/components/booking.js",
     "src/app/[locale]/cafe/page12.ts1",
     "src/app/[locale]/cafe/page3.ts1"
-, "src/app/[locale]/cafe/page1.t12", "src/functions/viomaIntegration.js"  ],
+, "src/app/[locale]/cafe/page1.t12", "src/functions/viomaIntegration.js", "src/app/[locale]/components/cafeModule.old"  ],
   "exclude": ["node_modules"]
 }

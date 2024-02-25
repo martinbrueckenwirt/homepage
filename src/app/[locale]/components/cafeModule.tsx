@@ -1,12 +1,12 @@
+
+
 import styles  from './cafeModule.module.css';
 import Image from 'next/image'
 import Link from 'next/link';
+import Slider from './slider';
 import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
-import {useTranslations} from 'next-intl';
-import Bild1 from '../../../../public/P2677228-1_hoch.webp'
-import Bild2 from '../../../../public/P2566177-1.webp'
-import Bild3 from '../../../../public/P2506075-1_quadrat.webp'
-import Bild4 from '../../../../public/P1270601_hoch.webp'
+import {NextIntlClientProvider,useTranslations } from 'next-intl';
+
 
 
 export default function CafeModule() {
@@ -21,13 +21,10 @@ export default function CafeModule() {
     let text6: string = t('text6');
     let text7: string = t('text7');
     let text8: string = t('text8');
-  
-
-    let altBild1: string = t('altBild1');
-    let altBild2: string = t('altBild2');
-    let altBild3: string = t('altBild3');
-    let altBild4: string = t('altBild4');
+   
     
+
+  
   
   
 /* Muster für zb "<important> abc </important" */
@@ -47,68 +44,28 @@ return (
     
 </div>
 <div className ={styles.wrapper}>
-    <div className ={styles.box1}>
-    <Image
-    src =  {Bild1}
-    height= {800}
-    width = {615}
-    alt={altBild1}
-    priority = {false}
-    sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-      
-    />
-    </div>
-    <div className ={`${h1Font.className} ${styles.box2}`}>
-        <p>{text1}</p>
-        <p>{text2}</p>
-        <p>{text3}</p>
-        <p>{text4}</p>
-        <p>{text5}</p>
-        <p>{text6}</p>
-        <p>{text7}</p>
-
-    
-    </div>
-    <div className ={styles.box3}>
-   
-    <Image
-    src =  {Bild2}
-    height= {450}
-    width = {600}
-    alt={altBild1}
-    priority = {false}
-    sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-      
-    />
-    
-    </div>
-    <div className ={styles.box4}>
-    <Image
-  
-    src =  {Bild4}
-    height= {400}
-    width = {350}
-    alt={altBild1}
-    priority = {false}
-    sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-      
-    />
-   
+    <div className = {styles.wrapperSliderAndText}>
+        <div className ={styles.box1}>
+        <NextIntlClientProvider>
+            <Slider />
+        </NextIntlClientProvider>
+        </div>
+        <div className ={`${h1Font.className} ${styles.box2}`}>
+            <p>{text1}</p>
+            <p>{text2}</p>
+            <p>{text3}</p>
+            <p>{text4}</p>
+            <p>{text5}</p>
+            <p>{text6}</p>
+            <p>{text7}</p>
+            <p>{text8}</p>
+        </div>
     </div>
 
-    <div className ={`${h1Font.className} ${styles.box6}`}>
-    <Image
-  
-  src =  {Bild3}
-  height= {400}
-  width = {400}
-  alt={altBild1}
-  priority = {false}
-  sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-    
-  />
-    </div>
 
+    <div className ={`${h1Font.className} ${styles.box3}`}>
+        <div dangerouslySetInnerHTML={{__html: t.raw('knownFor')}} />
+    </div>
     
     
     

@@ -116,14 +116,13 @@ return (
 
     <div className={styles.textContainer}>
                 <div className={`${h1Font.className} ${styles.text}`}>
-                {/*    <p dangerouslySetInnerHTML={{ __html: text1 }} />*/}
                     <div dangerouslySetInnerHTML={{__html: t.raw('cafeIntro')}} />
                     
                 </div>
-            </div>
+    </div>
     <h2 className={`${h1Font.className} ${styles.appartmentContainer}`}>
         {cafeContainerHeadline}
-     </h2>
+    </h2>
 <CafeModule /> 
     </section>
 

@@ -23,15 +23,7 @@ export type BurgerMenueProps ={
     menueSlide:string;
 }
 
-export type CafeSliderType = {
-    image: string;
-    description: string;
-    descriptionEn: string;
-    descriptionIt: string; 
-    alt: string; 
-    altEN: string;
-    altIT: string;
-}
+
 
 export type GalleryImage = {
     small:string;
@@ -108,5 +100,15 @@ export type PricingList = {
     type: string,
     season: string,
     
+}
+
+export type SliderType = {
+    image: string;
+    description: string;
+    descriptionEn: string;
+    descriptionIt: string; 
+    alt: string; 
+    altEN: string;
+    altIT: string;
 }
 

@@ -1,0 +1,51 @@
+/* Set initial opacity to 0 for all slides */
+.slider{
+  position:relative;
+  width: 70vw;
+}
+
+
+.slide {
+  /*wird im CafeModule verwendet*/
+  position:absolute; /*die slides liegen übereinander*/  
+  width: 50vw; /*muss gleich sein wie cafeModule.module.css box1-width*/
+  height:auto;
+  z-index:0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* Add a smooth transition effect */
+  }
+  
+  /* Set opacity to 1 for the active slide */
+  .slide.active {
+    opacity: 1;
+    z-index:90;
+  }
+
+@media(max-width:399px){
+  .slide{
+  width: 70vw;
+  }   
+}
+
+@media(min-width:400px) and (max-width: 779px){ 
+  .slide{
+    width: 70vw;
+  }
+  }
+@media(min-width:780px)  and (max-width: 1079px){
+  .slider{
+    left:0;
+    width: 100%;
+    
+  }
+.slide {
+  left: calc(50% - 35vw); /* Center the slide horizontally */
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}
+@media(min-width:1080px)  and (max-width: 1399px){    }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

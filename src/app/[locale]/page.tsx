@@ -3,15 +3,16 @@ import styles from './page.module.css';
 import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { Metadata } from 'next';
-import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
+import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont,handwriting } from '@/src/functions/fonts';
 import Hero from './components/heroModule';
 import Link from 'next/link';
 import HeroImage from '../../../public/P1540356-2550x1274-180-60.webp';
 import Image from 'next/image';
-import Appartments from '../../../public/P1360618-800x630-180-60.webp';
-import Cafe from '../../../public/P1180423.jpg';
-import Aktivitaeten from '../../../public/P2566866-1.jpg';
-import History from '../../../public/BrueckenwirtVorHochwasser.webp';
+// import Appartments from '../../../public/P1360618-800x630-180-60.webp';
+import Appartments from '../../../public/P1360618-800x630-180-60-sw.webp';
+import Cafe from '../../../public/P1180423_sw.webp';
+import Aktivitaeten from '../../../public/P2566866-1.webp';
+import Greeting from '../../../public/P2658668-RW2-1.webp';
 import Background from '../../../public/Landkarte_50proz.png';
 
 import Booking from './components/booking';
@@ -46,7 +47,8 @@ export default function Home({params: {locale}}: {params: {locale: any}}) {
     let imageAlt: string="";
     imageAlt = t('heroimagealt');
     let altAppartment: string = t('altAppartment');
-    let apparmentHeadline: string = t('appartmentContainerHeadline');
+    let appartmentTeaser: string = t('appartmentTeaser');
+    let appartmentHeadline: string = t('appartmentContainerHeadline');
     let appartmentText: string = t('appartmentText');
     let cafeHeadline: string = t('cafeHeadline');
     let cafeText: string = t('cafeText');
@@ -54,10 +56,10 @@ export default function Home({params: {locale}}: {params: {locale: any}}) {
     let aktivitaetenHeadline: string = t('aktivitaetenHeadline');
     let aktivitaetenText: string = t('aktivitaetenText');
     let altAktivitaeten: string = t('altAktivitaeten');
-    let altHistory: string = t('altHistory');
-    let historyText: string = t('historyText');
-    let historyText2: string = t('historyText2');
-    let historyText3: string = t('historyText3');
+    let altGreeting: string = t('altGreeting');
+    let greetingText: string = t('greetingText');
+    let greetingText2: string = t('greetingText2');
+    let greetingText3: string = t('greetingText3');
     
     
     /* Muster für zb "<important> abc </important" */
@@ -108,8 +110,11 @@ return (
                 </div>  
                 <div className={styles.box2} >
                     <div className={styles.textContainer}>
+                        <div className={`${handwriting.className} ${styles.handwritingAppartement}`} >    
+                            {appartmentTeaser}
+                        </div>
                         <div className={`${h1Font.className} ${styles.h2}`} >    
-                            {apparmentHeadline}
+                            {appartmentHeadline}
                         </div>
                         <div className={`${h1Font.className} ${styles.text}`} >
                             {appartmentText}
@@ -128,7 +133,7 @@ return (
                         <div className={`${h1Font.className} ${styles.h2}`} >   
                                 {cafeHeadline}        
                         </div>
-                        <div className={styles.text} >
+                            <div className={`${h1Font.className} ${styles.text}`} >
                             {cafeText}
                         </div>
                             <Link href="#">
@@ -176,7 +181,7 @@ return (
                         <div className={`${h1Font.className} ${styles.h2}`} >   
                                 {aktivitaetenHeadline}        
                         </div>
-                        <div className={styles.text} >
+                       <div className={`${h1Font.className} ${styles.text}`} >
                             {aktivitaetenText}
                         </div>
                             <Link href="#">
@@ -189,34 +194,42 @@ return (
             </div>
         </div>
     <section>
-        <div className={styles.historyContainer}>            
+               
+        <div className={`${h1Font.className} ${styles.greetingContainer}`} >             
                 
-                <div className={styles.historyImage}>
+                <div className={styles.greetingImage}>
                     <Image
-                        className={styles.image}
-                        src =  {History}
+                        className={styles.imageFamily}
+                        src =  {Greeting}
                         width = {400}
-                        height={300}
+                        height={400}
                     
-                        alt={altHistory}
+                        alt={altGreeting}
                         priority = {false}
                         // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
                         // layout="responsive"
                     />            
                 </div>
                 
-                <div className={styles.historyText}>
-                            {historyText}
-                            <br></br>
-                            {historyText2}
-                            <br></br>
-                            {historyText3}
+                <div className={styles.greetingText}>
+                            
+                        <div className={`${handwriting.className} ${styles.greetingHeader}`}>
+                            {greetingText}
+                        </div>
+                        <div className={styles.greetingTextLine}>
+                            {greetingText2}
+                        </div>
+                        <div className={styles.greetingTextLine}>
+                            {greetingText3}
+                        </div>
+                        
                 </div>
                     
             
         </div>        
     </section>    
 
+            
 </div >
 
 

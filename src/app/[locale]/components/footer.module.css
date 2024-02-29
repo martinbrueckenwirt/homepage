@@ -2,9 +2,19 @@
 {
 position: relative;
 top: 10rem;
-height: 30rem;
-background-color: Purple;
+height: 20rem;
+background-color: var( --background-dark);
+z-index:1;
 font-size: large;
-display: none;
+/* display: none; */
 
+}
+
+.image
+{
+    position: relative;
+  width: 100%;
+  height: auto;
+  z-index:99;
+  /* display: none; */
 }

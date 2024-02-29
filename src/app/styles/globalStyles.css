@@ -9,7 +9,8 @@
   --background-white:#fff;  
   --background-light: #f2f3f5;
   --background-medium: #c6c8ca;
-  --background-card: #cdbdbd38;
+  --fontHandwriting: #baafa2;
+  --background-card: #b0681638;
 
 
   --background-medium-warm: rgb(250, 241, 224);
@@ -37,6 +38,8 @@
   --fontweight-h2Text:500;
   --fontweight-h3Text:400;
   --fontweight-h4Text:300;
+  
+  --fontweight-h5Text:100;
   --fontweight-normalText:400;
   --fontweight-footerText:200;
 

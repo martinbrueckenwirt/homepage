@@ -68,10 +68,10 @@
 
    },
   
-  "Footer":{
-    "Einleitung": "I am on the page"
+   "footer":{
+    "text": "We are Family"
   },
-  "history":{
+  "historyDEPRECATED":{
     "altImage1":"Historical picture of the Brückenwirt farm",
     "altImage2":"Flood water runs through the Brückenwirt house",
     "altImage3":"The Brückenwirt house after revitalization",
@@ -89,32 +89,34 @@
 },
  
   "home": {
-      "appartment":"Apartment",
-      "appartmentContainerHeadline": "Your holiday apartment",
-      "booknow": "Book now",
-      "cafeContainerHeadline": "Cafe Brückenwirt",
-      "cafeIntro":"<b>Café Brückenwirt</b> is a cozy café with a <b>beautiful sun terrace</b> in the Pustertal. Here you can enjoy a perfect cappuccino made from the famous Brückenwirt blend. The café also offers <b>homemade tarts</b> and cakes, sundaes and <b>ice cream from the organic mountain farm in the Villgratental</b> as well as organic fruit juices. The large garden with children's playground is another highlight of the café. The café is very conveniently located and offers a warm and personal atmosphere all year round.",
-      "details": "Details",
-      "headline":"Holidays in the mountains",
-      "history":"Our history has a lot to tell",
-      "historyContainerHeadline":"Our eventful history",
+    "altAppartment":"Bedroom of a holiday apartment with a double bed",
+    "appartment":"Apartment",
+    "appartmentTeaser":"very cozy",
+    "appartmentContainerHeadline": "Your holiday apartment",
+    "appartmentText": "Enjoy your holiday in our modern holiday apartments directly at the Thurntaler Sillian ski area. The Three Peaks, the Lienz Dolomites and the Villgrat Mountains form the impressive backdrop for your activities in all seasons.",
+    "headline":"holidays in the mountains",
+    "cafeHeadline":"Cafe Brückenwirt",
+    "cafeText":"Enjoy the time in our cozy cafe",
+    "altCafe":"Cafe Brückenwirt",
+    "aktivitaetenHeadline":"Activities",
+    "aktivitaetenText":"Discover the diversity of the region",
+    "altAktivitaeten":"Hiker in the mountains",
+    "altGreeting":"Picture of the family",
+    "greetingText":"We are Family!",
+    "greetingText2":"Welcome to our cozy apartment house! Discover our unique apartments and enjoy the relaxed atmosphere in our café.",
+    "greetingText3":"With us you will not only find a temporary home, but also a bit of warmth and hospitality.",
+    "booknow": "Book now",
+    "cafeContainerHeadline": "Cafe Brückenwirt",
+    "cafeIntro":"<b>Café Brückenwirt</b> is a cozy café with a <b>beautiful sun terrace</b> in the Pustertal. Here you can enjoy a perfect cappuccino made from the famous Brückenwirt blend. The café also offers <b>homemade tarts</b> and cakes, sundaes and <b>ice cream from the organic mountain farm in the Villgratental</b> as well as organic fruit juices. The large garden with children's playground is another highlight of the café. The café is very conveniently located and offers a warm and personal atmosphere all year round.",
+    "details": "More information",
+ 
+
+
       "herotext": "Modern holiday apartments directly at the ski area",
       "heroimagealt": "Brückenwirt with butterfly in the foreground",
       "metaDescription":"Beautifully located apartment house with modern apartments / holiday apartments directly at the Sillian / Thurntaler ski area for your perfect holiday in East Tyrol; very child-friendly, large garden, high-quality furnishings, breakfast buffet in the house, cafe with a perfect cappucino on the ground floor.",
-      "metaTitle":"Modern holiday apartments directly at the ski area in East Tyrol",
-   
-      "title": "Holidays in the mountains",
-      "pricesummer":"Price summer from:",
-      "pricewinter":"Preis winter from:",
-      "persons":"Persons",
-      "welcome":"Welcome to our <b>apartments / holiday flats</b> directly at the Thurntaler Sillian ski area.<br><br> Enjoy your well-deserved <b>feel-good holiday in the middle of the mountains</b>. The Three Peaks, the Lienz Dolomites and the Villgrat Mountains form the impressive backdrop for your activities in all seasons.",
-      "textmodul1":"Holiday apartments with 32m²-85m² for 2-7 people",
-      "textmodul2":"Each apartment has its own <b>balcony</b>",
-      "textmodul3":"Full-fledged kitchens",
-      "textmodul4":"Separate bedrooms - for your special <b>privacy</b>",
-      "textmodul5":"Real wood floors",
-      "textmodul6":"Large garden with lawn with children's play equipment",
-      "textmodul7":"Pets welcome"
+      "metaTitle":"Modern holiday apartments directly at the ski area in East Tyrol"
+  
     },
      "Metadata":{
       "title": "Holiday Apartments directly at skiing area Thurntaler Hochpustertal Sillian",
@@ -125,7 +127,8 @@
       "appartment": "Apartments",
       "contact": "Contact",
       "cafe": "Cafe",
-      "about": "About"
+      "about": "About",
+      "imprint": "Imprint"
       
     },
     "pricingTableVarious":{

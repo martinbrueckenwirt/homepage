@@ -78,6 +78,7 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
   const cafeTrans = t('cafe');
   const contactTrans = t('contact');
   const aboutTrans = t('about');
+  const imprintTrans	= t('imprint');
 
   
 
@@ -98,7 +99,7 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
         <Suspense fallback ={<Loading/>}>
         <Navigation home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
         {children}
-        <Footer/>
+        <Footer locale ={locale} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} imprint={imprintTrans}/>
         </Suspense>
         <script id='viomaIntegration' src='/scripts/viomaIntegration.js' />
       </body>

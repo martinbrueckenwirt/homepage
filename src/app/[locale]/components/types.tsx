@@ -23,7 +23,15 @@ export type BurgerMenueProps ={
     menueSlide:string;
 }
 
-
+export type FooterProps = {
+    locale: string;
+    home: string;
+    appartment:string;
+    cafe:string;
+    about: string;
+    contact: string;
+    imprint: string;
+   }
 
 export type GalleryImage = {
     small:string;

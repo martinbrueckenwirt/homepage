@@ -70,14 +70,14 @@
     "map":"carta geografica"
   },
     
-  "Footer":{
-    "Einleitung": "ITALIENSICH I am on the page"
+  "footer":{
+    "text": "Siamo una famiglia"
   },
   "hero": {
    "bookingButton":"Prenota ora"
     
   },
-  "history":{
+  "historyDEPRECATED":{
     "altImage1":"Foto storica del maso Brückenwirt",
     "altImage2":"L'acqua della piena attraversa la casa Brückenwirt",
     "altImage3":"La casa Brückenwirt dopo la ristrutturazione",
@@ -90,15 +90,28 @@
     "revitalisation":"Nel 2014 il Brückenwirt è stato completamente rinnovato, rivitalizzato e riaperto nell'autunno 2014. Le camere sono state trasformate in appartamenti di alta qualità. Ogni appartamento ha accesso ad almeno un balcone con vista libera a est verso Lienz, a sud verso le Alpi Carniche oppure a ovest. Ogni appartamento ha il suo tocco personale."
   },
   "home": {
-      "appartment":"Appartamento",
-      "appartmentContainerHeadline": "Qui è dove vivi",
-      "booknow": "Prenota ora",
-      "cafeContainerHeadline": "Cafe Brückenwirt",
-      "cafeIntro":"<b>Café Brückenwirt</b> è un accogliente caffè con una <b>bellissima terrazza soleggiata</b> in Val Pusteria. Qui potrete gustare un perfetto cappuccino preparato con la famosa miscela Brückenwirt. Il caffè offre anche <b>crostate</b> e torte fatte in casa, coppe di gelato e <b>gelati del maso di montagna biologico nella Villgratental</b> nonché succhi di frutta biologici.L'ampio giardino con parco giochi per bambini è un altro punto forte dell'offerta. il caffè. Il caffè è situato in una posizione molto comoda e offre un'atmosfera calda e personale tutto l'anno",
-      "details": "Dettagli",
-      "headline":"Vacanze in montagna",
-      "history":"La nostra storia ha molto da raccontare",
-      "historyContainerHeadline": "La nostra storia movimentata",
+    "altAppartment":"Camera da letto di un appartamento per vacanze con letto matrimoniale",
+    "appartment":"Appartamento",
+    "appartmentTeaser":"molto accogliente",
+    "appartmentContainerHeadline": "Il tuo appartamento per le vacanze",
+    "appartmentText": "Godetevi la vostra vacanza nei nostri moderni appartamenti direttamente nel comprensorio sciistico Thurntaler Sillian. Le Tre Cime, le Dolomiti di Lienz e i Monti del Villgrat costituiscono lo scenario impressionante per le vostre attività in tutte le stagioni.",
+    "headline":"Vacanze in montagna",
+    "cafeHeadline":"Cafe Brückenwirt",
+    "cafeText":"Godetevi il tempo nel nostro accogliente bar",
+    "altCafe":"Cafe Brückenwirt",
+    "aktivitaetenHeadline":"Attività",
+    "aktivitaetenText":"Scopri la diversità della regione",
+    "altAktivitaeten":"Un escursionista in montagna",
+    "altGreeting":"Immagine della famiglia",
+    "greetingText":"Siamo una famiglia!",
+    "greetingText2":"Benvenuti nel nostro accogliente condominio! Scopri i nostri appartamenti unici e goditi l'atmosfera rilassata nella nostra caffetteria.",
+    "greetingText3":"Da noi non troverai solo una casa temporanea, ma anche un po' di calore e ospitalità.",
+    "booknow": "Prenota ora",
+    "cafeContainerHeadline": "Cafe Brückenwirt",
+    "cafeIntro":"<b>Café Brückenwirt</b> è un accogliente bar con <b>bellissima terrazza soleggiata</b> in Val Pusteria. Qui potrete gustare un perfetto cappuccino preparato con la famosa miscela Brückenwirt. La caffetteria offre anche <b>crostate</b> e torte fatte in casa, coppe di gelato e <b>gelato del maso di montagna biologico del Villgratental</b> nonché succhi di frutta biologici. L'ampio giardino con parco giochi per bambini è un altro punto forte della caffetteria. La caffetteria è situata in una posizione molto comoda e offre un'atmosfera calda e personale tutto l'anno.",
+    "details": "Maggiori informazioni",
+ 
+     
       "herotext": "Moderni appartamenti per le vacanze direttamente sul comprensorio sciistico",
       "heroimagealt": "La nostra storia movimentata",
       "metaDescription":"BPalazzina in splendida posizione con moderni appartamenti/appartamenti per vacanze direttamente nel comprensorio sciistico Sillian/Thurntaler per la vostra vacanza perfetta nel Tirolo Orientale; molto adatto ai bambini, ampio giardino, arredamento di alta qualità, colazione a buffet in casa, bar con un perfetto cappuccino al piano terra.",
@@ -126,7 +139,8 @@
       "appartment": "Appartamenti",
       "contact": "Contatto",
       "cafe": "Cafe",
-      "about": "Chi Siamo"
+      "about": "Chi Siamo",
+      "imprint": "impronta"
       
     },
     "pricingTableVarious":{

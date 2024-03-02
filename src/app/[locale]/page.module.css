@@ -231,8 +231,8 @@
     
    }
 
-   .greetingImage{
-    width: 25vw;
+   .imageFamily{
+    width: 40vw;
     /* margin-right: 20px; */
    }
 
@@ -256,3 +256,108 @@
       padding-top: 1rem;
       padding-bottom: 1rem;
    }
+
+   @media(max-width:779px){    
+
+      .teaser{
+         padding-bottom: 1rem;
+         margin-right: 1rem;
+         font-size: var(--fontsize-h3Text);
+         font-weight: var(--fontweight-h4Text);
+       
+       }
+   
+   .innerWrapper {
+      grid-template-columns: 1fr;
+      /* column-gap: 1rem; Adjust the gap size as needed */
+      margin-left:5vw;
+      width:90vw;
+      row-gap: 1rem; /* Adjust the gap size as needed */
+      padding-top:1rem;
+      padding-bottom:3rem;
+   }
+
+   .box1, .box2, .box3, .box4, .box5, .box6{
+      grid-column: 1 /2;
+      justify-self: center;
+   }
+
+   .box2{
+      grid-row: 2 / 3;}
+
+      .box3{
+         grid-row: 4 / 5;
+      
+      }
+       .box4{
+         grid-row: 3 / 4;
+
+      }
+      .box5{
+         grid-row: 5 / 6;
+      }
+      
+      .box6{
+         grid-row: 6 / 7;
+      }
+
+   .image{
+      width:80vw;
+   }
+
+   .greetingContainer{
+      flex-direction: column ;
+      align-items: center;
+      justify-content: space-around;
+   }
+      
+   .greetingHeader{
+     display:flex; 
+     width:100vw;  
+      justify-content: center;
+   } 
+   .imageFamily{
+         width: 40vw;
+         /* height: auto; */
+         /* display: none; */
+         /* margin-right: 20px; */
+        }
+
+        .greetingText{
+          max-width: 80vw;
+      
+      }
+
+}
+@media(min-width:1080px)  and (max-width: 1399px){   
+   .teaser{
+      padding-bottom: 1rem;
+      margin-right: 1rem;
+      font-size: var(--fontsize-h3Text);
+      font-weight: var(--fontweight-h4Text);
+    
+    }
+
+   .innerWrapper {
+      width:90vw
+   }
+   
+   .image{
+       width:200px;
+       
+   }
+   .greetingContainer{
+   flex-direction: column ;
+   align-items: center;
+   justify-content: space-around;
+}
+   .imageFamily{
+      width: 40vw;
+      /* height: auto; */
+      /* display: none; */
+      /* margin-right: 20px; */
+     }
+
+ }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

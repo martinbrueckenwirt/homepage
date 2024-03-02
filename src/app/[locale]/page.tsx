@@ -96,17 +96,19 @@ return (
             <div className={styles.innerWrapper} >
                        
                 <div className={styles.box1}>
-                    <Image
-                        className={styles.image}
-                        src =  {Appartments}
-                        width = {800}
-                        height={600}
-                    
-                        alt={altAppartment}
-                        priority = {false}
-                        // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-                        // layout="responsive"
-                    />
+                    <div>
+                        <Image
+                            className={styles.image}
+                            src =  {Appartments}
+                            width = {800}
+                            height={600}
+                        
+                            alt={altAppartment}
+                            priority = {false}
+                            // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
+                            layout="responsive"
+                        />
+                    </div>
                 </div>  
                 <div className={styles.box2} >
                     <div className={styles.textContainer}>
@@ -145,23 +147,24 @@ return (
                 </div>
                         
                 <div className={styles.box4}> 
-                        <div className={styles.image} >
+                        <div>
                             <Image
                                 className={styles.image}
                                 src =  {Cafe}
-                                width = {800}
+                                width={800}
                                 height={600}
                             
                                 alt={altCafe}
                                 priority = {false}
                                 // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-                                // layout="responsive"
+                                // style={{objectFit:"contain"}}
+                                layout="responsive"
                             />
                         </div>
                 </div>
                
                 <div className={styles.box5}> 
-                        <div className={styles.image} >
+                        <div>
                             <Image
                                 className={styles.image}
                                 src =  {Aktivitaeten}
@@ -171,7 +174,7 @@ return (
                                 alt={altAktivitaeten}
                                 priority = {false}
                                 // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-                                // layout="responsive"
+                                layout="responsive"
                             />
                         </div>
                 </div>   
@@ -197,9 +200,10 @@ return (
                
         <div className={`${h1Font.className} ${styles.greetingContainer}`} >             
                 
-                <div className={styles.greetingImage}>
+            <div className={styles.imageFamily}>       
                     <Image
                         className={styles.imageFamily}
+                        // className={styles.image}
                         src =  {Greeting}
                         width = {400}
                         height={400}
@@ -207,9 +211,9 @@ return (
                         alt={altGreeting}
                         priority = {false}
                         // sizes ="(max-width:580px) 100vw, (max-width:1024px) 50vw, 33vw)"
-                        // layout="responsive"
+                        layout="responsive"
                     />            
-                </div>
+             </div>   
                 
                 <div className={styles.greetingText}>
                             

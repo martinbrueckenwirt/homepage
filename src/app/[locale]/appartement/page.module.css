@@ -1,33 +1,61 @@
-.container{
+.spacerHead{
+    position: relative;
+    top:1rem; /*direkt unmter Hero*/
+    margin-top: 0px;
+    padding-top: 0px ;
+  }
+  
+  .h1{
     position:relative;
-    margin-top: 300px;
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-   
+    top: 2.5rem; /*Abstand zum Hero*/
 
-.h1Container{
+    padding-left: var(--padding-left);
+    font-size: var(--fontsize-hero);
+    font-weight: var(--fontweight-h1Text);
+    color: var(--red);
+  }
+
+  .textTeaserContainer{
+   display:flex;
+   justify-content: flex-end;
+   align-items: flex-start;
+   
+   margin-top: 0px;
+   margin-bottom: 8rem;
+   padding-top: 0px ;
+ }
+   
+  .teaser{
+   margin-right: 2rem;
+   width:70%;
+}
+
+ .teaserText{
+    font-size: var(--fontsize-h1Text);
+    font-weight: var(--fontweight-h4Text);
+}
+
+
+.intro{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width:70%;
-}
-.headline{
-    font-weight: var(--fontweight-h1Text);
-    font-size: var(--fontsize-h1Text);
-}
-.subtitle{
-    padding-top:1rem;
-    font-weight: var(--fontweight-h3Text);
-    font-size: var(--fontsize-h3Text);
+    align-items: flex-start;
+    /* margin-left: 10vw; */
+    width:95%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: var(--fontweight-h4Text);
+    font-size: var(--fontsize-h4Text);
 }
 
+.introCompact{
+    line-height: 0.2%;
+}
 .appartmentContainer{
     display:block;
     width:calc(70%);
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -37,15 +65,17 @@
     padding:1rem;
     display:flex;
     justify-content:space-between;
-    background-color: var(--background-medium-warm);
+    background-color: var(--background-medium);
     
 }
 
 .cardImage{
- width: 100%;
+ width: 400px;
  height:auto;
  margin:0.5rem;
  padding:0;
+ box-shadow: 10px 20px 15px rgb(155, 154, 154);
+ border-radius: 5px;
 }
 
 .cardTextBlock{
@@ -137,3 +167,34 @@
 .buttonRight:hover::before{
     content: url('../../../../public/caret-right.webp');
 }
+
+@media(max-width:399px){    }
+@media(min-width:400px) and (max-width: 779px){    }
+@media(min-width:780px)  and (max-width: 1079px){}
+@media(min-width:1080px)  and (max-width: 1399px){    }
+@media(min-width:1400px)and (max-width: 1999px){
+    .cardImage{
+        width: 80%;
+        /* height:auto; */
+        margin:0.5rem;
+        /* padding:0; */
+        box-shadow: 10px 20px 15px rgb(155, 154, 154);
+        border-radius: 5px;
+       }
+    .cardHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h3Text);
+    }
+    .cardSubHeadline{
+        /* margin-top:0.5rem; */
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h4Text);
+    }
+    .cardText{
+        /* line-height:1.5 rem; */
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h4Text);
+    }
+
+}
+@media(min-width:2000px){}

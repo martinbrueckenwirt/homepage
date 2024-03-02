@@ -2,10 +2,20 @@
     "appartements":{
       "title": "Moderne Appartements/Ferienwohnungen direkt am Schigebiet",
       "description":"Moderne Appartements / Ferienwohnungen direkt am Schigebiet Sillian Thurntaler für Ihren perfekten Urlaub in Osttirol; 2-6 Personen; sehr kinderfreundlich, großer Garten, 32m²- 85m²; hochwertige Ausstattung; Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
-      "appartmentContainerHeadline": "Appartments/ Ferienwohnungen",
-      "subtitle":"Wohnen im Brückenwirt",
-      "heroImageAlt":"Kinderspielzeug liegt am Boden",
+      "headline": "Appartments/ Ferienwohnungen",
+      "welcome":"<b>Wohnen im Brückenwirt</b> <br><br>",
+       "heroImageAlt":"Kinderspielzeug liegt am Boden",
        "bookingButton":"Jetzt buchen",
+
+      "intro1":"Tauchen Sie in die Osttiroler Gemütlichkeit ein. Wohlfühlen steht an erster Stelle.<br><br>",
+      "intro2":"Eingebettet in eine wunderbare Landschaft zwischen den schroffen Südtiroler Dolomiten und den lieblichen Villgrater Bergen genießen Sie Ihren Urlaub in unserem Haus.",
+      "intro3":"Aus allen Appartements haben Sie freien Blick auf die beeindruckenden umliegenden Berge und die Bergbauernhöfe, die sich hoch über dem Tal an die  Berghänge klammern. Die Burg Heinfels tront auf dem Felsen oberhalb des Brückenwirtes. Die denkmalgeschützte 'Punbrugge', eine gedeckte historische Holzbrücke (18. Jhdt), ist ein Meisterwerk der Zimmermannskunst.",
+      "intro3a":"<b>Wunderbare Ausblicke</b>",
+      "intro4":"Die Seilbahn ins Schigebiet liegt auf der anderen Strassenseite.",
+      "intro4a":"<b>Seilbahn</b>",
+      "intro5":"Wir haben ein paar 'Geheimtipps' für Sie, die in keinem Reiseführer stehen....",
+      "intro6":"Unsere Ferienwohnungen verfügen über eine vollwertige Küchenausstattung mit Geschirrspüler, elektrischem Herd mit Backofen, Kühlschrank mit Gefrierfach, Wasserkocher und Kaffeemaschine sowie umfangreichen Küchenutensilien.",
+      
       "moreDetails":"mehr Informationen",
       "altStudio":"Bild des Appartement Studio",
       "altJunior": "Bild des Appartement Junior",

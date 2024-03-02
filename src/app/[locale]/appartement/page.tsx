@@ -12,7 +12,7 @@ import Link from 'next/link';
 import {getTranslations} from 'next-intl/server';
 
 
-import HeroImage from '../../../../public/P2535132-1.jpg';
+import HeroImage from '../../../../public/P1170986-2550x1274-180-60.webp';
 import studio    from '../../../../public/P1190113.webp';
 import junior    from '../../../../public/P1210796_web.webp';
 import family    from '../../../../public/P1360618-800x630-180-60.webp';
@@ -45,10 +45,17 @@ export default function Appartements({params: {locale}}: {params: {locale: any}}
     unstable_setRequestLocale(locale);
     const t = useTranslations('appartements');
 
-    let imageAlt: string = "";
-    imageAlt = t('heroImageAlt');
+    let imageAlt: string = t('heroImageAlt');
     const appartmentContainerHeadline = t("appartmentContainerHeadline"); 
     const subtitle = t("subtitle");
+    const intro1 = t("intro1");
+    const intro2 = t("intro2");
+    const intro3 = t("intro3");
+    const intro3a = t("intro3a");
+    const intro4 = t("intro4");
+    const intro4a = t("intro4a");
+    const intro5 = t("intro5");
+    const intro6 = t("intro6");
     const altStudio = t("altStudio");
     const altJunior = t("altJunior");
     const altFamily = t("altFamily");
@@ -101,13 +108,30 @@ return (
         </div>
          
         
+        <section className={styles.spacerHead}>
+        <h1 className={`${heroFont.className} ${styles.h1}`}>    
+            <div dangerouslySetInnerHTML={{__html: t.raw('headline')}} />
+            </h1>
+        <div className={styles.textTeaserContainer}>
+            <div className={`${h1Font.className} ${styles.teaser}`}>
+                <div className={styles.teaserText} dangerouslySetInnerHTML={{__html: t.raw('welcome')}} />
+                <div className={styles.teaserText} dangerouslySetInnerHTML={{__html: t.raw('intro1')}} />
+                <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro2')}} />
+                <div className={`${styles.introCompact} ${styles.intro}`} dangerouslySetInnerHTML={{__html: t.raw('intro3a')}} />
+                <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro3')}} />
+                <div className={`${styles.introCompact} ${styles.intro}`} dangerouslySetInnerHTML={{__html: t.raw('intro4a')}} />
+                <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro4')}} />
+                <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro5')}} />
+                <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro6')}} />
+            </div>
+        </div>
+        </section>
+
+
 
         <div className={styles.container}>
 
-            <h1 className={`${heroFont.className} ${styles.h1Container}`} >  
-                <div className={styles.headline}>{appartmentContainerHeadline}</div> 
-                <div className={styles.subtitle}>{subtitle}</div>      
-            </h1>
+           
 
             <section className={styles.appartmentContainer}>
             <div className={styles.appartementCard}>
@@ -168,7 +192,7 @@ return (
                         alt={altJunior}
                         width={500}
                         height={350}
-                        /*layout="fill" */
+                        layout="responsive" 
                         sizes={sizes}
                     />
                 </div>    

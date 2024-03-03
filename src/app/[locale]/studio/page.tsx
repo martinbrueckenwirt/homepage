@@ -91,8 +91,10 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
             </div>
             <button className={styles.bookButton}>{bookingButton}</button>
         </h1>
-
-        <Booking apartmentId={"21197"}/>
+        <div id="vri-container-21197" className ={styles.test}>
+              <Booking apartmentId={"21197"}/>
+        </div>
+       
         <BackgroundImage type ={'A'}/>
        
     </section>

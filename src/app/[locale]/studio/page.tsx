@@ -61,7 +61,9 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
     const altLayout = t('altLayout');
     const bookingButton = t('bookingButton');
     const winterSeason = pricesGeneral.winterSeason;
-    
+    const id:string = "A";
+    const bookingURL: string = `/${locale}/bookAppartement?id=${id}`;
+
     return (
     <>
         <Head>
@@ -89,11 +91,13 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                     {h1subtitle}
                 </div>
             </div>
-            <button className={styles.bookButton}>{bookingButton}</button>
+            <Link href={bookingURL}>
+                <button className={styles.bookButton}>{bookingButton}</button>
+            </Link>
         </h1>
-        <div id="vri-container-21197" className ={styles.test}>
+        {/* <div id="vri-container-21197" className ={styles.test}>
               <Booking apartmentId={"21197"}/>
-        </div>
+        </div> */}
        
         <BackgroundImage type ={'A'}/>
        

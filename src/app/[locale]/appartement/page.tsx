@@ -10,6 +10,8 @@ import Hero from '../components/heroModule';
 import Image from 'next/image';
 import Link from 'next/link';
 import {getTranslations} from 'next-intl/server';
+import getMinPriceApartment from '../../../functions/getMinPriceApartment';
+import { MinPrice } from './types';
 
 
 import HeroImage from '../../../../public/P1170986-2550x1274-180-60.webp';
@@ -18,6 +20,7 @@ import junior    from '../../../../public/P1210796_web.webp';
 import family    from '../../../../public/P1360618-800x630-180-60.webp';
 import familyExclusive from '../../../../public/P1360618-800x630-180-60.webp';
 import topSuite  from '../../../../public/P1360933_web.jpg';
+
  
 export async function generateMetadata({params: {locale}}: {params: {locale: string}}) {
   const t = await getTranslations({locale, namespace: 'appartements'});
@@ -45,6 +48,17 @@ export default function Appartements({params: {locale}}: {params: {locale: any}}
     unstable_setRequestLocale(locale);
     const t = useTranslations('appartements');
 
+    let prices: MinPrice; 
+
+    const priceSummer = t('pricesummer');
+    const priceWinter = t('pricewinter');
+    const studioPrices= getMinPriceApartment('A');
+    const juniorPrices= getMinPriceApartment('B');
+    const familyPrices= getMinPriceApartment('D');
+    const familySuperiorPrices= getMinPriceApartment('D');
+    const topSuitePrices= getMinPriceApartment('E');
+
+
     let imageAlt: string = t('heroImageAlt');
     const appartmentContainerHeadline = t("appartmentContainerHeadline"); 
     const subtitle = t("subtitle");
@@ -65,32 +79,28 @@ export default function Appartements({params: {locale}}: {params: {locale: any}}
     const studioHeadline = t("studioHeadline");
     const studioSubHeadline = t("studioSubHeadline");
     const studioText1 = t("studioText1");
-    const studioText2 = t("studioText2");
-    const studioText3 = t("studioText3");
+ 
     const juniorHeadline = t("juniorHeadline");
     const juniorSubHeadline = t("juniorSubHeadline");
     const juniorText1 = t("juniorText1");
-    const juniorText2 = t("juniorText2");
-    const juniorText3 = t("juniorText3");
+ 
     const familyHeadline = t("familyHeadline");
     const familySubHeadline = t("familySubHeadline");
     const familyText1 = t("familyText1");
-    const familyText2 = t("familyText2");
-    const familyText3 = t("familyText3");
+   
     const familyExclusiveHeadline = t("familyExclusiveHeadline");
     const familyExclusiveSubHeadline = t("familyExclusiveSubHeadline");
     const familyExclusiveText1 = t("familyExclusiveText1");
-    const familyExclusiveText2 = t("familyExclusiveText2");
-    const familyExclusiveText3 = t("familyExclusiveText3");
+  
     const topSuiteHeadline = t("topSuiteHeadline");
     const topSuiteSubHeadline = t("topSuiteSubHeadline");
     const topSuiteText1 = t("topSuiteText1");
-    const topSuiteText2 = t("topSuiteText2");
-    const topSuiteText3 = t("topSuiteText3");
+  
 
-
+    
 return (
     <>
+  
     <Head>
                 <script
                     type="application/ld+json"
@@ -145,12 +155,15 @@ return (
                         sizes={sizes}
                     />
                 </div>
-                <div className={`${h1Font.className} ${styles.cardTextBlock}`}>
-                    <p className={styles.cardHeadline}>{familyHeadline}</p>
+                <div className={`${h1Font.className} ${styles.cardTextBlockRight}`}>
+                    <p className={styles.cardHeadline}>{studioHeadline}</p>
                     <p className={styles.cardSubHeadline}>{studioSubHeadline}</p>
                     <p className={styles.cardText}>{studioText1}</p>
-                    <p className={styles.cardText}>{studioText2}</p>
-                    <p className={styles.cardText}>{studioText3}</p>
+                    
+                    <div className={styles.cardTextCompact}>
+                        <p>{t('pricesummer')} €{studioPrices.minPriceSummer},-- </p>
+                        <p>{t('pricewinter')} €{studioPrices.minPriceWinter},-- </p>
+                    </div>
             
                     <div className={styles.buttonContainer}>
                         <div >
@@ -165,19 +178,24 @@ return (
                     </div>
                 </div>
                 </div>
-            <div className={styles.appartementCard}>
+            <div className={styles.appartementCardTextLeft}>
                
-                <div className={`${h1Font.className} ${styles.cardTextBlock}`}>
+                <div className={`${h1Font.className} ${styles.cardTextBlockLeft}`}>
                     <p className={styles.cardHeadline}>{juniorHeadline}</p>
                     <p className={styles.cardSubHeadline}>{juniorSubHeadline}</p>
                     <p className={styles.cardText}>{juniorText1}</p>
-                    <p className={styles.cardText}>{juniorText2}</p>
-                    <p className={styles.cardText}>{juniorText3}</p>
+                    <div className={styles.cardTextCompact}>
+                        <p>{t('pricesummer')} €{juniorPrices.minPriceSummer},-- </p>
+                        <p>{t('pricewinter')} €{juniorPrices.minPriceWinter},-- </p>
+                    </div>
             
                     <div className={styles.buttonContainer}>
-                        <div >
-                            <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
-                        </div>
+                        <Link href="#">
+                            <div >
+                                <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
+                            </div>
+                        </Link>
+                   
 
                         <Link href="#">
                             <div className={styles.button}>
@@ -208,17 +226,21 @@ return (
                         sizes={sizes}
                     />
                 </div>
-                <div className={`${h1Font.className} ${styles.cardTextBlock}`}>
+                <div className={`${h1Font.className} ${styles.cardTextBlockRight}`}>
                     <p className={styles.cardHeadline}>{familyHeadline}</p>
                     <p className={styles.cardSubHeadline}>{familySubHeadline}</p>
                     <p className={styles.cardText}>{familyText1}</p>
-                    <p className={styles.cardText}>{familyText2}</p>
-                    <p className={styles.cardText}>{familyText3}</p>
+                    <div className={styles.cardTextCompact}>
+                    <p>{t('pricesummer')} €{familyPrices.minPriceSummer},-- </p>
+                    <p>{t('pricewinter')} €{familyPrices.minPriceWinter},-- </p>
+                    </div>
             
                     <div className={styles.buttonContainer}>
-                        <div >
-                            <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
-                        </div>
+                        <Link href="#">
+                            <div >
+                                <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
+                            </div>
+                        </Link>
 
                         <Link href="#">
                             <div className={styles.button}>
@@ -229,20 +251,23 @@ return (
                 </div>
                 </div>    
 
-                <div className={styles.appartementCard}>
+                <div className={styles.appartementCardTextLeft}>
                 
-                <div className={`${h1Font.className} ${styles.cardTextBlock}`}>
+                <div className={`${h1Font.className} ${styles.cardTextBlockLeft}`}>
                     <p className={styles.cardHeadline}>{topSuiteHeadline}</p>
                     <p className={styles.cardSubHeadline}>{topSuiteSubHeadline}</p>
                     <p className={styles.cardText}>{topSuiteText1}</p>
-                    <p className={styles.cardText}>{topSuiteText2}</p>
-                    <p className={styles.cardText}>{topSuiteText3}</p>
+                    <div className={styles.cardTextCompact}>
+                        <p>{t('pricesummer')} €{familySuperiorPrices.minPriceSummer},-- </p>
+                        <p>{t('pricewinter')} €{familySuperiorPrices.minPriceWinter},-- </p>
+                    </div>
             
                     <div className={styles.buttonContainer}>
-                        <div >
-                            <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
-                        </div>
-
+                        <Link href="#">
+                            <div >
+                                <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
+                            </div>
+                        </Link>
                         <Link href="#">
                             <div className={styles.button}>
                                 <button className={styles.buttonRight}> {t('moreDetails')}</button>        
@@ -272,17 +297,21 @@ return (
                         sizes={sizes}
                     />
                 </div>
-                <div className={`${h1Font.className} ${styles.cardTextBlock}`}>
+                <div className={`${h1Font.className} ${styles.cardTextBlockRight}`}>
                     <p className={styles.cardHeadline}>{familyExclusiveHeadline}</p>
                     <p className={styles.cardSubHeadline}>{familyExclusiveSubHeadline}</p>
                     <p className={styles.cardText}>{familyExclusiveText1}</p>
-                    <p className={styles.cardText}>{familyExclusiveText2}</p>
-                    <p className={styles.cardText}>{familyExclusiveText3}</p>
+                    <div className={styles.cardTextCompact}>
+                        <p>{t('pricesummer')} €{topSuitePrices.minPriceSummer},-- </p>
+                        <p>{t('pricewinter')} €{topSuitePrices.minPriceWinter},-- </p>
+                    </div>
             
                     <div className={styles.buttonContainer}>
-                        <div >
-                            <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
-                        </div>
+                        <Link href="#">
+                            <div >
+                                <button className={styles.buttonLeft}> {t('bookingButton')}</button>        
+                            </div>
+                        </Link>
 
                         <Link href="#">
                             <div className={styles.button}>

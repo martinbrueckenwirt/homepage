@@ -6,7 +6,7 @@
       "subtitle":"Abitare al Brückenwirt",
       "heroImageAlt":"I giocattoli per bambini giacciono sul pavimento",
        "bookingButton":"Prenota ora",
-      "moreDetails":"Maggiori informazioni",
+      "moreDetails":"Più Dettagli",
       "altStudio":"Immagine dell'appartamento monolocale",
       "altJunior": "Immagine dell'Appartamento Junior",
       "altFamily": "Immagine dell'appartamento familiare",
@@ -15,29 +15,19 @@
       "studioHeadline":"Studio",
       "studioSubHeadline": "L'accogliente appartamento",
       "studioText1": "30m² per 2-3 persone",
-      "studioText2": "spaziosa camera da letto con letto matrimoniale e divano letto",
-      "studioText3": "Cucina separata, ampio balcone esposto ad ovest...",
       "juniorHeadline":"Junior",
       "juniorSubHeadline": "L'appartamento tranquillo con vista sul verde",
       "juniorText1": "37m² per 2-4 persone",
-      "juniorText2": "spaziosa camera separata con letto matrimoniale",
-      "juniorText3": "Soggiorno con divano letto, ampio balcone affacciato sul giardino...",
-      "familyHeadline":"Family",
+      "familyHeadline":"Family Comfort",
       "familySubHeadline": "Appartamento con 2 camere da letto e balcone",
       "familyText1": "56m² per 4-6 persone",
-      "familyText2": "2 camere da letto separate con letti matrimoniali",
-      "familyText3": "Soggiorno con divano letto, ampio balcone esposto a sud...",
-      "familyExclusiveHeadline":"FamilyExclusive",
+      "familyExclusiveHeadline":"Family Superior",
       "familyExclusiveSubHeadline": "Appartamento con 2 camere da letto e balcone",
       "familyExclusiveText1": "56m² per 4-6 persone",
-      "familyExclusiveText2": "2 camere da letto separate con letti matrimoniali",
-      "familyExclusiveText3": "ampio balcone esposto a sud, cabina termica...",
       "topSuiteHeadline":"TopSuite",
       "topSuiteSubHeadline": "Lo spazioso appartamento sotto il tetto",
-      "topSuiteText1": "87m² per 4-7 persone",
-      "topSuiteText2": "2 camere da letto separate, 2 bagni, cabina a infrarossi",
-      "topSuiteText3": "soggiorno ampio e confortevolenpm ru..."
-   
+      "topSuiteText1": "87m² per 4-7 persone"
+        
     },
 
   "cafe":{

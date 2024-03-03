@@ -5,6 +5,7 @@ import {unstable_setRequestLocale} from 'next-intl/server';
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
 import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/functions/fonts';
+import Hero from '../components/heroModule';
 import styles from './page.module.css';
 import Gallery from '../components/gallery';
 import Image from 'next/image';
@@ -12,7 +13,11 @@ import grundriss from '../../../../public/Appartements_1.webp';
 import PricingTable from '../components/pricingTable';
 import pricesGeneral from '../../../../data/pricesGeneral'
 import PricingTableVarious from '../components/pricingTableVarious';
+import HeroImage from '../../../../public/P1190113_2550x1274-180-60.webp';
+import Booking from '../components/booking';
+
 import {BgImage} from '../components/types';
+
 import BackgroundImage from '../components/backgroundImage';
 
 
@@ -50,7 +55,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
     unstable_setRequestLocale(locale);
     const t = useTranslations('studio');
 
-  
+    let imageAlt: string = t('heroImageAlt');
     const h1 = t('h1');
     const h1subtitle = t('h1subtitle');
     const altLayout = t('altLayout');
@@ -66,15 +71,28 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                 />
         </Head>
     <section className={styles.container}> 
+            <Hero 
+                imageUrl = {HeroImage}
+                imageUrlAlt = {imageAlt}
+                calledFrom = "studio">
+            </Hero>
+        
+        
+        
+        
         <h1  className={`${heroFont.className}  ${styles.h1Container}`}>  
-                    <div >
-                        <div className={styles.h1}>{h1}</div>
-                        <div className={`${h3Font.className} ${styles.subtitle}`}>{h1subtitle}</div>
-                    
-                    </div>
+            <div className={styles.h1Text}>
+                <div className={styles.h1}>
+                    {h1}
+                </div>
+                <div className={`${h3Font.className} ${styles.subtitle}`}>
+                    {h1subtitle}
+                </div>
+            </div>
             <button className={styles.bookButton}>{bookingButton}</button>
-             
         </h1>
+
+        <Booking apartmentId={"21197"}/>
         <BackgroundImage type ={'A'}/>
        
     </section>

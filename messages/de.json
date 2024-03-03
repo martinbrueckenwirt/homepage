@@ -15,8 +15,9 @@
       "intro4a":"<b>Seilbahn</b>",
       "intro5":"Wir haben ein paar 'Geheimtipps' für Sie, die in keinem Reiseführer stehen....",
       "intro6":"Unsere Ferienwohnungen verfügen über eine vollwertige Küchenausstattung mit Geschirrspüler, elektrischem Herd mit Backofen, Kühlschrank mit Gefrierfach, Wasserkocher und Kaffeemaschine sowie umfangreichen Küchenutensilien.",
-      
-      "moreDetails":"mehr Informationen",
+      "pricesummer":"Preis Sommer ab:",
+      "pricewinter":"Preis Winter ab:",
+      "moreDetails":"mehr Details",
       "altStudio":"Bild des Appartement Studio",
       "altJunior": "Bild des Appartement Junior",
       "altFamily": "Bild des Appartement Family",
@@ -25,31 +26,19 @@
       "studioHeadline":"Studio",
       "studioSubHeadline": "Das kuschelige Appartement",
       "studioText1": "30m² für 2-3 Personen",
-      "studioText2": "geräumiger Schlafraum mit Doppelbett und Ausziehcouch",
-      "studioText3": "getrennte Küche, großzügiger Balkon Richtung Westen...",
       "juniorHeadline":"Junior",
       "juniorSubHeadline": "Das ruhige Appartment mit Blick ins Grüne",
       "juniorText1": "37m² für 2-4 Personen",
-      "juniorText2": "geräumiger getrennter Schlafraum mit Doppelbett",
-      "juniorText3": "Wohnraum mit Ausziehcouch, großzügiger Balkon in Richtung Garten...",
-      "familyHeadline":"Family",
+      "familyHeadline":"Family Comfort",
       "familySubHeadline": "Appartement mit 2 Schlafzimmern und Balkon",
       "familyText1": "56m² für 4-6 Personen",
-      "familyText2": "2 getrennte Schlafräume mit Doppelbetten",
-      "familyText3": "Wohnraum mit Ausziehcouch, großzügiger Balkon in Richtung Süden...",
-      "familyExclusiveHeadline":"FamilyExclusive",
+      "familyExclusiveHeadline":"Family Superior",
       "familyExclusiveSubHeadline": "Appartement mit 2 Schlafzimmern und Balkon",
       "familyExclusiveText1": "56m² für 4-6 Personen",
-      "familyExclusiveText2": "2 getrennte Schlafräume mit Doppelbetten",
-      "familyExclusiveText3": "großzügiger Balkon in Richtung Süden, Wärmekabine...",
       "topSuiteHeadline":"TopSuite",
       "topSuiteSubHeadline": "Das großzügige Appartement unter dem Dach",
-      "topSuiteText1": "87m² für 4-7 Personen",
-      "topSuiteText2": "2 getrennte Schlafräume, 2 Bäder, Infrarotkabine",
-      "topSuiteText3": "großer gemütlicher Wohnraum..."
-
-
-
+      "topSuiteText1": "87m² für 4-7 Personen"
+ 
     },
     "cafe":{
       "quote": "<q>Die schönste Sonnenterrasse im Pustertal</q>",
@@ -129,8 +118,7 @@
       "metaDescription":"Wunderschön gelegenes Appartementhaus mit modernen Appartements / Ferienwohnungen direkt am Schigebiet Sillian / Thurntaler für Ihren perfekten Urlaub in Osttirol; sehr kinderfreundlich, großer Garten,  hochwertige Ausstattung, Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
       "metaTitle":"Moderne Ferienwohnungen direkt am Schigebiet in Osttirol",
       "title": "Urlaub in den Bergen",
-      "pricesummer":"Preis Sommer ab:",
-      "pricewinter":"Preis Winter ab:",
+  
       "persons":"Personen",
       "welcome":"Willkommen in unseren  <b>Appartements / Ferienwohnungen</b> direkt am Schigebiet Thurntaler Sillian.<br><br> Genießen Sie Ihren verdienten <b>Wohlfühlurlaub inmitten der Berge</b>. Die Drei Zinnen, die Lienzer Dolomiten, die Villgrater Berge bilden zu allen Jahreszeiten die imposante Kulisse für Ihre Unternehmungen.",
       "textmodul1":"Ferienwohnungen mit 32m²-85m² für 2-7 Personen",
@@ -186,6 +174,7 @@
       "pets":"Haustiere - Reinigungskosten"
     },
     "studio":{
+      "heroImageAlt":"Bild des Appartement Studio",
       "altLayout":"Grundriss",
       "title": "Ferienwohnung Studio",
       "description":"Ferienwohnung 32m² für 2-3 Personen. Ausblick nach Westen.",

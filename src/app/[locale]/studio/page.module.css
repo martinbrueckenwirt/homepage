@@ -1,29 +1,35 @@
 .container{
 position:relative;
-margin-top: 230px;
 margin-bottom: 4rem;
 
 
 }
 
 .h1Container{
+    width:100%;
     display:flex;
     justify-content:space-between;
-    width:100%;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin-top: 12rem;
+    /* padding-left: var(--padding-left); */
     margin-bottom:0;
     padding-bottom: 0;
     
 }
+
+.h1Text{
+    padding-left:var(--padding-left);
+    display:flex;
+    flex-direction: column;
+}
 .h1{
-   
+   display:flex;
     font-weight: var(--fontweight-h1Text);
     font-size: var(--fontsize-h1Text);
 }
 
 .subtitle{
-    
+    display:flex;
+    justify-content:space-between;
     margin-bottom:0;
     margin-top:0;
     padding-bottom: 0;
@@ -32,12 +38,14 @@ margin-bottom: 4rem;
 }
 
 .bookButton{
-  
-  /*width: 10rem;
-  height: 5rem; */
+    /* display:flex; */
+    /* justify-content:space-between; */
+  width:fit-content;
+  /*height: 5rem; */
   height: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  margin-right: 2rem;
+  /* padding-left: 2rem; */
+  /* padding-right: 2rem; */
   background-color: var(--red);
     border:1px solid var(--red);    
   font-size: 20px;

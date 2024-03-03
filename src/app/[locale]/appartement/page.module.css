@@ -68,19 +68,33 @@
     background-color: var(--background-medium);
     
 }
+.appartementCardTextLeft{
+    margin-top: 1rem;;
+    padding:1rem;
+    display:flex;
+    justify-content:space-between;
+    background-color: var(--background-medium);
+    
+}
 
 .cardImage{
  width: 400px;
  height:auto;
- margin:0.5rem;
+ /* margin:0.5rem; */
  padding:0;
  box-shadow: 10px 20px 15px rgb(155, 154, 154);
  border-radius: 5px;
 }
 
-.cardTextBlock{
+.cardTextBlockLeft{
+    /* margin-left:2rem; */
+    width: 50%;
+}
+
+
+.cardTextBlockRight{
     margin-left:2rem;
-    width: 70%;
+    width: 50%;
 }
 .cardHeadline{
     margin-top:0.5rem;
@@ -99,6 +113,13 @@
     font-size: var(--fontsize-h4Text);
 }
 
+.cardTextCompact{
+    font-weight: var(--fontweight-h4Text);
+    font-size: var(--fontsize-h4Text);
+    line-height: 0.2%;
+}
+
+
 .buttonContainer{
     margin-top:2.5rem;
     left:1em;
@@ -112,6 +133,7 @@
 
 .buttonLeft{
     padding: 1rem;
+    width: fit-content;
     height:3em;
     z-index: 2;
    /* background-color: rgb(245, 245, 245);
@@ -134,8 +156,9 @@
 
 
 .buttonRight{
-    padding: 1em;
+    padding: 1rem;
     height:3em;
+    width: fit-content;
     border: 1px solid rgb(245, 245, 245);
     background-color: var(--background-dark);
     z-index: 2;
@@ -168,30 +191,205 @@
     content: url('../../../../public/caret-right.webp');
 }
 
-@media(max-width:399px){    }
-@media(min-width:400px) and (max-width: 779px){    }
-@media(min-width:780px)  and (max-width: 1079px){}
-@media(min-width:1080px)  and (max-width: 1399px){    }
-@media(min-width:1400px)and (max-width: 1999px){
+@media(max-width:779px){    
+    .spacerHead{
+        top:5rem; /*direkt unmter Hero*/
+          }
+    .h1{
+        font-size: var(--fontsize-h2Text);
+        font-weight: var(--fontweight-h3Text);
+        padding-left:0;
+ 
+      }
+    
+      .textTeaserContainer{
+        
+        margin-top: 5rem;
+              }
+
+       
+      .teaser{
+       margin-right: 0.1rem;
+       width:100%;
+    }
+    
+     .teaserText{
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h4Text);
+    }
+
+    .appartmentContainer{
+        width:calc(100%);
+     }
+
+    .appartementCard{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        padding:0;
+    }
+
+    .appartementCardTextLeft{
+        display:flex;
+        flex-direction:column-reverse;
+        justify-content:space-between;
+    }
     .cardImage{
-        width: 80%;
-        /* height:auto; */
+        display:flex;
+        justify-content:center;
+        width: 100%;
+    }
+    .cardTextBlockLeft{
+        /* margin-left:2rem; */
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        padding-left:1rem;
+    }
+    
+    
+    .cardTextBlockRight{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        
+    }
+    .cardHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h4Text);
+    }
+    .cardSubHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .cardText{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    
+    .cardTextCompact{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+       }
+    .buttonLeft, .buttonRight{
+        font-size: 15px;
+        /* padding-bottom: 2rem; */
+
+    }   
+   
+        
+
+}
+/* @media(min-width:400px) and (max-width: 779px){    } */
+@media(min-width:780px)  and (max-width: 1079px){
+    .appartmentContainer{
+        width:calc(80%);
+     }
+
+    .appartementCard{
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+
+    .appartementCardTextLeft{
+        display:flex;
+        flex-direction:column-reverse;
+        justify-content:space-between;
+    }
+    .cardImage{
+        display:flex;
+        justify-content:center;
+        width: 100%;
+    }
+    .cardTextBlockLeft{
+        /* margin-left:2rem; */
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        padding-left:1rem;
+    }
+    
+    
+    .cardTextBlockRight{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 100%;
+        
+    }
+    .cardHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h3Text);
+    }
+    .cardSubHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h4Text);
+    }
+    .cardText{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    
+    .cardTextCompact{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+       }
+    .buttonLeft, .buttonRight{
+        font-size: 20px;
+        padding-bottom: 2rem;
+
+    }   
+   
+        
+}
+@media(min-width:1080px)  and (max-width: 1399px){    
+    .cardImage{
+        width: 100%;
         margin:0.5rem;
-        /* padding:0; */
-        box-shadow: 10px 20px 15px rgb(155, 154, 154);
-        border-radius: 5px;
+       
        }
     .cardHeadline{
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h3Text);
     }
     .cardSubHeadline{
-        /* margin-top:0.5rem; */
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h4Text);
     }
     .cardText{
-        /* line-height:1.5 rem; */
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+    }
+    .cardTextCompact{
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h5Text);
+       }
+    .buttonLeft, .buttonRight{
+        font-size: 15px;
+    }   
+   
+       
+
+}
+@media(min-width:1400px)and (max-width: 1999px){
+    .cardImage{
+        width: 80%;
+        margin:0.5rem;
+      
+       }
+    .cardHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h3Text);
+    }
+    .cardSubHeadline{
+        font-weight: var(--fontweight-h3Text);
+        font-size: var(--fontsize-h4Text);
+    }
+    .cardText{
         font-weight: var(--fontweight-h4Text);
         font-size: var(--fontsize-h4Text);
     }

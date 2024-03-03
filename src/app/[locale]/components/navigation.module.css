@@ -8,14 +8,13 @@
    
 
     .topBarTransparent{
-        /*top: 50px;*/
+        position: fixed;
+        top:0;
         padding-top:10px;
         height:40px; 
         display: flex;
         justify-content: space-between;
-        position: fixed;
         width:100%;
-      
         background: var(--background-light);
         z-index:99;
     }
@@ -83,7 +82,6 @@
     .navbarTransparent{
         background: var(--background-light);
         position: fixed;
-        /*top:60px;*/
         top: 50px;
         height: 50px; /* 50px + 50px = gesamthöhe Nav 100*/
         width: 100%;

@@ -46,6 +46,7 @@ export default function Home({params: {locale}}: {params: {locale: any}}) {
 
     let imageAlt: string="";
     imageAlt = t('heroimagealt');
+    
     let altAppartment: string = t('altAppartment');
     let appartmentTeaser: string = t('appartmentTeaser');
     let appartmentHeadline: string = t('appartmentContainerHeadline');
@@ -60,7 +61,7 @@ export default function Home({params: {locale}}: {params: {locale: any}}) {
     let greetingText: string = t('greetingText');
     let greetingText2: string = t('greetingText2');
     let greetingText3: string = t('greetingText3');
-    
+    let linkAppartment = `/${locale}/appartement`;
     
     /* Muster für zb "<important> abc </important" */
     /*text1 = t.markup('text1',{
@@ -121,7 +122,8 @@ return (
                         <div className={`${h1Font.className} ${styles.text}`} >
                             {appartmentText}
                         </div>
-                        <Link href="#">
+                        <Link href={linkAppartment}>
+                           
                             <div className={styles.button}>
                                 <button className={styles.button}> {t('details')}</button>        
                              </div>

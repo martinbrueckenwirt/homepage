@@ -29,6 +29,7 @@ import english from '../../../../public/England_30x25.webp';
 import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
+import ViewPortSize from '../components/helperGetViewportSize';
 
 export default function Navigation({ home, appartment, cafe, contact, about}: NavigationProps) {
  
@@ -105,7 +106,7 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
 
 
         <>
-       
+         <ViewPortSize />
         <div className = {topTransparent === true 
             ? styles.topBar
             : styles.topBarTransparent     

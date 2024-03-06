@@ -1,4 +1,6 @@
 .test{
+    margin-top: 250px;
+   
     display: flex;
     justify-content: center;
 }

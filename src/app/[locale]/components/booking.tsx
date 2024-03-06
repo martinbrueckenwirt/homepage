@@ -3,7 +3,7 @@ import React, { use } from 'react'
 import styles from './booking.module.css';
 import { Booking } from './types'
 import {useLocale} from 'next-intl';
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import Script from 'next/script';
 
 
@@ -14,7 +14,7 @@ export default function Booking(props: Booking) {
 	// Übergabe der Apartment-ID und der Sprache
 	
 	const locale = useLocale();
-	const [isLoaded, setIsLoaded] = useState(true);
+	
 
 	// useEffect feuert ein Event, das von /public/scripts/viomaIntegration.js abgefangen wird	
 	useEffect(() => {
@@ -24,8 +24,13 @@ export default function Booking(props: Booking) {
 				language: locale
 			}
 		};
-        const event = new CustomEvent('viomaLoadEvent', eventDetail );
-        document.dispatchEvent(event);
+	// console.log('booking useEffect' + props.apartmentId + ' ' + locale)
+			const event = new CustomEvent('viomaLoadEvent', eventDetail);
+			document.dispatchEvent(event);
+	
+		
+  
+		
     }, [locale,props.apartmentId]);
  
 

@@ -14,7 +14,7 @@ import PricingTable from '../components/pricingTable';
 import pricesGeneral from '../../../../data/pricesGeneral'
 import PricingTableVarious from '../components/pricingTableVarious';
 import HeroImage from '../../../../public/P1190113_2550x1274-180-60.webp';
-import Booking from '../components/booking';
+
 
 import {BgImage} from '../components/types';
 
@@ -95,9 +95,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                 <button className={styles.bookButton}>{bookingButton}</button>
             </Link>
         </h1>
-        {/* <div id="vri-container-21197" className ={styles.test}>
-              <Booking apartmentId={"21197"}/>
-        </div> */}
+       
        
         <BackgroundImage type ={'A'}/>
        

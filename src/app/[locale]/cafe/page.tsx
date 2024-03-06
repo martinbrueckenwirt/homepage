@@ -5,7 +5,7 @@ import { useState, useEffect} from 'react';
 // import BookingDE from '../components/bookingDE';
 
 // import BookingEN from '../components/bookingEN';
-import Booking from '../components/booking';
+
 import Slider from '../components/slider';
 
 
@@ -29,7 +29,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                 <Slider />
             TEST Hauptcontainer 
             </div>
-            <Booking apartmentId={"20845"}/>
+  
         </>
     );
         

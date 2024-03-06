@@ -15,7 +15,7 @@ import Aktivitaeten from '../../../public/P2566866-1.webp';
 import Greeting from '../../../public/P2658668-RW2-1.webp';
 import Background from '../../../public/Landkarte_50proz.png';
 
-import Booking from './components/booking';
+
 
 
 import {getTranslations} from 'next-intl/server';
@@ -90,7 +90,7 @@ return (
             </div>
         </div>
 
-     <Booking apartmentId={"20845"}/>
+    
     </section>
          
         <div className={styles.outerWrapper}>

@@ -34,19 +34,16 @@ function viomaIntegration(apartmentId, language){
 	
 	if (document.body) {
 		
+		// const existingLine = document.getElementById(containerId);
+		// const newLine = document.createElement("div");
+		// newLine.textContent = containerId;
+		// existingLine.parentNode.insertBefore(newLine, existingLine.nextSibling);
 		
-		if (document.getElementById(containerId)) {
-			console.log('viomaIntegrationjs Container existiert bereits');
-		}
-		else {
-			console.log("viomaIntegrationjs Container wird erstellt");
-			var element = document.createElement('div');
-			element.id = containerId;
-			document.body.appendChild(element);
-		}
-		// var element = document.createElement('div');
-		// element.id = containerId;
-		// document.body.appendChild(element);
+
+
+		var element = document.createElement('div');
+		element.id = containerId;
+		document.body.appendChild(element);
 		
 	}
 	//Timeout um das Ausführen von vcst zu verzögern, um sicher zu gehen, dass die Function vollständig geladen ist

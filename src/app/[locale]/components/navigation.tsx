@@ -28,6 +28,7 @@ import german from '../../../../public/Deutschland_30x25.webp';
 import english from '../../../../public/England_30x25.webp';
 import italian   from '../../../../public/Italien_30x25.webp';
 import Link from 'next/link';  
+import { useSearchParams } from 'next/navigation';
 import {createSharedPathnamesNavigation} from 'next-intl/navigation';
 import ViewPortSize from '../components/helperGetViewportSize';
 
@@ -38,23 +39,32 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
     const [isBurgerMenueVisible, setIsBurgerMenueVisible]= useState<boolean>(false);
     const [isStartUp, setIsStartUp]= useState<boolean>(true);
     const {Link, useRouter, usePathname} = createSharedPathnamesNavigation({locales});
-    const [myPathname, setMyPathname] = useState<string>("");
+  
     const router = useRouter();
     let pathname = usePathname();
-
+    
     
     let  phoneNumber: string = "+43664805563922";
     let  email: string = "office@derbrueckenwirt.at";
     const locale = useLocale();
+    const searchParams = useSearchParams(); // Use the hook to get query parameters
+    const id = searchParams.get('id');
+    let myPathname:string = pathname;
   
     
     function setNewPath(lang:string) {
         if (lang === locale) return;
-     
-        router.replace( pathname, { locale: lang } );
-             
-       return;
+    
+        if(id) {    
+            myPathname=myPathname + "?id=" + id;
+        }
+    
+        router.replace( myPathname, { locale: lang }  );
+        return;
     }
+
+    
+
 
     const HorizontalRow = () => {
         return (

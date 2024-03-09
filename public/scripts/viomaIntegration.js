@@ -7,7 +7,7 @@ var forceWindowReload = 1;
 var entryCounter = 0;
 var entryDocumentBody = 0;
 
-console.log('viomaIntegrationjs Eingang');
+
 
 var viomaUrl = 'https://cst-client-hotel-brueckenwirt.viomassl.com/';
 var viomaJs  = viomaUrl+'js/vri/vri.js';
@@ -30,8 +30,7 @@ function viomaIntegration(apartmentId, language){
 	if (language != sessionLanguage) 
 	{
 		window.location.reload();
-		console.log('viomaIntegrationjs Sprache hat sich geändert, Seite wird neu geladen');
-				
+	
 	}
 
 	function isEven(n) {
@@ -50,15 +49,15 @@ function viomaIntegration(apartmentId, language){
 		entryDocumentBody++;
 
 		var isEvenValue = isEven(entryCounter);
-		console.log('!!!! forceWindowReload, entryCounter, isEven, entryDocumentBody: ', forceWindowReload , entryCounter, isEvenValue, entryDocumentBody);
+		// console.log('!!!! forceWindowReload, entryCounter, isEven, entryDocumentBody: ', forceWindowReload , entryCounter, isEvenValue, entryDocumentBody);
 		if ((forceWindowReload === 1) && isEven(entryCounter)&& (entryDocumentBody > 2)){
 			
 			var isEvenEntryDocumentBody = isEven(entryDocumentBody);
-			console.log('isEvenEntryDocumentBody, entryDocumentBody ', isEvenEntryDocumentBody, entryDocumentBody);
+			// console.log('isEvenEntryDocumentBody, entryDocumentBody ', isEvenEntryDocumentBody, entryDocumentBody);
 			if (isEven(entryDocumentBody)){
-				console.log('******forceWindowReload ist true, Seite wird neu geladen');
+				// console.log('******forceWindowReload ist true, Seite wird neu geladen');
 				window.location.reload();
-				forceWindowReload = 1;
+				// forceWindowReload = 1;
 				}
 			}
 
@@ -98,7 +97,6 @@ document.addEventListener('viomaLoadEvent', function (event) {
 function getLanguageFromPath(){
 	var path = window.location.pathname;
 	var language = path.split('/')[1];
-	console.log('viomaIntegrationjs getLanguageFromPath: '+language);
 	return language;
 }
 		

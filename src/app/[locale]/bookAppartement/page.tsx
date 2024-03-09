@@ -28,7 +28,7 @@ export default function BookAppartement({params: {locale}}: {params: {locale: an
             viomaID = "1206";
             return
         }
-        console.log('bookAppartement nicht gefunden ' + myId);
+        console.log('bookAppartement myID nicht gefunden ' + myId);
         return "";
     }
    

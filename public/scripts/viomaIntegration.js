@@ -3,6 +3,11 @@
 // Einbindung im Layout.tsx
 
 var sessionLanguage = getLanguageFromPath();
+var forceWindowReload = 1;
+var entryCounter = 0;
+var entryDocumentBody = 0;
+
+console.log('viomaIntegrationjs Eingang');
 
 var viomaUrl = 'https://cst-client-hotel-brueckenwirt.viomassl.com/';
 var viomaJs  = viomaUrl+'js/vri/vri.js';
@@ -22,10 +27,17 @@ var viomaJs  = viomaUrl+'js/vri/vri.js';
 // Dies erfolgt "hart" über window.location.reload() und hebelt die Caching-Mechanismen von Nextjs aus
 
 function viomaIntegration(apartmentId, language){
-	if (language != sessionLanguage)
+	if (language != sessionLanguage) 
 	{
 		window.location.reload();
+		console.log('viomaIntegrationjs Sprache hat sich geändert, Seite wird neu geladen');
+				
 	}
+
+	function isEven(n) {
+		return n % 2 == 0;
+	}	
+
 	
 
 	// erstellen des vioma Containers, dieser hat eine eindeutige Struktur
@@ -34,12 +46,21 @@ function viomaIntegration(apartmentId, language){
 	
 	if (document.body) {
 		
-		// const existingLine = document.getElementById(containerId);
-		// const newLine = document.createElement("div");
-		// newLine.textContent = containerId;
-		// existingLine.parentNode.insertBefore(newLine, existingLine.nextSibling);
-		
+		  		
+		entryDocumentBody++;
 
+		var isEvenValue = isEven(entryCounter);
+		console.log('!!!! forceWindowReload, entryCounter, isEven, entryDocumentBody: ', forceWindowReload , entryCounter, isEvenValue, entryDocumentBody);
+		if ((forceWindowReload === 1) && isEven(entryCounter)&& (entryDocumentBody > 2)){
+			
+			var isEvenEntryDocumentBody = isEven(entryDocumentBody);
+			console.log('isEvenEntryDocumentBody, entryDocumentBody ', isEvenEntryDocumentBody, entryDocumentBody);
+			if (isEven(entryDocumentBody)){
+				console.log('******forceWindowReload ist true, Seite wird neu geladen');
+				window.location.reload();
+				forceWindowReload = 1;
+				}
+			}
 
 		var element = document.createElement('div');
 		element.id = containerId;
@@ -49,28 +70,35 @@ function viomaIntegration(apartmentId, language){
 	//Timeout um das Ausführen von vcst zu verzögern, um sicher zu gehen, dass die Function vollständig geladen ist
 	//das sind die eigentlich relevanten Zeilen für den Aufruf der Buchungstrecke
 	setTimeout(function () {
-		console.log('viomaIntegrationjs vcst wird aufgerufen');
 		vcst( {load: 'init', url: viomaUrl, set_language: language} );
 		vcst( {id:apartmentId} );
+		entryCounter++;
 	}, 10 );
+	
+
+
+		// Clean up the event listener when it was fired -copilot
+document.removeEventListener('viomaLoadEvent', function() {
+	console.log('viomaIntegrationjs viomaLoadEvent entfernt');
+});
 	
 }
 
 // Eventlistener für die Buchungstrecke, er wird von booking.tsx ausgelöst
 document.addEventListener('viomaLoadEvent', function (event) {
-	console.log('viomaIntegrationjs viomaLoadEvent erhalten');
 	setTimeout( function(){
 		viomaIntegration(event.detail.apartmentId, event.detail.language);
 	}, 10);
+
 });		
-	// Clean up the event listener when it was fired -copilot
-document.removeEventListener('viomaLoadEvent', function() {});
+
      
 
 	
 function getLanguageFromPath(){
 	var path = window.location.pathname;
 	var language = path.split('/')[1];
+	console.log('viomaIntegrationjs getLanguageFromPath: '+language);
 	return language;
 }
 		

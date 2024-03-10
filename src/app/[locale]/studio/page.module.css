@@ -78,6 +78,7 @@ margin-bottom: 4rem;
     margin-right: 2rem;;
     font-weight: var(--fontweight-h3Text);
     font-size: var(--fontsize-h3Text);
+
 }
 /*Einzelzeile des Containers*/
 .textContainer1Text div{
@@ -86,24 +87,45 @@ margin-bottom: 4rem;
 
 .detailsContainer{
     display:flex;
+    flex-direction: row;
     justify-content: align-items;
     margin-top: 5rem;
-    margin-left: 2rem;
-    width:100%;
+    margin-left: 10rem;
+    max-width:80%;
+    
 
+}
+
+.imageContainer{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    /* height: calc((30/4)*3vw); */
+    /* margin-top:1.3rem; Bild und Text oben gleiche Linie */
+    margin-right: 5rem;
+    /* margin-bottom:2rem; */
+    /* padding-bottom: 0;  */
 }
 
 .grundriss{
-    width: 30%;
+   
     height: calc((30/4)*3vw);
-    margin-top:1.3rem; /*Bild und Text oben gleiche Linie */
-    margin-right: 2rem;
-    margin-bottom:2rem;
+    margin-top:1.3rem; /*Bild und Text oben gleiche Linie*/
     
+}
+
+.layoutText{
+    display:flex;
+    justify-content: center ;
+    font-weight: var(--fontweight-h5Text);
+    font-size: var(--fontsize-h5Text);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding-bottom: 0; 
 }
+
 .textContainer2Text{
-    font-weight: var(--fontweight-h5Text);
+    font-weight: var(--fontweight-h4Text);
     font-size: var(--fontsize-h4Text);
 }
 /*Einzelzeile der Textdetails*/
@@ -115,20 +137,36 @@ margin-bottom: 4rem;
     height:2rem;
 }
 
-.containerpricing{
-    margin-top: 12rem;
-    
+.pricingOuterContainer{
+    display:flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-bottom: 0;
+}
+
+.containerPricing{
+        margin-top: 12rem;
+        width:70%;
+        
+        display:flex;
+        flex-direction: column;
+      /* align-items: center; */
+        justify-content: center;
+        
+    border:1px solid var(--border-pricetable);   
 }
 
 .pricingHeadline{
-    /*entspricht appartmentcontainer Startseite*/
-    margin-left: 40rem;
-    margin-top: 5rem;
-    padding: 1rem;
+
     display: flex;
-    justify-content: flex-start;
-    background-color: var(--background-light);
-    font-size: var(--fontsize-h1Text);
+    justify-content: center;    
+    padding-top: 1.5rem;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+   
+    font-size: var(--fontsize-h4Text);
     font-weight: var(--fontweight-h2Text);
 }
 
@@ -138,7 +176,7 @@ margin-bottom: 4rem;
     .detailsContainer{
         margin-left: 2rem;
         width:95%;
-        background-image: ;
+        /* background-image: ; */
     }
     
     .h1{
@@ -177,14 +215,24 @@ margin-bottom: 4rem;
     
 
     .detailsContainer{
+        flex-direction: column;
+        /* justify-content: align-items; */
+        /* margin-top: 5rem; */
+        align-items: center;
+        max-width:90%;
         margin-left: 2rem;
         width:95%;
-    }
+     }
+
+     .imageContainer{
+        width: 80%;
+          }
    
     .h1{
         font-weight: var(--fontweight-h4Text);
         font-size: var(--fontsize-h3Text);
     }
+    
     
     .bookButton{
        
@@ -193,35 +241,46 @@ margin-bottom: 4rem;
         font-weight:bold
     }
     .subtitle{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
         }
     .textContainer1Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
     .textContainer2Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
 
     .pricingHeadline{
         margin-left: 6rem;
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
-        font-weight: var(--fontweight-h5Text);
     }
    }
 @media(min-width:780px)  and (max-width: 1079px){
     
     .h1{
-        font-weight: var(--fontweight-h4Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h3Text);
         
     }
     .detailsContainer{
+        flex-direction: column;
+        align-items: center ;
+        /* justify-content: align-items; */
+        /* margin-top: 5rem; */
+        
+       
         margin-left: 2rem;
         width:95%;
+        max-width:95%;
     }
+
+    .imageContainer{
+        width: 50%;
+          }
    
     .bookButton{
        
@@ -230,26 +289,37 @@ margin-bottom: 4rem;
         font-weight:bold
     }
     .subtitle{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
         }
+
+    .imageContainer{
+            
+            width: 45%;
+            
+            margin-right: 2rem;
+            /* margin-bottom:2rem; */
+            /* padding-bottom: 0;  */
+        }
+        
     .textContainer1Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
     .textContainer2Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
     .pricingHeadline{
         margin-left: 6rem;
+        font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
-        font-weight: var(--fontweight-h5Text);
+
     }
 }
 @media(min-width:1080px)  and (max-width: 1399px){    
     .h1{
-        font-weight: var(--fontweight-h4Text);
+        font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h3Text);
         
     }
@@ -266,21 +336,22 @@ margin-bottom: 4rem;
         font-weight:bold
     }
     .subtitle{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
         }
     .textContainer1Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
     }
     .textContainer2Text{
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
     }
     .pricingHeadline{
         margin-left: 6rem;
+        font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
-        font-weight: var(--fontweight-h5Text);
+   
     }
 
 

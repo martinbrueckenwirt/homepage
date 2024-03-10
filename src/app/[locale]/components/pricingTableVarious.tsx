@@ -14,7 +14,7 @@ const PricingTableVarious = () => {
     
     return (
         <>
-        <div className={styles.container}> 
+        <div className={styles.priceContainer}> 
             <div className={`${h1Font.className} ${styles.row}`}>        
                 <div className={styles.box1}>{finalCleaning}</div> 
                 <div className={styles.box2}>{pricesGeneral.finalCleaning}</div>      

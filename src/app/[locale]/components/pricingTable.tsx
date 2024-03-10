@@ -22,9 +22,9 @@ const PricingTable = (props:PricingList)  => {
 
 return (
 <>
-    <div className={`${h3Font.className} ${styles.container}`}> 
+    <div className={`${h1Font.className} ${styles.container}`}> 
             
-      <div className={styles.season}> {season}</div>
+      <div className={`${h1Font.className} ${styles.season}`}> {season}</div>
         <div className={styles.priceContainer}>
             
             {prices.map((price, index) => (
@@ -34,7 +34,7 @@ return (
                     {price.date}            
                 </div>
                 <div className={styles.price}>
-                    <span> € {price.price}   </span>
+                    <span> € {price.price},-- </span>
                                
                 </div>
             </div>))

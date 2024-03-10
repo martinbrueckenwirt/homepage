@@ -12,7 +12,9 @@
   --fontHandwriting: #baafa2;
   --background-card: #b0681638;
 
-
+  --background-pricetable-1:rgba(250, 241, 224, 0.2);
+  --background-pricetable-2:rgba(183, 176, 164, 0.2);
+  --border-pricetable:rgba(84, 81, 76, 0.3);
   --background-medium-warm: rgb(250, 241, 224);
   --background-medium-cold: rgb(211, 234, 245);
   --background-dark: #2f3436;

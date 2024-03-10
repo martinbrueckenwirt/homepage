@@ -18,7 +18,7 @@ export default function BackgroundImage(props:BgImage) {
                     alt="Hintergrundbild"
                     /*style={{objectFit: "cover"}  }*/
                     style={{
-                        objectFit: 'cover',
+                        // objectFit: 'cover',
                         opacity: 0.2,
                     /*    layout='fill', */
                       }}

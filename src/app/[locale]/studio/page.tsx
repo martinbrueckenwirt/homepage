@@ -63,6 +63,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
     const winterSeason = pricesGeneral.winterSeason;
     const id:string = "A";
     const bookingURL: string = `/${locale}/bookAppartement?id=${id}`;
+    const layoutText = t('layoutText');
 
     return (
     <>
@@ -74,9 +75,9 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
         </Head>
     <section className={styles.container}> 
             <Hero 
-                imageUrl = {HeroImage}
-                imageUrlAlt = {imageAlt}
-                calledFrom = "studio">
+                imageUrl = {HeroImage} 
+                imageUrlAlt = {imageAlt} 
+                calledFrom = "studio"> 
             </Hero>
         
         
@@ -97,7 +98,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
         </h1>
        
        
-        <BackgroundImage type ={'A'}/>
+        {/* <BackgroundImage type ={'A'}/> */}
        
     </section>
 
@@ -114,12 +115,18 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
         </section>
 
         <div className={styles.detailsContainer}>  
-            <Image className={styles.grundriss}
-                src={grundriss} 
-                alt={altLayout} 
-                height={500}
-                width={700}
-            />
+           <div className={styles.imageContainer}>
+                <Image className={`${h1Font.className}${styles.grundriss}`}
+                    src={grundriss} 
+                    alt={altLayout} 
+                    height={500}
+                    width={700}
+                    layout="responsive"
+                />
+                <div className={styles.layoutText}>
+                    {layoutText}
+                </div>
+            </div>
             <section className={styles.textContainer}>
                     <div className={`${h1Font.className} ${styles.textContainer2Text}`}>
                         <div dangerouslySetInnerHTML={{__html: t.raw('text5')}} />
@@ -139,7 +146,10 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                     </div>
             </section>
         </div> 
-        <section className={styles.containerPricing}>
+        <section className={styles.pricingOuterContainer}>
+
+            <div  className={`${h1Font.className} ${styles.containerPricing}`}> 
+                          
                 <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('winterSeason')}}
                      />
                 
@@ -150,19 +160,21 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                       
             />
                 </div>    
-            <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{__html: t.raw('summerSeason')}} />
-            <div>
-            <PricingTable
-                type = {'A'}
-                season={'summer'} 
-                       
-            />
-            </div>  
+       
+                <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{__html: t.raw('summerSeason')}} />
+                <div>
+                <PricingTable
+                    type = {'A'}
+                    season={'summer'} 
+                        
+                />
+                </div>
+           
             <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('various') }} />
-            <div>
-             <PricingTableVarious/>
-            </div>   
-            
+                <div>
+                <PricingTableVarious/>
+                </div>   
+            </div>
                 
         </section>
     </>

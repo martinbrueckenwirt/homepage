@@ -37,6 +37,16 @@ margin-bottom: 4rem;
     font-size: var(--fontsize-h3Text);
 }
 
+.claim{
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h2Text);
+   line-height: 50%;
+   transform: rotate(-20deg);
+   z-index:99;
+   color: var(--fontHandwriting);
+   /* margin-bottom:6rem; */
+}
+
 .bookButton{
     /* display:flex; */
     /* justify-content:space-between; */
@@ -146,7 +156,7 @@ margin-bottom: 4rem;
 }
 
 .containerPricing{
-        margin-top: 12rem;
+        margin-top: 10rem;
         width:70%;
         
         display:flex;
@@ -157,13 +167,17 @@ margin-bottom: 4rem;
     border:1px solid var(--border-pricetable);   
 }
 
+.gap{
+    margin-top:2rem;
+}
+
 .pricingHeadline{
 
     display: flex;
     justify-content: center;    
     padding-top: 1.5rem;
     /* display: flex; */
-    justify-content: center;
+
     align-items: center;
    
     font-size: var(--fontsize-h4Text);
@@ -185,6 +199,11 @@ margin-bottom: 4rem;
         font-size: var(--fontsize-h4Text);
         
     }
+
+    .claim{
+        display:none;
+    }
+
     .bookButton{
         
       
@@ -204,10 +223,20 @@ margin-bottom: 4rem;
         font-weight: var(--fontweight-h5Text);
         font-size: var(--fontsize-h5Text);
     }
+    .pricingOuterContainer{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    
+}
+.containerPricing{
+        margin-top: 2rem;
+          border:none; 
+       }
+
     .pricingHeadline{
-        margin-left: 5rem;
+        
         font-size: var(--fontsize-h5Text);
-        font-weight: var(--fontweight-h5Text);
+        font-weight: var(--fontweight-h3Text);
     }
 }
 
@@ -230,9 +259,14 @@ margin-bottom: 4rem;
    
     .h1{
         font-weight: var(--fontweight-h4Text);
-        font-size: var(--fontsize-h3Text);
+        font-size: var(--fontsize-h4Text);
     }
-    
+       .claim{
+        line-height: 1.5;
+        font-weight: var(--fontweight-h4Text);
+        font-size: var(--fontsize-h6Text);
+        
+    }
     
     .bookButton{
        
@@ -242,7 +276,7 @@ margin-bottom: 4rem;
     }
     .subtitle{
         font-weight: var(--fontweight-h3Text);
-        font-size: var(--fontsize-h5Text);
+        font-size: var(--fontsize-h6Text);
         }
     .textContainer1Text{
         font-weight: var(--fontweight-h3Text);
@@ -252,9 +286,19 @@ margin-bottom: 4rem;
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
+.pricingOuterContainer{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    
+}
+.containerPricing{
+        margin-top: 2rem;
+        border:none; 
+           
+}
 
     .pricingHeadline{
-        margin-left: 6rem;
+   
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
@@ -266,6 +310,9 @@ margin-bottom: 4rem;
         font-size: var(--fontsize-h3Text);
         
     }
+    .claim {
+        display:none;
+    }   
     .detailsContainer{
         flex-direction: column;
         align-items: center ;
@@ -310,8 +357,17 @@ margin-bottom: 4rem;
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
     }
+    .pricingOuterContainer{
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    
+}
+.containerPricing{
+        margin-top: 4rem;
+        
+}
     .pricingHeadline{
-        margin-left: 6rem;
+    
         font-weight: var(--fontweight-h3Text);
         font-size: var(--fontsize-h5Text);
 
@@ -323,11 +379,17 @@ margin-bottom: 4rem;
         font-size: var(--fontsize-h3Text);
         
     }
-    .detailsContainer{
-        margin-left: 2rem;
-        width:95%;
-    }
+    
    
+    .detailsContainer{
+        flex-direction: column;
+        align-items: center ;
+        /* width: 95%; */
+        /* justify-content: align-items; */
+        /* margin-top: 5rem; */
+       /* ; */
+        max-width:95%;
+    }
    
     .bookButton{
        
@@ -347,8 +409,13 @@ margin-bottom: 4rem;
         font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
     }
+    .pricingOuterContainer{
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    
+}
     .pricingHeadline{
-        margin-left: 6rem;
+
         font-weight: var(--fontweight-h2Text);
         font-size: var(--fontsize-h5Text);
    

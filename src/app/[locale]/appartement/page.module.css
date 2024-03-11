@@ -196,9 +196,9 @@
         top:5rem; /*direkt unmter Hero*/
           }
     .h1{
-        font-size: var(--fontsize-h2Text);
+        font-size: var(--fontsize-h3Text);
         font-weight: var(--fontweight-h3Text);
-        padding-left:0;
+        /* padding-left:1rem; */
  
       }
     
@@ -210,11 +210,11 @@
        
       .teaser{
        margin-right: 0.1rem;
-       width:100%;
+       width:90%;
     }
     
      .teaserText{
-        font-size: var(--fontsize-h5Text);
+        font-size: var(--fontsize-h4Text);
         font-weight: var(--fontweight-h4Text);
     }
 

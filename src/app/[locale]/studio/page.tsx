@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server';
 import {unstable_setRequestLocale} from 'next-intl/server'; 
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
-import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont } from '@/src/functions/fonts';
+import { heroFont, h1Font,h2Font, h3Font,textFont, footerFont, handwriting } from '@/src/functions/fonts';
 import Hero from '../components/heroModule';
 import styles from './page.module.css';
 import Gallery from '../components/gallery';
@@ -64,6 +64,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
     const id:string = "A";
     const bookingURL: string = `/${locale}/bookAppartement?id=${id}`;
     const layoutText = t('layoutText');
+    const claim = t('claim');
 
     return (
     <>
@@ -92,6 +93,9 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                     {h1subtitle}
                 </div>
             </div>
+                <div className={`${handwriting.className} ${styles.claim}`}  >  
+                    {claim}
+                </div>
             <Link href={bookingURL}>
                 <button className={styles.bookButton}>{bookingButton}</button>
             </Link>
@@ -170,7 +174,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
                 />
                 </div>
            
-            <div className={styles.pricingHeadline} dangerouslySetInnerHTML={{ __html: t.raw('various') }} />
+            <div className={`${styles.pricingHeadline} ${styles.gap}`} dangerouslySetInnerHTML={{ __html: t.raw('various') }} />
                 <div>
                 <PricingTableVarious/>
                 </div>   

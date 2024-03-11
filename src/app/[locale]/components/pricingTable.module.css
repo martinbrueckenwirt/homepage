@@ -71,17 +71,18 @@
 }
 @media(min-width:400px) and (max-width: 779px){    
    .season{
-      font-weight: var(--fontweight-h4Text);
+      
+      font-weight: var(--fontweight-h3Text);
       font-size: var(--fontsize-h4Text);
   }
   .date{
-   font-weight: var(--fontweight-h4Text);
-   font-size: var(--fontsize-h4Text);
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h5Text);
   }
 
 .price{
-   font-weight: var(--fontweight-h4Text);
-   font-size: var(--fontsize-h3Text);
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h5Text);
 }
 }
 @media(min-width:780px)  and (max-width: 1079px){
@@ -90,13 +91,13 @@
       font-size: var(--fontsize-h4Text);
   }
   .date{
-   font-weight: var(--fontweight-h4Text);
-   font-size: var(--fontsize-h4Text);
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h5Text);
   }
 
 .price{
-   font-weight: var(--fontweight-h4Text);
-   font-size: var(--fontsize-h3Text);
+   font-weight: var(--fontweight-h3Text);
+   font-size: var(--fontsize-h5Text);
 }
 }
 @media(min-width:1080px)  and (max-width: 1399px){     
@@ -105,13 +106,13 @@
    font-size: var(--fontsize-h4Text);
 }
 .date{
-font-weight: var(--fontweight-h4Text);
-font-size: var(--fontsize-h4Text);
+font-weight: var(--fontweight-h3Text);
+font-size: var(--fontsize-h5Text);
 }
 
 .price{
-font-weight: var(--fontweight-h4Text);
-font-size: var(--fontsize-h3Text);
+font-weight: var(--fontweight-h3Text);
+font-size: var(--fontsize-h5Text);
 }  }
 @media(min-width:1400px)and (max-width: 1999px){}
 @media(min-width:2000px){}

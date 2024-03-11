@@ -4,6 +4,7 @@
 .priceContainer{
     display:flex;
     /*height: calc(31vw);*/
+ 
     flex-direction: row;   
     flex-wrap:wrap; 
     gap: 0.3rem;
@@ -76,3 +77,81 @@
     grid-row: 2;
     border-bottom: 1px solid var(--border-pricetable);
 }
+
+
+
+   @media (max-width: 1399px){    
+/* @media(min-width:780px)  and (max-width: 1399px){     */
+.priceContainer{
+    flex-direction: column;   
+    flex-wrap:wrap; 
+    }
+
+.row{
+    grid-template-columns: 300px 50px 5px;
+    font-weight: var(--fontweight-h3Text);
+    font-size: var(--fontsize-h6Text);
+    max-width:70%;
+   }
+
+.box1{
+    grid-column: 1 / 2; 
+     align-self: flex-end;
+    /* margin-left: 1rem; */
+   
+}  
+.box2{
+    grid-column: 2/3 ; 
+    align-self: flex-start;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+  
+}
+.box3{
+    grid-column: 1 / 2;
+    grid-row:2;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+     
+}
+.box4{
+    grid-column: 2/3;
+      grid-row:2;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+    
+}
+        
+.box5{
+    grid-column: 1 / 2;
+    /* margin-left: 1rem; */
+    grid-row: 3
+  
+}
+.box6{
+    grid-column: 2/3;
+    grid-row: 3;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+}
+.box7{  
+    grid-column: 1 / 2;
+    grid-row: 4;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+   
+}
+.box8{
+    grid-column: 2 / 3;
+    grid-row: 4;
+    /* border-bottom: 1px solid var(--border-pricetable); */
+}
+
+
+
+}
+@media(min-width:1400px)and (max-width: 1999px){
+.row{
+     max-width:70%;
+    grid-template-columns: 250px 20px 70px 380px 10px 70px ;
+    font-weight: var(--fontweight-h3Text);
+    font-size: var(--fontsize-h5Text);
+   }
+
+}
+@media(min-width:2000px){}

@@ -5,7 +5,7 @@ import {unstable_setRequestLocale} from 'next-intl/server';
 import { Metadata } from 'next';
 import JsonLD from "../../../../data/metadata";
 import Head from 'next/head';
-import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
+import { heroFont, h1Font,handwriting, h2Font, h3Font, textFont, footerFont } from '@/src/functions/fonts';
 import Hero from '../components/heroModule';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -124,7 +124,7 @@ return (
             </h1>
         <div className={styles.textTeaserContainer}>
             <div className={`${h1Font.className} ${styles.teaser}`}>
-                <div className={styles.teaserText} dangerouslySetInnerHTML={{__html: t.raw('welcome')}} />
+                    <div className={`${handwriting.className} ${styles.teaserText}`} dangerouslySetInnerHTML={{__html: t.raw('welcome')}} />
                 <div className={styles.teaserText} dangerouslySetInnerHTML={{__html: t.raw('intro1')}} />
                 <div className={styles.intro} dangerouslySetInnerHTML={{__html: t.raw('intro2')}} />
                 <div className={`${styles.introCompact} ${styles.intro}`} dangerouslySetInnerHTML={{__html: t.raw('intro3a')}} />

@@ -1,0 +1,48 @@
+.container{
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.h1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 3rem;
+    width:90%;
+    margin-top:10rem;
+     font-size: var(--fontsize-h1Text);
+     font-weight: var(--fontweight-h1Text);
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.headline{
+    display: flex;
+    justify-content: flex-end;
+    /* width:90%; */
+    margin-top: 5rem;
+    /* margin-bottom: 5rem; */
+    font-size: var(--fontsize-h2Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.text{
+    display: flex;
+    justify-content: flex-end;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+    color: var(--red);
+}
+
+.text .a{
+    text-decoration: none;
+    color: var(--red);
+}

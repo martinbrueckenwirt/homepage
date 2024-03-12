@@ -62,7 +62,7 @@ export default function Studio({params: {locale}}: {params: {locale: any}}) {
     const bookingButton = t('bookingButton');
     const winterSeason = pricesGeneral.winterSeason;
     const id:string = "A";
-    const bookingURL: string = `/${locale}/bookAppartement?id=${id}`;
+    const bookingURL: string = `/${locale}/bookApartment?id=${id}`;
     const layoutText = t('layoutText');
     const claim = t('claim');
 

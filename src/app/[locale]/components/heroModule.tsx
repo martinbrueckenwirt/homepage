@@ -5,7 +5,8 @@ import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont } from '@/src/fu
 import { HeroProps } from './types';
 import {useLocale,useTranslations} from 'next-intl';
 
-import logo from '../../../../public/Logo2023_250x37.webp';
+// import logo from '../../../../public/Logo2023_250x37.webp';
+import logo from '../../../../public/LogoKreis.png';
 import logosmall from '../../../../public/Logo2023_148x22.webp';
 
 export default function Hero(props:HeroProps) {
@@ -25,8 +26,8 @@ export default function Hero(props:HeroProps) {
                     <Image 
                     src = {logo}
                     alt = "logo"
-                    width ={250}
-                    height ={37}
+                    width ={60}
+                    height ={60}
                     priority={true}
                     />
                 </Link>

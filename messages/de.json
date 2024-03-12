@@ -40,6 +40,57 @@
       "topSuiteText1": "87m² für 4-7 Personen"
  
     },
+
+    "bookApartment":{
+      "title": "Buchen Sie Ihre Ferienwohnung im Brückenwirt",
+      "description":"Buchen Sie Ihre Ferienwohnung im Brückenwirt Appartements in Heinfels bei Sillian, Osttirol. Direkt am Schigebiet Thurntaler Sillian. Moderne Appartements für 2-7 Personen. Sehr kinderfreundlich, großer Garten, hochwertige Ausstattung, Frühstücksbuffet im Haus, Cafe mit perfektem Cappucino im Erdgeschoß.",
+      "h1": "Buchen Sie Ihre Ferienwohnung mit Bestpreisgarantie!",
+      "headline": "Sichere, schnelle, kostengünstigste Buchung, keine Vermittlergebühren",
+      "text1": "Buchungsbedingungen"
+      
+    },
+    "bookingConditions":{
+        "h1":"Buchungsbedingungen",
+        "priceApartment":"Preis Appartement",
+        "priceApartmentText1":"Die Appartementpreise verstehen sich pro Appartement und Tag.",
+        "priceApartmentText2":"Bei den Pauschalen werden Programme je Anwendung oder je Person angeboten.",
+        "priceApartmentText3":"Die Preise beinhalten die gesetzliche Mehrwertsteuer.",
+        "priceApartmentText4":"Bitte entnehmen Sie die Details aus den Beschreibungen der Wohnungen.",
+        "h2":"Buchungen",
+        "h2Text1":"Es ist möglich, bestimmte Zimmerkategorien zu buchen. Wünsche hinsichtlich bestimmter Zimmer-Nummern und Etagen behalten wir uns vor. Natürlich versuchen wir Ihre Wünsche nach Möglichkeit zu erfüllen.",
+        "h3":"Inclusive Leistungen",
+        "h3Text1":"Bettwäsche und Handtücher, Wechsel nach 7 Tagen, Zusatzpolster/-decken möglich (bitte im Cafe nachfragen)",
+        "h3Text2":"WLAN, Sat TV, Safe",
+        "h3Text3":"Vollausgestattete Küche (Backofen, Geschirrspüler, Kühlschrank mit Gefrierfach, Kaffeemaschine, Wasserkocher und ausreichende Küchenutensilien,…)",
+        "h3Text4":"Jede Wohnung verfügt über einen oder mehrere Balkone",
+        "h3Text5":"Wandsafe",
+        "h3Text6":"Schikeller mit Schuhtrockner",
+        "h3Text7":"Gartenbenützung",
+        "h3Text8":"Kinderspielplatz",
+        "h3Text9":"Parkplatz (teilweise überdacht)",
+        "h4":"Ihre Reservierung",
+        "h4Text1":"Halten wir garantiert bis 19.00 Uhr. Eine spätere Anreise sprechen Sie bitte mit uns ab.",
+        "h5":"An- und Abreise",
+        "h5Text1":"Wir wollen Ihr Zimmer gründlich reinigen, bevor Sie es beziehen. Daher ist es erst ab 13:00 bezugsfertig.",
+        "h5Text2":"Am Abreisetag steht Ihnen das Zimmer bis 10:00 Uhr zur Verfügung.",
+        "h6":"Bezahlung",
+        "h6Text1":"Wir akzeptieren Mastercard, Visacard, American Express, EC-Karte oder Bargeld.",
+        "h7":"Anzahlung",
+        "h7Text1":"Für eine verbindliche Reservierung bitten wir Sie um eine Anzahlung von 20 % der Gesamtsumme. Die Anzahlung ist innerhalb von 10 Tagen nach Erhalt der schriftlichen Reservierungsbestätigung zu leisten. Bankverbindung: Osttiroler Volksbank; IBAN:AT584073000030002885, BIC OVLIAT21XXX. Der gesamte Betrag ist bei Anreise fällig. Zahlungsarten:",
+        "h7Text2":"Überweisung/Vorauskassa, Bankomat, Mastercard, Visa, bar vor Ort",
+        "h8":"Stornobedingungen",
+        "h8Text1":"… es kann immer mal was dazwischen kommen! Wir empfehlen Ihnen eine Reiserücktrittsversicherung abzuschließen. Beispielsweise können Sie eine solche bei der Europäischen Reiseversicherung abschließen. Stornierungen sind nur schriftlich gültig. Bis zu 30 Tage vor Urlaubsantritt kann kostenlos storniert werden. Von 30 Tage – 7 Tage vor Anreise stellen wir 80 % der Gesamtsumme in Rechnung. Ab 7 Tage vor Anreise, no-show, verspätete Anreise/verfrühte Abreise verrechnen wir 100 % der Gesamtsumme. Es gelten die österreichischen Hotelvertragsbedingungen. Erfüllungsort Sillian, Gerichtsstand Lienz in Osttirol.",
+        "h9":"Kurtaxe",
+        "h9Text1":"Die Kurtaxe wird ganzjährig von der Gemeinde Heinfels eingehoben und beträgt derzeit €2,– pro Person/Nacht.",
+        "h9Text2":"Kinder & Jugendliche bis zum Alter von 15 Jahren sind frei.",
+        "h10":"Mehrwertsteuer",
+        "h10Text1":"Unsere Preise sind Inklusive-Preise und enthalten den Steuersatz auf Übernachtungsleistungen.",
+        "h11":"Preisliste",
+        "h11Text1":"Beim Erscheinen einer neuen Preisliste verliert eine bestehende Preisliste ihre Gültigkeit. Es gilt der gesetzliche Mehrwertsteuersatz. Preisunterschiede in den einzelnen Preiskategorien entstehen nur durch Größe, Ausstattung und Lage der Zimmer oder die Buchung von Pauschalen. Alle anderen Leistungen sind gleich..",
+        "h12":"Haustiere",
+        "h12Text1":"Haustiere sind willkommen."
+      },
+
     "cafe":{
       "quote": "<q>Die schönste Sonnenterrasse im Pustertal</q>",
       "text1": "Urgemütlich",

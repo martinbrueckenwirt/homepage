@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import  JsonLD  from "../../../data/metadata";
 import '../styles/globalStyles.css';
 import { useTranslations } from 'next-intl';
+import {NextIntlClientProvider, useMessages} from 'next-intl';
 import React from 'react';
 import Loading from './loading';
 import { Suspense } from 'react';
@@ -70,6 +71,7 @@ export function generateStaticParams() {
 export default function LocaleLayout({children, params: {locale}}: {children: any, params: {locale: string}}) {
   // Validate that the incoming `locale` parameter is valid
   unstable_setRequestLocale(locale);
+  const messages = useMessages();
   const t = useTranslations('navigation');
   // const myLocale =locale;
   // console.log('Layout myLocale',myLocale);
@@ -96,12 +98,16 @@ export default function LocaleLayout({children, params: {locale}}: {children: an
   return (
     <html lang={locale}  >
       <body>
-        <Suspense fallback ={<Loading/>}>
-        <Navigation home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
-        {children}
-        <Footer locale ={locale} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} imprint={imprintTrans}/>
+        <Suspense fallback={<Loading />}>
+          <NextIntlClientProvider messages={messages} >
+            <Navigation home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} />
+                {children}
+            <Footer locale ={locale} home ={home} appartment={apartmentTrans} cafe={cafeTrans} contact={contactTrans} about={aboutTrans} imprint={imprintTrans}/>
+         
+          </NextIntlClientProvider >
         </Suspense>
-        <script id='viomaIntegration' src='/scripts/viomaIntegration.js' />
+            <script id='viomaIntegration' src='/scripts/viomaIntegration.js' />
+      
       </body>
 
     </html>

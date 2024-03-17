@@ -1,18 +1,20 @@
 /* Set initial opacity to 0 for all slides */
 .slider{
   position:relative;
-  width: 70vw;
+  width: 50vw;
 }
 
 
 .slide {
   /*wird im CafeModule verwendet*/
   position:absolute; /*die slides liegen übereinander*/  
-  width: 50vw; /*muss gleich sein wie cafeModule.module.css box1-width*/
+  width: 800px; /*muss gleich sein wie cafeModule.module.css box1-width*/
   height:auto;
   z-index:0;
   opacity: 0;
   transition: opacity 1.5s ease-in-out; /* Add a smooth transition effect */
+  box-shadow: var(--cardImageBoxShadow); /*appartmentCard*/
+  border-radius: var(--cardImageBorderRadius);
   }
   
   /* Set opacity to 1 for the active slide */

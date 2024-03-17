@@ -92,10 +92,8 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
           
     }
     
- 
+    
     const GetBurgerImage  = (Props:GetBurgerImageProps):React.JSX.Element=> {
-
-       
 
         let mySrc: StaticImageData = open;      
         if (Props.burgerMenueVisible === false) {
@@ -194,7 +192,7 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
         <div className={styles.visibility}> {/* ab600px*/}
             <div className={isBurgerMenueVisible === true
                 ? `${styles.burgerMenue}`
-                : isStartUp === true
+                : (isStartUp === true)
                     ? `${styles.burgerMenuInvisible}`
                     : `${styles.burgerMenueSlideOut}`}>
                 <div className = {`${styles.toggle} ${styles.close}`} onClick={handleClickMenueToggle}>
@@ -206,8 +204,13 @@ export default function Navigation({ home, appartment, cafe, contact, about}: Na
             
                 </div>
              
-                <div className={`${navbarFont.className} ${styles.burgerMenueItems}`} onClick={handleClickBurgerMenue}>
-                <ul >
+                {/* <div className={`${navbarFont.className} ${styles.burgerMenueItems}`} onClick={handleClickBurgerMenue}> */}
+                    <div id='Items' className={isStartUp
+                        ? `${styles.burgerMenueInvisible}`
+                        :`${navbarFont.className} ${styles.burgerMenueItems}`
+                        } onClick={handleClickBurgerMenue}> 
+               
+                    <ul >
                     <li> <Link href="/">{home}</Link></li>
                     <li> <Link href="/appartement">{appartment}</Link> </li>
                     <li> <Link href="/cafe">{cafe}</Link></li>

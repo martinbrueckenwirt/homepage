@@ -20,6 +20,7 @@ export default function BookApartment({params: {locale}}: {params: {locale: any}
     const h1 = t('h1');
     const headline = t('headline');
     const text1 = t('text1');
+     const bookingConditionsURL: string = `/${locale}/bookingConditions`;
 
 
     
@@ -54,7 +55,7 @@ export default function BookApartment({params: {locale}}: {params: {locale: any}
                 <div className={styles.innerContainer}>
                     <div className={`${h1Font.className} ${styles.headline}`}>{headline}</div>
                     <div className={`${h1Font.className} ${styles.text}`}>
-                        <Link className={styles.text}   href="/bookingConditions">
+                        <Link className={styles.text} href={bookingConditionsURL }>
                             {text1}
                         </Link>
                     </div>

@@ -11,12 +11,9 @@ import logosmall from '../../../../public/Logo2023_148x22.webp';
 
 export default function Hero(props:HeroProps) {
 
-    let myImage:string =  props.imageUrl;
-
     const t = useTranslations('hero');
     const bookingButton = t('bookingButton');
-
-
+   
     return(
 
         <div className = {styles.heroSection}>

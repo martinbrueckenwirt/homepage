@@ -21,6 +21,8 @@
   --red:rgb(245, 8, 8);
   --footerFont-color:rgb(249, 246, 246);
   --font-color:black; 
+  --cardImageBoxShadow: 10px 20px 15px rgb(155, 154, 154); /*appartment card*/
+  --cardImageBorderRadius:5px;
 
  
   --fontsize-hero:5em;
@@ -30,6 +32,7 @@
   --fontsize-h4Text:1.5em;
   --fontsize-h5Text:1.2em;
   --fontsize-h6Text:0.9em;
+  --fontsize-h7Text:0.7em;
   
   --fontsize-navigationContact:1em;
   --fontsize-navigationMenu:1.2em;

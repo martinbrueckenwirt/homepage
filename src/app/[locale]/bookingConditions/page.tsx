@@ -47,10 +47,11 @@ export default function BookingConditions({ params: { locale } }: { params: { lo
     const h11Text1 = t('h11Text1');
     const h12 = t('h12');
     const h12Text1 = t('h12Text1');
+   
 
      return (
          <> 
-             hallo
+             
     <div className={`${h1Font.className} ${styles.Container}` }>
         <div className={styles.h1}>
             {h1}

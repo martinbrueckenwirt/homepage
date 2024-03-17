@@ -11,6 +11,7 @@ const PricingTableVarious = () => {
     let breakfast = t('breakfast');
     let localTax = t('localTax');
     let pets = t('pets');
+  
     
     return (
         <>
@@ -27,6 +28,7 @@ const PricingTableVarious = () => {
                 <div className={styles.box7}>{pets}</div> 
                 <div className={styles.box8}>{pricesGeneral.pets}</div>      
             </div>
+            
 
 
         </div>

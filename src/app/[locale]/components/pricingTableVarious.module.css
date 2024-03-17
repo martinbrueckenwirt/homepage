@@ -79,7 +79,6 @@
 }
 
 
-
    @media (max-width: 1399px){    
 /* @media(min-width:780px)  and (max-width: 1399px){     */
 .priceContainer{
@@ -141,7 +140,6 @@
     grid-row: 4;
     /* border-bottom: 1px solid var(--border-pricetable); */
 }
-
 
 
 }

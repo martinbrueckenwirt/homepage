@@ -4,7 +4,8 @@ const pricesGeneral = {
     localTax:"€ 2,--",
     pets:"€ 45,--",
     summerSeason: "2024",
-    winterSeason: "2023/2024"
+    winterSeason: "2023/2024",
+    localtax: "€ 2,--"
 }
 
 export default pricesGeneral;

@@ -1,9 +1,83 @@
-.test
+.container
 {
 position: relative;
-top: 15rem;
-height: 30rem;
-background-color: yellow;
-font-size: large;
+margin-top: 15rem;
+width: 90%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+justify-content: center;
+/* background-color: rgb(233, 233, 188); */
 
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: column ;
+}
+
+.h1{
+    font-size: var(--fontsize-h1Text);
+    font-weight: var(--fontweight-h1Text);
+}
+.h2{
+    display:flex;
+    flex-direction: column;
+    line-height:0.5;
+    margin-bottom: 5rem;
+    
+}
+
+.h2Line{
+  
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h2Text);
+}
+
+.quoteLine2{
+    display:flex;
+    justify-content: flex-start;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+    /* margin-top: 0.1rem; */
+    /* line-height: 0.8; */
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+.slider{
+    /* width: 50%; */
+    height: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.textContent{
+    display: flex;
+    flex-direction: column ;
+    margin-left:3rem;
+    /* width: 30%; */
+    /* justify-content:space-around */
+
+}
+
+.text{
+    font-size: var(--fontsize-h3Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.knownFor{
+    margin-top:6rem;
+    font-size: var(--fontsize-h3Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.oeffnungszeiten{
+    margin-top:5rem;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
 }

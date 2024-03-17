@@ -40,3 +40,35 @@
     font-weight: var(--fontweight-h4Text);
    
 }
+
+@media(max-width:399px){    .h1{ 
+    font-size: var(--fontsize-h4Text);
+     font-weight: var(--fontweight-h2Text);
+}    
+.headline{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h2Text);
+
+   }
+
+   .text{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+   }
+
+}
+@media(min-width:400px) and (max-width: 779px){ 
+    .h1{ 
+    font-size: var(--fontsize-h3Text);
+     font-weight: var(--fontweight-h2Text);
+}
+.headline{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h2Text);
+
+   }
+}
+@media(min-width:780px)  and (max-width: 1079px){}
+@media(min-width:1080px)  and (max-width: 1399px){    }
+@media(min-width:1400px)and (max-width: 1999px){}
+@media(min-width:2000px){}

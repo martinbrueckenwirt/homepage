@@ -81,7 +81,7 @@
         "h8":"Stornobedingungen",
         "h8Text1":"… es kann immer mal was dazwischen kommen! Wir empfehlen Ihnen eine Reiserücktrittsversicherung abzuschließen. Beispielsweise können Sie eine solche bei der Europäischen Reiseversicherung abschließen. Stornierungen sind nur schriftlich gültig. Bis zu 30 Tage vor Urlaubsantritt kann kostenlos storniert werden. Von 30 Tage – 7 Tage vor Anreise stellen wir 80 % der Gesamtsumme in Rechnung. Ab 7 Tage vor Anreise, no-show, verspätete Anreise/verfrühte Abreise verrechnen wir 100 % der Gesamtsumme. Es gelten die österreichischen Hotelvertragsbedingungen. Erfüllungsort Sillian, Gerichtsstand Lienz in Osttirol.",
         "h9":"Kurtaxe",
-        "h9Text1":"Die Kurtaxe wird ganzjährig von der Gemeinde Heinfels eingehoben und beträgt derzeit €2,– pro Person/Nacht.",
+        "h9Text1":"Die Kurtaxe wird ganzjährig von der Gemeinde Heinfels eingehoben. Sie gilt pro Person/Nacht.",
         "h9Text2":"Kinder & Jugendliche bis zum Alter von 15 Jahren sind frei.",
         "h10":"Mehrwertsteuer",
         "h10Text1":"Unsere Preise sind Inklusive-Preise und enthalten den Steuersatz auf Übernachtungsleistungen.",
@@ -92,15 +92,22 @@
       },
 
     "cafe":{
-      "quote": "<q>Die schönste Sonnenterrasse im Pustertal</q>",
+      "heroImageAlt":"Kaffeetasse mit frischem Cappuccino",
+      "h1":"Cafe Brückenwirt",
+      "quote": "<h2><q>Die gemütlichste Sonnenterrasse im Hochpustertal</q> <h2>",
       "text1": "Urgemütlich",
-      "text2": "Sonnenterrasse ganzjährig geöffnet",
+      "text2": "Willkommen im Cafe Brückenwirt",
+ 
       "text3": "Perfekter Cappuccino",  
       "text4": "Hausgemachte Kuchen und Torten",
+
       "text5": "Eiskaffee und Eisbecher", 
       "text6": "Bio-Obstsäfte",
       "text7": "Sitzplätze im kühlen Garten",
       "text8": "Großer Kinderspielplatz",
+      "text9": "Sonnenterrasse ganzjährig geöffnet",
+      "oeffnungszeiten":"Öffnungszeiten",
+      "oeffnungszeitenText":"Montag - Sonntag 8:00-19:00, Dienstag geschlossen",
       "knownFor": "Wir sind bekannt für unseren perfekten Cappuccino, <b>hausgemachte Kuchen und Torten</b>, Eiskaffee und Eisbecher, Bio-Obstsäfte und unsere wunderschöne Sonnenterrasse. Unser Eis stammt von einer kleinen Bio-Eismanufaktur aus dem Villgratental. Wir bieten auch Frühstück und haben eine kleine Speisekarte mit regionalen Produkten. Wir freuen uns auf Ihren Besuch!"
      
       

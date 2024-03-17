@@ -82,8 +82,8 @@
  height:auto;
  /* margin:0.5rem; */
  padding:0;
- box-shadow: 10px 20px 15px rgb(155, 154, 154);
- border-radius: 5px;
+ box-shadow: var(--cardImageBoxShadow); /*appartementCard*/
+ border-radius: var(--cardImageBorderRadius);
 }
 
 .cardTextBlockLeft{

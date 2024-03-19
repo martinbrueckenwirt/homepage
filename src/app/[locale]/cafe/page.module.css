@@ -70,14 +70,56 @@ justify-content: center;
     font-weight: var(--fontweight-h3Text);
 }
 
+.link{
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+    color: var(--red);
+    text-decoration: none;
+}
+
+
+
 .knownFor{
-    margin-top:6rem;
+    margin-top:8rem;
     font-size: var(--fontsize-h3Text);
     font-weight: var(--fontweight-h3Text);
 }
 
-.oeffnungszeiten{
+.opentimes{
     margin-top:5rem;
-    font-size: var(--fontsize-h5Text);
+    font-size: var(--fontsize-h6Text);
     font-weight: var(--fontweight-h3Text);
+}
+.reservation{
+    margin-top:0rem;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h1Text);
+}   
+
+.cafeContainer{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.cafeCard{
+    margin-top: 1rem;;
+    /* padding:1rem; */
+    display:flex;
+    width:20%;
+    flex-direction:column;
+    justify-content:space-between; 
+}
+
+.cafeCardImage{
+     box-shadow: var(--cardImageBoxShadow); /*appartementCard*/
+    border-radius: var(--cardImageBorderRadius);
+    margin-bottom: 3rem;
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h4Text);
+ 
 }

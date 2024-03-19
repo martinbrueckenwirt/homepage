@@ -95,19 +95,28 @@
       "heroImageAlt":"Kaffeetasse mit frischem Cappuccino",
       "h1":"Cafe Brückenwirt",
       "quote": "<h2><q>Die gemütlichste Sonnenterrasse im Hochpustertal</q> <h2>",
+      "oeffnungszeiten":"Öffnungszeiten",
+      "oeffnungszeitenText":"Montag - Sonntag 8:00-19:00, Dienstag geschlossen",
+      "reservierung":"Reservierung",
+      "contact":"Lage/Anfahrt",
       "text1": "Urgemütlich",
-      "text2": "Willkommen im Cafe Brückenwirt",
- 
+      "text2": "Willkommen im Cafe Brückenwirt! <br><br> Wir freuen uns auf Ihren Besuch und wir verwöhnen Sie gerne.",
+      "cafeImageAlt":"Team Cafe Brückenwirt sitzt vor der Bar des Cafe Brückenwirt",
+      "terraceImageAlt":"2 Gläser im strahlenden Sonnenschein",
+      "text9": "Windgeschützte Sonnenterrasse ganzjährig geöffnet.",
+      "sunTerrace": "Genießen Sie den ganzen Tag Sonne und die wunderschönen Ausblicke auf die angrenzende historische Punbrugge, die Burg Heinfels oder den Karnischen Kamm.",
+      "gardenImageAlt":"2 Mädchen trinken im Garten einen Obstsaft",
+      "text7": "Im großen Garten mit dem Spielplatz finden sie schattige Sitzplätze. <br><br> Die Spielgeräte sind direkt in ihrem Blickfeld.",
       "text3": "Perfekter Cappuccino",  
       "text4": "Hausgemachte Kuchen und Torten",
 
       "text5": "Eiskaffee und Eisbecher", 
       "text6": "Bio-Obstsäfte",
-      "text7": "Sitzplätze im kühlen Garten",
-      "text8": "Großer Kinderspielplatz",
-      "text9": "Sonnenterrasse ganzjährig geöffnet",
-      "oeffnungszeiten":"Öffnungszeiten",
-      "oeffnungszeitenText":"Montag - Sonntag 8:00-19:00, Dienstag geschlossen",
+   
+      "text8": "Der große Kinderspielplatz bietet Spielgeräte für Kinder jeden Alters: <br> <br> Schaukeln, Kletterturm, Balancierstangen, Bälle...",
+      "imagePlaygroundAlt":"Junge klettert auf Holzturm",
+     
+     
       "knownFor": "Wir sind bekannt für unseren perfekten Cappuccino, <b>hausgemachte Kuchen und Torten</b>, Eiskaffee und Eisbecher, Bio-Obstsäfte und unsere wunderschöne Sonnenterrasse. Unser Eis stammt von einer kleinen Bio-Eismanufaktur aus dem Villgratental. Wir bieten auch Frühstück und haben eine kleine Speisekarte mit regionalen Produkten. Wir freuen uns auf Ihren Besuch!"
      
       

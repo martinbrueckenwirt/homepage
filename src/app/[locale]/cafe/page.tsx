@@ -86,7 +86,8 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                         </div>
                 </div>
                 <p className={`${heroFont.className} ${styles.knownFor}`} dangerouslySetInnerHTML={{ __html: t.raw('knownFor') }} />
-                <div className={`${heroFont.className} ${styles.cafeContainer}`}>
+                    <div className={`${heroFont.className} ${styles.cafeContainer}`}>
+                    <div className={styles.cafeInnerContainer}>
                         <div className={styles.cafeCard}>
                             <Image className={styles.cafeCardImage}
                                 src={CafeImage}
@@ -105,6 +106,8 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                             />
                             <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('sunTerrace') }} />
                         </div>
+                    </div>    
+                    <div className={styles.cafeInnerContainer}> 
                         <div className={styles.cafeCard}>
                             <Image className={styles.cafeCardImage}
                                 src={GardenImage}
@@ -124,6 +127,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                             />
                             <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('text8') }} />
                         </div>
+                    </div>  
                 </div>    
              </div>
         </div>

@@ -60,9 +60,8 @@ justify-content: center;
     display: flex;
     flex-direction: column ;
     margin-left:3rem;
-    /* width: 30%; */
+     /* width: 30%;  */
     /* justify-content:space-around */
-
 }
 
 .text{
@@ -99,15 +98,24 @@ justify-content: center;
 .cafeContainer{
     display: flex;
     flex-direction: row ;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 5rem;
+}
+
+.cafeInnerContainer{
+    display: flex;
+    flex-direction: row ;
+    width: 45%;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
 }
 
 .cafeCard{
     margin-top: 1rem;;
     /* padding:1rem; */
     display:flex;
-    width:20%;
+    width:45%;
     flex-direction:column;
     justify-content:space-between; 
 }
@@ -123,3 +131,115 @@ justify-content: center;
     font-weight: var(--fontweight-h4Text);
  
 }
+
+@media(max-width:399px){    }
+@media(min-width:400px) and (max-width: 779px){    }
+@media(min-width:780px)  and (max-width: 1079px){}
+@media(min-width:1080px)  and (max-width: 1399px){   
+
+.h2Line{
+  
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.quoteLine2{
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h4Text);
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: flex-start; /* Add this line */
+}
+
+.slider{
+    /* width: 50%; */
+    /* height: 50%; */
+    /* display:flex; */
+    /* justify-self: center; */
+    /* align-self: center; */
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+    /* margin-left:2rem; */
+     /* width: 30%;  */
+    /* justify-content:space-around */
+.textContent{
+    margin-top:38rem;
+    width: 80%; 
+    /* justify-content:space-around */
+}
+
+.text{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.link{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+   
+}
+
+.knownFor{
+    margin-top:5rem;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+}
+.cafeInnerContainer{
+    display:flex;
+    flex-direction: column;
+}
+.cafeCard{
+    margin-top: 1rem;;
+    /* padding:1rem; */
+    display:flex;
+    width:80%;
+    flex-direction:column;
+    justify-content:space-between; 
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+ }
+
+
+
+}
+@media(min-width:1400px)and (max-width: 1999px){
+.textContent{
+    margin-left:2rem;
+     width: 30%; 
+    /* justify-content:space-around */
+}
+
+.text{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.link{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+   
+}
+
+.knownFor{
+    margin-top:18rem;
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h3Text);
+}
+.cafeCardImage{
+ width:100%;
+ height: auto;
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+ }
+}
+@media(min-width:2000px){}

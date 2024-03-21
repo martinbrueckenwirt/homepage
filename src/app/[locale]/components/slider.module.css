@@ -8,7 +8,7 @@
 .slide {
   /*wird im CafeModule verwendet*/
   position:absolute; /*die slides liegen übereinander*/  
-  width: 800px; /*muss gleich sein wie cafeModule.module.css box1-width*/
+  width: 800px; 
   height:auto;
   z-index:0;
   opacity: 0;
@@ -35,11 +35,7 @@
   }
   }
 @media(min-width:780px)  and (max-width: 1079px){
-  .slider{
-    left:0;
-    width: 100%;
-    
-  }
+
 .slide {
   left: calc(50% - 35vw); /* Center the slide horizontally */
   width: 70vw;
@@ -48,8 +44,16 @@
   align-items: center;
 }
 }
-@media(min-width:1080px)  and (max-width: 1399px){    }
-@media(min-width:1400px)and (max-width: 1999px){
+@media(min-width:1080px)  and (max-width: 1399px){ 
+  .slide {
+  width: 60vw;
 
+}
+   }
+@media(min-width:1400px)and (max-width: 1999px){
+.slide {
+  width: 50vw;
+
+}
 }
 @media(min-width:2000px){}

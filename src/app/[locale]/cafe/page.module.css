@@ -50,8 +50,8 @@ justify-content: center;
 }
 
 .slider{
-    /* width: 50%; */
-    height: 50%;
+    width: 50%;
+    /* height: 50%; */
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -60,7 +60,7 @@ justify-content: center;
     display: flex;
     flex-direction: column ;
     margin-left:3rem;
-     /* width: 30%;  */
+    width: 40%; 
     /* justify-content:space-around */
 }
 
@@ -123,7 +123,7 @@ justify-content: center;
 .cafeCardImage{
      box-shadow: var(--cardImageBoxShadow); /*appartementCard*/
     border-radius: var(--cardImageBorderRadius);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .cafeCardText{
     /* margin-top:6rem; */
@@ -133,12 +133,233 @@ justify-content: center;
 }
 
 @media(max-width:399px){    }
-@media(min-width:400px) and (max-width: 779px){    }
-@media(min-width:780px)  and (max-width: 1079px){}
-@media(min-width:1080px)  and (max-width: 1399px){   
+@media(min-width:400px) and (max-width: 779px){    
+.h1{
+    font-size: var(--fontsize-h3Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.h2{
+    display:flex;
+    flex-direction: column;
+    line-height:0.5;
+    margin-bottom: 5rem;   
+}
+
+.h2Line{
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h2Text);
+}
+
+.quoteLine2{
+    display:flex;
+    justify-content: flex-start;
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h4Text);
+}
+.opentimes{
+    margin-top:5rem;
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h2Text);
+    line-height: 0.5;
+}
+.opentimes2{
+    margin-top:0rem; 
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.reservation{
+    margin-top:0rem;
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h2Text);
+}   
+
+
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Add this line */
+}
+
+.slider{
+    width: 80%;
+    display:flex;
+    align-items: center ;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+    
+.textContent{
+    display:flex;
+    flex-wrap:wrap;
+    align-content: center;
+    margin-top:17rem;
+    width: 80%; 
+}
+
+.text{
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.link{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+    color: var(--red);
+    text-decoration: none;
+}
+
+.knownFor{
+    margin-top:4rem;
+    width:90vw;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
+    
+}
+
+.cafeContainer{
+    display:flex;
+    flex-direction: column;
+}
+.cafeInnerContainer{
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    width:90%;
+}
+.cafeCard{
+    margin-top: 1rem;;
+    /* padding:1rem; */
+    display:flex;
+    width: 90%;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    /* justify-content:space-between;  */
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    width: 90%;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
+ }
+}
+
+
+@media(min-width:780px)  and (max-width: 1079px){
+
+.h1{
+    font-size: var(--fontsize-h3Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.h2{
+    display:flex;
+    flex-direction: column;
+    line-height:0.5;
+    margin-bottom: 5rem;
+    
+}
 
 .h2Line{
   
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h2Text);
+}
+
+.quoteLine2{
+    display:flex;
+    justify-content: flex-start;
+    font-size: var(--fontsize-h7Text);
+    font-weight: var(--fontweight-h4Text);
+    /* margin-top: 0.1rem; */
+    /* line-height: 0.8; */
+}
+
+.contentContainer{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Add this line */
+}
+
+.slider{
+    width: 55%;
+    display:flex;
+    align-items: center ;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+    
+.textContent{
+    display:flex;
+    flex-wrap:wrap;
+    align-content: center;
+    margin-top:30rem;
+    width: 55%; 
+}
+
+.text{
+    font-size: var(--fontsize-h4Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.link{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+    color: var(--red);
+    text-decoration: none;
+}
+
+.knownFor{
+    margin-top:4rem;
+    width:90vw;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h3Text);
+}
+
+.opentimes{
+    margin-top:5rem;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h3Text);
+}
+.opentimes2{
+    margin-top:0rem; 
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h3Text);
+}
+.reservation{
+    margin-top:0rem;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h1Text);
+}   
+
+.cafeInnerContainer{
+    display:flex;
+    flex-direction: column;
+}
+.cafeCard{
+    margin-top: 1rem;;
+    /* padding:1rem; */
+    display:flex;
+    width: 90%;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    /* justify-content:space-between;  */
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    width: 60%;
+    font-size: var(--fontsize-h5Text);
+    font-weight: var(--fontweight-h4Text);
+ }
+}
+
+@media(min-width:1080px)  and (max-width: 1399px){   
+
+.h2Line{
     font-size: var(--fontsize-h6Text);
     font-weight: var(--fontweight-h2Text);
 }
@@ -146,27 +367,27 @@ justify-content: center;
     font-size: var(--fontsize-h7Text);
     font-weight: var(--fontweight-h4Text);
 }
-
 .contentContainer{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
     justify-content: flex-start; /* Add this line */
 }
-
 .slider{
-    /* width: 50%; */
-    /* height: 50%; */
-    /* display:flex; */
-    /* justify-self: center; */
-    /* align-self: center; */
+    width: 60%;
+    background-color: brown;
+    display:flex;
+    align-items: center ;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    
 }
-    /* margin-left:2rem; */
-     /* width: 30%;  */
-    /* justify-content:space-around */
+    
 .textContent{
+    display:flex;
+    /* justify-content: center; */
+    /* align-content: center; */
+    align-items: center ;
     margin-top:38rem;
     width: 80%; 
     /* justify-content:space-around */
@@ -196,12 +417,15 @@ justify-content: center;
     margin-top: 1rem;;
     /* padding:1rem; */
     display:flex;
-    width:80%;
+    width: 90%;
     flex-direction:column;
-    justify-content:space-between; 
+    justify-content: flex-start;
+    align-items: center;
+    /* justify-content:space-between;  */
 }
 .cafeCardText{
     /* margin-top:6rem; */
+    width: 60%;
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h4Text);
  }
@@ -210,10 +434,13 @@ justify-content: center;
 
 }
 @media(min-width:1400px)and (max-width: 1999px){
+    
 .textContent{
-    margin-left:2rem;
-     width: 30%; 
-    /* justify-content:space-around */
+    margin-top:5vw;
+    margin-left:4rem;
+    width: 35%; 
+    justify-content:center;
+    /* align-items: center; */
 }
 
 .text{

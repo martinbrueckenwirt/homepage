@@ -26,6 +26,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
     const h1 = t('h1');
     const oeffnungszeiten = t('oeffnungszeiten');
     const oeffnungszeitenText = t('oeffnungszeitenText');
+    const oeffnungszeitenText2 = t('oeffnungszeitenText2');
     const reservierung = t('reservierung');
     const contact = t('contact');   
     const text1 = t('text1');
@@ -63,7 +64,8 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                     <h2 className={styles.h2}>
                         <div className={`${handwriting.className} ${styles.h2Line}`} dangerouslySetInnerHTML={{ __html: t.raw('quote') }} />
                         <div className={`${h1Font.className} ${styles.quoteLine2}`}> Lukas H.</div>
-                       <p className={`${h1Font.className} ${styles.opentimes}`}>{oeffnungszeiten}: {oeffnungszeitenText}</p>
+                        <p className={`${h1Font.className} ${styles.opentimes}`}>{oeffnungszeiten}: {oeffnungszeitenText}</p>
+                        <p className={`${h1Font.className} ${styles.opentimes2}`}> {oeffnungszeitenText2}</p>
                         <p className={`${h1Font.className} ${styles.reservation}`}>{reservierung}: +43 4842 6336</p>
                         <p className={`${h1Font.className} ${styles.reservation}`}>
                             <Link className={styles.link} href={contactURL}>

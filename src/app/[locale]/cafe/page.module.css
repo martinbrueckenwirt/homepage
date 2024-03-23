@@ -132,7 +132,100 @@ justify-content: center;
  
 }
 
-@media(max-width:399px){    }
+@media(max-width:399px){    
+.h1{
+    font-size: var(--fontsize-h3Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.h2Line{
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h4Text);
+    line-height:1.5;
+}
+.quoteLine2{
+    display:flex;
+    justify-content: flex-start;
+   
+}
+.opentimes{
+    margin-top:5rem;
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h2Text);
+    line-height: 1.5;
+}
+.opentimes2{
+    margin-top:0rem; 
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h2Text);
+}
+.reservation{
+    margin-top:0rem;
+    font-size: var(--fontsize-h8Text);
+    font-weight: var(--fontweight-h2Text);
+}   
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Add this line */
+}
+.slider{
+    width: 80%;
+    display:flex;
+    align-items: center ;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    }
+.textContent{
+    display:flex;
+    flex-wrap:wrap;
+    align-content: center;
+    margin-top:13rem;
+    width: 80%; 
+}
+.text{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h3Text);
+}
+.link{
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+    color: var(--red);
+    text-decoration: none;
+}
+.knownFor{
+    margin-top:2rem;
+    width:90vw;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+}
+.cafeContainer{
+    display:flex;
+    flex-direction: column;
+}
+.cafeInnerContainer{
+    display:flex;
+    flex-direction: column;
+    align-self: center;
+    width:90%;
+}
+.cafeCard{
+    margin-top: 1rem;;
+    /* padding:1rem; */
+    display:flex;
+    width: 90%;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    /* justify-content:space-between;  */
+}
+.cafeCardText{
+    /* margin-top:6rem; */
+    width: 90%;
+    font-size: var(--fontsize-h6Text);
+    font-weight: var(--fontweight-h4Text);
+    }
+}
 @media(min-width:400px) and (max-width: 779px){    
 .h1{
     font-size: var(--fontsize-h3Text);
@@ -144,12 +237,10 @@ justify-content: center;
     line-height:0.5;
     margin-bottom: 5rem;   
 }
-
 .h2Line{
     font-size: var(--fontsize-h8Text);
     font-weight: var(--fontweight-h2Text);
 }
-
 .quoteLine2{
     display:flex;
     justify-content: flex-start;
@@ -172,24 +263,19 @@ justify-content: center;
     font-size: var(--fontsize-h7Text);
     font-weight: var(--fontweight-h2Text);
 }   
-
-
 .contentContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Add this line */
 }
-
 .slider{
     width: 80%;
     display:flex;
     align-items: center ;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    
-}
-    
+ }
 .textContent{
     display:flex;
     flex-wrap:wrap;
@@ -197,27 +283,22 @@ justify-content: center;
     margin-top:17rem;
     width: 80%; 
 }
-
 .text{
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h3Text);
 }
-
 .link{
     font-size: var(--fontsize-h6Text);
     font-weight: var(--fontweight-h4Text);
     color: var(--red);
     text-decoration: none;
 }
-
 .knownFor{
     margin-top:4rem;
     width:90vw;
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h3Text);
-    
 }
-
 .cafeContainer{
     display:flex;
     flex-direction: column;

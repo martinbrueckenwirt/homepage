@@ -1,4 +1,3 @@
 User-Agent: *
-Allow: / 
-index, follow
+Disallow: 
 Sitemap: https://www.derbrueckenwirt.at/sitemap.xml

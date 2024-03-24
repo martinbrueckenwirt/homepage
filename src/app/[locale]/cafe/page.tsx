@@ -17,7 +17,7 @@ import CakeDetailImage from '../../../../public/P2000565-300x200-180-60.webp';
 import TerraceImage2 from '../../../../public/P1770541-300x200-180-60.webp';
 import Link from 'next/link';
 
-
+/* *a*Metadaten */
 export default function Cafe({params: {locale}}: {params: {locale: any}}) {
 
     const t = useTranslations('cafe');
@@ -60,8 +60,6 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
 
     return (
         <>    
-           
-                
             <Hero 
                 imageUrl = {HeroImage}
                 imageUrlAlt = {imageAlt}

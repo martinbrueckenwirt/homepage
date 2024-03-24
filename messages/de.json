@@ -101,25 +101,21 @@
       "reservierung":"Reservierung",
       "contact":"Lage/Anfahrt",
       "text1": "Urgemütlich",
-      "text2": "Willkommen im Cafe Brückenwirt! <br><br> Wir freuen uns auf Ihren Besuch und wir verwöhnen Sie gerne.",
+      "text2": "<strong>Willkommen im Cafe Brückenwirt!</strong> <br><br> Wir freuen uns auf Ihren Besuch und wir verwöhnen Sie gerne.",
       "cafeImageAlt":"Team Cafe Brückenwirt sitzt vor der Bar des Cafe Brückenwirt",
       "terraceImageAlt":"2 Gläser im strahlenden Sonnenschein",
       "text9": "Windgeschützte Sonnenterrasse ganzjährig geöffnet.",
       "sunTerrace": "Genießen Sie den ganzen Tag Sonne und die wunderschönen Ausblicke auf die angrenzende historische Punbrugge, die Burg Heinfels oder den Karnischen Kamm.",
       "gardenImageAlt":"2 Mädchen trinken im Garten einen Obstsaft",
-      "text7": "Im großen Garten mit dem Spielplatz finden sie schattige Sitzplätze. <br><br> Die Spielgeräte sind direkt in ihrem Blickfeld.",
+      "text7": "An heißen Tagen bieten wir <strong>schattige Plätze im großen Garten</strong>. <br><br> So können Sie sich entspannen, während Ihre Kinder fröhlich spielen.",
       "text3": "Perfekter Cappuccino",  
       "text4": "Hausgemachte Kuchen und Torten",
-
       "text5": "Eiskaffee und Eisbecher", 
       "text6": "Bio-Obstsäfte",
-   
-      "text8": "Der große Kinderspielplatz bietet Spielgeräte für Kinder jeden Alters: <br> <br> Schaukeln, Kletterturm, Balancierstangen, Bälle...",
+      "text8": "Unsere grüne Oase verfügt über einen <strong>Spielplatz</strong> direkt im Garten. Ihre Kinder können sich auf Schaukeln, Rutschen und Klettergerüsten austoben, während Sie in Ruhe Ihren Kaffee genießen.",
       "imagePlaygroundAlt":"Junge klettert auf Holzturm",
-     
-     
-      "knownFor": "Wir sind bekannt für unseren perfekten Cappuccino, <b>hausgemachte Kuchen und Torten</b>, Eiskaffee und Eisbecher, Bio-Obstsäfte und unsere wunderschöne Sonnenterrasse. Unser Eis stammt von einer kleinen Bio-Eismanufaktur aus dem Villgratental. Wir bieten auch Frühstück und haben eine kleine Speisekarte mit regionalen Produkten. Wir freuen uns auf Ihren Besuch!"
-     
+      "knownFor": "Wir sind bekannt für unseren perfekten Cappuccino, <b>hausgemachte Kuchen und Torten</b>, Eiskaffee und Eisbecher, Bio-Obstsäfte und unsere wunderschöne Sonnenterrasse. Unser Eis stammt von einer kleinen Bio-Eismanufaktur aus dem Villgratental. Wir bieten auch Frühstück und haben eine kleine Speisekarte mit regionalen Produkten. Wir freuen uns auf Ihren Besuch!",
+      "knownFor1":"Von saftigen Schokoladentorten bis hin zu fruchtigen Obstkuchen. Wir verwenden nur die besten Zutaten. <br><br>Jedes Produkt, das wir servieren, ist mit Liebe und Sorgfalt zubereitet. Wir legen Wert auf <strong>Qualität, Frische und Geschmack</strong>. <br><br> Starten Sie Ihren Tag bei uns mit einem reichhaltigen <strong>Frühstück</strong>. Unser Buffet bietet eine Auswahl an täglich frischen Brötchen, Aufschnitt, Käse, Müsli, Joghurt und vielem mehr. Dazu servieren wir aromatischen Kaffee und frischen Fruchtsaft."
       
      },
      "contact":{

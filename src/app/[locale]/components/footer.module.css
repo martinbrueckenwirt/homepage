@@ -95,6 +95,18 @@ color: var(--red);
   color: var(--red);
 }
 
+@media(max-width:399px){
+  .text{
+    margin-top:2rem;
+    font-size: var(--fontsize-h3Text);
+    color: var(--red);
+  }
+  .menu li{
+    margin-right: 5vw;
+  }
+  
+  
+}
 @media(max-width:1079px){
   .footerContainer,.linkContainer,.socialContainer,.menu,.logoContainer{
     flex-wrap: wrap;

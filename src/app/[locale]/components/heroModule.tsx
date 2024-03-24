@@ -14,12 +14,12 @@ export default function Hero(props:HeroProps) {
     const t = useTranslations('hero');
     const bookingButton = t('bookingButton');
     //89%
-    //largest contentful paint 2,4s, Blocking 380ms
-    const sizes:string = "(max-width: 779px) 100vw, (max-width: 1399px) 50vw, 33vw";
-    //88% largest contentful paint 2,4s, Blocking 400ms
+    //largest contentful paint 2,4s, Blocking 380ms funktioniert nicht bei 1900px- viel zu klein    
+    // const sizes:string = "(max-width: 779px) 100vw, (max-width: 1399px) 50vw, 33vw";
+    //88% largest contentful paint 2,4s, Blocking 400ms - funktioniert nicht bei 1900px- viel zu klein
     // const sizes:string = "(max-width: 779px) 100vw, (max-width: 1079px) 80vw, (max-width: 1399px) 70vw, (max-width: 1999px) 60vw, 33vw";
     //89% largest contentful paint 2,3s, Blocking 380ms
-    // const sizes:string = "(max-width: 399px) 100vw, (max-width: 779px) 100vw, (max-width: 1079px) 80vw, (max-width: 1399px) 75vw, (max-width: 1999px) 75vw, 70vw";
+    const sizes:string = "(max-width: 399px) 100vw, (max-width: 779px) 100vw, (max-width: 1079px) 80vw, (max-width: 1399px) 75vw, (max-width: 1999px) 75vw, 70vw";
     
     return(
 

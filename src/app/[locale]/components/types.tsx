@@ -67,6 +67,10 @@ export interface IAppartementTeaserImage  {
     priority: boolean
 }
 
+export type ImageList ={
+    imageList: SliderType[]
+}
+
 
 export type ImageType ={
     small: string,

@@ -4,6 +4,8 @@ import { heroFont, h1Font, h2Font, h3Font, textFont, footerFont,handwriting } fr
 import Hero from '../components/heroModule';
 import Slider from '../components/slider';
 import Image from 'next/image';
+// import imageList from "../../../../data/imageSliderCafe"
+import imageList from '../../../../data/imageSliderCafe';
 import HeroImage from '../../../../public/P1180423-2550x1274-180-60.webp';
 import CafeImage from '../../../../public/P2902846-RW2-1-300x200-180-70.webp';
 import TerraceImage from '../../../../public/P1270601-300x200-180-70.webp';
@@ -76,7 +78,8 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                 <div className={styles.contentContainer}>
                     
                     <div className={styles.slider} >
-                            <Slider />        
+                            <Slider 
+                            slides={imageList}/>        
                     </div>
                         <div className={`${heroFont.className} ${styles.textContent}`} >
                             <p className={styles.text}>{text3}</p>
@@ -88,6 +91,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                         </div>
                 </div>
                 <p className={`${heroFont.className} ${styles.knownFor}`} dangerouslySetInnerHTML={{ __html: t.raw('knownFor') }} />
+                <p className={`${heroFont.className} ${styles.knownFor1}`} dangerouslySetInnerHTML={{ __html: t.raw('knownFor1') }} />
                     <div className={`${heroFont.className} ${styles.cafeContainer}`}>
                     <div className={styles.cafeInnerContainer}>
                         <div className={styles.cafeCard}>
@@ -97,6 +101,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                                 width={300}
                                 height={200}
                             />
+                             <p className={`${handwriting.className} ${styles.cafeCardHandwritingText}`} dangerouslySetInnerHTML={{ __html: t.raw('text1') }} />
                             <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('text2') }} />
                         </div>
                         <div className={styles.cafeCard}>

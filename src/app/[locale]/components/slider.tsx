@@ -2,15 +2,19 @@
 import Image from "next/image"
 import { useState, useEffect } from "react";
 import  imageList from "../../../../data/imageSliderCafe"
-import { SliderType } from "./types";
+import { SliderType, ImageList } from "./types";
+
+
 
 
 
 import styles from './slider.module.css'; // Import your CSS module
 
-const Slider = () => {
+const Slider = (Props:SliderType[]) => {
 const [activeSlide, setActiveSlide] = useState(0);
-const slides: SliderType[] = imageList;
+const slides: SliderType[] = Props.slides;
+// const slides: SliderType[] =imageList;
+const sizes: string = "(max-width: 399px) 70vw, (max-width: 779px) 70vw, (max-width: 1079px) 70vw, (max-width: 1399px) 60vw, (max-width: 1999px) 50vw, 70vw";
 
 
 useEffect(() => {
@@ -35,7 +39,7 @@ return (
                 alt={slide.alt}
                 height={800}
                 width={630}
-                sizes="(max-width: 1800px) 100vw"
+                sizes={sizes}
                 className={`${styles.slide} ${index === activeSlide ? styles.active : ''}`}
             />
         </div>

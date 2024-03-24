@@ -6,7 +6,7 @@ import Link from 'next/link';
 import {useTranslations} from 'next-intl';
 import  facebook  from '../../../../public/facebook.webp';
 import  instagram  from '../../../../public/instagram_2111463.webp';
-import logo from '../../../../public/logo_mit_schrift.png';
+import logo from '../../../../public/LogoGrau.png';
 import { useTransition } from 'react';
 
 export default function Footer({ locale, home, appartment, cafe, contact, about, imprint}: FooterProps) {
@@ -21,6 +21,7 @@ export default function Footer({ locale, home, appartment, cafe, contact, about,
     let linkAbout = `/${locale}/about`;
     let linkContact = `/${locale}/contact`;
     let linkImprint = `/${locale}/imprint`;
+    let sizes = "(max-width: 768px) 100vw, 1182px";
 
     return (
         <>
@@ -52,7 +53,8 @@ export default function Footer({ locale, home, appartment, cafe, contact, about,
                 <div className={`${handwriting.className} ${styles.text}`}>
                     {text}
                 </div>
-                <Image className={styles.logo} src={logo} alt="Logo" width={250} height={37} />
+                <Image className={styles.logo} src={logo} alt="Logo" width={1182} height={255} 
+                sizes ={sizes}/>
             </div>
            
         </div>

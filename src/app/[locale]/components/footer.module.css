@@ -86,7 +86,8 @@ color: var(--red);
 
 .logo{
   padding-left: 3rem;/* width: 250px; */
-  /* height: auto; */
+  width: 250px;
+  height: auto; 
 } 
 
 .text{

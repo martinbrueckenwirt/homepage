@@ -11,6 +11,10 @@ import CafeImage from '../../../../public/P2902846-RW2-1-300x200-180-70.webp';
 import TerraceImage from '../../../../public/P1270601-300x200-180-70.webp';
 import GardenImage from '../../../../public/P2566173-1-300x200-180-70.webp';
 import PlaygroundImage from '../../../../public/P1260376-300x200-180-70.webp';
+import CoffeeImage from     '../../../../public/P2504637-300x200-180-60.webp';
+import AppelstrudelImage from '../../../../public/P2888259-300x200-180-60.webp';
+import CakeDetailImage from '../../../../public/P2000565-300x200-180-60.webp';
+import TerraceImage2 from '../../../../public/P1770541-300x200-180-60.webp';
 import Link from 'next/link';
 
 
@@ -42,10 +46,16 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
     
     const text9 = t('text9');
     const knownFor = t('knownFor');   
+    const textCoffee = t('textCoffee');
+    const textAppelstrudel = t('textAppelstrudel');
     const cafeImageAlt = t('cafeImageAlt');
     const terraceImageAlt = t('terraceImageAlt');
     const gardenImageAlt = t('gardenImageAlt');
     const imagePlaygroundAlt = t('imagePlaygroundAlt');
+    const coffeeImageAlt = t('coffeeImageAlt');
+    const appelstrudelImageAlt = t('appelstrudelImageAlt');
+    const cakeDetailImageAlt = t('cakeDetailImageAlt');
+    const terraceImage2Alt = t('terraceImage2Alt');
     const contactURL = `/${locale}/contact`;
 
     return (
@@ -92,7 +102,7 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                 </div>
                 <p className={`${heroFont.className} ${styles.knownFor}`} dangerouslySetInnerHTML={{ __html: t.raw('knownFor') }} />
                 <p className={`${heroFont.className} ${styles.knownFor1}`} dangerouslySetInnerHTML={{ __html: t.raw('knownFor1') }} />
-                    <div className={`${heroFont.className} ${styles.cafeContainer}`}>
+                <div className={`${heroFont.className} ${styles.cafeContainer}`}>
                     <div className={styles.cafeInnerContainer}>
                         <div className={styles.cafeCard}>
                             <Image className={styles.cafeCardImage}
@@ -135,6 +145,54 @@ export default function Cafe({params: {locale}}: {params: {locale: any}}) {
                             <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('text8') }} />
                         </div>
                     </div>  
+                </div>
+               
+                <div className={`${heroFont.className} ${styles.cafeContainerRow2}`}>
+                    <div className={`${heroFont.className} ${styles.cafeContainer}`}>
+                        <div className={styles.cafeInnerContainer}>
+                            <div className={styles.cafeCard}>
+                                <Image className={styles.cafeCardImage}
+                                    src={CoffeeImage}
+                                    alt={coffeeImageAlt}
+                                    width={300}
+                                    height={200}
+                                />
+                                <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('textCoffee') }} />
+                            </div>
+                            <div className={styles.cafeCard}>
+                                <Image className={styles.cafeCardImage}
+                                    src={AppelstrudelImage}
+                                    alt={appelstrudelImageAlt}
+                                    width={300}
+                                    height={200}
+                                />
+                                <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('textAppelstrudel') }} />
+                            </div>
+                        </div>    
+                        <div className={styles.cafeInnerContainer}> 
+                            <div className={styles.cafeCard}>
+                                <Image className={styles.cafeCardImage}
+                                    src={CakeDetailImage}
+                                    alt={cakeDetailImageAlt}
+                                    width={300}
+                                    height={200}
+                                />
+                                <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('textCakeDetail') }} />
+                                
+                            </div>
+                            <div className={styles.cafeCard}>
+                                <Image className={styles.cafeCardImage}
+                                    src={TerraceImage2}
+                                    alt={terraceImage2Alt}
+                                    width={300}
+                                    height={200}
+                                />
+                                <p className={styles.cafeCardText} dangerouslySetInnerHTML={{ __html: t.raw('textTerrace2') }} />
+                            </div>
+                        </div>  
+                    </div>
+
+
                 </div>    
              </div>
         </div>

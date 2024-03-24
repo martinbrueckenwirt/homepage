@@ -82,15 +82,37 @@
   "cafe":{
     "quote": "<q>La terrazza soleggiata più bella della Val Pusteria</q>",
     "text1": "Molto accogliente",
-    "text2": "Terrazza solarium aperta tutto l'anno",
-    "text3": "Cappuccino perfetto",  
+     "text3": "Cappuccino perfetto",  
     "text4": "Torte e crostate fatte in casa",
     "text5": "Coppe di caffè e gelato", 
     "text6": "Succhi di frutta biologici",
-    "text7": "Posti a sedere nel fresco giardino",
-    "text8": "Ampio parco giochi per bambini",
-    "knownFor": "Siamo conosciuti per il nostro cappuccino perfetto, <b>torte e crostate fatte in casa</b>, caffè freddo e coppe gelato, succhi di frutta biologici e la nostra splendida terrazza soleggiata. Il nostro gelato proviene da una piccola fabbrica di gelato biologico nel Villgratental. Offriamo anche la colazione e un piccolo menù con prodotti locali. Non vediamo l'ora della tua visita!"
-     
+    "heroImageAlt":"Tazza di caffè con cappuccino fresco",
+    "h1":"Cafe Brückenwirt",
+    "oeffnungszeiten":"Orari di apertura",
+    "oeffnungszeitenText":"Lunedì - Domenica 8:00-19:00,",
+    "oeffnungszeitenText2":"Martedì chiuso",
+    "reservierung":"Prenotazione",
+    "contact":"Posizione",
+    "text2": "<strong>Benvenuti al Café Brückenwirt!</strong> <br><br> Saremo lieti della vostra visita e saremo lieti di viziarvi.",
+    "cafeImageAlt":"Il Team Café Brückenwirt siede davanti al bar del Café Brückenwirt",
+    "terraceImageAlt":"2 Occhiali sotto il sole splendente",
+    "text9": "Terrazza soleggiata protetta dal vento aperta tutto l'anno.",
+    "sunTerrace": "Godetevi il sole tutto il giorno e la splendida vista sull'adiacente storica Punbrugge, sul castello di Heinfels o sulla cresta carnica.",
+    "gardenImageAlt":"2 Le ragazze bevono un succo di frutta in giardino",
+    "text7": "Nelle giornate calde offriamo posti ombreggiati nell'ampio giardino. <br><br> Così potrai rilassarti mentre i tuoi bambini giocano felici.",
+    "text8": "La nostra oasi verde ha un parco giochi direttamente in giardino. I tuoi bambini potranno divertirsi tra altalene, scivoli e strutture per l'arrampicata mentre tu ti godi il tuo caffè in tutta tranquillità.",
+    "imagePlaygroundAlt":"Il ragazzo si arrampica sulla torre di legno",
+    "knownFor": "Siamo conosciuti per il nostro cappuccino perfetto, <b>torte e crostate fatte in casa</b>, caffè freddo e coppe gelato, succhi di frutta biologici e la nostra splendida terrazza soleggiata. Il nostro gelato proviene da una piccola fabbrica di gelato biologico nel Villgratental. Offriamo anche la colazione e un piccolo menù con prodotti locali. Non vediamo l'ora della tua visita!",
+    "knownFor1":"Dalle succose torte al cioccolato alle fruttate torte alla frutta. Usiamo solo i migliori ingredienti. <br><br>Ogni prodotto che serviamo è preparato con amore e cura. Apprezziamo la qualità, la freschezza e il gusto. <br><br> Inizia da noi la tua giornata con una ricca <strong>colazione</strong>. Il nostro buffet offre una selezione di panini freschi ogni giorno, salumi, formaggi, muesli, yogurt e molto altro ancora. Serviamo anche caffè aromatici e succhi di frutta fresca.",
+    "coffeeImageAlt":"Cappuccino con cuore",	
+    "textCoffee":"Produciamo il <strong>miglior cappuccino</strong> in lungo e in largo. Le nostre specialità di caffè sono preparate con amore e cura. Utilizziamo solo i migliori fagioli e latticini.",
+    "appelstrudelImageAlt":"Un coltello taglia un pezzo di strudel di mele",
+    "textAppelstrudel":"Il nostro <b>strudel di mele</b> è una poesia. Viene preparato secondo un'antica ricetta di famiglia. Ci piace servire con panna montata.",
+    "cakeDetailImageAlt":"Vista del primo piano delle ciliegie su una torta",
+    "textCakeDetail":"<strong>Torta di ciliegie della Foresta Nera</strong> <br><br>Uno dei nostri highlight",
+    "terraceImage2Alt":"2 Bicchieri su un tavolo sulla terrazza solarium",
+    "textTerrace2":"La nostra <strong>terrazza solarium</strong> è il luogo perfetto per godersi il sole e rilassarsi."
+
   
     
   },

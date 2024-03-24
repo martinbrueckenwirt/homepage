@@ -26,12 +26,19 @@ export default function Hero(props:HeroProps) {
         <div className = {styles.heroSection}>
            
             <div className = {styles.buttonContainer}>
-                <Link href ="/" className = {styles.logo}>
-                    <Image 
+                <Link href ="/" >
+                    <Image className = {styles.logo}
                     src = {logo}
                     alt = "logo"
                     width ={60}
                     height ={60}
+                    priority={true}
+                    />
+                    <Image className = {styles.logoSmall}
+                    src = {logo}
+                    alt = "logo"
+                    width ={50}
+                    height ={50}
                     priority={true}
                     />
                 </Link>

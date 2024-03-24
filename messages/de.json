@@ -115,8 +115,15 @@
       "text8": "Unsere grüne Oase verfügt über einen <strong>Spielplatz</strong> direkt im Garten. Ihre Kinder können sich auf Schaukeln, Rutschen und Klettergerüsten austoben, während Sie in Ruhe Ihren Kaffee genießen.",
       "imagePlaygroundAlt":"Junge klettert auf Holzturm",
       "knownFor": "Wir sind bekannt für unseren perfekten Cappuccino, <b>hausgemachte Kuchen und Torten</b>, Eiskaffee und Eisbecher, Bio-Obstsäfte und unsere wunderschöne Sonnenterrasse. Unser Eis stammt von einer kleinen Bio-Eismanufaktur aus dem Villgratental. Wir bieten auch Frühstück und haben eine kleine Speisekarte mit regionalen Produkten. Wir freuen uns auf Ihren Besuch!",
-      "knownFor1":"Von saftigen Schokoladentorten bis hin zu fruchtigen Obstkuchen. Wir verwenden nur die besten Zutaten. <br><br>Jedes Produkt, das wir servieren, ist mit Liebe und Sorgfalt zubereitet. Wir legen Wert auf <strong>Qualität, Frische und Geschmack</strong>. <br><br> Starten Sie Ihren Tag bei uns mit einem reichhaltigen <strong>Frühstück</strong>. Unser Buffet bietet eine Auswahl an täglich frischen Brötchen, Aufschnitt, Käse, Müsli, Joghurt und vielem mehr. Dazu servieren wir aromatischen Kaffee und frischen Fruchtsaft."
-      
+      "knownFor1":"Von saftigen Schokoladentorten bis hin zu fruchtigen Obstkuchen. Wir verwenden nur die besten Zutaten. <br><br>Jedes Produkt, das wir servieren, ist mit Liebe und Sorgfalt zubereitet. Wir legen Wert auf <strong>Qualität, Frische und Geschmack</strong>. <br><br> Starten Sie Ihren Tag bei uns mit einem reichhaltigen <strong>Frühstück</strong>. Unser Buffet bietet eine Auswahl an täglich frischen Brötchen, Aufschnitt, Käse, Müsli, Joghurt und vielem mehr. Dazu servieren wir aromatischen Kaffee und frischen Fruchtsaft.",
+      "coffeeImageAlt":"Cappuccino mit Herz",	
+      "textCoffee":"Wir machen den <strong>besten Cappuccino</strong> weit und breit. Unsere Kaffeespezialitäten werden mit Liebe und Sorgfalt zubereitet. Wir verwenden nur die besten Bohnen und Milchprodukte.",
+      "appelstrudelImageAlt":"Ein Messer schneidet ein Stück Apfelstrudel ab",
+      "textAppelstrudel":"Unser <b>Apfelstrudel</b> ist ein Gedicht. Er wird nach einem alten Familienrezept zubereitet. Dazu servieren wir gerne Schlaggobers",
+      "cakeDetailImageAlt":"Detailansicht von Kirschen auf einer Torte",
+      "textCakeDetail":"<strong>Schwarzwälderkirschtorte</strong> <br><br>Eines unserer Highlights.",
+      "terraceImage2Alt":"2 Gläser auf einem Tisch auf der Sonnenterrasse",
+      "textTerrace2":"Unsere <strong>Sonnenterrasse</strong> ist der perfekte Ort, um die Sonne zu genießen und die Seele baumeln zu lassen."
      },
      "contact":{
       "title": "Kontakt Brückenwirt Appartements",

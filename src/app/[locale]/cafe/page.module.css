@@ -100,13 +100,15 @@ justify-content: center;
     height:450px;
     width:45%;
     flex-direction:column;
-    justify-content:space-between; 
     margin-bottom: 2rem;
     border: 1px solid var(--border-pricetable);
-    box-shadow: var(--cardImageBoxShadow); 
+    border-right:4px solid var(--cardItemBorderDark);
+    border-bottom:3px solid var(--cardItemBorderDark);
+    /* box-shadow: var(--cardImageBoxShadow);  */
     border-radius: var(--cardImageBorderRadius);
 }
 .cafeCardImage{
+    margin-top:0.3rem;
     margin-bottom: 1rem;
 }
 .cafeCardHandwritingText{
@@ -328,6 +330,9 @@ margin-top: 7rem;
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h3Text);
 }
+.cafeContainerRow2{
+    display:none;
+}
 .cafeContainer{
     display:flex;
     flex-direction: column;
@@ -489,7 +494,8 @@ margin-top: 7rem;
 }
 .cafeCardText{
     /* margin-top:6rem; */
-    width: 60%;
+    width: 80%;
+    max-width:320px;
     font-size: var(--fontsize-h5Text);
     font-weight: var(--fontweight-h4Text);
  }
@@ -618,4 +624,50 @@ margin-top: 7rem;
     font-weight: var(--fontweight-h4Text);
  }
 }
-@media(min-width:2000px){}
+@media(min-width:2000px){
+    .container
+{
+margin-top: 13rem;
+width: 80%;
+}
+    .textContent{
+        margin-top:5vw;
+        margin-left:0rem;
+        width: 60%; 
+        justify-content:center;
+        /* align-items: center; */
+    }
+    .text{
+        font-size: var(--fontsize-h3Text);
+        font-weight: var(--fontweight-h3Text);
+    }
+    .link{
+        font-size: var(--fontsize-h6Text);
+        font-weight: var(--fontweight-h4Text);
+    }
+    
+    .knownFor{
+        margin-top:10rem;
+    }
+    .knownFor, .knownFor1{
+        font-size: var(--fontsize-h4Text);
+        font-weight: var(--fontweight-h3Text);
+    
+    }
+    .cafeCard{
+        height:500px;
+   }
+    .cafeCardImage{
+     width:100%;
+     height: auto;
+    }
+    .cafeCardHandwritingText{
+        margin-top:-1rem;
+        padding-bottom: 1rem;
+    }
+    .cafeCardText{
+        /* margin-top:6rem; */
+        font-size: var(--fontsize-h5Text);
+        font-weight: var(--fontweight-h4Text);
+     }
+}
